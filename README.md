@@ -1,8 +1,7 @@
-## Hi there 👋
+# 2three1y
 
-I'm 2three1y
-This is my personal website
-I can't wait for you to learn about me
-Yes. You'll learn everything
-My SSN? Not really
-Hope you injoy
+Welcome to my personal site.
+
+I'm 15. I love coding (and tech). I'm blind.
+
+This page is built to be accessible. Expand the sections to learn more about me, what I'm building, and where to find me.
