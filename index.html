@@ -15,15 +15,59 @@
   <main id="main-content" tabindex="-1" aria-labelledby="page-title">
     <h2 id="page-title">About</h2>
 
-    <!-- Render or place Markdown content here. Preserve blank lines between sections. -->
-    <section aria-labelledby="content-heading">
-      <h3 id="content-heading">Content</h3>
-      <p>Markdown content goes here.</p>
+    <section aria-labelledby="about-trigger">
+      <button type="button" id="about-trigger" aria-expanded="false" aria-controls="about-panel">
+        About
+      </button>
+
+      <div id="about-panel" role="region" aria-labelledby="about-trigger" hidden>
+        <p>This is my personal website.</p>
+
+        <p>I can’t wait for you to learn about me.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="socials-trigger">
+      <button type="button" id="socials-trigger" aria-expanded="false" aria-controls="socials-panel">
+        Socials
+      </button>
+
+      <div id="socials-panel" role="region" aria-labelledby="socials-trigger" hidden>
+        <ul>
+          <li><a href="https://twitter.com/2three1y">Twitter</a></li>
+
+          <li><a href="https://techhub.social/@Techgirl1232">Mastodon</a></li>
+
+          <li><a href="https://github.com/2three1y">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="who-more-i-trigger">
+      <button type="button" id="who-more-i-trigger" aria-expanded="false" aria-controls="who-more-i-panel">
+        Who more I
+      </button>
+
+      <div id="who-more-i-panel" role="region" aria-labelledby="who-more-i-trigger" hidden>
+        <p>Yes, you’ll learn everything.</p>
+      </div>
     </section>
   </main>
 
   <footer role="contentinfo">
     <p>About</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('button[aria-controls]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var panel = document.getElementById(button.getAttribute('aria-controls'));
+        var isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+        button.setAttribute('aria-expanded', String(!isExpanded));
+        panel.hidden = isExpanded;
+      });
+    });
+  </script>
 </body>
 </html>
