@@ -10,52 +10,6 @@
 
   <title>2three1y — About</title>
 
-  <style>
-
-    :root { color-scheme: dark; --bg: #10131a; --surface: #181d27; --surface-2: #222a38; --text: #f4f7fb; --muted: #c4ccda; --accent: #79d8ff; --border: #526078; --focus: #ffe66d; }
-
-    * { box-sizing: border-box; }
-
-    body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.06rem/1.7 system-ui, sans-serif; }
-
-    a { color: var(--accent); text-underline-offset: .18em; }
-
-    :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
-
-    header, nav, main, footer { width: min(100% - 2rem, 58rem); margin-inline: auto; }
-
-    header { padding: 4rem 0 1.5rem; }
-
-    nav { border-block: 1px solid var(--border); padding: .8rem 0; }
-
-    nav ul { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; list-style: none; padding: 0; margin: 0; }
-
-    main { padding: 3rem 0; }
-
-    main > section { margin-block: 3rem; }
-
-    .content-block, .project-card, .post { margin-block: 2rem; padding: 1.1rem 1.2rem; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); }
-
-    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
-
-    .project-card { margin: 0; background: var(--surface-2); }
-
-    .social-list { display: grid; gap: 1rem; list-style: none; padding: 0; margin: 0; }
-
-    .social-item { padding: 1rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--surface-2); }
-
-    .social-item h3 { margin-top: 0; }
-
-    .npub, .discord-tag { overflow-wrap: anywhere; }
-
-    .copy-button { padding: .25rem .55rem; border: 1px solid var(--border); border-radius: .35rem; background: var(--surface); color: var(--text); font: inherit; cursor: pointer; }
-
-    .copy-status, time { color: var(--muted); }
-
-    footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
-
-  </style>
-
 </head>
 
 <body>
@@ -88,25 +42,19 @@
 
   </nav>
 
-  <main id="main-content" tabindex="-1">
-
-    <p>I’m 15. I love coding and tech. I’m blind. This page is built to be accessible, with content that can be explored at your own pace.</p>
+  <main id="main-content">
 
     <section id="about" aria-labelledby="about-heading">
 
       <h2 id="about-heading">About me</h2>
 
-      <div class="content-block">
+      <h3>Who I am</h3>
 
-        <h3>Who I am</h3>
+      <p>I’m 15. Yes, 15.</p>
 
-        <p>I’m 15. Yes, 15.</p>
+      <p>I love coding, which means I love tech.</p>
 
-        <p>I love coding, which means I love tech.</p>
-
-        <p>I’m blind.</p>
-
-      </div>
+      <p>I’m blind.</p>
 
     </section>
 
@@ -114,15 +62,11 @@
 
       <h2 id="advocacy-heading">Accessibility advocacy</h2>
 
-      <div class="content-block">
+      <h3>Building for everyone</h3>
 
-        <h3>Building for everyone</h3>
+      <p>Accessibility is not an optional extra to me. As a blind developer, I’m a major accessibility advocate, and I care about making technology usable, understandable, and welcoming for people with different disabilities and ways of navigating.</p>
 
-        <p>Accessibility is not an optional extra to me. As a blind developer, I’m a major accessibility advocate, and I care about making technology usable, understandable, and welcoming for people with different disabilities and ways of navigating.</p>
-
-        <p>I advocate for semantic HTML, visible focus, keyboard support, high contrast, readable structure, screen-reader navigation, and interfaces that do not hide important information behind unnecessary interaction.</p>
-
-      </div>
+      <p>I advocate for semantic HTML, visible focus, keyboard support, high contrast, readable structure, screen-reader navigation, and interfaces that do not hide important information behind unnecessary interaction.</p>
 
     </section>
 
@@ -130,13 +74,13 @@
 
       <h2 id="looscid-heading">Looscid</h2>
 
-      <div class="content-block">
+      <h3>Accessible local-first web workspace</h3>
 
-        <h3>Vision</h3>
+      <p>Looscid is an accessible, local-first, decentralized web operating environment and workspace. It is a focused framework and evolving project, not a claim to replace iOS or Android today.</p>
 
-        <p>Looscid is an accessible, decentralized, open-source operating system framework. The vision is to give people more control over their computing environment while making accessibility a foundation rather than an afterthought.</p>
+      <p>Its purpose is to give people more control over their data, identity, and daily tools through digital sovereignty: work should remain useful on the local device, while synchronization and collaboration can be decentralized rather than controlled by one platform.</p>
 
-      </div>
+      <p>Accessibility is part of the architecture. The interface uses semantic landmarks, predictable heading structure, keyboard and screen-reader navigation, discrete content blocks, and aria-live status messaging so important state changes can be announced without forcing users through visually dependent interactions.</p>
 
     </section>
 
@@ -144,19 +88,63 @@
 
       <h2 id="projects-heading">Projects</h2>
 
-      <div class="project-grid">
+      <article>
 
-        <article class="project-card"><h3>Memeprojects</h3><p>A place where you can find two fun projects.</p><p><a href="https://github.com/2three1y/memeprojects">Enter the boredom-cure zone on GitHub</a></p></article>
+        <h3>Memeprojects</h3>
 
-        <article class="project-card"><h3>RU a cheater</h3><p>A no-tracking joke project that gives a playful result.</p><p><a href="https://github.com/2three1y/memeprojects">See the source on GitHub</a></p></article>
+        <p>Memeprojects is a small collection of playful experiments that treat the web as a place for quick, self-contained interactions. The projects are intentionally lightweight and no-tracking, with straightforward pages rather than opaque account flows.</p>
 
-        <article class="project-card"><h3>Persona evaluator</h3><p>A playful persona evaluation project.</p><p><a href="https://github.com/2three1y/memeprojects">Visit it on GitHub</a></p></article>
+        <p><a href="https://github.com/2three1y/memeprojects">Explore Memeprojects on GitHub</a></p>
 
-        <article class="project-card"><h3>Reactor toolbar</h3><p>A fictional reaction-toolbar concept with gestures and rich reactions.</p><p><a href="https://github.com/2three1y/reactor-toolbar">Visit it on GitHub</a></p></article>
+      </article>
 
-        <article class="project-card"><h3>Easyconvert</h3><p>A tool for making JSON and ZIP data archives easier to work with.</p><p><a href="https://github.com/2three1y/Easyconvert">Visit Easyconvert on GitHub</a></p></article>
+      <article>
 
-      </div>
+        <h3>RU a cheater</h3>
+
+        <p>RU a cheater is a joke project built around a simple input-to-result interaction. It demonstrates how a small client-side experience can be readable, keyboard-friendly, and usable without collecting personal data.</p>
+
+        <p><a href="https://github.com/2three1y/memeprojects">See the source on GitHub</a></p>
+
+      </article>
+
+      <article>
+
+        <h3>Persona evaluator</h3>
+
+        <p>Persona evaluator is a playful evaluation experiment. Its value is in making a structured result understandable: clear labels, predictable output, and a simple flow that does not hide the result behind unnecessary UI.</p>
+
+        <p><a href="https://github.com/2three1y/memeprojects">Visit it on GitHub</a></p>
+
+      </article>
+
+      <article>
+
+        <h3>Reactor toolbar</h3>
+
+        <p>Reactor toolbar explores a reaction interface with gestures and rich reactions while keeping the interaction model explicit. The design challenge is to provide fast feedback without making gestures the only path, so controls and state can remain discoverable to keyboard and screen-reader users.</p>
+
+        <p><a href="https://github.com/2three1y/reactor-toolbar">Visit Reactor toolbar on GitHub</a></p>
+
+      </article>
+
+      <article>
+
+        <h3>Easyconvert</h3>
+
+        <p>Easyconvert is a local utility for working with JSON and ZIP data archives. Its parsing and conversion workflow is designed to work offline, keeping files on the user’s device instead of requiring an upload to a remote service. That makes the tool practical for privacy-sensitive data and unreliable connections.</p>
+
+        <p><a href="https://github.com/2three1y/Easyconvert">Visit Easyconvert on GitHub</a></p>
+
+      </article>
+
+      <article>
+
+        <h3>Alex Classic</h3>
+
+        <p>Alex Classic is an audio and voice project focused on extracting and working with wavetable data. It reflects the same interest in making technical systems inspectable and useful to blind developers: the important processing steps should be understandable through accessible output rather than hidden behind a visual-only tool.</p>
+
+      </article>
 
     </section>
 
@@ -166,13 +154,11 @@
 
       <p>Technical notes, project updates, and ideas about accessible technology.</p>
 
-      <article class="post">
+      <article>
 
         <h3><a href="blog/my-800-iphone-died/">My $800 iPhone Died, and a 2019 iPod Had to Save It</a></h3>
 
-        <p><time datetime="2026-09-20">September 20, 2026</time></p>
-
-        <p>My $800 iPhone died, and a 2019 iPod became the unexpected backup.</p>
+        <p>Published September 20, 2026.</p>
 
         <p><a href="blog/">View all posts</a></p>
 
@@ -184,59 +170,49 @@
 
       <h2 id="socials-heading">Socials</h2>
 
-      <div class="content-block">
+      <h3>Find me online</h3>
 
-        <h3>Find me online</h3>
+      <section aria-labelledby="github-heading">
 
-        <div class="social-list">
+        <h3 id="github-heading">GitHub</h3>
 
-          <section class="social-item" aria-labelledby="github-heading">
+        <p><a href="https://github.com/2three1y">Visit my GitHub profile</a></p>
 
-            <h3 id="github-heading">GitHub</h3>
+      </section>
 
-            <p><a href="https://github.com/2three1y">Visit my GitHub profile</a></p>
+      <section aria-labelledby="twitter-heading">
 
-          </section>
+        <h3 id="twitter-heading">Twitter</h3>
 
-          <section class="social-item" aria-labelledby="twitter-heading">
+        <p><a href="https://twitter.com/2three1y">Visit my Twitter profile</a></p>
 
-            <h3 id="twitter-heading">Twitter</h3>
+      </section>
 
-            <p><a href="https://twitter.com/2three1y">Visit my Twitter profile</a></p>
+      <section aria-labelledby="mastodon-heading">
 
-          </section>
+        <h3 id="mastodon-heading">Mastodon</h3>
 
-          <section class="social-item" aria-labelledby="mastodon-heading">
+        <p><a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a></p>
 
-            <h3 id="mastodon-heading">Mastodon</h3>
+      </section>
 
-            <p><a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a></p>
+      <section aria-labelledby="nostr-heading">
 
-          </section>
+        <h3 id="nostr-heading">Nostr</h3>
 
-          <section class="social-item" aria-labelledby="nostr-heading">
+        <p>npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</p>
 
-            <h3 id="nostr-heading">Nostr</h3>
+        <p><a href="https://ditto.pub/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Follow on Ditto</a> <a href="https://primal.net/p/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">View on Primal</a></p>
 
-            <p><span class="npub">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</span></p>
+      </section>
 
-            <p><button class="copy-button" type="button" aria-label="Copy npub to clipboard" data-npub="npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Copy</button> <span id="npub-copy-status" class="copy-status" aria-live="polite"></span></p>
+      <section aria-labelledby="discord-heading">
 
-            <p><a href="https://ditto.pub/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Follow on Ditto</a> <a href="https://primal.net/p/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">View on Primal</a></p>
+        <h3 id="discord-heading">Discord</h3>
 
-          </section>
+        <p>Username: <span class="discord-tag">2three1y</span></p>
 
-          <section class="social-item" aria-labelledby="discord-heading">
-
-            <h3 id="discord-heading">Discord</h3>
-
-            <p>Username: <span class="discord-tag">2three1y</span></p>
-
-          </section>
-
-        </div>
-
-      </div>
+      </section>
 
     </section>
 
@@ -246,35 +222,7 @@
 
     <p>2three1y</p>
 
-    <p><a href="#top">Back to top</a></p>
-
   </footer>
-
-  <script>
-
-    const copyButton = document.querySelector('.copy-button');
-
-    const copyStatus = document.querySelector('#npub-copy-status');
-
-    copyButton.addEventListener('click', async () => {
-
-      try {
-
-        await navigator.clipboard.writeText(copyButton.dataset.npub);
-
-        copyButton.textContent = 'Copied';
-
-        copyStatus.textContent = 'Copied npub to clipboard.';
-
-      } catch (error) {
-
-        copyStatus.textContent = 'Copy failed. Please select and copy the npub manually.';
-
-      }
-
-    });
-
-  </script>
 
 </body>
 
