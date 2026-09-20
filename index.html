@@ -46,7 +46,7 @@
 
     .social-item h3 { margin-top: 0; }
 
-    .npub { overflow-wrap: anywhere; }
+    .npub, .discord-tag { overflow-wrap: anywhere; }
 
     .copy-button { padding: .25rem .55rem; border: 1px solid var(--border); border-radius: .35rem; background: var(--surface); color: var(--text); font: inherit; cursor: pointer; }
 
@@ -190,13 +190,49 @@
 
         <div class="social-list">
 
-          <section class="social-item"><h3>GitHub</h3><p><a href="https://github.com/2three1y">Visit my GitHub profile</a></p></section>
+          <section class="social-item" aria-labelledby="github-heading">
 
-          <section class="social-item"><h3>Twitter</h3><p><a href="https://twitter.com/2three1y">Visit my Twitter profile</a></p></section>
+            <h3 id="github-heading">GitHub</h3>
 
-          <section class="social-item"><h3>Mastodon</h3><p><a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a></p></section>
+            <p><a href="https://github.com/2three1y">Visit my GitHub profile</a></p>
 
-          <section class="social-item"><h3>Nostr</h3><p><span class="npub">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</span></p><p><button class="copy-button" type="button" aria-label="Copy npub to clipboard" data-npub="npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Copy</button> <span id="npub-copy-status" class="copy-status" aria-live="polite"></span></p><p><a href="https://ditto.pub/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Follow on Ditto</a> <a href="https://primal.net/p/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">View on Primal</a></p></section>
+          </section>
+
+          <section class="social-item" aria-labelledby="twitter-heading">
+
+            <h3 id="twitter-heading">Twitter</h3>
+
+            <p><a href="https://twitter.com/2three1y">Visit my Twitter profile</a></p>
+
+          </section>
+
+          <section class="social-item" aria-labelledby="mastodon-heading">
+
+            <h3 id="mastodon-heading">Mastodon</h3>
+
+            <p><a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a></p>
+
+          </section>
+
+          <section class="social-item" aria-labelledby="nostr-heading">
+
+            <h3 id="nostr-heading">Nostr</h3>
+
+            <p><span class="npub">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</span></p>
+
+            <p><button class="copy-button" type="button" aria-label="Copy npub to clipboard" data-npub="npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Copy</button> <span id="npub-copy-status" class="copy-status" aria-live="polite"></span></p>
+
+            <p><a href="https://ditto.pub/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Follow on Ditto</a> <a href="https://primal.net/p/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">View on Primal</a></p>
+
+          </section>
+
+          <section class="social-item" aria-labelledby="discord-heading">
+
+            <h3 id="discord-heading">Discord</h3>
+
+            <p>Username: <span class="discord-tag">2three1y</span></p>
+
+          </section>
 
         </div>
 
