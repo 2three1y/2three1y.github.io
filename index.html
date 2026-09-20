@@ -60,13 +60,19 @@
 
     .social-list li { display: flex; flex-wrap: wrap; gap: .35rem .75rem; align-items: baseline; }
 
-    .social-list span, time { color: var(--muted); }
+    .social-list span, time, .copy-status { color: var(--muted); }
+
+    .npub { overflow-wrap: anywhere; }
+
+    .copy-button { margin-inline-start: .5rem; padding: .25rem .55rem; border: 1px solid var(--border); border-radius: .35rem; background: var(--surface); color: var(--text); font: inherit; cursor: pointer; }
+
+    .copy-button:hover { background: var(--surface-2); }
 
     footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
 
-    @media (forced-colors: active) { .content-block, .project-card, .post, nav { border-color: CanvasText; } }
+    @media (forced-colors: active) { .content-block, .project-card, .post, nav, .copy-button { border-color: CanvasText; } }
 
-    @media (prefers-contrast: more) { body { font-weight: 500; } .content-block, .project-card, .post, nav { border-width: 2px; } }
+    @media (prefers-contrast: more) { body { font-weight: 500; } .content-block, .project-card, .post, nav, .copy-button { border-width: 2px; } }
 
   </style>
 
@@ -174,55 +180,15 @@
 
       <div class="project-grid">
 
-        <article class="project-card">
+        <article class="project-card"><h3>Memeprojects</h3><p>A place where you can find two fun projects.</p><p><a href="https://github.com/2three1y/memeprojects">Enter the boredom-cure zone on GitHub</a></p></article>
 
-          <h3>Memeprojects</h3>
+        <article class="project-card"><h3>RU a cheater</h3><p>A no-tracking joke project that gives a playful result.</p><p><a href="https://github.com/2three1y/memeprojects">See the source on GitHub</a></p></article>
 
-          <p>A place where you can find two fun projects.</p>
+        <article class="project-card"><h3>Persona evaluator</h3><p>A playful persona evaluation project.</p><p><a href="https://github.com/2three1y/memeprojects">Visit it on GitHub</a></p></article>
 
-          <p><a href="https://github.com/2three1y/memeprojects">Enter the boredom-cure zone on GitHub</a></p>
+        <article class="project-card"><h3>Reactor toolbar</h3><p>A fictional reaction-toolbar concept with gestures and rich reactions.</p><p><a href="https://github.com/2three1y/reactor-toolbar">Visit it on GitHub</a></p></article>
 
-        </article>
-
-        <article class="project-card">
-
-          <h3>RU a cheater</h3>
-
-          <p>A no-tracking joke project that gives a playful result.</p>
-
-          <p><a href="https://github.com/2three1y/memeprojects">See the source on GitHub</a></p>
-
-        </article>
-
-        <article class="project-card">
-
-          <h3>Persona evaluator</h3>
-
-          <p>A playful persona evaluation project.</p>
-
-          <p><a href="https://github.com/2three1y/memeprojects">Visit it on GitHub</a></p>
-
-        </article>
-
-        <article class="project-card">
-
-          <h3>Reactor toolbar</h3>
-
-          <p>A fictional reaction-toolbar concept with gestures and rich reactions.</p>
-
-          <p><a href="https://github.com/2three1y/reactor-toolbar">Visit it on GitHub</a></p>
-
-        </article>
-
-        <article class="project-card">
-
-          <h3>Easyconvert</h3>
-
-          <p>A tool for making JSON and ZIP data archives easier to work with.</p>
-
-          <p><a href="https://github.com/2three1y/Easyconvert">Visit Easyconvert on GitHub</a></p>
-
-        </article>
+        <article class="project-card"><h3>Easyconvert</h3><p>A tool for making JSON and ZIP data archives easier to work with.</p><p><a href="https://github.com/2three1y/Easyconvert">Visit Easyconvert on GitHub</a></p></article>
 
       </div>
 
@@ -236,33 +202,11 @@
 
       <div class="post-list">
 
-        <article class="post">
+        <article class="post"><h3><a href="blog/my-800-iphone-died/">My $800 iPhone Died, and a 2019 iPod Had to Save It</a></h3><p><time datetime="2026-09-20">September 20, 2026</time></p><p>My $800 iPhone died, and a 2019 iPod became the unexpected backup.</p></article>
 
-          <h3><a href="blog/my-800-iphone-died/">My $800 iPhone Died, and a 2019 iPod Had to Save It</a></h3>
+        <article class="post"><h3>Welcome to my writing space</h3><p><time datetime="2026-09-20">September 20, 2026</time></p><p>This is where I’ll publish technical posts about coding, accessibility, Looscid, and the ideas behind the things I build.</p></article>
 
-          <p><time datetime="2026-09-20">September 20, 2026</time></p>
-
-          <p>My $800 iPhone died, and a 2019 iPod became the unexpected backup.</p>
-
-        </article>
-
-        <article class="post">
-
-          <h3>Welcome to my writing space</h3>
-
-          <p><time datetime="2026-09-20">September 20, 2026</time></p>
-
-          <p>This is where I’ll publish technical posts about coding, accessibility, Looscid, and the ideas behind the things I build.</p>
-
-        </article>
-
-        <article class="post">
-
-          <h3>Coming soon</h3>
-
-          <p>Future posts will document experiments, design decisions, lessons learned, and practical ways to build technology that works for more people.</p>
-
-        </article>
+        <article class="post"><h3>Coming soon</h3><p>Future posts will document experiments, design decisions, lessons learned, and practical ways to build technology that works for more people.</p></article>
 
       </div>
 
@@ -284,6 +228,8 @@
 
           <li><strong>Mastodon</strong> <a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a> <span>@Techgirl1232@techhub.social</span></li>
 
+          <li><strong>Nostr</strong> <span class="npub">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</span> <button class="copy-button" type="button" aria-label="Copy my full npub to your clipboard to paste in your client" aria-describedby="npub-copy-hint" data-npub="npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Copy</button> <span id="npub-copy-hint" class="copy-status" aria-live="polite">Copy my full npub to paste in your client.</span> <a href="https://ditto.pub/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Follow on Ditto</a> <a href="https://primal.net/p/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">View on Primal</a></li>
+
         </ul>
 
       </div>
@@ -299,6 +245,32 @@
     <p><a href="#top">Back to top</a></p>
 
   </footer>
+
+  <script>
+
+    const copyButton = document.querySelector('.copy-button');
+
+    const copyStatus = document.querySelector('#npub-copy-hint');
+
+    copyButton.addEventListener('click', async () => {
+
+      try {
+
+        await navigator.clipboard.writeText(copyButton.dataset.npub);
+
+        copyButton.textContent = 'Copied';
+
+        copyStatus.textContent = 'Copied my full npub to your clipboard.';
+
+      } catch (error) {
+
+        copyStatus.textContent = 'Copy failed. Please select and copy the npub manually.';
+
+      }
+
+    });
+
+  </script>
 
 </body>
 
