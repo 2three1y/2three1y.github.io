@@ -14,30 +14,13 @@
 
   <style>
 
-    :root {
-      color-scheme: dark;
-      --bg: #10131a;
-      --surface: #181d27;
-      --surface-2: #222a38;
-      --text: #f4f7fb;
-      --muted: #c4ccda;
-      --accent: #79d8ff;
-      --accent-strong: #b7ebff;
-      --border: #526078;
-      --focus: #ffe66d;
-    }
+    :root { color-scheme: dark; --bg: #10131a; --surface: #181d27; --surface-2: #222a38; --text: #f4f7fb; --muted: #c4ccda; --accent: #79d8ff; --accent-strong: #b7ebff; --border: #526078; --focus: #ffe66d; }
 
     * { box-sizing: border-box; }
 
     html { scroll-behavior: smooth; }
 
-    body {
-      margin: 0;
-      min-width: 18rem;
-      background: var(--bg);
-      color: var(--text);
-      font: 1.06rem/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+    body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.06rem/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 
     a { color: var(--accent); text-underline-offset: .18em; }
 
@@ -45,16 +28,7 @@
 
     :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 
-    .skip-link {
-      position: absolute;
-      left: .75rem;
-      top: .75rem;
-      z-index: 10;
-      padding: .65rem .9rem;
-      background: var(--focus);
-      color: #111;
-      transform: translateY(-200%);
-    }
+    .skip-link { position: absolute; left: .75rem; top: .75rem; z-index: 10; padding: .65rem .9rem; background: var(--focus); color: #111; transform: translateY(-200%); }
 
     .skip-link:focus { transform: translateY(0); }
 
@@ -70,7 +44,7 @@
 
     h2 { font-size: clamp(1.45rem, 4vw, 2rem); margin: 0 0 1.5rem; }
 
-    h3 { font-size: 1.25rem; margin-top: 0; }
+    h3 { font-size: 1.25rem; margin: 0 0 .5rem; }
 
     nav { border-block: 1px solid var(--border); padding: .8rem 0; }
 
@@ -80,31 +54,19 @@
 
     main { padding: 3rem 0; }
 
-    main > section { scroll-margin-top: 1rem; }
+    main > section { scroll-margin-top: 1rem; margin-block: 3rem; }
 
     .intro { color: var(--muted); max-width: 65ch; }
 
-    .accordion { margin: 1rem 0; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); overflow: clip; }
+    .content-block { margin-block: 2rem; padding: 1.1rem 1.2rem 1.3rem; max-width: 72ch; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); }
 
-    .accordion > h3 { margin: 0; }
+    .content-block p:first-child { margin-top: 0; }
 
-    .accordion-button { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; border: 0; padding: 1rem 1.1rem; background: var(--surface-2); color: var(--text); font: inherit; font-weight: 700; text-align: left; cursor: pointer; }
-
-    .accordion-button:hover { background: #2b3547; }
-
-    .state { flex: 0 0 auto; color: var(--accent-strong); font-size: 1.35em; line-height: 1; }
-
-    .panel { padding: 1.1rem 1.2rem 1.3rem; max-width: 72ch; }
-
-    .panel p:first-child { margin-top: 0; }
-
-    .panel p:last-child, .panel ul:last-child { margin-bottom: 0; }
+    .content-block p:last-child, .content-block ul:last-child { margin-bottom: 0; }
 
     .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
 
     .project-card { border: 1px solid var(--border); border-radius: .55rem; padding: 1rem; background: var(--surface-2); }
-
-    .project-card h3 { margin-bottom: .4rem; }
 
     .project-card p { margin-block: .5rem; }
 
@@ -118,11 +80,9 @@
 
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-    @media (forced-colors: active) { :root { --focus: Highlight; } .accordion, .project-card, nav { border: 1px solid CanvasText; } .accordion-button { border: 1px solid ButtonText; } }
+    @media (forced-colors: active) { :root { --focus: Highlight; } .content-block, .project-card, nav { border: 1px solid CanvasText; } }
 
-    .js .panel[hidden] { display: none; }
-
-    @media (prefers-contrast: more) { body { font-weight: 500; } .accordion, .project-card, nav { border-width: 2px; } }
+    @media (prefers-contrast: more) { body { font-weight: 500; } .content-block, .project-card, nav { border-width: 2px; } }
 
   </style>
 
@@ -164,101 +124,45 @@
 
       <h2 id="about-heading">About me</h2>
 
-      <div class="accordion">
+      <div class="content-block">
 
-        <h3>
+        <h3>Who I am</h3>
 
-          <button class="accordion-button" type="button" aria-expanded="true" aria-controls="about-me-panel" id="about-me-button">
+        <p>I’m 15. Yes, 15.</p>
 
-            <span>About me</span>
+        <p>I love coding, which means I love tech.</p>
 
-            <span class="state" aria-hidden="true">−</span>
-
-          </button>
-
-        </h3>
-
-        <div class="panel" id="about-me-panel" role="region" aria-labelledby="about-me-button">
-
-          <p>I’m 15. Yes, 15.</p>
-
-          <p>I love coding, which means I love tech.</p>
-
-          <p>I’m blind.</p>
-
-        </div>
+        <p>I’m blind.</p>
 
       </div>
 
-      <div class="accordion">
+      <div class="content-block">
 
-        <h3>
+        <h3>How I code</h3>
 
-          <button class="accordion-button" type="button" aria-expanded="true" aria-controls="how-i-code-panel" id="how-i-code-button">
+        <p>I usually code by using <a href="https://poke.com">Poke</a>, <a href="https://claude.ai">Claude</a>, <a href="https://grok.com">Grok</a>, and whatever else helps.</p>
 
-            <span>How I code</span>
-
-            <span class="state" aria-hidden="true">−</span>
-
-          </button>
-
-        </h3>
-
-        <div class="panel" id="how-i-code-panel" role="region" aria-labelledby="how-i-code-button">
-
-          <p>I usually code by using <a href="https://poke.com">Poke</a>, <a href="https://claude.ai">Claude</a>, <a href="https://grok.com">Grok</a>, and whatever else helps.</p>
-
-          <p>I also try doing it myself, although it’s quite hard.</p>
-
-        </div>
+        <p>I also try doing it myself, although it’s quite hard.</p>
 
       </div>
 
-      <div class="accordion">
+      <div class="content-block">
 
-        <h3>
+        <h3>My story</h3>
 
-          <button class="accordion-button" type="button" aria-expanded="true" aria-controls="story-panel" id="story-button">
+        <p>I don’t know how to begin this, but here goes.</p>
 
-            <span>My story</span>
+        <p>My love of coding began when I first held my first mobile device, an iPod touch. I loved exploring the apps installed on it. It was nice to tap around, discover what things could do, and feel the possibilities.</p>
 
-            <span class="state" aria-hidden="true">−</span>
-
-          </button>
-
-        </h3>
-
-        <div class="panel" id="story-panel" role="region" aria-labelledby="story-button">
-
-          <p>I don’t know how to begin this, but here goes.</p>
-
-          <p>My love of coding began when I first held my first mobile device, an iPod touch. I loved exploring the apps installed on it. It was nice to tap around, discover what things could do, and feel the possibilities.</p>
-
-          <p>That curiosity stuck with me. Even though I can’t see the screen in the same way, the idea of making things that live inside devices has never left.</p>
-
-        </div>
+        <p>That curiosity stuck with me. Even though I can’t see the screen in the same way, the idea of making things that live inside devices has never left.</p>
 
       </div>
 
-      <div class="accordion">
+      <div class="content-block">
 
-        <h3>
+        <h3>What I’m building</h3>
 
-          <button class="accordion-button" type="button" aria-expanded="true" aria-controls="building-panel" id="building-button">
-
-            <span>What I’m building</span>
-
-            <span class="state" aria-hidden="true">−</span>
-
-          </button>
-
-        </h3>
-
-        <div class="panel" id="building-panel" role="region" aria-labelledby="building-button">
-
-          <p>I’m building lots of things.</p>
-
-        </div>
+        <p>I’m building lots of things.</p>
 
       </div>
 
@@ -324,27 +228,13 @@
 
       </div>
 
-      <div class="accordion">
+      <div class="content-block">
 
-        <h3>
+        <h3>Why I build</h3>
 
-          <button class="accordion-button" type="button" aria-expanded="true" aria-controls="why-panel" id="why-button">
+        <p>I build because I want to. Building makes me happy, and I love it.</p>
 
-            <span>Why I build</span>
-
-            <span class="state" aria-hidden="true">−</span>
-
-          </button>
-
-        </h3>
-
-        <div class="panel" id="why-panel" role="region" aria-labelledby="why-button">
-
-          <p>I build because I want to. Building makes me happy, and I love it.</p>
-
-          <p>I also love building what I need, like <a href="https://github.com/2three1y/Easyconvert">Easyconvert</a>.</p>
-
-        </div>
+        <p>I also love building what I need, like <a href="https://github.com/2three1y/Easyconvert">Easyconvert</a>.</p>
 
       </div>
 
@@ -354,29 +244,15 @@
 
       <h2 id="questions-heading">Questions</h2>
 
-      <div class="accordion">
+      <div class="content-block">
 
-        <h3>
+        <h3>Questions people can ask</h3>
 
-          <button class="accordion-button" type="button" aria-expanded="true" aria-controls="questions-panel" id="questions-button">
+        <p>You can ask me questions and I’ll answer them.</p>
 
-            <span>Questions people can ask</span>
+        <h4>How old are you?</h4>
 
-            <span class="state" aria-hidden="true">−</span>
-
-          </button>
-
-        </h3>
-
-        <div class="panel" id="questions-panel" role="region" aria-labelledby="questions-button">
-
-          <p>You can ask me questions and I’ll answer them.</p>
-
-          <h4>How old are you?</h4>
-
-          <p>15. Yes, still 15.</p>
-
-        </div>
+        <p>15. Yes, still 15.</p>
 
       </div>
 
@@ -386,35 +262,21 @@
 
       <h2 id="socials-heading">Socials</h2>
 
-      <div class="accordion">
+      <div class="content-block">
 
-        <h3>
+        <h3>Find me online</h3>
 
-          <button class="accordion-button" type="button" aria-expanded="true" aria-controls="socials-panel" id="socials-button">
+        <p>You can find me across many places on the Internet.</p>
 
-            <span>Find me online</span>
+        <ul class="social-list">
 
-            <span class="state" aria-hidden="true">−</span>
+          <li><strong>GitHub</strong> <span>I love using GitHub and code there a lot.</span> <a href="https://github.com/2three1y">Visit my GitHub profile</a></li>
 
-          </button>
+          <li><strong>Twitter/X</strong> <span>I also have a Twitter or X page.</span> <a href="https://twitter.com/2three1y">Visit my Twitter/X profile</a></li>
 
-        </h3>
+          <li><strong>Mastodon</strong> <span>I use it, but not that often.</span> <a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a> <span>Handle: @Techgirl1232@techhub.social</span></li>
 
-        <div class="panel" id="socials-panel" role="region" aria-labelledby="socials-button">
-
-          <p>You can find me across many places on the Internet.</p>
-
-          <ul class="social-list">
-
-            <li><strong>GitHub</strong> <span>I love using GitHub and code there a lot.</span> <a href="https://github.com/2three1y">Visit my GitHub profile</a></li>
-
-            <li><strong>Twitter/X</strong> <span>I also have a Twitter or X page.</span> <a href="https://twitter.com/2three1y">Visit my Twitter/X profile</a></li>
-
-            <li><strong>Mastodon</strong> <span>I use it, but not that often.</span> <a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a> <span>Handle: @Techgirl1232@techhub.social</span></li>
-
-          </ul>
-
-        </div>
+        </ul>
 
       </div>
 
@@ -429,56 +291,6 @@
     <p><a href="#top">Back to top</a></p>
 
   </footer>
-
-  <script>
-
-    (function () {
-
-      document.documentElement.classList.add('js');
-
-      var buttons = Array.prototype.slice.call(document.querySelectorAll('.accordion-button'));
-
-      function setState(button, expanded) {
-
-        var panel = document.getElementById(button.getAttribute('aria-controls'));
-
-        button.setAttribute('aria-expanded', String(expanded));
-
-        button.querySelector('.state').textContent = expanded ? '−' : '+';
-
-        panel.hidden = !expanded;
-
-      }
-
-      buttons.forEach(function (button) { setState(button, false); });
-
-      buttons.forEach(function (button, index) {
-
-        button.addEventListener('click', function () { setState(button, button.getAttribute('aria-expanded') !== 'true'); });
-
-        button.addEventListener('keydown', function (event) {
-
-          var next;
-
-          if (event.key === 'ArrowDown' || event.key === 'ArrowRight') next = buttons[(index + 1) % buttons.length];
-
-          if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') next = buttons[(index - 1 + buttons.length) % buttons.length];
-
-          if (event.key === 'Home') next = buttons[0];
-
-          if (event.key === 'End') next = buttons[buttons.length - 1];
-
-          if (event.key === 'Escape') { setState(button, false); return; }
-
-          if (next) { event.preventDefault(); next.focus(); }
-
-        });
-
-      });
-
-    }());
-
-  </script>
 
 </body>
 
