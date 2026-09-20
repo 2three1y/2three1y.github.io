@@ -70,10 +70,6 @@
 
     footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
 
-    @media (forced-colors: active) { .content-block, .project-card, .post, nav, .copy-button { border-color: CanvasText; } }
-
-    @media (prefers-contrast: more) { body { font-weight: 500; } .content-block, .project-card, .post, nav, .copy-button { border-width: 2px; } }
-
   </style>
 
 </head>
@@ -160,18 +156,6 @@
 
       </div>
 
-      <div class="content-block">
-
-        <h3>Check it out</h3>
-
-        <p>Read the code and follow the project:</p>
-
-        <p><a href="https://github.com/Looscid/Looscid">Looscid on GitHub</a></p>
-
-        <p><a href="https://x.com/Looscid">Looscid on Twitter</a></p>
-
-      </div>
-
     </section>
 
     <section id="projects" aria-labelledby="projects-heading">
@@ -200,15 +184,15 @@
 
       <p>Technical notes, project updates, and ideas about accessible technology.</p>
 
-      <div class="post-list">
+      <article class="post">
 
-        <article class="post"><h3><a href="blog/my-800-iphone-died/">My $800 iPhone Died, and a 2019 iPod Had to Save It</a></h3><p><time datetime="2026-09-20">September 20, 2026</time></p><p>My $800 iPhone died, and a 2019 iPod became the unexpected backup.</p></article>
+        <h3><a href="blog/my-800-iphone-died/">My $800 iPhone Died, and a 2019 iPod Had to Save It</a></h3>
 
-        <article class="post"><h3>Welcome to my writing space</h3><p><time datetime="2026-09-20">September 20, 2026</time></p><p>This is where I’ll publish technical posts about coding, accessibility, Looscid, and the ideas behind the things I build.</p></article>
+        <p><time datetime="2026-09-20">September 20, 2026</time></p>
 
-        <article class="post"><h3>Coming soon</h3><p>Future posts will document experiments, design decisions, lessons learned, and practical ways to build technology that works for more people.</p></article>
+        <p>My $800 iPhone died, and a 2019 iPod became the unexpected backup.</p>
 
-      </div>
+      </article>
 
     </section>
 
@@ -228,7 +212,7 @@
 
           <li><strong>Mastodon</strong> <a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a> <span>@Techgirl1232@techhub.social</span></li>
 
-          <li><strong>Nostr</strong> <span class="npub">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</span> <button class="copy-button" type="button" aria-label="Copy my full npub to your clipboard to paste in your client" aria-describedby="npub-copy-hint" data-npub="npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Copy</button> <span id="npub-copy-hint" class="copy-status" aria-live="polite">Copy my full npub to paste in your client.</span> <a href="https://ditto.pub/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Follow on Ditto</a> <a href="https://primal.net/p/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">View on Primal</a></li>
+          <li><strong>Nostr</strong> <span class="npub">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</span> <button class="copy-button" type="button" aria-label="Copy npub to clipboard" data-npub="npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Copy</button> <span id="npub-copy-status" class="copy-status" aria-live="polite"></span> <a href="https://ditto.pub/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Follow on Ditto</a> <a href="https://primal.net/p/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">View on Primal</a></li>
 
         </ul>
 
@@ -250,7 +234,7 @@
 
     const copyButton = document.querySelector('.copy-button');
 
-    const copyStatus = document.querySelector('#npub-copy-hint');
+    const copyStatus = document.querySelector('#npub-copy-status');
 
     copyButton.addEventListener('click', async () => {
 
@@ -260,7 +244,7 @@
 
         copyButton.textContent = 'Copied';
 
-        copyStatus.textContent = 'Copied my full npub to your clipboard.';
+        copyStatus.textContent = 'Copied npub to clipboard.';
 
       } catch (error) {
 
