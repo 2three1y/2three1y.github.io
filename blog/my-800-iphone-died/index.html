@@ -26,9 +26,13 @@
 
     :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 
-    header, main, footer { width: min(100% - 2rem, 58rem); margin-inline: auto; }
+    header, nav, main, footer { width: min(100% - 2rem, 58rem); margin-inline: auto; }
 
-    header { padding: 4rem 0 1.5rem; border-bottom: 1px solid var(--border); }
+    header { padding: 4rem 0 1.5rem; }
+
+    nav { border-block: 1px solid var(--border); padding: .8rem 0; }
+
+    nav ul { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; list-style: none; padding: 0; margin: 0; }
 
     main { padding: 3rem 0; }
 
@@ -50,7 +54,7 @@
 
 <body>
 
-  <header>
+  <header id="top">
 
     <p><a href="../../index.html#blog">Back to Blog / Writing</a></p>
 
@@ -60,7 +64,27 @@
 
   </header>
 
-  <main id="main-content">
+  <nav aria-label="Page navigation">
+
+    <ul>
+
+      <li><a href="../../index.html#about">About</a></li>
+
+      <li><a href="../../index.html#advocacy">Accessibility advocacy</a></li>
+
+      <li><a href="../../index.html#looscid">Looscid</a></li>
+
+      <li><a href="../../index.html#projects">Projects</a></li>
+
+      <li><a href="../../index.html#blog">Blog / Writing</a></li>
+
+      <li><a href="../../index.html#socials">Socials</a></li>
+
+    </ul>
+
+  </nav>
+
+  <main id="main-content" tabindex="-1">
 
     <article aria-labelledby="post-title">
 
