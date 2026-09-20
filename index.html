@@ -8,27 +8,25 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" content="2three1y’s accessible personal site, story, projects, and social links.">
+  <meta name="description" content="2three1y’s accessible personal site, projects, accessibility advocacy, and Looscid vision.">
 
   <title>2three1y — About</title>
 
   <style>
 
-    :root { color-scheme: dark; --bg: #10131a; --surface: #181d27; --surface-2: #222a38; --text: #f4f7fb; --muted: #c4ccda; --accent: #79d8ff; --accent-strong: #b7ebff; --border: #526078; --focus: #ffe66d; }
+    :root { color-scheme: dark; --bg: #10131a; --surface: #181d27; --surface-2: #222a38; --text: #f4f7fb; --muted: #c4ccda; --accent: #79d8ff; --border: #526078; --focus: #ffe66d; }
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
-
-    body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.06rem/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.06rem/1.7 system-ui, sans-serif; }
 
     a { color: var(--accent); text-underline-offset: .18em; }
 
-    a:hover { color: var(--accent-strong); }
+    a:hover { color: #b7ebff; }
 
     :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 
-    .skip-link { position: absolute; left: .75rem; top: .75rem; z-index: 10; padding: .65rem .9rem; background: var(--focus); color: #111; transform: translateY(-200%); }
+    .skip-link { position: absolute; left: .75rem; top: .75rem; padding: .65rem .9rem; background: var(--focus); color: #111; transform: translateY(-200%); }
 
     .skip-link:focus { transform: translateY(0); }
 
@@ -36,39 +34,29 @@
 
     header { padding: 4rem 0 1.5rem; }
 
-    header p { max-width: 65ch; color: var(--muted); margin: .5rem 0 0; }
+    header p, .intro { max-width: 65ch; color: var(--muted); }
 
-    h1, h2, h3 { line-height: 1.2; text-wrap: balance; }
+    h1, h2, h3, h4 { line-height: 1.2; }
 
-    h1 { font-size: clamp(2.3rem, 7vw, 4.5rem); margin: 0; letter-spacing: -.04em; }
+    h1 { font-size: clamp(2.3rem, 7vw, 4.5rem); margin: 0; }
 
-    h2 { font-size: clamp(1.45rem, 4vw, 2rem); margin: 0 0 1.5rem; }
+    h2 { font-size: clamp(1.45rem, 4vw, 2rem); margin-top: 0; }
 
-    h3 { font-size: 1.25rem; margin: 0 0 .5rem; }
+    h3 { font-size: 1.25rem; }
 
-    nav { border-block: 1px solid var(--border); padding: .8rem 0; }
+    nav { border-block: 1px solid #526078; padding: .8rem 0; }
 
     nav ul, .social-list { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; list-style: none; padding: 0; margin: 0; }
 
-    nav a { display: inline-block; padding: .25rem 0; }
-
     main { padding: 3rem 0; }
 
-    main > section { scroll-margin-top: 1rem; margin-block: 3rem; }
+    main > section { margin-block: 3rem; }
 
-    .intro { color: var(--muted); max-width: 65ch; }
-
-    .content-block { margin-block: 2rem; padding: 1.1rem 1.2rem 1.3rem; max-width: 72ch; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); }
-
-    .content-block p:first-child { margin-top: 0; }
-
-    .content-block p:last-child, .content-block ul:last-child { margin-bottom: 0; }
+    .content-block, .project-card { margin-block: 2rem; padding: 1.1rem 1.2rem; border: 1px solid #526078; border-radius: .7rem; background: var(--surface); }
 
     .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
 
-    .project-card { border: 1px solid var(--border); border-radius: .55rem; padding: 1rem; background: var(--surface-2); }
-
-    .project-card p { margin-block: .5rem; }
+    .project-card { margin: 0; background: var(--surface-2); }
 
     .social-list { flex-direction: column; gap: .8rem; }
 
@@ -76,13 +64,13 @@
 
     .social-list span { color: var(--muted); }
 
-    footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
+    footer { border-top: 1px solid #526078; padding: 1.5rem 0 3rem; color: var(--muted); }
 
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-
-    @media (forced-colors: active) { :root { --focus: Highlight; } .content-block, .project-card, nav { border: 1px solid CanvasText; } }
+    @media (forced-colors: active) { .content-block, .project-card, nav { border-color: CanvasText; } }
 
     @media (prefers-contrast: more) { body { font-weight: 500; } .content-block, .project-card, nav { border-width: 2px; } }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
   </style>
 
@@ -106,9 +94,11 @@
 
       <li><a href="#about">About</a></li>
 
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#advocacy">Accessibility advocacy</a></li>
 
-      <li><a href="#questions">Questions</a></li>
+      <li><a href="#looscid">Looscid</a></li>
+
+      <li><a href="#projects">Projects</a></li>
 
       <li><a href="#socials">Socials</a></li>
 
@@ -158,11 +148,69 @@
 
       </div>
 
+    </section>
+
+    <section id="advocacy" aria-labelledby="advocacy-heading">
+
+      <h2 id="advocacy-heading">Accessibility advocacy</h2>
+
       <div class="content-block">
 
-        <h3>What I’m building</h3>
+        <h3>Building for everyone</h3>
 
-        <p>I’m building lots of things.</p>
+        <p>Accessibility is not an optional extra to me. As a blind developer, I’m a major accessibility advocate, and I care about making technology usable, understandable, and welcoming for people with different disabilities and ways of navigating.</p>
+
+        <p>I advocate for semantic HTML, visible focus, keyboard support, high contrast, readable structure, screen-reader navigation, and interfaces that do not hide important information behind unnecessary interaction.</p>
+
+        <p>Accessible design should be part of the architecture from the beginning, not a patch added at the end.</p>
+
+      </div>
+
+    </section>
+
+    <section id="looscid" aria-labelledby="looscid-heading">
+
+      <h2 id="looscid-heading">Looscid</h2>
+
+      <div class="content-block">
+
+        <h3>Vision</h3>
+
+        <p>Looscid is an accessible, decentralized, open-source operating system framework. The vision is to give people more control over their computing environment while making accessibility a foundation rather than an afterthought.</p>
+
+        <p>Looscid is intended to be built in the open, shaped by its users, and designed so that assistive technology, customization, privacy, and user agency are first-class concerns.</p>
+
+      </div>
+
+      <div class="content-block">
+
+        <h3>Architecture</h3>
+
+        <p>Looscid’s architecture is based on modular, interoperable components instead of one locked-down platform. An open-source core can provide common system services while independent modules provide interfaces, applications, accessibility services, and integrations.</p>
+
+        <p>Its decentralized direction means that identity, data, communication, and services should not depend on one central gatekeeper. Users should be able to choose where their data lives, connect compatible services, inspect the code, and replace components without losing access to their work.</p>
+
+        <p>Accessibility should exist across the stack: in the system APIs, event model, rendering and input layers, documentation, developer tools, and default user experience. The goal is not merely to support one screen reader, but to make the framework adaptable to many assistive technologies and interaction styles.</p>
+
+      </div>
+
+      <div class="content-block">
+
+        <h3>Open-source principles</h3>
+
+        <ul>
+
+          <li>Build in public and welcome review.</li>
+
+          <li>Prefer open standards and interoperable formats.</li>
+
+          <li>Protect user control, privacy, and ownership.</li>
+
+          <li>Make accessibility testable, documented, and maintained.</li>
+
+          <li>Keep the system modular so users can choose and change components.</li>
+
+        </ul>
 
       </div>
 
@@ -235,24 +283,6 @@
         <p>I build because I want to. Building makes me happy, and I love it.</p>
 
         <p>I also love building what I need, like <a href="https://github.com/2three1y/Easyconvert">Easyconvert</a>.</p>
-
-      </div>
-
-    </section>
-
-    <section id="questions" aria-labelledby="questions-heading">
-
-      <h2 id="questions-heading">Questions</h2>
-
-      <div class="content-block">
-
-        <h3>Questions people can ask</h3>
-
-        <p>You can ask me questions and I’ll answer them.</p>
-
-        <h4>How old are you?</h4>
-
-        <p>15. Yes, still 15.</p>
 
       </div>
 
