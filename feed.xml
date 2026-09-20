@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>2three1y — Blog</title>
+    <link>https://2three1y.github.io/blog/</link>
+    <description>Writing by 2three1y about technology, accessibility, coding, and projects.</description>
+    <item>
+      <title>My $800 iPhone Died, and a 2019 iPod Had to Save It</title>
+      <link>https://2three1y.github.io/blog/my-800-iphone-died/</link>
+      <guid isPermaLink="true">https://2three1y.github.io/blog/my-800-iphone-died/</guid>
+      <pubDate>Sun, 20 Sep 2026 09:34:00 -0400</pubDate>
+      <description>An essay about a five-hour accessibility deadlock on an $800 iPhone and how a 2019 iPod rescued the night.</description>
+    </item>
+  </channel>
+</rss>
