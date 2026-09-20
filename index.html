@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" content="2three1y’s accessible personal site, projects, accessibility advocacy, and Looscid vision.">
+  <meta name="description" content="2three1y’s accessible personal site, accessibility advocacy, Looscid vision, projects, and writing.">
 
   <title>2three1y — About</title>
 
@@ -42,9 +42,7 @@
 
     h2 { font-size: clamp(1.45rem, 4vw, 2rem); margin-top: 0; }
 
-    h3 { font-size: 1.25rem; }
-
-    nav { border-block: 1px solid #526078; padding: .8rem 0; }
+    nav { border-block: 1px solid var(--border); padding: .8rem 0; }
 
     nav ul, .social-list { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; list-style: none; padding: 0; margin: 0; }
 
@@ -52,25 +50,23 @@
 
     main > section { margin-block: 3rem; }
 
-    .content-block, .project-card { margin-block: 2rem; padding: 1.1rem 1.2rem; border: 1px solid #526078; border-radius: .7rem; background: var(--surface); }
+    .content-block, .project-card, .post { margin-block: 2rem; padding: 1.1rem 1.2rem; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); }
 
-    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
+    .project-grid, .post-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
 
-    .project-card { margin: 0; background: var(--surface-2); }
+    .project-card, .post { margin: 0; background: var(--surface-2); }
 
     .social-list { flex-direction: column; gap: .8rem; }
 
     .social-list li { display: flex; flex-wrap: wrap; gap: .35rem .75rem; align-items: baseline; }
 
-    .social-list span { color: var(--muted); }
+    .social-list span, time { color: var(--muted); }
 
-    footer { border-top: 1px solid #526078; padding: 1.5rem 0 3rem; color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
 
-    @media (forced-colors: active) { .content-block, .project-card, nav { border-color: CanvasText; } }
+    @media (forced-colors: active) { .content-block, .project-card, .post, nav { border-color: CanvasText; } }
 
-    @media (prefers-contrast: more) { body { font-weight: 500; } .content-block, .project-card, nav { border-width: 2px; } }
-
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (prefers-contrast: more) { body { font-weight: 500; } .content-block, .project-card, .post, nav { border-width: 2px; } }
 
   </style>
 
@@ -99,6 +95,8 @@
       <li><a href="#looscid">Looscid</a></li>
 
       <li><a href="#projects">Projects</a></li>
+
+      <li><a href="#blog">Blog / Writing</a></li>
 
       <li><a href="#socials">Socials</a></li>
 
@@ -186,31 +184,21 @@
 
         <h3>Architecture</h3>
 
-        <p>Looscid’s architecture is based on modular, interoperable components instead of one locked-down platform. An open-source core can provide common system services while independent modules provide interfaces, applications, accessibility services, and integrations.</p>
+        <p>Looscid’s architecture is based on modular, interoperable components instead of one locked-down platform. Its decentralized direction means identity, data, communication, and services should not depend on one central gatekeeper.</p>
 
-        <p>Its decentralized direction means that identity, data, communication, and services should not depend on one central gatekeeper. Users should be able to choose where their data lives, connect compatible services, inspect the code, and replace components without losing access to their work.</p>
-
-        <p>Accessibility should exist across the stack: in the system APIs, event model, rendering and input layers, documentation, developer tools, and default user experience. The goal is not merely to support one screen reader, but to make the framework adaptable to many assistive technologies and interaction styles.</p>
+        <p>Accessibility should exist across the stack: in system APIs, the event model, rendering and input layers, documentation, developer tools, and the default user experience.</p>
 
       </div>
 
       <div class="content-block">
 
-        <h3>Open-source principles</h3>
+        <h3>Check it out</h3>
 
-        <ul>
+        <p>Read the code and follow the project:</p>
 
-          <li>Build in public and welcome review.</li>
+        <p><a href="https://github.com/Looscid/Looscid">Looscid on GitHub</a></p>
 
-          <li>Prefer open standards and interoperable formats.</li>
-
-          <li>Protect user control, privacy, and ownership.</li>
-
-          <li>Make accessibility testable, documented, and maintained.</li>
-
-          <li>Keep the system modular so users can choose and change components.</li>
-
-        </ul>
+        <p><a href="https://x.com/Looscid">Looscid on X/Twitter: @Looscid</a></p>
 
       </div>
 
@@ -258,8 +246,6 @@
 
           <p>This is a joke. I once sent a very detailed message about a fictional reaction toolbar with thousands of reactions, swipe gestures, editing, images, GIFs, and a super-reaction workflow.</p>
 
-          <p>I have no idea why I sent that. I was on a call with a friend and sent it to Poke, who apparently decided it was a good idea.</p>
-
           <p><a href="https://github.com/2three1y/reactor-toolbar">Swipe, double-tap, and overreact on GitHub</a></p>
 
         </article>
@@ -270,19 +256,39 @@
 
           <p>I got suspended from Claude. Claude sends you JSON and ZIP files as a data archive. I couldn’t find a place to read them because I can’t read JSON, so I built this.</p>
 
-          <p><a href="https://github.com/2three1y/Easyconvert">JSON? Never heard of her—visit Easyconvert on GitHub</a></p>
+          <p><a href="https://github.com/2three1y/Easyconvert">Visit Easyconvert on GitHub</a></p>
 
         </article>
 
       </div>
 
-      <div class="content-block">
+    </section>
 
-        <h3>Why I build</h3>
+    <section id="blog" aria-labelledby="blog-heading">
 
-        <p>I build because I want to. Building makes me happy, and I love it.</p>
+      <h2 id="blog-heading">Blog / Writing</h2>
 
-        <p>I also love building what I need, like <a href="https://github.com/2three1y/Easyconvert">Easyconvert</a>.</p>
+      <p>Technical notes, project updates, and ideas about accessible technology.</p>
+
+      <div class="post-list">
+
+        <article class="post">
+
+          <h3>Welcome to my writing space</h3>
+
+          <p><time datetime="2026-09-20">September 20, 2026</time></p>
+
+          <p>This is where I’ll publish technical posts about coding, accessibility, Looscid, and the ideas behind the things I build.</p>
+
+        </article>
+
+        <article class="post">
+
+          <h3>Coming soon</h3>
+
+          <p>Future posts will document experiments, design decisions, lessons learned, and practical ways to build technology that works for more people.</p>
+
+        </article>
 
       </div>
 
@@ -296,15 +302,13 @@
 
         <h3>Find me online</h3>
 
-        <p>You can find me across many places on the Internet.</p>
-
         <ul class="social-list">
 
-          <li><strong>GitHub</strong> <span>I love using GitHub and code there a lot.</span> <a href="https://github.com/2three1y">Visit my GitHub profile</a></li>
+          <li><strong>GitHub</strong> <a href="https://github.com/2three1y">Visit my GitHub profile</a></li>
 
-          <li><strong>Twitter/X</strong> <span>I also have a Twitter or X page.</span> <a href="https://twitter.com/2three1y">Visit my Twitter/X profile</a></li>
+          <li><strong>Twitter/X</strong> <a href="https://twitter.com/2three1y">Visit my Twitter/X profile</a></li>
 
-          <li><strong>Mastodon</strong> <span>I use it, but not that often.</span> <a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a> <span>Handle: @Techgirl1232@techhub.social</span></li>
+          <li><strong>Mastodon</strong> <a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a> <span>@Techgirl1232@techhub.social</span></li>
 
         </ul>
 
