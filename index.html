@@ -3,197 +3,121 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="2three1y’s accessible personal site, story, projects, and social links.">
   <title>2three1y — About</title>
+  <style>
+    :root { color-scheme: dark; --bg: #10131a; --surface: #181d27; --surface-2: #222a38; --text: #f4f7fb; --muted: #c4ccda; --accent: #79d8ff; --accent-strong: #b7ebff; --border: #526078; --focus: #ffe66d; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.06rem/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: var(--accent); text-underline-offset: .18em; }
+    a:hover { color: var(--accent-strong); }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+    .skip-link { position: absolute; left: .75rem; top: .75rem; z-index: 10; padding: .65rem .9rem; background: var(--focus); color: #111; transform: translateY(-200%); }
+    .skip-link:focus { transform: translateY(0); }
+    header, nav, main, footer { width: min(100% - 2rem, 58rem); margin-inline: auto; }
+    header { padding: 4rem 0 1.5rem; }
+    header p { max-width: 65ch; color: var(--muted); margin: .5rem 0 0; }
+    h1, h2, h3 { line-height: 1.2; text-wrap: balance; }
+    h1 { font-size: clamp(2.3rem, 7vw, 4.5rem); margin: 0; letter-spacing: -.04em; }
+    h2 { font-size: clamp(1.45rem, 4vw, 2rem); margin: 0 0 1.5rem; }
+    h3 { font-size: 1.25rem; margin-top: 0; }
+    nav { border-block: 1px solid var(--border); padding: .8rem 0; }
+    nav ul, .social-list, .steps { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; list-style: none; padding: 0; margin: 0; }
+    nav a { display: inline-block; padding: .25rem 0; }
+    main { padding: 3rem 0; }
+    main > section { scroll-margin-top: 1rem; }
+    .intro { color: var(--muted); max-width: 65ch; }
+    .accordion { margin: 1rem 0; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); overflow: clip; }
+    .accordion > h3 { margin: 0; }
+    .accordion-button { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; border: 0; padding: 1rem 1.1rem; background: var(--surface-2); color: var(--text); font: inherit; font-weight: 700; text-align: left; cursor: pointer; }
+    .accordion-button:hover { background: #2b3547; }
+    .state { flex: 0 0 auto; color: var(--accent-strong); font-size: 1.35em; line-height: 1; }
+    .panel { padding: 1.1rem 1.2rem 1.3rem; max-width: 72ch; }
+    .panel p:first-child { margin-top: 0; }
+    .panel p:last-child, .panel ul:last-child { margin-bottom: 0; }
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
+    .project-card { border: 1px solid var(--border); border-radius: .55rem; padding: 1rem; background: var(--surface-2); }
+    .project-card h3 { margin-bottom: .4rem; }
+    .project-card p { margin-block: .5rem; }
+    .social-list { flex-direction: column; gap: .8rem; }
+    .social-list li { display: flex; flex-wrap: wrap; gap: .35rem .75rem; align-items: baseline; }
+    .social-list span { color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (forced-colors: active) { :root { --focus: Highlight; } .accordion, .project-card, nav { border: 1px solid CanvasText; } .accordion-button { border: 1px solid ButtonText; } }
+    .js .panel[hidden] { display: none; }
+    @media (prefers-contrast: more) { body { font-weight: 500; } .accordion, .project-card, nav { border-width: 2px; } }
+  </style>
 </head>
-
 <body>
-  <a href="#main-content">Skip to main content</a>
-
-  <header role="banner">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header id="top">
     <h1>2three1y</h1>
+    <p>Welcome to my personal site: a place to learn about me, what I’m building, and where to find me.</p>
   </header>
-
-  <main id="main-content" tabindex="-1" aria-labelledby="page-title">
-    <h2 id="page-title">Welcome to my personal site</h2>
-
-    <section aria-labelledby="about-me-trigger">
-      <button type="button" id="about-me-trigger" aria-expanded="false" aria-controls="about-me-panel">
-        About me
-      </button>
-      <div id="about-me-panel" role="region" aria-labelledby="about-me-trigger" hidden>
-        <p>I'm 15. Yes, 15.</p>
-        <p>I love coding, which means I love tech.</p>
-        <p>I'm blind.</p>
-      </div>
+  <nav aria-label="Page navigation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#questions">Questions</a></li>
+      <li><a href="#socials">Socials</a></li>
+    </ul>
+  </nav>
+  <main id="main-content" tabindex="-1">
+    <p class="intro">I’m 15. I love coding and tech. I’m blind. This page is built to be accessible, with content that can be explored at your own pace.</p>
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About me</h2>
+      <div class="accordion"><h3><button class="accordion-button" type="button" aria-expanded="true" aria-controls="about-me-panel" id="about-me-button"><span>About me</span><span class="state" aria-hidden="true">−</span></button></h3><div class="panel" id="about-me-panel" role="region" aria-labelledby="about-me-button"><p>I’m 15. Yes, 15.</p><p>I love coding, which means I love tech.</p><p>I’m blind.</p></div></div>
+      <div class="accordion"><h3><button class="accordion-button" type="button" aria-expanded="true" aria-controls="how-i-code-panel" id="how-i-code-button"><span>How I code</span><span class="state" aria-hidden="true">−</span></button></h3><div class="panel" id="how-i-code-panel" role="region" aria-labelledby="how-i-code-button"><p>I usually code by using <a href="https://poke.com">Poke</a>, <a href="https://claude.ai">Claude</a>, <a href="https://grok.com">Grok</a>, and whatever else helps.</p><p>I also try doing it myself, although it’s quite hard.</p></div></div>
+      <div class="accordion"><h3><button class="accordion-button" type="button" aria-expanded="true" aria-controls="story-panel" id="story-button"><span>My story</span><span class="state" aria-hidden="true">−</span></button></h3><div class="panel" id="story-panel" role="region" aria-labelledby="story-button"><p>I don’t know how to begin this, but here goes.</p><p>My love of coding began when I first held my first mobile device, an iPod touch. I loved exploring the apps installed on it. It was nice to tap around, discover what things could do, and feel the possibilities.</p><p>That curiosity stuck with me. Even though I can’t see the screen in the same way, the idea of making things that live inside devices has never left.</p></div></div>
+      <div class="accordion"><h3><button class="accordion-button" type="button" aria-expanded="true" aria-controls="building-panel" id="building-button"><span>What I’m building</span><span class="state" aria-hidden="true">−</span></button></h3><div class="panel" id="building-panel" role="region" aria-labelledby="building-button"><p>I’m building lots of things.</p></div></div>
     </section>
-
-    <section aria-labelledby="how-i-code-trigger">
-      <button type="button" id="how-i-code-trigger" aria-expanded="false" aria-controls="how-i-code-panel">
-        How I code
-      </button>
-      <div id="how-i-code-panel" role="region" aria-labelledby="how-i-code-trigger" hidden>
-        <p>I usually code by using <a href="https://poke.com">Poke</a>, <a href="https://claude.ai">Claude</a>, <a href="https://grok.com">Grok</a> and whatever else helps.</p>
-        <p>I also try doing it myself, although it's quite hard.</p>
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="project-grid">
+        <article class="project-card"><h3>Memeprojects</h3><p>A place where you can find two fun projects.</p><p><a href="https://github.com/2three1y/memeprojects">Enter the boredom-cure zone on GitHub</a></p></article>
+        <article class="project-card"><h3>RU a cheater</h3><p>I had an idea for a site where, with no tracking, you get a result about whether you’re a cheater or not. This is a joke project—I can’t see what you do.</p><p><a href="https://github.com/2three1y/memeprojects">Are you sus? See the source on GitHub</a></p></article>
+        <article class="project-card"><h3>Persona evaluator</h3><p>Like RU a cheater, this evaluates your persona. You can even select whether you’ve been bad or good.</p><p><a href="https://github.com/2three1y/memeprojects">Judge your soul—or pretend to—on GitHub</a></p></article>
+        <article class="project-card"><h3>Reactor toolbar</h3><p>This is a joke. I once sent a very detailed message about a fictional reaction toolbar with thousands of reactions, swipe gestures, editing, images, GIFs, and a super-reaction workflow.</p><p>I have no idea why I sent that. I was on a call with a friend and sent it to Poke, who apparently decided it was a good idea.</p><p><a href="https://github.com/2three1y/reactor-toolbar">Swipe, double-tap, and overreact on GitHub</a></p></article>
+        <article class="project-card"><h3>Easyconvert</h3><p>I got suspended from Claude. Claude sends you JSON and ZIP files as a data archive. I couldn’t find a place to read them because I can’t read JSON, so I built this.</p><p><a href="https://github.com/2three1y/Easyconvert">JSON? Never heard of her—visit Easyconvert on GitHub</a></p></article>
       </div>
+      <div class="accordion"><h3><button class="accordion-button" type="button" aria-expanded="true" aria-controls="why-panel" id="why-button"><span>Why I build</span><span class="state" aria-hidden="true">−</span></button></h3><div class="panel" id="why-panel" role="region" aria-labelledby="why-button"><p>I build because I want to. Building makes me happy, and I love it.</p><p>I also love building what I need, like <a href="https://github.com/2three1y/Easyconvert">Easyconvert</a>.</p></div></div>
     </section>
-
-    <section aria-labelledby="my-story-trigger">
-      <button type="button" id="my-story-trigger" aria-expanded="false" aria-controls="my-story-panel">
-        My story
-      </button>
-      <div id="my-story-panel" role="region" aria-labelledby="my-story-trigger" hidden>
-        <p>I don't know how to begin this, but here goes.</p>
-        <p>My love of coding began when I first held my first mobile device, which was an iPod touch. I loved looking at the apps installed. It was nice just exploring what they could do, tapping around, feeling the possibilities.</p>
-        <p>That curiosity stuck with me. Even though I can't see the screen the same way, the idea of making things that live inside devices has never left.</p>
-      </div>
+    <section id="questions" aria-labelledby="questions-heading">
+      <h2 id="questions-heading">Questions</h2>
+      <div class="accordion"><h3><button class="accordion-button" type="button" aria-expanded="true" aria-controls="questions-panel" id="questions-button"><span>Questions people can ask</span><span class="state" aria-hidden="true">−</span></button></h3><div class="panel" id="questions-panel" role="region" aria-labelledby="questions-button"><p>You can ask me questions and I’ll answer them.</p><h4>How old are you?</h4><p>15. Yes, still 15.</p></div></div>
     </section>
-
-    <section aria-labelledby="what-im-building-trigger">
-      <button type="button" id="what-im-building-trigger" aria-expanded="false" aria-controls="what-im-building-panel">
-        What I'm building
-      </button>
-      <div id="what-im-building-panel" role="region" aria-labelledby="what-im-building-trigger" hidden>
-        <p>I'm building lots of things.</p>
-      </div>
-    </section>
-
-    <section aria-labelledby="memeprojects-trigger">
-      <button type="button" id="memeprojects-trigger" aria-expanded="false" aria-controls="memeprojects-panel">
-        Memeprojects
-      </button>
-      <div id="memeprojects-panel" role="region" aria-labelledby="memeprojects-trigger" hidden>
-        <p>It's a place where you can find 2 projects.</p>
-        <p><a href="https://github.com/2three1y/memeprojects">Enter the boredom-cure zone (GitHub)</a></p>
-      </div>
-    </section>
-
-    <section aria-labelledby="ru-a-cheater-trigger">
-      <button type="button" id="ru-a-cheater-trigger" aria-expanded="false" aria-controls="ru-a-cheater-panel">
-        RU a cheater
-      </button>
-      <div id="ru-a-cheater-panel" role="region" aria-labelledby="ru-a-cheater-trigger" hidden>
-        <p>I just had this idea where you can visit a site, and with no tracking, you'll get a result if you're a cheater or not.</p>
-        <p>By the way, this is just a joke project. I can't see what you do 😂</p>
-        <p><a href="https://github.com/2three1y/memeprojects">Are you sus? Source code here (GitHub)</a></p>
-      </div>
-    </section>
-
-    <section aria-labelledby="persona-evaluator-trigger">
-      <button type="button" id="persona-evaluator-trigger" aria-expanded="false" aria-controls="persona-evaluator-panel">
-        Persona evaluator
-      </button>
-      <div id="persona-evaluator-panel" role="region" aria-labelledby="persona-evaluator-trigger" hidden>
-        <p>This is like the RU a cheater project above. Instead this one evaluates your persona.</p>
-        <p>This is also funny because you can select if you've been bad or good.</p>
-        <p><a href="https://github.com/2three1y/memeprojects">Judge your soul (or at least pretend to) — GitHub</a></p>
-      </div>
-    </section>
-
-    <section aria-labelledby="reactor-toolbar-trigger">
-      <button type="button" id="reactor-toolbar-trigger" aria-expanded="false" aria-controls="reactor-toolbar-panel">
-        Reactor toolbar
-      </button>
-      <div id="reactor-toolbar-panel" role="region" aria-labelledby="reactor-toolbar-trigger" hidden>
-        <p>This is a joke.</p>
-        <p>I sent "Reactor Toolbar, expanded. Showing 2931 reactions available. Swipe with 1 finger to preview, double tap to select. If you don't want the added reaction, Swipe up on the reaction to select "Change" And select "edit" to add multiple Reactions. Use the editor to place the first and last reaction. You can also add emojies, gifs and more. To Add Images, tap the Add button, then tap "Image" From the Add selector. Tap "Search" and type in your Search. Hit the "Search" button to show results and tap that result to add it. Hit the "Done" Button to send the reaction. Hit "Send" in your messaging App to send your message along with the Super-reaction you just added. Your friends will be able to edit your reaction, use it as a template, Save and Share it."</p>
-        <p>I have no idea why I sent that. I was on a call with a friend and I sent that. I remember sending that to poke who decided it'd be a good idea.</p>
-        <p><a href="https://github.com/2three1y/reactor-toolbar">Swipe, double-tap, and overreact (GitHub)</a></p>
-      </div>
-    </section>
-
-    <section aria-labelledby="easyconvert-trigger">
-      <button type="button" id="easyconvert-trigger" aria-expanded="false" aria-controls="easyconvert-panel">
-        Easyconvert
-      </button>
-      <div id="easyconvert-panel" role="region" aria-labelledby="easyconvert-trigger" hidden>
-        <p>I got suspended from Claude. Claude sends you a bunch of JSON and ZIP files. That's your data archive.</p>
-        <p>I couldn't find a place to read them because I can't read JSON so I built this.</p>
-        <p><a href="https://github.com/2three1y/Easyconvert">JSON? Never heard of her (GitHub)</a></p>
-      </div>
-    </section>
-
-    <section aria-labelledby="why-i-build-trigger">
-      <button type="button" id="why-i-build-trigger" aria-expanded="false" aria-controls="why-i-build-panel">
-        Why I build
-      </button>
-      <div id="why-i-build-panel" role="region" aria-labelledby="why-i-build-trigger" hidden>
-        <p>I build because I want to. Building makes me happy and I love it.</p>
-        <p>I also love building what I need, like <a href="https://github.com/2three1y/Easyconvert">Easyconvert</a>.</p>
-      </div>
-    </section>
-
-    <section aria-labelledby="questions-trigger">
-      <button type="button" id="questions-trigger" aria-expanded="false" aria-controls="questions-panel">
-        Questions
-      </button>
-      <div id="questions-panel" role="region" aria-labelledby="questions-trigger" hidden>
-        <p>You can ask me questions and I'll answer them.</p>
-        <section aria-labelledby="q-age-trigger">
-          <button type="button" id="q-age-trigger" aria-expanded="false" aria-controls="q-age-panel">
-            How old are you?
-          </button>
-          <div id="q-age-panel" role="region" aria-labelledby="q-age-trigger" hidden>
-            <p>15. Yes, still 15.</p>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <section aria-labelledby="socials-trigger">
-      <button type="button" id="socials-trigger" aria-expanded="false" aria-controls="socials-panel">
-        Socials
-      </button>
-      <div id="socials-panel" role="region" aria-labelledby="socials-trigger" hidden>
-        <p>You can find me across many places on the Internet.</p>
-      </div>
-    </section>
-
-    <section aria-labelledby="github-trigger">
-      <button type="button" id="github-trigger" aria-expanded="false" aria-controls="github-panel">
-        I code on GitHub
-      </button>
-      <div id="github-panel" role="region" aria-labelledby="github-trigger" hidden>
-        <p>I love using GitHub. I code on there a lot.</p>
-        <p><a href="https://github.com/2three1y">Visit GitHub Profile</a></p>
-      </div>
-    </section>
-
-    <section aria-labelledby="twitter-trigger">
-      <button type="button" id="twitter-trigger" aria-expanded="false" aria-controls="twitter-panel">
-        I tweet too
-      </button>
-      <div id="twitter-panel" role="region" aria-labelledby="twitter-trigger" hidden>
-        <p>I also have a Twitter (or X) page.</p>
-        <p><a href="https://twitter.com/2three1y">Visit Twitter Profile</a></p>
-      </div>
-    </section>
-
-    <section aria-labelledby="mastodon-trigger">
-      <button type="button" id="mastodon-trigger" aria-expanded="false" aria-controls="mastodon-panel">
-        I also use Mastodon
-      </button>
-      <div id="mastodon-panel" role="region" aria-labelledby="mastodon-trigger" hidden>
-        <p>I use it, but not that often, but you can follow (if you'd like).</p>
-        <p><a href="https://techhub.social/@Techgirl1232">Visit Mastodon Profile</a></p>
-        <p>Handle: @Techgirl1232@techhub.social</p>
-      </div>
+    <section id="socials" aria-labelledby="socials-heading">
+      <h2 id="socials-heading">Socials</h2>
+      <div class="accordion"><h3><button class="accordion-button" type="button" aria-expanded="true" aria-controls="socials-panel" id="socials-button"><span>Find me online</span><span class="state" aria-hidden="true">−</span></button></h3><div class="panel" id="socials-panel" role="region" aria-labelledby="socials-button"><p>You can find me across many places on the Internet.</p><ul class="social-list"><li><strong>GitHub</strong><span>I love using GitHub and code there a lot.</span><a href="https://github.com/2three1y">Visit my GitHub profile</a></li><li><strong>Twitter/X</strong><span>I also have a Twitter or X page.</span><a href="https://twitter.com/2three1y">Visit my Twitter/X profile</a></li><li><strong>Mastodon</strong><span>I use it, but not that often.</span><a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a><span>Handle: @Techgirl1232@techhub.social</span></li></ul></div></div>
     </section>
   </main>
-
-  <footer role="contentinfo">
-    <p>2three1y</p>
-  </footer>
-
+  <footer><p>2three1y</p><p><a href="#top">Back to top</a></p></footer>
   <script>
-    document.querySelectorAll('button[aria-controls]').forEach(function (button) {
-      button.addEventListener('click', function () {
+    (function () {
+      document.documentElement.classList.add('js');
+      var buttons = Array.prototype.slice.call(document.querySelectorAll('.accordion-button'));
+      function setState(button, expanded) {
         var panel = document.getElementById(button.getAttribute('aria-controls'));
-        var isExpanded = button.getAttribute('aria-expanded') === 'true';
-
-        button.setAttribute('aria-expanded', String(!isExpanded));
-        panel.hidden = isExpanded;
+        button.setAttribute('aria-expanded', String(expanded));
+        button.querySelector('.state').textContent = expanded ? '−' : '+';
+        panel.hidden = !expanded;
+      }
+      buttons.forEach(function (button) { setState(button, false); });
+      buttons.forEach(function (button, index) {
+        button.addEventListener('click', function () { setState(button, button.getAttribute('aria-expanded') !== 'true'); });
+        button.addEventListener('keydown', function (event) {
+          var next;
+          if (event.key === 'ArrowDown' || event.key === 'ArrowRight') next = buttons[(index + 1) % buttons.length];
+          if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') next = buttons[(index - 1 + buttons.length) % buttons.length];
+          if (event.key === 'Home') next = buttons[0];
+          if (event.key === 'End') next = buttons[buttons.length - 1];
+          if (event.key === 'Escape') { setState(button, false); return; }
+          if (next) { event.preventDefault(); next.focus(); }
+        });
       });
-    });
+    }());
   </script>
 </body>
 </html>
