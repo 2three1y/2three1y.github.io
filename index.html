@@ -44,7 +44,7 @@
 
     nav { border-block: 1px solid var(--border); padding: .8rem 0; }
 
-    nav ul, .social-list { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; list-style: none; padding: 0; margin: 0; }
+    nav ul { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; list-style: none; padding: 0; margin: 0; }
 
     main { padding: 3rem 0; }
 
@@ -52,21 +52,25 @@
 
     .content-block, .project-card, .post { margin-block: 2rem; padding: 1.1rem 1.2rem; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); }
 
-    .project-grid, .post-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
 
-    .project-card, .post { margin: 0; background: var(--surface-2); }
+    .project-card { margin: 0; background: var(--surface-2); }
 
-    .social-list { flex-direction: column; gap: .8rem; }
+    .social-list { display: grid; gap: 1rem; list-style: none; padding: 0; margin: 0; }
 
-    .social-list li { display: flex; flex-wrap: wrap; gap: .35rem .75rem; align-items: baseline; }
+    .social-item { margin: 0; padding: 1rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--surface-2); }
 
-    .social-list span, time, .copy-status { color: var(--muted); }
+    .social-item h3 { margin-top: 0; }
+
+    .social-item p { margin-bottom: 0; }
 
     .npub { overflow-wrap: anywhere; }
 
     .copy-button { margin-inline-start: .5rem; padding: .25rem .55rem; border: 1px solid var(--border); border-radius: .35rem; background: var(--surface); color: var(--text); font: inherit; cursor: pointer; }
 
     .copy-button:hover { background: var(--surface-2); }
+
+    .copy-status, time { color: var(--muted); }
 
     footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
 
@@ -204,17 +208,45 @@
 
         <h3>Find me online</h3>
 
-        <ul class="social-list">
+        <div class="social-list">
 
-          <li><strong>GitHub</strong> <a href="https://github.com/2three1y">Visit my GitHub profile</a></li>
+          <section class="social-item" aria-labelledby="github-heading">
 
-          <li><strong>Twitter/X</strong> <a href="https://twitter.com/2three1y">Visit my Twitter/X profile</a></li>
+            <h3 id="github-heading">GitHub</h3>
 
-          <li><strong>Mastodon</strong> <a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a> <span>@Techgirl1232@techhub.social</span></li>
+            <p><a href="https://github.com/2three1y">Visit my GitHub profile</a></p>
 
-          <li><strong>Nostr</strong> <span class="npub">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</span> <button class="copy-button" type="button" aria-label="Copy npub to clipboard" data-npub="npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Copy</button> <span id="npub-copy-status" class="copy-status" aria-live="polite"></span> <a href="https://ditto.pub/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Follow on Ditto</a> <a href="https://primal.net/p/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">View on Primal</a></li>
+          </section>
 
-        </ul>
+          <section class="social-item" aria-labelledby="twitter-heading">
+
+            <h3 id="twitter-heading">Twitter</h3>
+
+            <p><a href="https://twitter.com/2three1y">Visit my Twitter profile</a></p>
+
+          </section>
+
+          <section class="social-item" aria-labelledby="mastodon-heading">
+
+            <h3 id="mastodon-heading">Mastodon</h3>
+
+            <p><a href="https://techhub.social/@Techgirl1232">Visit my Mastodon profile</a></p>
+
+          </section>
+
+          <section class="social-item" aria-labelledby="nostr-heading">
+
+            <h3 id="nostr-heading">Nostr</h3>
+
+            <p><span class="npub">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</span></p>
+
+            <p><button class="copy-button" type="button" aria-label="Copy npub to clipboard" data-npub="npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Copy</button> <span id="npub-copy-status" class="copy-status" aria-live="polite"></span></p>
+
+            <p><a href="https://ditto.pub/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">Follow on Ditto</a> <a href="https://primal.net/p/npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d">View on Primal</a></p>
+
+          </section>
+
+        </div>
 
       </div>
 
