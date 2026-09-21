@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131a">
   <meta name="description" content="Writing about technology, accessibility, coding, and projects.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://2three1y.github.io/">
@@ -19,7 +20,7 @@
   <link rel="me" href="https://github.com/2three1y">
   <link rel="me" href="https://twitter.com/2three1y">
   <link rel="alternate" type="application/rss+xml" title="2three1y RSS feed" href="feed.xml">
-  <title>2three1y — About</title>
+  <title>2three1y — Home</title>
   <style>
     :root { color-scheme: dark; --bg: #10131a; --surface: #181d27; --surface-2: #222a38; --text: #f4f7fb; --muted: #c4ccda; --accent: #79d8ff; --border: #526078; --focus: #ffe66d; }
     * { box-sizing: border-box; }
@@ -34,9 +35,41 @@
     main > section { margin-block: 3rem; }
     article { margin-block: 2rem; padding: 1.1rem 1.2rem; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); }
     footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
+
+    /* Visually-hidden until focused: standard skip-link pattern */
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -3.5rem;
+      background: var(--surface-2);
+      color: var(--text);
+      padding: .6rem 1rem;
+      border-radius: .4rem;
+      border: 1px solid var(--border);
+      z-index: 100;
+      transition: top .15s ease-in-out;
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    dl.social-list { margin: 0; padding: 0; }
+    dl.social-list > div { padding: .9rem 0; border-bottom: 1px solid var(--border); }
+    dl.social-list > div:last-child { border-bottom: none; }
+    dl.social-list dt { font-weight: 600; margin: 0 0 .25rem; }
+    dl.social-list dd { margin: 0; color: var(--muted); }
+    dl.social-list dd a { color: var(--accent); }
+
+    .back-to-top { display: inline-block; margin-top: 1rem; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .skip-link { transition: none; }
+    }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header id="top"><h1>2three1y</h1><p>Welcome to my personal site: a place to learn about me, what I’m building, and where to find me.</p></header>
   <nav aria-label="Page navigation"><ul><li><a href="#about">About</a></li><li><a href="#advocacy">Accessibility advocacy</a></li><li><a href="#looscid">Looscid</a></li><li><a href="#projects">Projects</a></li><li><a href="blog/">Blog / Writing</a></li><li><a href="#socials">Socials</a></li></ul></nav>
   <main id="main-content">
@@ -45,7 +78,36 @@
     <section id="looscid" aria-labelledby="looscid-heading"><h2 id="looscid-heading">Looscid</h2><h3>An autonomous local-first workspace</h3><p>Looscid is an autonomous, local-first decentralized web workspace built around digital sovereignty. It is an evolving operating environment for keeping data and daily tools useful on the local device, rather than presenting itself as a finished replacement for iOS or Android.</p><p>The technical focus is screen-reader ergonomics: predictable landmarks and headings, short discrete blocks, keyboard-first movement, and status changes exposed through aria-live messaging. The goal is a workspace that feels calm and navigable when every interaction is being spoken.</p></section>
     <section id="projects" aria-labelledby="projects-heading"><h2 id="projects-heading">Projects</h2><article><h3>Memeprojects</h3><p>Memeprojects is a set of lightweight, zero-dependency browser toys. Each one is a small proof that accessible interactive fun can load instantly, stay understandable to a screen reader, and work without trackers or an account system.</p><p><a href="https://github.com/2three1y/memeprojects">Explore Memeprojects on GitHub</a></p></article><article><h3>RU a cheater</h3><p>RU a cheater turns a simple input and result into a deliberately silly no-tracking experience. Its technical value is restraint: client-side behavior, readable output, and no unnecessary service layer.</p><p><a href="https://github.com/2three1y/memeprojects">See the source on GitHub</a></p></article><article><h3>Persona evaluator</h3><p>Persona evaluator experiments with structured prompts and clear result presentation. The interface keeps labels and outcomes explicit so the experience remains usable without relying on visual cards, hidden controls, or unexplained animation.</p><p><a href="https://github.com/2three1y/memeprojects">Visit it on GitHub</a></p></article><article><h3>Reactor Toolbar</h3><p>Reactor Toolbar is a rapid keyboard-first development harness for reaction interfaces. Structured prompt engineering drives quick experiments, while explicit controls and announced state keep the resulting interaction discoverable to keyboard and screen-reader users.</p><p><a href="https://github.com/2three1y/reactor-toolbar">Visit Reactor Toolbar on GitHub</a></p></article><article><h3>Easyconvert</h3><p>Easyconvert is built for instant offline conversion of JSON and ZIP archives: choose a file, parse it locally, and get the converted result without uploading anything to the cloud. Privacy-hardened file sanitization is part of the workflow, making it safer for sensitive archives and useful when connectivity is unreliable.</p><p><a href="https://github.com/2three1y/Easyconvert">Visit Easyconvert on GitHub</a></p></article><article><h3>Alex Classic</h3><p>Alex Classic is a retro speech preservation project. It investigates extracting the 670 MB of wavetables from OS X 10.5 Leopard’s Alex.SpeechVoice, then carrying that character into an offline synthesis pipeline to counter modern iOS speech degradation and pitch distortion.</p><p><a href="https://github.com/2three1y/alex-classic">Visit Alex Classic on GitHub</a></p></article></section>
     <section id="blog" aria-labelledby="blog-heading"><h2 id="blog-heading">Blog / Writing</h2><p><a href="blog/my-800-iphone-died/">My $800 iPhone Died, and a 2019 iPod Had to Save It</a></p><p><a href="blog/">View all posts</a></p></section>
-    <section id="socials" aria-labelledby="socials-heading"><h2 id="socials-heading">Socials</h2><h3>GitHub</h3><p><a href="https://github.com/2three1y" rel="me">Visit my GitHub profile</a></p><h3>Twitter</h3><p><a href="https://twitter.com/2three1y" rel="me">Visit my Twitter profile</a></p><h3>Mastodon</h3><p><a rel="me" href="https://techhub.social/@Techgirl1232">Mastodon</a> <span aria-label="Verified account">(Verified)</span></p><h3>RSS</h3><p><a href="feed.xml">Subscribe to the RSS feed</a></p><h3>Nostr</h3><p><span aria-label="Nostr public key">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</span> <span aria-label="Verified account">(Verified)</span></p><h3>Discord</h3><p>Username: 2three1y</p></section>
+    <section id="socials" aria-labelledby="socials-heading">
+      <h2 id="socials-heading">Socials</h2>
+      <dl class="social-list">
+        <div>
+          <dt>GitHub</dt>
+          <dd><a href="https://github.com/2three1y" rel="me">Visit my GitHub profile</a></dd>
+        </div>
+        <div>
+          <dt>Twitter</dt>
+          <dd><a href="https://twitter.com/2three1y" rel="me">Visit my Twitter profile</a></dd>
+        </div>
+        <div>
+          <dt>Mastodon</dt>
+          <dd><a rel="me" href="https://techhub.social/@Techgirl1232">Mastodon</a> <span aria-label="Verified account">(Verified)</span></dd>
+        </div>
+        <div>
+          <dt>RSS</dt>
+          <dd><a href="feed.xml">Subscribe to the RSS feed</a></dd>
+        </div>
+        <div>
+          <dt>Nostr</dt>
+          <dd><span aria-label="Nostr public key">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</span> <span aria-label="Verified account">(Verified)</span></dd>
+        </div>
+        <div>
+          <dt>Discord</dt>
+          <dd>Username: 2three1y</dd>
+        </div>
+      </dl>
+    </section>
+    <p><a class="back-to-top" href="#top">Back to top</a></p>
   </main>
   <footer><p>2three1y</p></footer>
 </body>
