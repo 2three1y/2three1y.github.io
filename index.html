@@ -35,6 +35,7 @@
     main > section { margin-block: 3rem; }
     article { margin-block: 2rem; padding: 1.1rem 1.2rem; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); }
     footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
+    button { font: inherit; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); border-radius: .4rem; padding: .45rem .8rem; cursor: pointer; }
 
     /* Visually-hidden until focused: standard skip-link pattern */
     .skip-link {
@@ -59,7 +60,6 @@
     dl.social-list dt { font-weight: 600; margin: 0 0 .25rem; }
     dl.social-list dd { margin: 0; color: var(--muted); }
     dl.social-list dd a { color: var(--accent); }
-
     .back-to-top { display: inline-block; margin-top: 1rem; }
 
     @media (prefers-reduced-motion: reduce) {
@@ -117,10 +117,10 @@
 
       <article>
         <h3>Memeprojects</h3>
-        <p>Are you bored? Memeprojects is here for you with chaotic tests like RU a Cheater and Persona Evaluator. Take a spin through wildly unscientific quizzes, leave with a questionable verdict or persona, and enjoy the chaos. A quick privacy note: your answers aren’t collected, and the site isn’t spying on you.</p>
+        <p>The digital antidote to having nothing to do and a suspicious amount of free time. Memeprojects serves up unhinged quizzes, questionable diagnostic verdicts, and internet chaos designed to waste your time in the best possible way. Your answers aren’t collected; the site is here to judge your vibes, not harvest your data.</p>
         <ul>
-          <li><strong>RU a Cheater:</strong> Let the completely unserious verdict machine deliver its dramatic judgment. It’s a joke generator, not a courtroom; expect laughs, not evidence.</li>
-          <li><strong>Persona Evaluator:</strong> Press a button and receive a very important-sounding persona result. Take it with approximately zero seriousness; it’s here for a chuckle, not to define you.</li>
+          <li><strong>RU a Cheater:</strong> Submit yourself to a completely unserious verdict machine. It’s a joke generator, not a courtroom—no lawyers, no evidence, just dramatic judgment.</li>
+          <li><strong>Persona Evaluator:</strong> Press a button; receive a very important-sounding persona result. Take it with approximately zero seriousness. Your friends, regrettably, may not.</li>
         </ul>
         <p><a href="https://2three1y.github.io/memeprojects/">Explore the Memeprojects collection on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/memeprojects">Browse the Memeprojects source code on GitHub</a></p>
@@ -128,28 +128,28 @@
 
       <article>
         <h3>Reactor Toolbar</h3>
-        <p>Need to react at the speed of thought—or at least faster than finding the right button? Reactor Toolbar offers quick-draw accessibility reactions and handy toolbar shortcuts, because your enthusiasm shouldn’t need a scavenger hunt.</p>
+        <p>Fast-draw reactions and accessible toolbar power, without hunting through menus like an archaeologist excavating the sacred Like button. Get to the reaction or shortcut you need while the moment is still happening.</p>
         <p><a href="https://2three1y.github.io/reactor-toolbar/">Try Reactor Toolbar on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/reactor-toolbar">Explore Reactor Toolbar source code on GitHub</a></p>
       </article>
 
       <article>
         <h3>Easyconvert</h3>
-        <p>Need to convert files without hitting shady ad-infested bloatware or 50 popup ads? Easyconvert gets you fast, clean conversions straight in your browser—no circus of download buttons required. Your files stay on your device; they aren’t collected or sent off for processing.</p>
+        <p>File conversion without 47 malware ads, sketchy download countdowns, or fake “Click Here” banners trying to install a toolbar on your grandmother’s laptop. Easyconvert handles clean, in-browser conversion—no shady download circus. Your files stay on your device; they aren’t collected or sent off for processing.</p>
         <p><a href="https://2three1y.github.io/Easyconvert/">Convert files with Easyconvert on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/Easyconvert">Browse Easyconvert source code on GitHub</a></p>
       </article>
 
       <article>
         <h3>Alex Classic</h3>
-        <p>Miss the uncompressed, legendary Alex timbre without the crunch? Alex Classic is chasing that familiar voice in all its crisp, retro glory—nostalgia, now with fewer audio gremlins.</p>
+        <p>A proper homage to the legendary, uncompressed Leopard-era Alex timbre—before neural models gave him a midlife crisis, pitch distortion, and an inexplicable new relationship with compression. Classic Alex, sounding like himself again.</p>
         <p><a href="https://github.com/2three1y/alex-classic">Explore Alex Classic source code on GitHub</a></p>
         <p>GitHub Pages is disabled for this project.</p>
       </article>
 
       <article>
         <h3>Soundvault</h3>
-        <p>Take a trip through nostalgic accessibility chimes, classic synths, retro OS soundpacks, and audio relics—all gathered in one vault. Come for the beep, stay because that startup sound just unlocked a core memory.</p>
+        <p>Nostalgic chimes, classic speech synths, vintage soundfonts, and retro OS audio relics—rescued from the digital void before they vanish into the great forgotten-download-folder in the sky. Open the vault; accidentally spend an hour recognizing startup sounds.</p>
         <p><a href="https://2three1y.github.io/soundvault/">Explore audio finds in Soundvault on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/soundvault">Browse Soundvault source code on GitHub</a></p>
       </article>
@@ -182,7 +182,12 @@
         </div>
         <div>
           <dt>Nostr</dt>
-          <dd><label for="nostr-npub">Nostr public key (npub)</label><br><input id="nostr-npub" type="text" value="npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d" readonly aria-label="Nostr public key, selectable and copyable"></dd>
+          <dd>
+            <p><label for="nostr-npub">Nostr public key (npub)</label></p>
+            <p><code id="nostr-npub">npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</code></p>
+            <p><button id="copy-nostr-btn" type="button" aria-describedby="copy-nostr-status">Copy Nostr Public Key</button></p>
+            <span id="copy-nostr-status" role="status" aria-live="polite" aria-atomic="true"></span>
+          </dd>
         </div>
         <div>
           <dt>Discord</dt>
@@ -195,5 +200,28 @@
   </main>
 
   <footer><p>2three1y</p></footer>
+
+  <script>
+    const copyNostrButton = document.getElementById('copy-nostr-btn');
+    const nostrNpub = document.getElementById('nostr-npub');
+    const copyNostrStatus = document.getElementById('copy-nostr-status');
+    let copyStatusTimeout;
+
+    copyNostrButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(nostrNpub.textContent.trim());
+        copyNostrButton.textContent = 'Copied!';
+        copyNostrStatus.textContent = 'Nostr public key copied to clipboard.';
+      } catch {
+        copyNostrStatus.textContent = 'Could not copy automatically. Select the public key text and copy it manually.';
+      }
+
+      clearTimeout(copyStatusTimeout);
+      copyStatusTimeout = setTimeout(() => {
+        copyNostrButton.textContent = 'Copy Nostr Public Key';
+        copyNostrStatus.textContent = '';
+      }, 2500);
+    });
+  </script>
 </body>
 </html>
