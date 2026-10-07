@@ -27,14 +27,14 @@
     body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.06rem/1.7 system-ui, sans-serif; }
     a { color: var(--accent); text-underline-offset: .18em; }
     :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
-    header, nav, main, footer { width: min(100% - 2rem, 58rem); margin-inline: auto; }
+    header, nav, main { width: min(100% - 2rem, 58rem); margin-inline: auto; }
     header { padding: 4rem 0 1.5rem; }
     nav { border-block: 1px solid var(--border); padding: .8rem 0; }
     nav ul { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; list-style: none; padding: 0; margin: 0; }
     main { padding: 3rem 0; }
     main > section { margin-block: 3rem; }
     article { margin-block: 2rem; padding: 1.1rem 1.2rem; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); }
-    footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
+    
     button { font: inherit; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); border-radius: .4rem; padding: .45rem .8rem; cursor: pointer; }
 
     /* Visually-hidden until focused: standard skip-link pattern */
@@ -249,7 +249,7 @@
     <p><a class="back-to-top" href="#top">Back to top</a></p>
   </main>
 
-  <footer><p>2three1y</p></footer>
+  
 
   <script>
     const copyNostrButton = document.getElementById('copy-nostr-btn');
