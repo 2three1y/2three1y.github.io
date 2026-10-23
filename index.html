@@ -28,14 +28,23 @@
       color-scheme: light dark;
       --bg: #f2f2f4; --surface: #ffffff; --surface-2: #e9e9ee; --text: #111114; --muted: #45454d;
       --accent: #0a58b8; --border: #d4d4db; --focus: #0a58b8; --halo: #f2f2f4; --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.04);
+      --on-accent: #ffffff;
       --radius: 1.15rem; --col: 44rem;
     }
     @media (prefers-color-scheme: dark) {
-      :root {
+      :root:not([data-theme="light"]) {
         --bg: #111113; --surface: #1c1c1f; --surface-2: #2a2a2f; --text: #f5f5f7; --muted: #b9b9c2;
-        --accent: #6cb6ff; --border: #34343a; --focus: #ffe66d; --halo: #111113; --shadow: none;
+        --accent: #6cb6ff; --border: #34343a; --focus: #ffe66d; --halo: #111113; --shadow: none; --on-accent: #111113;
       }
     }
+    /* Theme picked in Settings: Light or Dark overrule the device, System (no attribute) follows it. */
+    :root[data-theme="light"] { color-scheme: light; }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #111113; --surface: #1c1c1f; --surface-2: #2a2a2f; --text: #f5f5f7; --muted: #b9b9c2;
+      --accent: #6cb6ff; --border: #34343a; --focus: #ffe66d; --halo: #111113; --shadow: none; --on-accent: #111113;
+    }
+    :root[data-text="large"] { font-size: 118.75%; }
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.0625rem/1.7 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif; overflow-wrap: break-word; }
@@ -109,6 +118,48 @@
     footer p { max-width: 40rem; }
     .back-to-top { display: inline-block; margin-top: 1rem; }
 
+
+    /* Settings: grouped rounded rows, labels left, controls right. No motion. */
+    nav button#settings-open { display: inline-block; min-height: 44px; padding: .5rem .9rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-2); color: var(--text); font-weight: 600; line-height: 1.35; }
+    html:has(dialog#settings[open]) { overflow: hidden; }
+    dialog#settings { margin: 0 0 0 auto; padding: 0; width: min(100%, 28rem); max-width: 100%; height: 100%; max-height: 100%; border: 0; border-left: 1px solid var(--border); background: var(--bg); color: var(--text); overflow-y: auto; overflow-x: hidden; }
+    dialog#settings::backdrop { background: rgba(0, 0, 0, .5); }
+    .settings-inner { min-height: 100%; padding: 1.25rem 1.1rem 2rem; }
+    .settings-top { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: .4rem; }
+    .settings-top h2 { margin: 0; font-size: 1.6rem; }
+    #settings-close { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+    .settings-intro { color: var(--muted); margin: 0 0 1.25rem; font-size: 1rem; }
+    .settings-inner h3 { margin: 1.4rem 0 .5rem .9rem; font-size: .95rem; font-weight: 700; color: var(--muted); letter-spacing: 0; }
+    .settings-group { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+    .set-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem .75rem; margin: 0; padding: .6rem .9rem; min-height: 3.25rem; border: 0; border-top: 1px solid var(--border); min-width: 0; }
+    .settings-group > .set-row:first-child { border-top: 0; }
+    fieldset.set-row legend { float: left; padding: 0; font-weight: 600; }
+    .seg { display: flex; padding: 3px; gap: 3px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; }
+    .seg-opt { position: relative; display: flex; }
+    .seg-opt input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+    .seg-opt label { display: flex; align-items: center; justify-content: center; min-width: 4.25rem; min-height: 44px; padding: .3rem .8rem; border-radius: 999px; font-weight: 600; line-height: 1.2; }
+    .seg-opt input:checked + label { background: var(--accent); color: var(--on-accent); }
+    .seg-opt input:focus-visible + label { outline: 3px solid var(--focus); outline-offset: 2px; box-shadow: 0 0 0 5px var(--halo); }
+    .set-row.set-switch-row { padding: 0; }
+    .set-switch { display: flex; align-items: center; justify-content: space-between; gap: .75rem; width: 100%; min-height: 3.25rem; margin: 0; padding: .6rem .9rem; border: 0; border-radius: var(--radius); background: transparent; color: var(--text); text-align: left; font-weight: 600; }
+    .set-switch:hover { border: 0; background: var(--surface-2); }
+    .set-switch[aria-disabled="true"] { cursor: not-allowed; }
+    .set-end { display: inline-flex; align-items: center; gap: .55rem; flex: none; }
+    .set-state { color: var(--muted); font-weight: 500; font-size: .95rem; }
+    .track { position: relative; display: inline-block; width: 3.1rem; height: 1.9rem; border: 2px solid var(--muted); border-radius: 999px; background: transparent; flex: none; }
+    .knob { position: absolute; top: 50%; left: .2rem; width: 1.2rem; height: 1.2rem; margin-top: -.6rem; border-radius: 50%; background: var(--muted); }
+    .set-switch[aria-checked="true"] .track { background: var(--accent); border-color: var(--accent); }
+    .set-switch[aria-checked="true"] .knob { left: auto; right: .2rem; background: var(--on-accent); }
+    .set-foot { margin: .45rem .9rem 0; color: var(--muted); font-size: .93rem; line-height: 1.5; }
+    .settings-joke { margin: 2rem .9rem 0; color: var(--muted); font-size: .95rem; font-style: italic; }
+    @media (forced-colors: active) {
+      .seg-opt input:checked + label { outline: 2px solid CanvasText; }
+      .track { border-color: CanvasText; }
+      .knob { background: CanvasText; }
+      .set-switch[aria-checked="true"] .track { background: Highlight; border-color: Highlight; }
+      .set-switch[aria-checked="true"] .knob { background: Canvas; }
+    }
+
     @media (max-width: 30rem) {
       header { padding-top: 3rem; }
       article, .chime-bar { padding: 1.1rem 1.1rem; }
@@ -157,6 +208,16 @@ if(mq.addEventListener)mq.addEventListener("change",function(){sync(false);});el
 document.addEventListener("visibilitychange",function(){d.classList.toggle("ps-hidden",document.hidden);});
 document.addEventListener("click",function(e){var b=e.target&&e.target.closest&&e.target.closest("#ps-calm");if(!b)return;var on=b.getAttribute("aria-pressed")==="true";try{localStorage.setItem(K,on?"off":"on");}catch(x){}sync(true);});
 document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
+</script>
+<script id="prefs-script">
+/* Theme + text size from Settings, applied before the page paints. Saved on this device only. */
+(function(){var d=document.documentElement;
+function get(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+window.__applyPrefs=function(){var t=get("theme"),s=get("text-size");
+if(t==="light"||t==="dark")d.setAttribute("data-theme",t);else d.removeAttribute("data-theme");
+if(s==="large")d.setAttribute("data-text","large");else d.removeAttribute("data-text");
+var m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++){var o=m[i].getAttribute("data-c")||m[i].getAttribute("content");m[i].setAttribute("data-c",o);m[i].setAttribute("content",t==="light"?"#f2f2f4":t==="dark"?"#111113":o);}};
+window.__applyPrefs();})();
 </script>
 </head>
 <body>
@@ -221,6 +282,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
       <li><a href="#projects">Projects (the good stuff)</a></li>
       <li><a href="blog/">Writing (the blog)</a></li>
       <li><a href="#socials">Socials (where to find me)</a></li>
+      <li id="settings-entry" hidden><button type="button" id="settings-open" aria-haspopup="dialog"><span aria-hidden="true">⚙︎ </span>Settings (theme, chime, Calm mode)</button></li>
     </ul>
   </nav>
 
@@ -484,6 +546,54 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
     <p>Co-written with <a href="https://tab.bot">Tab, my AI sidekick</a>. I wrote the vibes, Tab wrote the commits. If something breaks, blame accordingly (it was Tab).</p>
   </footer>
 
+  <dialog id="settings" aria-labelledby="settings-title">
+    <div class="settings-inner">
+      <div class="settings-top">
+        <h2 id="settings-title">Settings</h2>
+        <button type="button" id="settings-close">Close</button>
+      </div>
+      <p class="settings-intro">Make this place yours. Every change sticks the moment you pick it, no Save button, no loading bar, no drama.</p>
+
+      <h3>Look</h3>
+      <div class="settings-group">
+        <fieldset class="set-row">
+          <legend>Theme</legend>
+          <div class="seg">
+            <span class="seg-opt"><input type="radio" name="set-theme" id="set-theme-system" value="system"><label for="set-theme-system">System</label></span>
+            <span class="seg-opt"><input type="radio" name="set-theme" id="set-theme-light" value="light"><label for="set-theme-light">Light</label></span>
+            <span class="seg-opt"><input type="radio" name="set-theme" id="set-theme-dark" value="dark"><label for="set-theme-dark">Dark</label></span>
+          </div>
+        </fieldset>
+        <fieldset class="set-row">
+          <legend>Text size</legend>
+          <div class="seg">
+            <span class="seg-opt"><input type="radio" name="set-text" id="set-text-default" value="default"><label for="set-text-default">Default</label></span>
+            <span class="seg-opt"><input type="radio" name="set-text" id="set-text-large" value="large"><label for="set-text-large">Large</label></span>
+          </div>
+        </fieldset>
+      </div>
+      <p class="set-foot">System follows your device. Light and Dark overrule it, respectfully. Large bumps all the text up a notch.</p>
+
+      <h3>Sound</h3>
+      <div class="settings-group">
+        <div class="set-row set-switch-row">
+          <button type="button" role="switch" id="set-chime" class="set-switch" aria-checked="true"><span class="set-label">Startup chime</span><span class="set-end" aria-hidden="true"><span class="set-state">On</span><span class="track"><span class="knob"></span></span></span></button>
+        </div>
+      </div>
+      <p class="set-foot">Same switch as the one at the top of the page. Flip either one and they both follow, like a duo queue that actually communicates.</p>
+
+      <h3>Motion</h3>
+      <div class="settings-group">
+        <div class="set-row set-switch-row">
+          <button type="button" role="switch" id="set-calm" class="set-switch" aria-checked="true"><span class="set-label">Calm mode</span><span class="set-end" aria-hidden="true"><span class="set-state">On</span><span class="track"><span class="knob"></span></span></span></button>
+        </div>
+      </div>
+      <p class="set-foot" id="set-calm-foot">Keeps anything that could ever move perfectly still. On by default.</p>
+
+      <p class="settings-joke">These save on your device only. I can’t see them, and honestly I don’t want to. I have enough settings of my own to ignore.</p>
+    </div>
+  </dialog>
+
   <script>
     const copyNostrButton = document.getElementById('copy-nostr-btn');
     const nostrNpub = document.getElementById('nostr-npub');
@@ -533,8 +643,15 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
         var on = isOn();
         tog.setAttribute('aria-pressed', on ? 'true' : 'false');
         stateEl.textContent = on ? 'on' : 'off';
+        try { document.dispatchEvent(new CustomEvent('chimechange', { detail: { on: on } })); } catch (e) {}
       }
       syncToggle();
+      // The Settings panel's chime switch flips the very same setting.
+      window.__chimeSet = function (on) {
+        try { localStorage.setItem(KEY, on ? 'on' : 'off'); } catch (e) {}
+        syncToggle();
+        if (!on) { stop(); disarm(); }
+      };
 
       var ctx = null, master = null, played = false, armed = false;
       function getCtx() {
@@ -624,7 +741,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
         if (e.type === 'keydown' && /^(Escape|Shift|Control|Alt|Meta|CapsLock|Fn)$/.test(e.key)) return;
         var t = e.target;
         // The chime's own buttons handle themselves.
-        if (t && t.closest && t.closest('#chime-btn, #chime-toggle')) { disarm(); return; }
+        if (t && t.closest && t.closest('#chime-btn, #chime-toggle, #set-chime')) { disarm(); return; }
         disarm();
         tryStart('first-interaction');
       }
@@ -657,6 +774,94 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
         if (a) setTimeout(focusNotice, 0);
       });
       if (location.hash === '#ps-notice') setTimeout(focusNotice, 0);
+    })();
+
+    // Settings panel: a native dialog. Focus moves in, Escape or Close shuts it, focus goes back to the opener.
+    (function () {
+      var dlg = document.getElementById('settings');
+      var openBtn = document.getElementById('settings-open');
+      var entry = document.getElementById('settings-entry');
+      var closeBtn = document.getElementById('settings-close');
+      if (!dlg || !openBtn || typeof dlg.showModal !== 'function') return;
+      var chimeSw = document.getElementById('set-chime');
+      var calmSw = document.getElementById('set-calm');
+      var calmFoot = document.getElementById('set-calm-foot');
+      var rm = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
+      var opener = null;
+      function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+      function put(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+      function setSwitch(sw, on) {
+        sw.setAttribute('aria-checked', on ? 'true' : 'false');
+        var s = sw.querySelector('.set-state');
+        if (s) s.textContent = on ? 'On' : 'Off';
+      }
+      function syncRadios() {
+        var t = get('theme'); if (t !== 'light' && t !== 'dark') t = 'system';
+        document.getElementById('set-theme-' + t).checked = true;
+        document.getElementById(get('text-size') === 'large' ? 'set-text-large' : 'set-text-default').checked = true;
+      }
+      function syncChime() { setSwitch(chimeSw, get('startup-chime') !== 'off'); }
+      function syncCalm() {
+        var on = window.calmMode ? window.calmMode() : true;
+        setSwitch(calmSw, on);
+        if (rm.matches) {
+          calmSw.setAttribute('aria-disabled', 'true');
+          calmFoot.textContent = 'Your device’s Reduce Motion setting is on, so Calm mode stays on. Your settings outrank mine.';
+        } else {
+          calmSw.removeAttribute('aria-disabled');
+          calmFoot.textContent = 'Keeps anything that could ever move perfectly still. On by default.';
+        }
+      }
+      function syncAll() { syncRadios(); syncChime(); syncCalm(); }
+
+      dlg.addEventListener('change', function (e) {
+        var t = e.target;
+        if (t.name === 'set-theme') put('theme', t.value);
+        else if (t.name === 'set-text') put('text-size', t.value);
+        else return;
+        if (window.__applyPrefs) window.__applyPrefs();
+      });
+      chimeSw.addEventListener('click', function () {
+        var on = chimeSw.getAttribute('aria-checked') !== 'true';
+        if (window.__chimeSet) window.__chimeSet(on); else put('startup-chime', on ? 'on' : 'off');
+        syncChime();
+      });
+      calmSw.addEventListener('click', function () {
+        if (rm.matches) return;
+        var on = !(window.calmMode && window.calmMode());
+        put('calm-mode', on ? 'on' : 'off');
+        if (window.__psSync) window.__psSync(false);
+        syncCalm();
+      });
+      document.addEventListener('chimechange', syncChime);
+      document.addEventListener('calmchange', syncCalm);
+
+      openBtn.addEventListener('click', function () {
+        opener = openBtn;
+        syncAll();
+        dlg.showModal();
+      });
+      closeBtn.addEventListener('click', function () { dlg.close(); });
+      // Keep Tab and Shift+Tab looping inside the panel while it's open.
+      dlg.addEventListener('keydown', function (e) {
+        if (e.key !== 'Tab') return;
+        var f = [].filter.call(dlg.querySelectorAll('button, input'), function (el) {
+          return !el.disabled && el.offsetParent !== null && (el.type !== 'radio' || el.checked);
+        });
+        if (!f.length) return;
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      });
+      // A tap on the dimmed backdrop closes it too.
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+      dlg.addEventListener('close', function () {
+        var o = opener || openBtn;
+        opener = null;
+        try { o.focus(); } catch (e) {}
+      });
+      syncAll();
+      if (entry) entry.hidden = false;
     })();
   </script>
 </body>
