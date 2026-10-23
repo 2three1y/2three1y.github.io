@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
       <li>What was checked: every animation, transition and script on this page, plus a frame-by-frame screen recording measured against the WCAG 2.3.1 limits (no more than three flashes in any second, including red flashes).</li>
       <li>Nothing on this site moves or blinks on its own. Not even a little.</li>
       <li>Your device's Reduce Motion setting is respected: if anything that moves ever gets added, it stays still while that setting is on.</li>
-      <li>This site never plays sound on its own. Ironic, considering the playlist.</li>
+      <li>This site never plays sound on its own. Ironic, considering the playlist. The only sound here is the startup chime, and it plays only when you press its button.</li>
       <li>Honest limits: this was tested with automated measurement, not a clinical tool like PEAT, and not on every device.</li>
     </ul>
     <p>If anything here ever flickers, that’s a real bug. Please <a href="https://github.com/2three1y/2three1y.github.io/issues">report it on GitHub</a>.</p>
@@ -133,7 +133,31 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 
   <header id="top">
     <h1>Carter (2three1y)</h1>
-    <p>Welcome to my corner of the internet. Accessible tools, Nostr stuff, old computer voices, and way too much bass. Bugs are features until proven otherwise.</p>
+    <p>A wild visitor appeared. Welcome to my corner of the internet: accessible tools, Nostr stuff, old computer voices, and way too much bass. Bugs are features until proven otherwise.</p>
+    <p id="custom-status">Custom status: arguing with Safari</p>
+    <script>
+      (function () {
+        var statuses = [
+          'arguing with Safari',
+          'teaching VoiceOver how to say 2three1y',
+          'listening to SUPXR at a volume my ears did not agree to',
+          'AFK, but the bass is still on',
+          'renaming repos so hyphens can never hurt anyone again',
+          'fixing a bug I made while fixing a bug',
+          'playing chess by ear and losing respectfully',
+          'starring repos faster than I can read them',
+          'in a voice channel, saying nothing, vibing',
+          'asking Classic Alex for life advice',
+          'offline-first, sleep-last',
+          'found a div pretending to be a button, reporting it to the mods',
+          'muted (on purpose this time)',
+          'checking that the focus ring is still visible (it is, it is huge)',
+          'adding one more feature before bed (lying)'
+        ];
+        var el = document.getElementById('custom-status');
+        if (el) el.textContent = 'Custom status: ' + statuses[Math.floor(Math.random() * statuses.length)];
+      })();
+    </script>
   </header>
 
   <nav aria-label="Page navigation">
@@ -154,45 +178,47 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 
       
 
-      <p>Hey, I’m Carter! You might know me as 2three1y. I go by Carter now, but the username stays. It’s been through too much to retire.</p>
+      <p>Hey, I’m Carter! You might know me as 2three1y. I go by Carter now, but the username stays. It’s been through too much to retire, and honestly it has seniority.</p>
 
-      <p>I like poking at tech until I figure out how it works, then turning it into something people can actually use. Sometimes that’s a handy browser tool. Sometimes it’s a quiz that judges your vibes. Both count.</p>
+      <p>I poke at tech until it confesses how it works, then turn it into something people can actually use. Sometimes that’s a handy browser tool. Sometimes it’s a quiz that judges your vibes. Both count. Both shipped.</p>
 
-      <p>Accessibility is built in from the first line, not bolted on at the end. Real headings, keyboard for everything, focus you can see, and stuff that tells you what it’s doing. If a screen reader can’t get around it, it isn’t done.</p>
+      <p>Accessibility goes in at the first line, not duct-taped on at the end. Real headings, keyboard for everything, focus you can see, and stuff that tells you what it’s doing. If a screen reader can’t get around it, it isn’t done. It’s a draft with a domain name.</p>
 
-      <p>I’m also a little obsessed with old computer voices, synths and system sounds. Startup chimes, classic speech synths, the tiny noises old hardware makes. If it beeped back in the day, I want to hear it again.</p>
+      <p>I’m also a little obsessed with old computer voices, synths and system sounds. Startup chimes, classic speech synths, the tiny noises old hardware makes. If it beeped back in the day, I want it back on speaker.</p>
 
-      <p>And I like tools that live on your own device and don’t need anyone’s permission to work. Local-first, decentralized, actually yours. That’s pretty much what Looscid is about.</p>
+      <p>And I like tools that live on your own device and don’t need anyone’s permission to work. Local-first, decentralized, actually yours. No “please sign in to continue” pop-up ruining the vibe. That’s pretty much what Looscid is about.</p>
 
       <h3>Favorites</h3>
 
-      <p>Now playing: whatever shuffle picks from the 203-song playlist. Lately that means hyperpop, digicore and jerk-style type beats. Short tracks (most under 3 minutes), roughly 120 to 150 BPM, and bass the loudness meter is honestly a little worried about.</p>
+      <p>Warning: this section is mostly bass. Numbers below are rough measurements of each track, not a lab report.</p>
+
+      <p>Now playing: whatever shuffle picks from the 203-song playlist. Expect hyperpop, digital rap and jersey club bounce, mostly under 3 minutes, anywhere from a laid-back 80-ish BPM to a 170-ish BPM sprint, with bass the loudness meter has opened a support ticket about.</p>
 
       <article>
 
         <h4>Playlists</h4>
 
         <ul>
-          <li><a href="https://www.youtube.com/playlist?list=PLZZegqbp1Trc">my song playlist</a>: 200+ songs, heavy on SUPXR, waera and pxiqzes</li>
-          <li><a href="https://youtube.com/playlist?list=PLMFsoYpUMuLYKhZcQHGLyKyIhrqPIFeon&amp;si=OZAla0CtnyUH_0pn">amazing beat playlist</a></li>
-          <li><a href="https://youtube.com/playlist?list=PLMFsoYpUMuLaRLbKDwUdTOwx0VgdaX8H7&amp;si=1dx7jpZezbfK4gaH">funny videos playlist</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLZZegqbp1Trc">my song playlist</a>: 200+ songs, heavy on SUPXR, waera and pxiqzes. Shuffle at your own risk.</li>
+          <li><a href="https://youtube.com/playlist?list=PLMFsoYpUMuLYKhZcQHGLyKyIhrqPIFeon&amp;si=OZAla0CtnyUH_0pn">amazing beat playlist</a>: beats for coding, or for pretending to code</li>
+          <li><a href="https://youtube.com/playlist?list=PLMFsoYpUMuLaRLbKDwUdTOwx0VgdaX8H7&amp;si=1dx7jpZezbfK4gaH">funny videos playlist</a>: emotional support for when the build fails</li>
         </ul>
 
       </article>
 
       <article>
 
-        <h4>Favorite tracks</h4>
+        <h4>Favorite tracks (with vibe checks)</h4>
 
         <ul>
-          <li><a href="https://www.youtube.com/watch?v=VSp9MDXYWsY">YOU DECIDE</a> by SUPXR (yes, the page title is a reference)</li>
-          <li><a href="https://www.youtube.com/watch?v=kGCdZ63ZZGI">wussup?</a> by shteppi and SUPXR</li>
-          <li><a href="https://www.youtube.com/watch?v=fZtLSdtQFgs">concord.</a> by shteppi</li>
-          <li><a href="https://www.youtube.com/watch?v=6Ku7wQvJvoE">ronald.</a> by shteppi</li>
-          <li><a href="https://www.youtube.com/watch?v=zWp8dfJO_04">SCRUPLES</a> by yit and Isaac Horner</li>
-          <li><a href="https://www.youtube.com/watch?v=gcemjdDbKuo">press start.</a> by pxiqzes featuring mi.ntyyy</li>
-          <li><a href="https://www.youtube.com/watch?v=nN9H95IwD4A">flower</a> by waera</li>
-          <li><a href="https://www.youtube.com/watch?v=5hiS3xc-hmg">What’s a Nintendo?</a> by Lilithzplug</li>
+          <li><a href="https://www.youtube.com/watch?v=VSp9MDXYWsY">YOU DECIDE</a> by SUPXR: hyperpop with a jersey club bounce at about 129 BPM, so the only thing you actually get to decide is how hard you nod (yes, the page title is a reference).</li>
+          <li><a href="https://www.youtube.com/watch?v=kGCdZ63ZZGI">wussup?</a> by shteppi and SUPXR: about 123 BPM and roughly 69% bass, the audio version of someone typing “wussup?” and then joining your voice channel without asking.</li>
+          <li><a href="https://www.youtube.com/watch?v=fZtLSdtQFgs">concord.</a> by shteppi: waera on the beat, around 136 BPM, and mastered so loud (about −8 LUFS) that it doesn’t knock, it kicks the door in and asks why you’re muted.</li>
+          <li><a href="https://www.youtube.com/watch?v=6Ku7wQvJvoE">ronald.</a> by shteppi: a laid-back bounce around 83 BPM with about three-quarters of the energy down in the bass, like the server member named Ronald who never talks but everyone somehow loves.</li>
+          <li><a href="https://www.youtube.com/watch?v=zWp8dfJO_04">SCRUPLES</a> by yit and Isaac Horner: measured at about −5.7 LUFS, the loudest track on this whole site by a mile, mastered like it just bought Nitro and has something to prove.</li>
+          <li><a href="https://www.youtube.com/watch?v=gcemjdDbKuo">press start.</a> by pxiqzes featuring mi.ntyyy: about 150 BPM played half-time with 72% bass, so it sits there like a chill game lobby right up until the boss music kicks in.</li>
+          <li><a href="https://www.youtube.com/watch?v=nN9H95IwD4A">flower</a> by waera: fast (around 172 BPM) and the bassiest one here at about 89%, which makes “flower” the most misleading name in the server, respectfully.</li>
+          <li><a href="https://www.youtube.com/watch?v=5hiS3xc-hmg">What’s a Nintendo?</a> by Lilithzplug: a bouncy 129-ish BPM with about two-thirds bass and a title engineered to start a 40-message argument in the gaming channel.</li>
         </ul>
 
       </article>
@@ -203,7 +229,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 
         <ul>
           <li>Classic Alex, the Leopard-era one, before neural voices gave him a midlife crisis</li>
-          <li>Old-school speech synths in general. The more robotic, the better</li>
+          <li>Old-school speech synths in general. The more robotic, the better. Bonus points if it mispronounces my username</li>
         </ul>
 
       </article>
@@ -213,11 +239,14 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
         <h4>Favorite things</h4>
 
         <ul>
-          <li>Startup chimes and system sounds</li>
+          <li>Startup chimes and system sounds (I made my own, see below)</li>
           <li>Synths and vintage soundfonts</li>
           <li>Retro OS audio that nobody else bothered to save</li>
-          <li>Apps that work offline and keep your stuff on your device</li>
+          <li>Apps that work offline and keep your stuff on your device, like a normal amount of privacy</li>
         </ul>
+
+        <p><button id="chime-btn" type="button">Play my startup chime</button></p>
+        <p id="chime-note">About two seconds, made live in your browser, and it only plays when you press the button. If your iPhone is on silent, it may stay quiet.</p>
 
       </article>
 
@@ -225,47 +254,47 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 
     <section id="advocacy" aria-labelledby="advocacy-heading">
       <h2 id="advocacy-heading">Accessibility advocacy</h2>
-      <h3>Not optional, not a plugin</h3>
+      <h3>Not optional, not a plugin, not a paid DLC</h3>
       <p>Accessibility isn’t a feature I add when there’s time left over. It’s the starting line. Semantic HTML, focus you can see, keyboard support for everything, high contrast, structure that makes sense when it’s read out loud, and no important info hiding behind fiddly extra clicks.</p>
-      <p>If it only works with a mouse, it’s still in early access.</p>
+      <p>If it only works with a mouse, it’s still in early access. If a div is pretending to be a button, it’s catfishing, and I will notice.</p>
     </section>
 
     <section id="looscid" aria-labelledby="looscid-heading">
       <h2 id="looscid-heading">Looscid</h2>
       <h3>My local-first workspace (forever in beta, in a good way)</h3>
-      <p>Looscid is an autonomous, local-first, decentralized web workspace built around owning your stuff. Your data and daily tools stay useful right on your own device. It’s still evolving, and no, it’s not trying to replace iOS or Android.</p>
-      <p>The main quest is screen-reader comfort: predictable landmarks and headings, short chunks, keyboard-first movement, and status updates announced through live regions. The goal is a workspace that stays calm when every single thing is being spoken.</p>
+      <p>Looscid is an autonomous, local-first, decentralized web workspace built around owning your stuff. Your data and daily tools stay useful right on your own device. It’s still evolving, and no, it’s not trying to replace iOS or Android. It knows its role.</p>
+      <p>The main quest is screen-reader comfort: predictable landmarks and headings, short chunks, keyboard-first movement, and status updates announced through live regions. The goal is a workspace that stays calm when every single thing is being spoken. Think quiet server at 3 AM, not everyone unmuting in the voice channel at once.</p>
     </section>
 
     <section id="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
-      <p>Stuff I built. Newest on top, chaos toward the bottom. Bass levels: working as intended.</p>
+      <p>Stuff I built. Newest on top, chaos sinks to the bottom. Bass levels: working as intended. Ping me if something breaks, I’m probably already in there.</p>
 
       <!-- New projects go right below this line: copy an <article> block. -->
       <article>
         <h3>Earshot</h3>
-        <p>New: an offline talking assistant in your browser. Paste text, open a file or a link, and it reads it aloud with natural neural voices (or hands it to VoiceOver). Talk to it to pause, skip, speed up or ask what the text says. Voices download only when you press Load voices.</p>
+        <p>New: an offline talking assistant in your browser. Paste text, open a file or a link, and it reads it aloud with natural neural voices (or hands it to VoiceOver). Talk to it to pause, skip, speed up or ask what the text says. Voices download only when you press Load voices. It never gets tired of reading to you, unlike some people.</p>
         <p><a href="https://2three1y.github.io/earshot/">Try Earshot on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/earshot">Browse Earshot source code on GitHub</a></p>
       </article>
 
       <article>
         <h3>Relay Radio</h3>
-        <p>New: Nostr as a radio station. Press play and the feed comes in as sound: an earcon for each note, reply, repost, reaction, zap and mention, then the note read aloud (or by VoiceOver). Safe curated relays by default, with an optional station for people you follow.</p>
+        <p>New: Nostr as a radio station. Press play and the feed comes in as sound: an earcon for each note, reply, repost, reaction, zap and mention, then the note read aloud (or by VoiceOver). Safe curated relays by default, with an optional station for people you follow. It’s lurking, but with earcons.</p>
         <p><a href="https://2three1y.github.io/relayradio/">Tune in to Relay Radio on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/relayradio">Browse Relay Radio source code on GitHub</a></p>
       </article>
 
       <article>
         <h3>Blind Chess</h3>
-        <p>New: chess you play entirely by sound and keyboard. Every move is spoken out loud, you type moves like Nf3 or tap squares, and you can play the computer, pass and play, or invite a friend over Nostr with a link. No account needed.</p>
+        <p>New: chess you play entirely by sound and keyboard. Every move is spoken out loud, you type moves like Nf3 or tap squares, and you can play the computer, pass and play, or invite a friend over Nostr with a link. No account needed. Trash talk sold separately.</p>
         <p><a href="https://2three1y.github.io/blindchess/">Play Blind Chess on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/blindchess">Browse Blind Chess source code on GitHub</a></p>
       </article>
 
       <article>
         <h3>Stargazer</h3>
-        <p>New: my 8,000+ GitHub stars as a sound map. Every repo plays a note (more stars, higher note), with audio graphs by month, language and license.</p>
+        <p>New: my 8,000+ GitHub stars as a sound map. Every repo plays a note (more stars, higher note), with audio graphs by month, language and license. Yes, I star a lot of repos. No, I will not be taking questions.</p>
         <p><a href="https://2three1y.github.io/stargazer/">Explore Stargazer on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/stargazer">Browse Stargazer source code on GitHub</a></p>
       </article>
@@ -279,21 +308,21 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 
       <article>
         <h3>GameSpeak</h3>
-        <p>New: drop in a game screenshot and it reads the text bubbles top to bottom, with next and previous line keys and a describe-layout mode. Reading text from pictures needs browser support; on iPhone, paste text from Live Text.</p>
+        <p>New: drop in a game screenshot and it reads the text bubbles top to bottom, with next and previous line keys and a describe-layout mode. Reading text from pictures needs browser support; on iPhone, paste text from Live Text. The NPCs finally speak up.</p>
         <p><a href="https://2three1y.github.io/gamespeak/">Try GameSpeak on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/gamespeak">Browse GameSpeak source code on GitHub</a></p>
       </article>
 
       <article>
         <h3>Dream Nests</h3>
-        <p>New: accessible live Nostr audio rooms and streams. Earcons tell you when a hand is raised, a mic turns on or a room ends, and the live chat gets read aloud. It’s listen-only and opens Nests rooms in their own app.</p>
+        <p>New: accessible live Nostr audio rooms and streams. Earcons tell you when a hand is raised, a mic turns on or a room ends, and the live chat gets read aloud. It’s listen-only and opens Nests rooms in their own app. Basically a voice channel, minus the open mic eating chips.</p>
         <p><a href="https://2three1y.github.io/dreamnests/">Listen to live audio rooms in Dream Nests on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/dreamnests">Browse Dream Nests source code on GitHub</a></p>
       </article>
 
       <article>
         <h3>Tap Party</h3>
-        <p>New and featured: a serverless Morse chat where you share a room link, tap a big pad, and your friends hear and feel every dot and dash. It has a learn mode and a braille view, and it’s built only from repos I’ve starred, all credited.</p>
+        <p>New and featured: a serverless Morse chat where you share a room link, tap a big pad, and your friends hear and feel every dot and dash. It has a learn mode and a braille view, and it’s built only from repos I’ve starred, all credited. Group chat, but make it the 1840s.</p>
         <p><a href="https://2three1y.github.io/tap-party/">Start a Morse chat in Tap Party on GitHub Pages</a></p>
         <p><a href="https://github.com/2three1y/tap-party">Browse Tap Party source code on GitHub</a></p>
       </article>
@@ -352,14 +381,14 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 
     <section id="blog" aria-labelledby="blog-heading">
       <h2 id="blog-heading">Blog / Writing</h2>
-      <p>For when a thought needs more than one breath. Latest:</p>
+      <p>For when a thought needs more than one breath, or more than one message in a row. Latest:</p>
       <p><a href="blog/my-800-iphone-died/">My $800 iPhone Died, and a 2019 iPod Had to Save It</a></p>
-      <p><a href="blog/">Read everything I’ve written</a></p>
+      <p><a href="blog/">Read everything I’ve written (no paywall, no newsletter pop-up)</a></p>
     </section>
 
     <section id="socials" aria-labelledby="socials-heading">
       <h2 id="socials-heading">Socials</h2>
-      <p>Come say hi. I reply faster than my builds finish.</p>
+      <p>Come say hi. I reply faster than my builds finish, which is a low bar but I clear it.</p>
       <ul class="social-list">
         <li>
           <p class="social-name">GitHub</p>
@@ -375,7 +404,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
         </li>
         <li>
           <p class="social-name">RSS</p>
-          <p><a href="feed.xml">Subscribe to the RSS feed, new writing delivered</a></p>
+          <p><a href="feed.xml">Subscribe to the RSS feed, new writing delivered, no algorithm involved</a></p>
         </li>
         <li>
           <p class="social-name">Nostr</p>
@@ -391,11 +420,11 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
       </ul>
     </section>
 
-    <p><a class="back-to-top" href="#top">Back to top</a></p>
+    <p><a class="back-to-top" href="#top">Back to top (speedrun the scroll)</a></p>
   </main>
 
   <footer>
-    <p>Made by Carter (2three1y) with semantic HTML, a keyboard, and a playlist that never ends. No trackers, no cookies, no flashing. Known issue: sleep is still on the roadmap, no ETA.</p>
+    <p>Made by Carter (2three1y) with semantic HTML, a keyboard, and a playlist that never ends. No trackers, no cookies, no flashing, no autoplay. Known issue: sleep is still on the roadmap, no ETA. Closed as working as intended.</p>
   </footer>
 
   <script>
@@ -408,7 +437,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
       try {
         await navigator.clipboard.writeText(nostrNpub.textContent.trim());
         copyNostrButton.textContent = 'Copied!';
-        copyNostrStatus.textContent = 'Nostr public key copied to clipboard. Paste away.';
+        copyNostrStatus.textContent = 'Nostr public key copied to clipboard. Paste responsibly.';
       } catch {
         copyNostrStatus.textContent = 'Could not copy automatically. Select the public key text and copy it manually.';
       }
@@ -419,6 +448,50 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
         copyNostrStatus.textContent = '';
       }, 2500);
     });
+  </script>
+  <script>
+    (function () {
+      var btn = document.getElementById('chime-btn');
+      var note = document.getElementById('chime-note');
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!btn) return;
+      if (!AC) {
+        btn.hidden = true;
+        if (note) note.textContent = 'Your browser can’t make sounds from scratch, so the startup chime is taking a day off.';
+        return;
+      }
+      var ctx;
+      btn.addEventListener('click', function () {
+        if (!ctx) ctx = new AC();
+        if (ctx.state === 'suspended' && ctx.resume) ctx.resume();
+        var t0 = ctx.currentTime + 0.05;
+        var master = ctx.createGain();
+        master.gain.value = 0.18;
+        var lp = ctx.createBiquadFilter();
+        lp.type = 'lowpass';
+        lp.frequency.value = 3200;
+        lp.connect(master);
+        master.connect(ctx.destination);
+        // A soft C major 9 bloom: notes enter one after another, then fade together.
+        [261.63, 329.63, 392.0, 493.88, 587.33].forEach(function (f, i) {
+          var start = t0 + i * 0.07;
+          [['sine', 1, 0.5], ['triangle', 2, 0.12]].forEach(function (v) {
+            var o = ctx.createOscillator();
+            var g = ctx.createGain();
+            o.type = v[0];
+            o.frequency.value = f * v[1];
+            o.detune.value = (i % 2 ? 4 : -4);
+            g.gain.setValueAtTime(0.0001, start);
+            g.gain.exponentialRampToValueAtTime(v[2], start + 0.04);
+            g.gain.exponentialRampToValueAtTime(0.0001, start + 1.9);
+            o.connect(g);
+            g.connect(lp);
+            o.start(start);
+            o.stop(start + 2);
+          });
+        });
+      });
+    })();
   </script>
 </body>
 </html>
