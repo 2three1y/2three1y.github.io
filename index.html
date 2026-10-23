@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10131a">
+  <meta name="theme-color" content="#f2f2f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
   <meta name="description" content="Carter (2three1y): accessible tools, Nostr and audio projects, old computer voices, and way too much bass.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://2three1y.github.io/">
@@ -22,54 +23,98 @@
   <link rel="alternate" type="application/rss+xml" title="2three1y RSS feed" href="feed.xml">
   <title>Carter (2three1y) — you decide</title>
   <style>
-    :root { color-scheme: dark; --bg: #10131a; --surface: #181d27; --surface-2: #222a38; --text: #f4f7fb; --muted: #c4ccda; --accent: #79d8ff; --border: #526078; --focus: #ffe66d; }
+    /* Clean, quiet, roomy. Light and dark follow your device. No motion added. */
+    :root {
+      color-scheme: light dark;
+      --bg: #f2f2f4; --surface: #ffffff; --surface-2: #e9e9ee; --text: #111114; --muted: #45454d;
+      --accent: #0a58b8; --border: #d4d4db; --focus: #0a58b8; --halo: #f2f2f4; --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.04);
+      --radius: 1.15rem; --col: 44rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111113; --surface: #1c1c1f; --surface-2: #2a2a2f; --text: #f5f5f7; --muted: #b9b9c2;
+        --accent: #6cb6ff; --border: #34343a; --focus: #ffe66d; --halo: #111113; --shadow: none;
+      }
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.06rem/1.7 system-ui, sans-serif; }
-    a { color: var(--accent); text-underline-offset: .18em; }
-    :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
-    header, nav, main, footer { width: min(100% - 2rem, 58rem); margin-inline: auto; }
-    header { padding: 4rem 0 1.5rem; }
-    nav { border-block: 1px solid var(--border); padding: .8rem 0; }
-    nav ul { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; list-style: none; padding: 0; margin: 0; }
-    main { padding: 3rem 0; }
-    main > section { margin-block: 3rem; }
-    article { margin-block: 2rem; padding: 1.1rem 1.2rem; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); }
-    
-    button { font: inherit; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); border-radius: .4rem; padding: .45rem .8rem; cursor: pointer; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.0625rem/1.7 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif; overflow-wrap: break-word; }
+    h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.015em; margin: 0 0 .6rem; }
+    h1 { font-size: clamp(2.1rem, 1.6rem + 2.4vw, 3.1rem); font-weight: 800; letter-spacing: -.03em; }
+    h2 { font-size: clamp(1.5rem, 1.3rem + .9vw, 1.85rem); font-weight: 750; margin-top: 0; }
+    h3 { font-size: 1.2rem; font-weight: 700; }
+    h4 { font-size: 1.05rem; font-weight: 700; }
+    p { margin: 0 0 1rem; }
+    ul { padding-left: 1.25rem; }
+    li { margin: .45rem 0; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .2em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; box-shadow: 0 0 0 6px var(--halo); }
+    header, nav, main, footer { width: min(100% - 2rem, var(--col)); margin-inline: auto; }
+    header { padding: 4.5rem 0 2rem; }
+    header > p { color: var(--muted); font-size: 1.125rem; max-width: 38rem; }
+    #custom-status { display: inline-block; margin: .25rem 0 0; padding: .45rem .95rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); color: var(--text); font-size: .95rem; }
+    nav { padding: .5rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+    nav ul { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: 0; }
+    nav li { margin: 0; }
+    nav a { display: inline-block; padding: .5rem .9rem; border-radius: 999px; color: var(--text); text-decoration: none; background: var(--surface-2); line-height: 1.35; }
+    nav a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+    main { padding: 2.5rem 0 3rem; }
+    main > section { margin-block: 4.5rem; }
+    main > section > p, main > section > h3 { max-width: 40rem; }
+    main > section > h3 { color: var(--muted); font-weight: 600; font-size: 1.1rem; margin-bottom: 1rem; }
+    article { margin-block: 1rem; padding: 1.25rem 1.4rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    article > :last-child, article ul > li:last-child { margin-bottom: 0; }
+    article p { color: var(--text); }
+    article p + p { margin-bottom: .35rem; }
+    section > article:first-of-type { margin-top: 1.5rem; }
+    code { font: .92em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--surface-2); padding: .15em .4em; border-radius: .4rem; }
+
+    button { font: inherit; font-weight: 600; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: .55rem 1.1rem; min-height: 44px; cursor: pointer; }
+    button:hover { border-color: var(--muted); }
 
     /* Visually-hidden until focused: standard skip-link pattern */
     .skip-link {
       position: absolute;
       left: 1rem;
       top: -3.5rem;
-      background: var(--surface-2);
+      background: var(--surface);
       color: var(--text);
       padding: .6rem 1rem;
-      border-radius: .4rem;
+      border-radius: 999px;
       border: 1px solid var(--border);
       z-index: 100;
       transition: top .15s ease-in-out;
     }
-    .chime-bar { margin: 1rem 0 1.5rem; padding: .8rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: .6rem; }
-    .chime-row { display: flex; flex-wrap: wrap; gap: .6rem .8rem; margin: 0 0 .5rem; }
+    .chime-bar { margin: 0 0 1rem; padding: 1.1rem 1.25rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .chime-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: 0 0 .75rem; }
     .chime-row button { min-height: 44px; }
+    #chime-btn { background: var(--text); color: var(--bg); border-color: var(--text); }
     #chime-toggle[aria-pressed="false"] { background: transparent; }
-    #chime-note { margin: 0; color: var(--muted); }
+    #chime-note { margin: 0; color: var(--muted); font-size: .97rem; }
     #ps-title:focus { outline: 3px solid #1b1b1b; outline-offset: 2px; }
     #ps-title:focus:not(:focus-visible) { outline: none; }
     .skip-link:focus {
       top: 1rem;
     }
 
-    ul.social-list { list-style: none; margin: 0; padding: 0; }
-    ul.social-list > li { padding: .9rem 0; border-bottom: 1px solid var(--border); color: var(--muted); }
+    ul.social-list { list-style: none; margin: 1.5rem 0 0; padding: .25rem 1.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+    ul.social-list > li { margin: 0; padding: 1rem 0; border-bottom: 1px solid var(--border); color: var(--muted); }
     ul.social-list > li:last-child { border-bottom: none; }
-    ul.social-list p { margin: .25rem 0; }
+    ul.social-list p { margin: .2rem 0; }
     ul.social-list a { color: var(--accent); }
-    .social-name { font-weight: 600; color: var(--text); }
+    .social-name { font-weight: 700; color: var(--text); }
     #nostr-npub code { overflow-wrap: anywhere; word-break: break-all; }
-    footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 2rem 0 4rem; color: var(--muted); font-size: .97rem; }
+    footer p { max-width: 40rem; }
     .back-to-top { display: inline-block; margin-top: 1rem; }
+
+    @media (max-width: 30rem) {
+      header { padding-top: 3rem; }
+      article, .chime-bar { padding: 1.1rem 1.1rem; }
+      ul.social-list { padding-inline: 1.1rem; }
+      main > section { margin-block: 3.5rem; }
+    }
 
     @media (prefers-reduced-motion: reduce) {
       .skip-link { transition: none; }
@@ -193,7 +238,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 
       <p>Hey, I’m Carter, also known as 2three1y. Carter is the display name now. 2three1y is the username, and it isn’t going anywhere: it has seniority, it has survived every rename, and it would win the server vote anyway.</p>
 
-      <p>My main quest: poke at tech until it confesses how it works, then turn it into something people can actually use. Some days that’s a handy browser tool. Some days it’s a quiz that judges your vibes. Both shipped. Both count. No further questions.</p>
+      <p>My main quest: poke at tech until it confesses how it works, then turn it into something people can actually use. Some days that’s a handy browser tool. Some days it’s a chess game you play by ear. Both shipped. Both count. No further questions.</p>
 
       <p>Accessibility ships in the first commit, not in a hotfix after launch. Real headings, keyboard for everything, focus you can actually see, and apps that tell you what they’re doing. If a screen reader can’t get around it, it isn’t done. It’s a draft with a domain name.</p>
 
@@ -203,7 +248,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 
       <h3>Favorites</h3>
 
-      <p>Warning: this section is mostly bass. Numbers below are rough measurements of each track, not a lab report.</p>
+      <p>Warning: this section is mostly bass, and damn, it’s a lot of bass. Numbers below are rough measurements of each track, not a lab report.</p>
 
       <p>Now playing: whatever shuffle picks from the 203-song playlist. Expect hyperpop, digital rap and jersey club bounce, mostly under 3 minutes, anywhere from a laid-back 80-ish BPM to a 170-ish BPM sprint, with bass the loudness meter has opened a support ticket about.</p>
 
@@ -212,7 +257,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
         <h4>Playlists</h4>
 
         <ul>
-          <li><a href="https://www.youtube.com/playlist?list=PLZZegqbp1Trc">my song playlist</a>: 200+ songs, heavy on SUPXR, waera and pxiqzes. Shuffle at your own risk.</li>
+          <li><a href="https://www.youtube.com/playlist?list=PLZZegqbp1Trc">my song playlist</a>: 200+ songs, heavy on SUPXR, waera and pxiqzes. Shuffle at your own risk. This shit slaps.</li>
           <li><a href="https://youtube.com/playlist?list=PLMFsoYpUMuLYKhZcQHGLyKyIhrqPIFeon&amp;si=OZAla0CtnyUH_0pn">amazing beat playlist</a>: beats for coding, or for pretending to code</li>
           <li><a href="https://youtube.com/playlist?list=PLMFsoYpUMuLaRLbKDwUdTOwx0VgdaX8H7&amp;si=1dx7jpZezbfK4gaH">funny videos playlist</a>: emotional support for when the build fails</li>
         </ul>
@@ -267,7 +312,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
       <h2 id="advocacy-heading">Accessibility advocacy</h2>
       <h3>Not optional, not a plugin, not a paid DLC</h3>
       <p>Accessibility isn’t a feature I add when there’s time left over. It’s the starting line. Semantic HTML, focus you can see, keyboard support for everything, high contrast, structure that makes sense when it’s read out loud, and no important info hiding behind fiddly extra clicks.</p>
-      <p>If it only works with a mouse, it’s still in early access. If a div is pretending to be a button, it’s catfishing, and I will notice.</p>
+      <p>If it only works with a mouse, it’s still in early access. If a div is pretending to be a button, it’s catfishing, and I will notice. What the hell, div.</p>
     </section>
 
     <section id="looscid" aria-labelledby="looscid-heading">
@@ -399,7 +444,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 
     <section id="socials" aria-labelledby="socials-heading">
       <h2 id="socials-heading">Socials</h2>
-      <p>Come say hi. I reply faster than my builds finish, which is a low bar but I clear it.</p>
+      <p>Come say hi. I reply faster than my builds finish, which is a low bar, but hell, I clear it.</p>
       <ul class="social-list">
         <li>
           <p class="social-name">GitHub</p>
@@ -436,6 +481,7 @@ document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 
   <footer>
     <p>Made by Carter (2three1y) with semantic HTML, a keyboard, and a playlist that never ends. No trackers, no cookies, no flashing, and nothing autoplays except one tiny startup chime with an off switch. Known issue: sleep is still on the roadmap, no ETA. Closed as working as intended.</p>
+    <p>Co-written with <a href="https://tab.bot">Tab, my AI sidekick</a>. I wrote the vibes, Tab wrote the commits. If something breaks, blame accordingly (it was Tab).</p>
   </footer>
 
   <script>
