@@ -114,6 +114,14 @@
     ul.social-list a { color: var(--accent); }
     .social-name { font-weight: 700; color: var(--text); }
     #nostr-npub code { overflow-wrap: anywhere; word-break: break-all; }
+    /* Projects: Loostore-style cards. Name, what it does, then Open and source code links. */
+    #projects article h3 { font-size: 1.3rem; margin-bottom: .35rem; }
+    #projects .status { color: var(--muted); }
+    #projects .links { display: flex; flex-wrap: wrap; gap: .5rem; margin: .9rem 0 0; }
+    #projects a.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: .5rem 1rem; border: 2px solid var(--accent); border-radius: 10px; background: var(--accent); color: var(--on-accent); font-weight: 600; line-height: 1.3; text-decoration: none; }
+    #projects a.btn.alt { background: transparent; color: var(--accent); }
+    #projects a.btn:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+    @media (forced-colors: active) { #projects a.btn { border-color: LinkText; } }
     footer { border-top: 1px solid var(--border); padding: 2rem 0 4rem; color: var(--muted); font-size: .97rem; }
     footer p { max-width: 40rem; }
     .back-to-top { display: inline-block; margin-top: 1rem; }
@@ -392,78 +400,67 @@ window.__applyPrefs();})();
       <article>
         <h3>Fork Lab</h3>
         <p>New: I fork a lot of apps, and most of them can’t run on a webpage, so I made tiny fake-but-working demos of 8 of them. Mesh chat on bitchat, posting on Misskey and Feditext, a scripted Kilo Code helper, a TalkBack trainer, the GrapheneOS camera, messages and PDF viewer, Chat UI and OldTwitter. All fake data, no servers, nothing to break. Finally my forks do something besides sit there looking busy.</p>
-        <p><a href="https://2three1y.github.io/forklab/">Try the Fork Lab demos on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/forklab">Browse Fork Lab source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/forklab/">Open Fork Lab</a> <a class="btn alt" href="https://github.com/2three1y/forklab">Fork Lab source code</a></p>
       </article>
 
       <article>
         <h3>Retro Desk</h3>
         <p>New: a Windows 95-style desktop in your browser, fan-made and totally original. Press Turn on computer for the boot chime, then poke around the Start menu, My Computer, a Notepad that actually saves, and a Recycle Bin with attitude. Zero blue screens so far. I’m knocking on my beige plastic.</p>
-        <p><a href="https://2three1y.github.io/retrodesk/">Boot up Retro Desk on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/retrodesk">Browse Retro Desk source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/retrodesk/">Open Retro Desk</a> <a class="btn alt" href="https://github.com/2three1y/retrodesk">Retro Desk source code</a></p>
       </article>
 
       <article>
         <h3>Letter Orchestra</h3>
         <p>New: type letters and they turn into music. 17 instruments, effects like reverb, delay and a bitcrusher, genre demos to get you started, and Export WAV so you can keep your masterpiece. Turns out my group chat messages slap.</p>
-        <p><a href="https://2three1y.github.io/letterorchestra/">Play Letter Orchestra on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/letterorchestra">Browse Letter Orchestra source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/letterorchestra/">Open Letter Orchestra</a> <a class="btn alt" href="https://github.com/2three1y/letterorchestra">Letter Orchestra source code</a></p>
       </article>
 
       <article>
         <h3>Earshot</h3>
         <p>New: an offline talking assistant in your browser. Paste text, open a file or a link, and it reads it aloud with natural neural voices (or hands it to VoiceOver). Talk to it to pause, skip, speed up or ask what the text says. Voices download only when you press Load voices. It never gets tired of reading to you, unlike some people.</p>
-        <p><a href="https://2three1y.github.io/earshot/">Try Earshot on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/earshot">Browse Earshot source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/earshot/">Open Earshot</a> <a class="btn alt" href="https://github.com/2three1y/earshot">Earshot source code</a></p>
       </article>
 
       <article>
         <h3>Relay Radio</h3>
         <p>New: Nostr as a radio station. Press play and the feed comes in as sound: an earcon for each note, reply, repost, reaction, zap and mention, then the note read aloud (or by VoiceOver). Safe curated relays by default, with an optional station for people you follow. It’s lurking, but with earcons.</p>
-        <p><a href="https://2three1y.github.io/relayradio/">Tune in to Relay Radio on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/relayradio">Browse Relay Radio source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/relayradio/">Open Relay Radio</a> <a class="btn alt" href="https://github.com/2three1y/relayradio">Relay Radio source code</a></p>
       </article>
 
       <article>
         <h3>Blind Chess</h3>
         <p>New: chess you play entirely by sound and keyboard. Every move is spoken out loud, you type moves like Nf3 or tap squares, and you can play the computer, pass and play, or invite a friend over Nostr with a link. No account needed. Trash talk sold separately.</p>
-        <p><a href="https://2three1y.github.io/blindchess/">Play Blind Chess on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/blindchess">Browse Blind Chess source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/blindchess/">Open Blind Chess</a> <a class="btn alt" href="https://github.com/2three1y/blindchess">Blind Chess source code</a></p>
       </article>
 
       <article>
         <h3>Stargazer</h3>
         <p>New: my 8,000+ GitHub stars as a sound map. Every repo plays a note (more stars, higher note), with audio graphs by month, language and license. Yes, I star a lot of repos. No, I will not be taking questions.</p>
-        <p><a href="https://2three1y.github.io/stargazer/">Explore Stargazer on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/stargazer">Browse Stargazer source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/stargazer/">Open Stargazer</a> <a class="btn alt" href="https://github.com/2three1y/stargazer">Stargazer source code</a></p>
       </article>
 
       <article>
         <h3>Retro Voice Jukebox</h3>
         <p>New: type anything and hear it in old-school DECtalk-style formant voices. 13 presets, retro effects, and you can save clips as WAV. One of them sings. You’ve been warned.</p>
-        <p><a href="https://2three1y.github.io/retrovoicejukebox/">Try Retro Voice Jukebox on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/retrovoicejukebox">Browse Retro Voice Jukebox source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/retrovoicejukebox/">Open Retro Voice Jukebox</a> <a class="btn alt" href="https://github.com/2three1y/retrovoicejukebox">Retro Voice Jukebox source code</a></p>
       </article>
 
       <article>
         <h3>GameSpeak</h3>
         <p>New: drop in a game screenshot and it reads the text bubbles top to bottom, with next and previous line keys and a describe-layout mode. Reading text from pictures needs browser support; on iPhone, paste text from Live Text. The NPCs finally speak up.</p>
-        <p><a href="https://2three1y.github.io/gamespeak/">Try GameSpeak on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/gamespeak">Browse GameSpeak source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/gamespeak/">Open GameSpeak</a> <a class="btn alt" href="https://github.com/2three1y/gamespeak">GameSpeak source code</a></p>
       </article>
 
       <article>
         <h3>Dream Nests</h3>
         <p>New: accessible live Nostr audio rooms and streams. Earcons tell you when a hand is raised, a mic turns on or a room ends, and the live chat gets read aloud. It’s listen-only and opens Nests rooms in their own app. Basically a voice channel, minus the open mic eating chips.</p>
-        <p><a href="https://2three1y.github.io/dreamnests/">Listen to live audio rooms in Dream Nests on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/dreamnests">Browse Dream Nests source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/dreamnests/">Open Dream Nests</a> <a class="btn alt" href="https://github.com/2three1y/dreamnests">Dream Nests source code</a></p>
       </article>
 
       <article>
         <h3>Tap Party</h3>
         <p>New and featured: a serverless Morse chat where you share a room link, tap a big pad, and your friends hear and feel every dot and dash. It has a learn mode and a braille view, and it’s built only from repos I’ve starred, all credited. Group chat, but make it the 1840s.</p>
-        <p><a href="https://2three1y.github.io/tapparty/">Start a Morse chat in Tap Party on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/tapparty">Browse Tap Party source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/tapparty/">Open Tap Party</a> <a class="btn alt" href="https://github.com/2three1y/tapparty">Tap Party source code</a></p>
       </article>
 
       <article>
@@ -473,48 +470,46 @@ window.__applyPrefs();})();
           <li><strong>RU a Cheater:</strong> Submit yourself to a completely unserious verdict machine. It’s a joke generator, not a courtroom—no lawyers, no evidence, just dramatic judgment.</li>
           <li><strong>Persona Evaluator:</strong> Press a button; receive a very important-sounding persona result. Take it with approximately zero seriousness. Your friends, regrettably, may not.</li>
         </ul>
-        <p><a href="https://2three1y.github.io/memeprojects/">Explore the Memeprojects collection on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/memeprojects">Browse the Memeprojects source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/memeprojects/">Open Memeprojects</a> <a class="btn alt" href="https://github.com/2three1y/memeprojects">Memeprojects source code</a></p>
       </article>
 
       <article>
         <h3>Reactor Toolbar</h3>
         <p>Fast-draw reactions and accessible toolbar power, without hunting through menus like an archaeologist excavating the sacred Like button. Get to the reaction or shortcut you need while the moment is still happening.</p>
-        <p><a href="https://2three1y.github.io/reactortoolbar/">Try Reactor Toolbar on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/reactortoolbar">Explore Reactor Toolbar source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/reactortoolbar/">Open Reactor Toolbar</a> <a class="btn alt" href="https://github.com/2three1y/reactortoolbar">Reactor Toolbar source code</a></p>
       </article>
 
       <article>
         <h3>Easyconvert</h3>
         <p>File conversion without 47 malware ads, sketchy download countdowns, or fake “Click Here” banners trying to install a toolbar on your grandmother’s laptop. Easyconvert handles clean, in-browser conversion—no shady download circus. Your files stay on your device; they aren’t collected or sent off for processing.</p>
-        <p><a href="https://2three1y.github.io/Easyconvert/">Convert files with Easyconvert on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/Easyconvert">Browse Easyconvert source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/Easyconvert/">Open Easyconvert</a> <a class="btn alt" href="https://github.com/2three1y/Easyconvert">Easyconvert source code</a></p>
       </article>
 
       <article>
         <h3>Alex Classic</h3>
         <p>A proper homage to the legendary, uncompressed Leopard-era Alex timbre—before neural models gave him a midlife crisis, pitch distortion, and an inexplicable new relationship with compression. Classic Alex, sounding like himself again.</p>
-        <p><a href="https://github.com/2three1y/alex-classic">Explore Alex Classic source code on GitHub</a></p>
-        <p>GitHub Pages is disabled for this project.</p>
+        <p class="status">GitHub Pages is disabled for this project.</p>
+        <p class="links"><a class="btn alt" href="https://github.com/2three1y/alexclassic">Alex Classic source code</a></p>
       </article>
 
       <article>
         <h3>Soundvault</h3>
         <p>Nostalgic chimes, classic speech synths, vintage soundfonts, and retro OS audio relics—rescued from the digital void before they vanish into the great forgotten-download-folder in the sky. Open the vault; accidentally spend an hour recognizing startup sounds.</p>
-        <p><a href="https://2three1y.github.io/soundvault/">Explore audio finds in Soundvault on GitHub Pages</a></p>
-        <p><a href="https://github.com/2three1y/soundvault">Browse Soundvault source code on GitHub</a></p>
+        <p class="links"><a class="btn" href="https://2three1y.github.io/soundvault/">Open Soundvault</a> <a class="btn alt" href="https://github.com/2three1y/soundvault">Soundvault source code</a></p>
       </article>
 
       <article>
         <h3>Code Translator</h3>
         <p>A two-panel browser code playground with a language dropdown and live output. Run JavaScript, preview HTML and SVG, and experiment with canvas drawings. Use the Run button or Ctrl/Cmd + Enter. Python is listed, but execution is not available yet. Despite the name, this runs or renders code rather than translating between languages.</p>
-        <p><a href="https://github.com/2three1y/codetranslator">Browse Code Translator source code on GitHub</a></p>
+        <p class="status">Source only, no live site yet.</p>
+        <p class="links"><a class="btn alt" href="https://github.com/2three1y/codetranslator">Code Translator source code</a></p>
       </article>
 
       <article>
         <h3>chaoticmodel</h3>
         <p>A chaotic little model with a personality of its own. Its system prompt and the raw training data behind it are open source.</p>
-        <p><a href="https://github.com/2three1y/chaoticmodel">Browse chaoticmodel source code on GitHub</a></p>
+        <p class="status">Source only, no live site yet.</p>
+        <p class="links"><a class="btn alt" href="https://github.com/2three1y/chaoticmodel">chaoticmodel source code</a></p>
       </article>
     </section>
 
