@@ -1,7 +1,6 @@
 # 2three1y
 
-Welcome to my personal site.
-
-I'm 15. I love coding (and tech). I'm blind.
-
-This page is built to be accessible. Browse the sections to learn more about me, what I'm building, and where to find me.
+Welcome to my personal site
+Thank You for checking me out
+Click
+(here)[https://www.2three1y.github.io] to browse. Thank You
