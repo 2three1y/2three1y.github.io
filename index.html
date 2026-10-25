@@ -45,6 +45,13 @@
       --accent: #6cb6ff; --border: #34343a; --focus: #ffe66d; --halo: #111113; --shadow: none; --on-accent: #111113;
     }
     :root[data-text="large"] { font-size: 118.75%; }
+    /* Font picked in Settings. System default (no attribute) keeps the look above. Atkinson Hyperlegible is self-hosted in /fonts (Braille Institute, SIL Open Font License, see fonts/OFL.txt) and only downloads if you pick it. */
+    @font-face { font-family: "Atkinson Hyperlegible"; src: url("fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Atkinson Hyperlegible"; src: url("fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+    :root[data-font="atkinson"] { --font-pick: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif; }
+    :root[data-font="mono"] { --font-pick: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    :root[data-font="atkinson"] body, :root[data-font="atkinson"] #ps-notice, :root[data-font="atkinson"] #ps-notice button, :root[data-font="atkinson"] #ps-notice summary,
+    :root[data-font="mono"] body, :root[data-font="mono"] #ps-notice, :root[data-font="mono"] #ps-notice button, :root[data-font="mono"] #ps-notice summary { font-family: var(--font-pick); }
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.0625rem/1.7 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif; overflow-wrap: break-word; }
@@ -144,6 +151,10 @@
     fieldset.set-row legend { float: left; padding: 0; font-weight: 600; }
     .seg { display: flex; padding: 3px; gap: 3px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; }
     .seg-opt { position: relative; display: flex; }
+    /* The font row has longer names, so it wraps onto more lines instead of running off the screen when zoomed in. */
+    .seg.seg-wrap { flex-wrap: wrap; border-radius: 26px; max-width: 100%; }
+    .seg-wrap .seg-opt { flex: 0 1 auto; min-width: 0; }
+    .seg-wrap .seg-opt label { text-align: center; }
     .seg-opt input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
     .seg-opt label { display: flex; align-items: center; justify-content: center; min-width: 4.25rem; min-height: 44px; padding: .3rem .8rem; border-radius: 999px; font-weight: 600; line-height: 1.2; }
     .seg-opt input:checked + label { background: var(--accent); color: var(--on-accent); }
@@ -218,12 +229,14 @@ document.addEventListener("click",function(e){var b=e.target&&e.target.closest&&
 document.addEventListener("DOMContentLoaded",function(){sync(false);});})();
 </script>
 <script id="prefs-script">
-/* Theme + text size from Settings, applied before the page paints. Saved on this device only. */
+/* Theme, text size and font from Settings, applied before the page paints. Saved on this device only. */
 (function(){var d=document.documentElement;
 function get(k){try{return localStorage.getItem(k);}catch(e){return null;}}
-window.__applyPrefs=function(){var t=get("theme"),s=get("text-size");
+window.__applyPrefs=function(){var t=get("theme"),s=get("text-size"),f=get("font");
 if(t==="light"||t==="dark")d.setAttribute("data-theme",t);else d.removeAttribute("data-theme");
 if(s==="large")d.setAttribute("data-text","large");else d.removeAttribute("data-text");
+if(f==="atkinson"||f==="mono")d.setAttribute("data-font",f);else d.removeAttribute("data-font");
+if(f==="atkinson"&&!document.getElementById("font-preload")){var l=document.createElement("link");l.id="font-preload";l.rel="preload";l.as="font";l.type="font/woff2";l.crossOrigin="anonymous";l.href="fonts/AtkinsonHyperlegible-Regular.woff2";document.head.appendChild(l);}
 var m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++){var o=m[i].getAttribute("data-c")||m[i].getAttribute("content");m[i].setAttribute("data-c",o);m[i].setAttribute("content",t==="light"?"#f2f2f4":t==="dark"?"#111113":o);}};
 window.__applyPrefs();})();
 </script>
@@ -588,8 +601,16 @@ window.__applyPrefs();})();
             <span class="seg-opt"><input type="radio" name="set-text" id="set-text-large" value="large"><label for="set-text-large">Large</label></span>
           </div>
         </fieldset>
+        <fieldset class="set-row">
+          <legend>Font</legend>
+          <div class="seg seg-wrap">
+            <span class="seg-opt"><input type="radio" name="set-font" id="set-font-system" value="system"><label for="set-font-system">System default</label></span>
+            <span class="seg-opt"><input type="radio" name="set-font" id="set-font-atkinson" value="atkinson"><label for="set-font-atkinson">Atkinson Hyperlegible</label></span>
+            <span class="seg-opt"><input type="radio" name="set-font" id="set-font-mono" value="mono"><label for="set-font-mono">Monospace</label></span>
+          </div>
+        </fieldset>
       </div>
-      <p class="set-foot">System follows your device. Light and Dark overrule it, respectfully. Large bumps all the text up a notch.</p>
+      <p class="set-foot">System follows your device. Light and Dark overrule it, respectfully. Large bumps all the text up a notch. Atkinson Hyperlegible was made by the Braille Institute for low-vision readers, so letters like I, l and 1 never get mixed up. It loads from this site, not from anybody else’s.</p>
 
       <h3>Sound</h3>
       <div class="settings-group">
@@ -816,6 +837,8 @@ window.__applyPrefs();})();
         var t = get('theme'); if (t !== 'light' && t !== 'dark') t = 'system';
         document.getElementById('set-theme-' + t).checked = true;
         document.getElementById(get('text-size') === 'large' ? 'set-text-large' : 'set-text-default').checked = true;
+        var f = get('font'); if (f !== 'atkinson' && f !== 'mono') f = 'system';
+        document.getElementById('set-font-' + f).checked = true;
       }
       function syncChime() { setSwitch(chimeSw, get('startup-chime') !== 'off'); }
       function syncCalm() {
@@ -835,6 +858,7 @@ window.__applyPrefs();})();
         var t = e.target;
         if (t.name === 'set-theme') put('theme', t.value);
         else if (t.name === 'set-text') put('text-size', t.value);
+        else if (t.name === 'set-font') put('font', t.value);
         else return;
         if (window.__applyPrefs) window.__applyPrefs();
       });
