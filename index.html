@@ -70,6 +70,10 @@
     header { padding: 4.5rem 0 2rem; }
     header > p { color: var(--muted); font-size: 1.125rem; max-width: 38rem; }
     #custom-status { display: inline-block; margin: .25rem 0 0; padding: .45rem .95rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); color: var(--text); font-size: .95rem; }
+    #past-statuses { margin: .75rem 0 0; max-width: 38rem; }
+    #past-statuses summary { cursor: pointer; }
+    #past-statuses ul { margin: .5rem 0 0; padding-left: 1.25rem; color: var(--muted); }
+    #another-status-btn { margin: .5rem 0 0; }
     nav { padding: .5rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
     nav ul { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: 0; }
     nav li { margin: 0; }
@@ -300,28 +304,75 @@ window.__applyPrefs();})();
     <h1>Chaotic Carter</h1>
     <p class="cc-tagline">producer. builder. chaos.</p>
     <p>you found my corner of the internet: accessible tools, Nostr stuff, old computer voices, and way too much bass. bugs are features until proven otherwise.</p>
-    <p id="custom-status">Custom status: arguing with Safari ... and failing 😭</p>
+    <p id="custom-status">Custom status: arguing with Safari .. and losing</p>
+    <details id="past-statuses">
+      <summary>Past statuses</summary>
+      <ul id="past-statuses-list">
+        <li>arguing with Safari .. and losing</li>
+        <li>teaching VoiceOver how to say 2three1y .. and it still says “two three one why”</li>
+        <li>listening to SUPXR at a volume my ears did not agree to .. and turning it up</li>
+        <li>AFK, but the bass is still on .. and the neighbors know</li>
+        <li>renaming repos so hyphens can never hurt anyone again .. and typoing the new name</li>
+        <li>fixing a bug I made while fixing a bug .. and making three more</li>
+        <li>playing chess by ear .. and losing respectfully</li>
+        <li>starring repos faster than I can read them .. and reading zero of them</li>
+        <li>in a voice channel, saying nothing, vibing .. and forgetting I’m unmuted</li>
+        <li>asking Classic Alex for life advice .. and actually taking it</li>
+        <li>offline-first, sleep-last .. and it’s 3 AM again</li>
+        <li>found a div pretending to be a button, reporting it to the mods .. and the mods are also divs</li>
+        <li>muted (on purpose this time) .. and nobody believes me</li>
+        <li>checking that the focus ring is still visible (it is, it is huge) .. and making it bigger</li>
+        <li>adding one more feature before bed (lying) .. and adding four</li>
+      </ul>
+    </details>
+    <p><button id="another-status-btn" type="button" hidden>Another status</button></p>
     <script>
       (function () {
         var statuses = [
-          'arguing with Safari ... and failing 😭',
-          'teaching VoiceOver how to say 2three1y ... and failing 😭',
-          'listening to SUPXR at a volume my ears did not agree to ... and failing 😭',
-          'AFK, but the bass is still on ... and failing 😭',
-          'renaming repos so hyphens can never hurt anyone again ... and failing 😭',
-          'fixing a bug I made while fixing a bug ... and failing 😭',
-          'playing chess by ear and losing respectfully ... and failing 😭',
-          'starring repos faster than I can read them ... and failing 😭',
-          'in a voice channel, saying nothing, vibing ... and failing 😭',
-          'asking Classic Alex for life advice ... and failing 😭',
-          'offline-first, sleep-last ... and failing 😭',
-          'found a div pretending to be a button, reporting it to the mods ... and failing 😭',
-          'muted (on purpose this time) ... and failing 😭',
-          'checking that the focus ring is still visible (it is, it is huge) ... and failing 😭',
-          'adding one more feature before bed (lying) ... and failing 😭'
+          "arguing with Safari .. and losing",
+          "teaching VoiceOver how to say 2three1y .. and it still says “two three one why”",
+          "listening to SUPXR at a volume my ears did not agree to .. and turning it up",
+          "AFK, but the bass is still on .. and the neighbors know",
+          "renaming repos so hyphens can never hurt anyone again .. and typoing the new name",
+          "fixing a bug I made while fixing a bug .. and making three more",
+          "playing chess by ear .. and losing respectfully",
+          "starring repos faster than I can read them .. and reading zero of them",
+          "in a voice channel, saying nothing, vibing .. and forgetting I’m unmuted",
+          "asking Classic Alex for life advice .. and actually taking it",
+          "offline-first, sleep-last .. and it’s 3 AM again",
+          "found a div pretending to be a button, reporting it to the mods .. and the mods are also divs",
+          "muted (on purpose this time) .. and nobody believes me",
+          "checking that the focus ring is still visible (it is, it is huge) .. and making it bigger",
+          "adding one more feature before bed (lying) .. and adding four"
         ];
         var el = document.getElementById('custom-status');
-        if (el) el.textContent = 'Custom status: ' + statuses[Math.floor(Math.random() * statuses.length)];
+        var current = Math.floor(Math.random() * statuses.length);
+        function show() {
+          if (el) el.textContent = 'Custom status: ' + statuses[current];
+        }
+        show();
+        // Past statuses: built from the same list, so the two never drift apart.
+        var list = document.getElementById('past-statuses-list');
+        if (list) {
+          list.textContent = '';
+          statuses.forEach(function (s) {
+            var li = document.createElement('li');
+            li.textContent = s;
+            list.appendChild(li);
+          });
+        }
+        // "Another status" picks a different one than the one showing now.
+        var btn = document.getElementById('another-status-btn');
+        if (btn) {
+          btn.hidden = false;
+          btn.addEventListener('click', function () {
+            if (statuses.length < 2) return;
+            var next;
+            do { next = Math.floor(Math.random() * statuses.length); } while (next === current);
+            current = next;
+            show();
+          });
+        }
       })();
     </script>
   </header>
