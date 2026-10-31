@@ -189,6 +189,15 @@
     @media (prefers-reduced-motion: reduce) {
       .skip-link { transition: none; }
     }
+    /* Chaotic Carter links: big full-width buttons, one per line. */
+    .cc-tagline { font-size: 1.25rem; font-weight: 700; color: var(--muted); letter-spacing: .01em; }
+    main > section > h3.cc-group { color: var(--text); font-weight: 700; font-size: 1.2rem; margin: 2rem 0 .75rem; }
+    ul.cc-links { list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    ul.cc-links > li { margin: 0; }
+    a.cc-btn { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; min-height: 3.5rem; padding: .85rem 1.25rem; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); font-weight: 700; font-size: 1.1rem; line-height: 1.35; text-decoration: none; }
+    a.cc-btn::after { content: "\2192" / ""; color: var(--accent); font-size: 1.25rem; flex: none; }
+    a.cc-btn:hover { border-color: var(--accent); }
+    .cc-latest { padding: .85rem 1.25rem; background: var(--surface-2); border-radius: var(--radius); }
   </style>
 <link rel="icon" href="data:,">
 <style id="ps-style">
@@ -297,6 +306,7 @@ window.__applyPrefs();})();
   <nav aria-label="Page navigation">
     <ul>
       <li><a href="#ps-notice">Photosensitivity notice (read this one)</a></li>
+      <li><a href="#chaotic-carter">Chaotic Carter links (music, projects, socials)</a></li>
       <li><a href="#about">About me (who even is this)</a></li>
       <li><a href="#advocacy">Accessibility advocacy (the soapbox)</a></li>
       <li><a href="#looscid">Looscid (my local-first workspace)</a></li>
@@ -312,6 +322,36 @@ window.__applyPrefs();})();
       <p class="chime-row"><button id="chime-btn" type="button">Play my startup chime</button> <button id="chime-toggle" type="button" aria-pressed="true">Startup chime: <span id="chime-state">on</span></button></p>
       <p id="chime-note">My startup chime plays once when the page opens, or on your first tap, click or key press if your browser makes sites wait. It’s soft, about two seconds, and made live in your browser. Switch it off and it stays off on this device. If your iPhone is on silent, it may stay quiet.</p>
     </div>
+
+    <section id="chaotic-carter" aria-labelledby="chaotic-carter-heading">
+      <h2 id="chaotic-carter-heading">Chaotic Carter</h2>
+      <p class="cc-tagline">producer. builder. chaos.</p>
+      <p>Every link in one place: my beats, my projects, and where to find me. Big buttons, no Linktree.</p>
+
+      <h3 class="cc-group">Music</h3>
+      <p class="cc-latest"><strong>Latest beat:</strong> new drops are on the way. <a href="https://www.youtube.com/channel/UChazMrj9avsQnGW-UiG86IQ">Hear the newest beat on my YouTube channel</a>.</p>
+      <ul class="cc-links">
+          <li><a class="cc-btn" href="https://www.youtube.com/channel/UChazMrj9avsQnGW-UiG86IQ">YouTube: Chaotic Carter beats</a></li>
+          <li><a class="cc-btn" href="https://www.tiktok.com/@supxr.and.odetari_fan">TikTok: beat snippets and chaos</a></li>
+          <li><a class="cc-btn" href="https://2three1y.github.io/letterorchestra/">Letter Orchestra: type letters, make music</a></li>
+      </ul>
+
+      <h3 class="cc-group">Projects</h3>
+      <ul class="cc-links">
+          <li><a class="cc-btn" href="https://looscid.github.io/Looscid/">Looscid: my local-first workspace</a></li>
+          <li><a class="cc-btn" href="https://2three1y.github.io/chaoticnews/">Chaotic News: news, but chaotic</a></li>
+          <li><a class="cc-btn" href="https://2three1y.github.io/dusk/">Dusk: a free voice for Piper text-to-speech</a></li>
+          <li><a class="cc-btn" href="https://2three1y.github.io/birdline/">Birdline: a no-algorithm timeline on Nostr</a></li>
+      </ul>
+
+      <h3 class="cc-group">Code and socials</h3>
+      <ul class="cc-links">
+          <li><a class="cc-btn" href="https://github.com/2three1y">GitHub: where the code lives</a></li>
+          <li><a class="cc-btn" href="https://techhub.social/@Techgirl1232">Mastodon: my profile</a></li>
+          <li><a class="cc-btn" href="#socials">Nostr: my public key, with a copy button</a></li>
+          <li><a class="cc-btn" href="https://twitter.com/2three1y">Twitter: my profile</a></li>
+      </ul>
+    </section>
 
     <section id="about" aria-labelledby="about-heading">
 
