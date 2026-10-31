@@ -183,7 +183,9 @@
       header { padding-top: 3rem; }
       article, .chime-bar { padding: 1.1rem 1.1rem; }
       ul.social-list { padding-inline: 1.1rem; }
-      main > section { margin-block: 3.5rem; }
+      main { padding-top: 1rem; }
+    main > section { margin-block: 3.5rem; }
+    main > section:first-child { margin-top: 1.5rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -274,7 +276,9 @@ window.__applyPrefs();})();
     :root[data-theme="dark"] header h1 { text-shadow: 0 0 28px rgba(124,196,255,.45); }
     .cc-tagline { margin: 0 0 1rem; font-size: 1.3rem; font-weight: 700; color: var(--accent); letter-spacing: .02em; }
     nav, article, ul.social-list, .chime-bar, .cc-nostr, .cc-latest, a.cc-btn { -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+    main { padding-top: 1rem; }
     main > section { margin-block: 3.5rem; }
+    main > section:first-child { margin-top: 1.5rem; }
     main > section > h3 { color: var(--text); font-weight: 700; font-size: 1.25rem; margin: 2rem 0 .75rem; }
     ul.cc-links { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: .65rem; }
     ul.cc-links > li { margin: 0; }
