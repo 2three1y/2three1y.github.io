@@ -392,6 +392,13 @@ window.__applyPrefs();})();
     </section>
 
     <section id="projects" class="wide" aria-labelledby="projects-heading">
+      <style>
+        #projects article h4 { margin: 0 0 .25rem; font-size: 1.4rem; line-height: 1.2; font-weight: 900; letter-spacing: -.015em; }
+        #projects .proj-nav { list-style: none; margin: 1rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+        #projects .proj-nav a { display: inline-block; min-height: 44px; padding: .55rem .95rem; background: var(--surface); color: var(--text); border: 2px solid var(--line); border-radius: 999px; box-shadow: 3px 3px 0 var(--hard); font-weight: 800; text-decoration: none; }
+        #projects .proj-nav a:hover { background: var(--surface-2); text-decoration: underline; }
+        #projects .group-intro { margin: 0; color: var(--muted); }
+      </style>
       <h2 id="projects-heading">Projects (built at 3 AM, mostly working)</h2>
       <p class="intro">everything i’ve shipped. accessible on day one, because i’m the first user and i can’t see the screen either. something broke? ping me. i’m probably already in there.</p>
       <h3>The headliners</h3>
@@ -401,94 +408,36 @@ window.__applyPrefs();})();
         <li><a href="https://2three1y.github.io/dusk/"><span class="lbl">Dusk: a free voice for Piper<span class="sr-only">, </span><span class="tag">still learning to talk, like all of us</span></span></a></li>
         <li><a href="https://2three1y.github.io/birdline/"><span class="lbl">Birdline: a Nostr timeline with zero algorithm<span class="sr-only">, </span><span class="tag">just posts, in order, like the old days</span></span></a></li>
       </ul>
-      <p class="intro">and everything else in orbit, newest-ish first:</p>
+      <p class="intro">and everything else in orbit. all 42 projects, grouped:</p>
+      <nav aria-label="Project groups">
+        <ul class="proj-nav"><li><a href="#proj-lab">Big builds and experiments</a></li><li><a href="#proj-sound">Sound and music</a></li><li><a href="#proj-tools">Everyday tools</a></li><li><a href="#proj-nostr">Nostr and play together</a></li><li><a href="#proj-social">Social apps</a></li><li><a href="#proj-sites">Sites, fan clubs and lore</a></li></ul>
+      </nav>
+      <h3 id="proj-lab">Big builds and experiments</h3>
+      <p class="group-intro">the big swings and the weird ones.</p>
       <div class="grid">
         <article id="looscid" class="feature">
-          <h3>Looscid</h3>
+          <h4>Looscid</h4>
           <p class="vibe">the main quest. forever in beta, on purpose</p>
           <p>my local-first, decentralized web workspace, built around one idea: your stuff is yours. your data and your daily tools keep working right on your own device. no account wall, no “please sign in to continue” jumpscare.</p>
           <p>it is not trying to replace iOS or Android. it knows its role. its real job is being comfy with a screen reader: predictable landmarks and headings, short chunks, keyboard-first everything, and status updates that get announced instead of hidden. the goal is a workspace that stays chill even when every single thing is being read out loud. quiet server at 3 AM, not ten people unmuting at once.</p>
           <p class="links"><a class="go" href="https://looscid.github.io/Looscid/">Open Looscid</a></p>
         </article>
         <article>
-          <h3>Fork Lab</h3>
+          <h4>Fork Lab</h4>
           <p class="vibe">my forks finally got jobs</p>
           <p>i fork a lot of apps. most of them can’t run in a browser. so i built tiny fake-but-working demos of 8 of them: mesh chat on bitchat, posting on Misskey and Feditext, a scripted Kilo Code helper, a TalkBack trainer, the GrapheneOS camera, messages and PDF viewer, Chat UI, and OldTwitter.</p>
           <p>all fake data. no servers. nothing to break (i checked, i tried).</p>
           <p class="links"><a class="go" href="https://2three1y.github.io/forklab/">Open Fork Lab</a> <a href="https://github.com/2three1y/forklab">Fork Lab source code</a></p>
         </article>
         <article>
-          <h3>Retro Desk</h3>
+          <h4>Retro Desk</h4>
           <p class="vibe">windows 95 called. i picked up</p>
           <p>a Windows 95-style desktop in your browser, fan-made and totally original. hit Turn on computer for the boot chime, then mess with the Start menu, My Computer, a Notepad that actually saves, and a Recycle Bin with a personality problem.</p>
           <p>blue screens so far: zero. knocking on beige plastic.</p>
           <p class="links"><a class="go" href="https://2three1y.github.io/retrodesk/">Open Retro Desk</a> <a href="https://github.com/2three1y/retrodesk">Retro Desk source code</a></p>
         </article>
         <article>
-          <h3>Letter Orchestra</h3>
-          <p class="vibe">type letters, accidentally make a beat</p>
-          <p>every letter you type turns into music. 17 instruments, reverb, delay, a bitcrusher, genre demos so you’re not starting from zero, and Export WAV so your masterpiece survives.</p>
-          <p>fun fact: my group chat messages go hard as melodies. the group chat did not consent.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/letterorchestra/">Open Letter Orchestra</a> <a href="https://github.com/2three1y/letterorchestra">Letter Orchestra source code</a></p>
-        </article>
-        <article>
-          <h3>Earshot</h3>
-          <p class="vibe">it reads to you and never gets tired</p>
-          <p>an offline talking assistant in your browser. paste text, open a file or a link, and it reads it out loud with natural neural voices, or hands it straight to VoiceOver. talk to it to pause, skip, speed up, or ask what the text even says.</p>
-          <p>voices only download when you press Load voices, so it’s not eating your data behind your back. unlike some apps. you know who you are.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/earshot/">Open Earshot</a> <a href="https://github.com/2three1y/earshot">Earshot source code</a></p>
-        </article>
-        <article>
-          <h3>Relay Radio</h3>
-          <p class="vibe">nostr, but it’s a radio station now</p>
-          <p>press play and your Nostr feed comes in as sound: an earcon for every note, reply, repost, reaction, zap and mention, then the note read out loud (or by VoiceOver). safe curated relays by default, plus an optional station for people you follow.</p>
-          <p>it’s lurking. with earcons. premium lurking.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/relayradio/">Open Relay Radio</a> <a href="https://github.com/2three1y/relayradio">Relay Radio source code</a></p>
-        </article>
-        <article>
-          <h3>Blind Chess</h3>
-          <p class="vibe">chess by ear. i made it for me, you can play too</p>
-          <p>chess you play completely by sound and keyboard. every move gets said out loud, you type moves like Nf3 or tap squares, and you can play the computer, pass and play, or invite a friend over Nostr with a link. no account needed.</p>
-          <p>trash talk not included. bring your own.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/blindchess/">Open Blind Chess</a> <a href="https://github.com/2three1y/blindchess">Blind Chess source code</a></p>
-        </article>
-        <article>
-          <h3>Stargazer</h3>
-          <p class="vibe">my star addiction, but you can hear it</p>
-          <p>my 8,000+ GitHub stars turned into a sound map. every repo plays a note (more stars, higher note), with audio graphs by month, language and license.</p>
-          <p>yes, i star a lot of repos. no, i will not be taking questions at this time.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/stargazer/">Open Stargazer</a> <a href="https://github.com/2three1y/stargazer">Stargazer source code</a></p>
-        </article>
-        <article>
-          <h3>Retro Voice Jukebox</h3>
-          <p class="vibe">old robot voices, on demand</p>
-          <p>type anything and hear it in old-school DECtalk-style formant voices. 13 presets, retro effects, and you can save clips as WAV.</p>
-          <p>one of the presets sings. this is your only warning.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/retrovoicejukebox/">Open Retro Voice Jukebox</a> <a href="https://github.com/2three1y/retrovoicejukebox">Retro Voice Jukebox source code</a></p>
-        </article>
-        <article>
-          <h3>GameSpeak</h3>
-          <p class="vibe">the NPCs finally speak up</p>
-          <p>drop in a game screenshot and it reads the text bubbles top to bottom, with next and previous line keys plus a describe-layout mode.</p>
-          <p>reading text out of pictures needs browser support. on iPhone, paste the text from Live Text and it works the same.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/gamespeak/">Open GameSpeak</a> <a href="https://github.com/2three1y/gamespeak">GameSpeak source code</a></p>
-        </article>
-        <article>
-          <h3>Dream Nests</h3>
-          <p class="vibe">voice channel energy, accessible edition</p>
-          <p>accessible live Nostr audio rooms and streams. earcons tell you when a hand goes up, a mic turns on, or a room ends, and the live chat gets read out loud.</p>
-          <p>it’s listen-only and opens Nests rooms in their own app. basically a voice channel without the guy eating chips on open mic.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/dreamnests/">Open Dream Nests</a> <a href="https://github.com/2three1y/dreamnests">Dream Nests source code</a></p>
-        </article>
-        <article>
-          <h3>Tap Party</h3>
-          <p class="vibe">group chat, but make it 1840</p>
-          <p>a serverless Morse code chat. share a room link, tap the big pad, and your friends hear and feel every dot and dash. it has a learn mode and a braille view.</p>
-          <p>built only from repos i’ve starred, every one credited. the stars finally paid off.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/tapparty/">Open Tap Party</a> <a href="https://github.com/2three1y/tapparty">Tap Party source code</a></p>
-        </article>
-        <article>
-          <h3>Memeprojects</h3>
+          <h4>Memeprojects</h4>
           <p class="vibe">for when you have suspicious amounts of free time</p>
           <p>unhinged quizzes, fake diagnostic verdicts, and internet chaos made to waste your time in the best way possible. your answers don’t get collected. it judges your vibes, it doesn’t harvest your data.</p>
           <ul>
@@ -498,44 +447,269 @@ window.__applyPrefs();})();
           <p class="links"><a class="go" href="https://2three1y.github.io/memeprojects/">Open Memeprojects</a> <a href="https://github.com/2three1y/memeprojects">Memeprojects source code</a></p>
         </article>
         <article>
-          <h3>Reactor Toolbar</h3>
-          <p class="vibe">find the like button without a shovel</p>
-          <p>fast reactions and accessible toolbar shortcuts, so you’re not digging through menus like an archaeologist looking for the sacred Like button. hit the reaction you want while the moment is still happening.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/reactortoolbar/">Open Reactor Toolbar</a> <a href="https://github.com/2three1y/reactortoolbar">Reactor Toolbar source code</a></p>
+          <h4>chaoticmodel</h4>
+          <p class="vibe">a model with my personality. be afraid</p>
+          <p>a chaotic little model with a personality of its own. its system prompt and the raw training data behind it are open source, so you can see exactly how the chaos was made.</p>
+          <p class="status">source only, no live site yet.</p>
+          <p class="links"><a href="https://github.com/2three1y/chaoticmodel">chaoticmodel source code</a></p>
+        </article>
+                <article>
+          <h4>NexOS</h4>
+          <p class="vibe">the other OS. yes, i have two</p>
+          <p>an operating system project, plus NexOS Web, a browser twin of it you can open right now.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/nexos/">Open NexOS</a> <a href="https://github.com/2three1y/nexos">NexOS source code</a></p>
+        </article>
+                <article>
+          <h4>Insomnia OS</h4>
+          <p class="vibe">for when it’s 4 AM and sleep said no</p>
+          <p>a cozy, accessible retro desktop for 4 AM: a live-synthesized sleep soundscape, Sheep.exe, a local-first notepad and a starfield.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/insomniaos/">Open Insomnia OS</a> <a href="https://github.com/2three1y/insomniaos">Insomnia OS source code</a></p>
+        </article>
+                <article>
+          <h4>Agentsync</h4>
+          <p class="vibe">a group project for AI agents, minus the slacker</p>
+          <p>a hub architecture for local-first agent orchestration.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/Agentsync/">Open Agentsync</a> <a href="https://github.com/2three1y/Agentsync">Agentsync source code</a></p>
+        </article>
+      </div>
+      <h3 id="proj-sound">Sound and music</h3>
+      <p class="group-intro">apps that make noise, on purpose.</p>
+      <div class="grid">
+        <article>
+          <h4>Letter Orchestra</h4>
+          <p class="vibe">type letters, accidentally make a beat</p>
+          <p>every letter you type turns into music. 17 instruments, reverb, delay, a bitcrusher, genre demos so you’re not starting from zero, and Export WAV so your masterpiece survives.</p>
+          <p>fun fact: my group chat messages go hard as melodies. the group chat did not consent.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/letterorchestra/">Open Letter Orchestra</a> <a href="https://github.com/2three1y/letterorchestra">Letter Orchestra source code</a></p>
         </article>
         <article>
-          <h3>Easyconvert</h3>
-          <p class="vibe">file conversion with zero malware ads</p>
-          <p>convert files without 47 sketchy ads, fake download countdowns, or a “Click Here” banner trying to install a toolbar on your grandma’s laptop. it all happens right in your browser. your files stay on your device and never get sent anywhere.</p>
-          <p class="links"><a class="go" href="https://2three1y.github.io/Easyconvert/">Open Easyconvert</a> <a href="https://github.com/2three1y/Easyconvert">Easyconvert source code</a></p>
+          <h4>Retro Voice Jukebox</h4>
+          <p class="vibe">old robot voices, on demand</p>
+          <p>type anything and hear it in old-school DECtalk-style formant voices. 13 presets, retro effects, and you can save clips as WAV.</p>
+          <p>one of the presets sings. this is your only warning.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/retrovoicejukebox/">Open Retro Voice Jukebox</a> <a href="https://github.com/2three1y/retrovoicejukebox">Retro Voice Jukebox source code</a></p>
         </article>
         <article>
-          <h3>Alex Classic</h3>
-          <p class="vibe">justice for the original Alex</p>
-          <p>a tribute to the legendary, uncompressed Leopard-era Alex voice, from before neural models gave him a midlife crisis, weird pitch, and a toxic relationship with compression. Alex, sounding like Alex again.</p>
-          <p class="status">GitHub Pages is off for this one, so it’s source only for now.</p>
-          <p class="links"><a href="https://github.com/2three1y/alexclassic">Alex Classic source code</a></p>
-        </article>
-        <article>
-          <h3>Soundvault</h3>
+          <h4>Soundvault</h4>
           <p class="vibe">a museum for startup sounds</p>
           <p>nostalgic chimes, classic speech synths, vintage soundfonts and retro OS audio, rescued before they vanish into the forgotten-downloads-folder in the sky.</p>
           <p>open it for one minute. lose an hour recognizing startup sounds. happens every time.</p>
           <p class="links"><a class="go" href="https://2three1y.github.io/soundvault/">Open Soundvault</a> <a href="https://github.com/2three1y/soundvault">Soundvault source code</a></p>
         </article>
         <article>
-          <h3>Code Translator</h3>
+          <h4>Stargazer</h4>
+          <p class="vibe">my star addiction, but you can hear it</p>
+          <p>my 8,000+ GitHub stars turned into a sound map. every repo plays a note (more stars, higher note), with audio graphs by month, language and license.</p>
+          <p>yes, i star a lot of repos. no, i will not be taking questions at this time.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/stargazer/">Open Stargazer</a> <a href="https://github.com/2three1y/stargazer">Stargazer source code</a></p>
+        </article>
+        <article>
+          <h4>Alex Classic</h4>
+          <p class="vibe">justice for the original Alex</p>
+          <p>a tribute to the legendary, uncompressed Leopard-era Alex voice, from before neural models gave him a midlife crisis, weird pitch, and a toxic relationship with compression. Alex, sounding like Alex again.</p>
+          <p class="status">GitHub Pages is off for this one, so it’s source only for now.</p>
+          <p class="links"><a href="https://github.com/2three1y/alexclassic">Alex Classic source code</a></p>
+        </article>
+                <article>
+          <h4>Dusk</h4>
+          <p class="vibe">still learning to talk, like all of us</p>
+          <p>a free, open-source, clear and lively English (US) voice for Piper text-to-speech.</p>
+          <p class="status">still training. files coming to Releases.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/dusk/">Open Dusk</a> <a href="https://github.com/2three1y/dusk">Dusk source code</a></p>
+        </article>
+                <article>
+          <h4>beatschool</h4>
+          <p class="vibe">beats with code. no excuses</p>
+          <p>learn to make beats with code, for AI agents and humans. it starts with a starter beat that doesn’t suck and upgrades it stage by stage until it slaps. numpy and scipy only.</p>
+          <p class="status">source only, no live site yet.</p>
+          <p class="links"><a href="https://github.com/2three1y/beatschool">beatschool source code</a></p>
+        </article>
+                <article>
+          <h4>Lyric Finder</h4>
+          <p class="vibe">for when you only know the chorus</p>
+          <p>an accessible lyric search that runs in your browser, using free public lyrics sources with a backup if one fails.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/lyricfinder/">Open Lyric Finder</a> <a href="https://github.com/2three1y/lyricfinder">Lyric Finder source code</a></p>
+        </article>
+      </div>
+      <h3 id="proj-tools">Everyday tools</h3>
+      <p class="group-intro">small apps that do one job and don’t waste your time.</p>
+      <div class="grid">
+        <article>
+          <h4>Earshot</h4>
+          <p class="vibe">it reads to you and never gets tired</p>
+          <p>an offline talking assistant in your browser. paste text, open a file or a link, and it reads it out loud with natural neural voices, or hands it straight to VoiceOver. talk to it to pause, skip, speed up, or ask what the text even says.</p>
+          <p>voices only download when you press Load voices, so it’s not eating your data behind your back. unlike some apps. you know who you are.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/earshot/">Open Earshot</a> <a href="https://github.com/2three1y/earshot">Earshot source code</a></p>
+        </article>
+        <article>
+          <h4>GameSpeak</h4>
+          <p class="vibe">the NPCs finally speak up</p>
+          <p>drop in a game screenshot and it reads the text bubbles top to bottom, with next and previous line keys plus a describe-layout mode.</p>
+          <p>reading text out of pictures needs browser support. on iPhone, paste the text from Live Text and it works the same.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/gamespeak/">Open GameSpeak</a> <a href="https://github.com/2three1y/gamespeak">GameSpeak source code</a></p>
+        </article>
+        <article>
+          <h4>Reactor Toolbar</h4>
+          <p class="vibe">find the like button without a shovel</p>
+          <p>fast reactions and accessible toolbar shortcuts, so you’re not digging through menus like an archaeologist looking for the sacred Like button. hit the reaction you want while the moment is still happening.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/reactortoolbar/">Open Reactor Toolbar</a> <a href="https://github.com/2three1y/reactortoolbar">Reactor Toolbar source code</a></p>
+        </article>
+        <article>
+          <h4>Easyconvert</h4>
+          <p class="vibe">file conversion with zero malware ads</p>
+          <p>convert files without 47 sketchy ads, fake download countdowns, or a “Click Here” banner trying to install a toolbar on your grandma’s laptop. it all happens right in your browser. your files stay on your device and never get sent anywhere.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/Easyconvert/">Open Easyconvert</a> <a href="https://github.com/2three1y/Easyconvert">Easyconvert source code</a></p>
+        </article>
+        <article>
+          <h4>Code Translator</h4>
           <p class="vibe">it doesn’t translate. it runs. naming is hard</p>
           <p>a two-panel code playground with a language dropdown and live output. run JavaScript, preview HTML and SVG, and draw on a canvas. press Run or Ctrl/Cmd + Enter. Python is in the list but can’t run yet. despite the name, it runs or renders code, it doesn’t translate between languages.</p>
           <p class="status">source only, no live site yet.</p>
           <p class="links"><a href="https://github.com/2three1y/codetranslator">Code Translator source code</a></p>
         </article>
+                <article>
+          <h4>Atlas Web</h4>
+          <p class="vibe">an AI app, now in a browser tab</p>
+          <p>my web version of the Atlas AI app by Taha Armin: chat, voice chat and writing tools.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/atlasweb/">Open Atlas Web</a> <a href="https://github.com/2three1y/atlasweb">Atlas Web source code</a></p>
+        </article>
+                <article>
+          <h4>Stolen Phone Shortcut</h4>
+          <p class="vibe">plan for the worst, tap for the best</p>
+          <p>what to do if my iPhone gets stolen: a simple Shortcut automation, written out step by step for VoiceOver. no Face ID needed.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/stolenphoneshortcut/">Open Stolen Phone Shortcut</a> <a href="https://github.com/2three1y/stolenphoneshortcut">Stolen Phone Shortcut source code</a></p>
+        </article>
+                <article>
+          <h4>MyWEB</h4>
+          <p class="vibe">the mysterious one</p>
+          <p>a private tool for DNS rooting.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/MyWEB/">Open MyWEB</a> <a href="https://github.com/2three1y/MyWEB">MyWEB source code</a></p>
+        </article>
+                <article>
+          <h4>Feditext Sim</h4>
+          <p class="vibe">a fediverse app, simulated</p>
+          <p>builds the Feditext app for the iOS Simulator on GitHub Actions. not a fork; full credit to the Feditext and Metabolist authors.</p>
+          <p class="status">source only, no live site.</p>
+          <p class="links"><a href="https://github.com/2three1y/feditextsim">Feditext Sim source code</a></p>
+        </article>
+      </div>
+      <h3 id="proj-nostr">Nostr and play together</h3>
+      <p class="group-intro">stuff you do with other people. by ear.</p>
+      <div class="grid">
         <article>
-          <h3>chaoticmodel</h3>
-          <p class="vibe">a model with my personality. be afraid</p>
-          <p>a chaotic little model with a personality of its own. its system prompt and the raw training data behind it are open source, so you can see exactly how the chaos was made.</p>
-          <p class="status">source only, no live site yet.</p>
-          <p class="links"><a href="https://github.com/2three1y/chaoticmodel">chaoticmodel source code</a></p>
+          <h4>Relay Radio</h4>
+          <p class="vibe">nostr, but it’s a radio station now</p>
+          <p>press play and your Nostr feed comes in as sound: an earcon for every note, reply, repost, reaction, zap and mention, then the note read out loud (or by VoiceOver). safe curated relays by default, plus an optional station for people you follow.</p>
+          <p>it’s lurking. with earcons. premium lurking.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/relayradio/">Open Relay Radio</a> <a href="https://github.com/2three1y/relayradio">Relay Radio source code</a></p>
+        </article>
+        <article>
+          <h4>Blind Chess</h4>
+          <p class="vibe">chess by ear. i made it for me, you can play too</p>
+          <p>chess you play completely by sound and keyboard. every move gets said out loud, you type moves like Nf3 or tap squares, and you can play the computer, pass and play, or invite a friend over Nostr with a link. no account needed.</p>
+          <p>trash talk not included. bring your own.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/blindchess/">Open Blind Chess</a> <a href="https://github.com/2three1y/blindchess">Blind Chess source code</a></p>
+        </article>
+        <article>
+          <h4>Dream Nests</h4>
+          <p class="vibe">voice channel energy, accessible edition</p>
+          <p>accessible live Nostr audio rooms and streams. earcons tell you when a hand goes up, a mic turns on, or a room ends, and the live chat gets read out loud.</p>
+          <p>it’s listen-only and opens Nests rooms in their own app. basically a voice channel without the guy eating chips on open mic.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/dreamnests/">Open Dream Nests</a> <a href="https://github.com/2three1y/dreamnests">Dream Nests source code</a></p>
+        </article>
+        <article>
+          <h4>Tap Party</h4>
+          <p class="vibe">group chat, but make it 1840</p>
+          <p>a serverless Morse code chat. share a room link, tap the big pad, and your friends hear and feel every dot and dash. it has a learn mode and a braille view.</p>
+          <p>built only from repos i’ve starred, every one credited. the stars finally paid off.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/tapparty/">Open Tap Party</a> <a href="https://github.com/2three1y/tapparty">Tap Party source code</a></p>
+        </article>
+                <article>
+          <h4>Birdline</h4>
+          <p class="vibe">just posts, in order, like the old days</p>
+          <p>short posts from people you follow, in order. old-school microblogging on Nostr. no algorithm, no ads, no AI. VoiceOver-first.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/birdline/">Open Birdline</a> <a href="https://github.com/2three1y/birdline">Birdline source code</a></p>
+        </article>
+                <article>
+          <h4>easynostr</h4>
+          <p class="vibe">Nostr, without the homework</p>
+          <p>an accessible, simple Nostr web client, screen reader first. in the spirit of Easy Chirp.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/easynostr/">Open easynostr</a> <a href="https://github.com/2three1y/easynostr">easynostr source code</a></p>
+        </article>
+      </div>
+      <h3 id="proj-social">Social apps</h3>
+      <p class="group-intro">places to post, yap and find your people.</p>
+      <div class="grid">
+                <article>
+          <h4>peep</h4>
+          <p class="vibe">invite-only, like a secret club with better buttons</p>
+          <p>an invite-only, VoiceOver-friendly fork of Chirp by Adnan Bukvic (MIT).</p>
+          <p class="links"><a class="go" href="https://peep.sites.tab.bot/">Open peep</a> <a href="https://github.com/2three1y/peep">peep source code</a></p>
+        </article>
+                <article>
+          <h4>Yapper Web</h4>
+          <p class="vibe">yap from any browser</p>
+          <p>a web version of the Yapper social app.</p>
+          <p class="status">source only, no live site right now.</p>
+          <p class="links"><a href="https://github.com/2three1y/yappersite">Yapper Web source code</a></p>
+        </article>
+                <article>
+          <h4>vibework</h4>
+          <p class="vibe">every social network, even the ones you’ve never heard of</p>
+          <p>a living index of mainstream, niche, new, regional and decentralized social networks.</p>
+          <p class="links"><a class="go" href="https://vibework.pages.bu.app/">Open vibework</a> <a href="https://github.com/2three1y/vibework">vibework source code</a></p>
+        </article>
+      </div>
+      <h3 id="proj-sites">Sites, fan clubs and lore</h3>
+      <p class="group-intro">fan clubs, fake news and one air fryer.</p>
+      <div class="grid">
+                <article>
+          <h4>Chaotic News</h4>
+          <p class="vibe">unbiased, unverified, unhinged</p>
+          <p>the Chaotic News Network. satire, all of it.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/chaoticnews/">Open Chaotic News</a> <a href="https://github.com/2three1y/chaoticnews">Chaotic News source code</a></p>
+        </article>
+                <article>
+          <h4>Loostore</h4>
+          <p class="vibe">an app store where every app is mine</p>
+          <p>every app and project of mine, in one place.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/Loostore/">Open Loostore</a> <a href="https://github.com/2three1y/Loostore">Loostore source code</a></p>
+        </article>
+                <article>
+          <h4>Carter Fan Club</h4>
+          <p class="vibe">the fan count only goes up</p>
+          <p>an over-the-top, fully accessible fan club website, with an ever-rising fan counter and a raccoon barista premiere.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/carterfanclub/">Open Carter Fan Club</a> <a href="https://github.com/2three1y/carterfanclub">Carter Fan Club source code</a></p>
+        </article>
+                <article>
+          <h4>CarterPCs Fan Club</h4>
+          <p class="vibe">RGB on, frames up</p>
+          <p>an RGB-maxed, fully accessible fan club website for tech creator CarterPCs, with a benchmark-style fan counter that never stops climbing.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/carterpcsfanclub/">Open CarterPCs Fan Club</a> <a href="https://github.com/2three1y/carterpcsfanclub">CarterPCs Fan Club source code</a></p>
+        </article>
+                <article>
+          <h4>Parker Burton Fan Club</h4>
+          <p class="vibe">green bubbles welcome</p>
+          <p>a green-bubble, fully accessible fan club website for That Android Guy, Parker Burton, with a fan counter that climbs forever.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/parkerburtonfanclub/">Open Parker Burton Fan Club</a> <a href="https://github.com/2three1y/parkerburtonfanclub">Parker Burton Fan Club source code</a></p>
+        </article>
+                <article>
+          <h4>Tab Fan Club</h4>
+          <p class="vibe">built by Tab, about Tab. a little much</p>
+          <p>a self-aware, fully accessible fan club website for Tab, the digital worker that lives in your texts.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/tabfanclub/">Open Tab Fan Club</a> <a href="https://github.com/2three1y/tabfanclub">Tab Fan Club source code</a></p>
+        </article>
+                <article>
+          <h4>Bulgeet and Bibi</h4>
+          <p class="vibe">totally legit company. do not click</p>
+          <p>a parody scam company website. every button leads nowhere.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/bulgeetandbibi/">Open Bulgeet and Bibi</a> <a href="https://github.com/2three1y/bulgeetandbibi">Bulgeet and Bibi source code</a></p>
+        </article>
+                <article>
+          <h4>Air Fryer Lore</h4>
+          <p class="vibe">a true(ish) story</p>
+          <p>the true(ish) story of Poke and the Bluetooth Air Fryer.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/Airfryerlore/">Open Air Fryer Lore</a> <a href="https://github.com/2three1y/Airfryerlore">Air Fryer Lore source code</a></p>
         </article>
       </div>
     </section>
