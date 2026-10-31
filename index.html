@@ -3,228 +3,215 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eef0fb" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#070a14" media="(prefers-color-scheme: dark)">
-  <meta name="description" content="Chaotic Carter (2three1y): beats, accessible web projects, Nostr stuff, and way too much bass. Every link in one place.">
+  <meta name="theme-color" content="#fff5e1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0a10" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="Chaotic Carter (2three1y): blind producer, coder, certified 3 AM menace. Free beats, accessible weird little apps, Nostr stuff, and every link I own. The center of the chaos.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://2three1y.github.io/">
   <meta property="og:site_name" content="Chaotic Carter">
-  <meta property="og:title" content="Chaotic Carter">
-  <meta property="og:description" content="Chaotic Carter (2three1y): beats, accessible web projects, Nostr stuff, and way too much bass. Every link in one place.">
+  <meta property="og:title" content="Chaotic Carter: the center of the chaos">
+  <meta property="og:description" content="Chaotic Carter (2three1y): blind producer, coder, certified 3 AM menace. Free beats, accessible weird little apps, Nostr stuff, and every link I own. The center of the chaos.">
+  <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@2three1y">
   <meta name="twitter:creator" content="@2three1y">
   <meta name="twitter:url" content="https://2three1y.github.io/">
-  <meta name="twitter:title" content="Chaotic Carter">
-  <meta name="twitter:description" content="Chaotic Carter (2three1y): beats, accessible web projects, Nostr stuff, and way too much bass. Every link in one place.">
+  <meta name="twitter:title" content="Chaotic Carter: the center of the chaos">
+  <meta name="twitter:description" content="Chaotic Carter (2three1y): blind producer, coder, certified 3 AM menace. Free beats, accessible weird little apps, Nostr stuff, and every link I own. The center of the chaos.">
   <link rel="me" href="https://techhub.social/@Techgirl1232">
   <link rel="me" href="https://github.com/2three1y">
   <link rel="me" href="https://twitter.com/2three1y">
+  <link rel="icon" href="data:,">
   <link rel="alternate" type="application/rss+xml" title="2three1y RSS feed" href="feed.xml">
-  <title>Chaotic Carter (2three1y): beats, builds, chaos</title>
+  <title>Chaotic Carter (2three1y): the center of the chaos</title>
+
   <style>
-    /* Clean, quiet, roomy. Light and dark follow your device. No motion added. */
+    /* Chaotic Carter, v-chaos: loud colors, hard shadows, zero motion. Light and dark follow your device unless Settings says otherwise. */
+    @font-face { font-family: "Atkinson Hyperlegible"; src: url("fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Atkinson Hyperlegible"; src: url("fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
     :root {
       color-scheme: light dark;
-      --bg: #f2f2f4; --surface: #ffffff; --surface-2: #e9e9ee; --text: #111114; --muted: #45454d;
-      --accent: #0a58b8; --border: #d4d4db; --focus: #0a58b8; --halo: #f2f2f4; --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.04);
-      --on-accent: #ffffff;
-      --radius: 1.15rem; --col: 44rem;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      --bg: #fff5e1; --surface: #ffffff; --surface-2: #ffe7b8; --text: #15121c; --muted: #463f55;
+      --accent: #5b12e6; --accent-2: #c8005f; --pop: #ffd400; --line: #15121c; --hard: #15121c;
+      --focus: #5b12e6; --halo: #fff5e1; --on-accent: #ffffff; --link: #4a0fc0;
+      --radius: .9rem; --col: 46rem; --wide: 62rem;
     }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
-        --bg: #111113; --surface: #1c1c1f; --surface-2: #2a2a2f; --text: #f5f5f7; --muted: #b9b9c2;
-        --accent: #6cb6ff; --border: #34343a; --focus: #ffe66d; --halo: #111113; --shadow: none; --on-accent: #111113;
+        --bg: #0b0a10; --surface: #17141f; --surface-2: #231e30; --text: #f8f5ff; --muted: #c9c1db;
+        --accent: #c6ff3d; --accent-2: #ff5fb0; --pop: #c6ff3d; --line: #4b4363; --hard: #c6ff3d;
+        --focus: #ffe66d; --halo: #0b0a10; --on-accent: #0b0a10; --link: #d9ff8a;
       }
     }
-    /* Theme picked in Settings: Light or Dark overrule the device, System (no attribute) follows it. */
     :root[data-theme="light"] { color-scheme: light; }
     :root[data-theme="dark"] {
       color-scheme: dark;
-      --bg: #111113; --surface: #1c1c1f; --surface-2: #2a2a2f; --text: #f5f5f7; --muted: #b9b9c2;
-      --accent: #6cb6ff; --border: #34343a; --focus: #ffe66d; --halo: #111113; --shadow: none; --on-accent: #111113;
+      --bg: #0b0a10; --surface: #17141f; --surface-2: #231e30; --text: #f8f5ff; --muted: #c9c1db;
+      --accent: #c6ff3d; --accent-2: #ff5fb0; --pop: #c6ff3d; --line: #4b4363; --hard: #c6ff3d;
+      --focus: #ffe66d; --halo: #0b0a10; --on-accent: #0b0a10; --link: #d9ff8a;
     }
     :root[data-text="large"] { font-size: 118.75%; }
-    /* Font picked in Settings. System default (no attribute) keeps the look above. Atkinson Hyperlegible is self-hosted in /fonts (Braille Institute, SIL Open Font License, see fonts/OFL.txt) and only downloads if you pick it. */
-    @font-face { font-family: "Atkinson Hyperlegible"; src: url("fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-    @font-face { font-family: "Atkinson Hyperlegible"; src: url("fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
-    :root[data-font="atkinson"] { --font-pick: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif; }
-    :root[data-font="mono"] { --font-pick: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
-    :root[data-font="atkinson"] body, :root[data-font="atkinson"] #ps-notice, :root[data-font="atkinson"] #ps-notice button, :root[data-font="atkinson"] #ps-notice summary,
-    :root[data-font="mono"] body, :root[data-font="mono"] #ps-notice, :root[data-font="mono"] #ps-notice button, :root[data-font="mono"] #ps-notice summary { font-family: var(--font-pick); }
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-    body { margin: 0; min-width: 18rem; background: var(--bg); color: var(--text); font: 1.0625rem/1.7 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif; overflow-wrap: break-word; }
-    h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.015em; margin: 0 0 .6rem; }
-    h1 { font-size: clamp(2.1rem, 1.6rem + 2.4vw, 3.1rem); font-weight: 800; letter-spacing: -.03em; }
-    h2 { font-size: clamp(1.5rem, 1.3rem + .9vw, 1.85rem); font-weight: 750; margin-top: 0; }
-    h3 { font-size: 1.2rem; font-weight: 700; }
-    h4 { font-size: 1.05rem; font-weight: 700; }
-    p { margin: 0 0 1rem; }
-    ul { padding-left: 1.25rem; }
-    li { margin: .45rem 0; }
-    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .2em; }
-    a:hover { text-decoration-thickness: 2px; }
+    :root[data-font="atkinson"] { --font: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, Arial, sans-serif; }
+    :root[data-font="mono"] { --font: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 1.0625rem/1.6 var(--font); overflow-wrap: break-word; }
+    body { background-image: radial-gradient(circle at 50% 0, color-mix(in srgb, var(--accent) 14%, transparent) 0, transparent 34rem); background-repeat: no-repeat; }
+    a { color: var(--link); text-underline-offset: .18em; text-decoration-thickness: .08em; }
+    a:hover { text-decoration-thickness: .16em; }
     :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; box-shadow: 0 0 0 6px var(--halo); }
-    header, nav, main, footer { width: min(100% - 2rem, var(--col)); margin-inline: auto; }
-    header { padding: 4.5rem 0 2rem; }
-    header > p { color: var(--muted); font-size: 1.125rem; max-width: 38rem; }
-    #custom-status { display: inline-block; margin: .25rem 0 0; padding: .45rem .95rem; border: 1px solid var(--border); border-radius: 1rem; background: var(--surface); color: var(--text); font-size: .95rem; }
-    #past-statuses { margin: .75rem 0 0; max-width: 38rem; }
-    #past-statuses summary { cursor: pointer; }
-    #past-statuses ul { margin: .5rem 0 0; padding-left: 1.25rem; color: var(--muted); }
-    #another-status-btn { margin: .5rem 0 0; }
-    nav { padding: .5rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
-    nav ul { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: 0; }
-    nav li { margin: 0; }
-    nav a { display: inline-block; padding: .5rem .9rem; border-radius: 999px; color: var(--text); text-decoration: none; background: var(--surface-2); line-height: 1.35; }
-    nav a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
-    main { padding: 2.5rem 0 3rem; }
-    main > section { margin-block: 4.5rem; }
-    main > section > p, main > section > h3 { max-width: 40rem; }
-    main > section > h3 { color: var(--muted); font-weight: 600; font-size: 1.1rem; margin-bottom: 1rem; }
-    article { margin-block: 1rem; padding: 1.25rem 1.4rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
-    article > :last-child, article ul > li:last-child { margin-bottom: 0; }
-    article p { color: var(--text); }
-    article p + p { margin-bottom: .35rem; }
-    section > article:first-of-type { margin-top: 1.5rem; }
-    code { font: .92em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--surface-2); padding: .15em .4em; border-radius: .4rem; }
+    img { max-width: 100%; height: auto; }
+    code { font-family: var(--mono); }
+    .wrap { width: min(100% - 2.25rem, var(--col)); margin-inline: auto; }
+    .wide { width: min(100% - 2.25rem, var(--wide)); margin-inline: auto; }
+    .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
-    button { font: inherit; font-weight: 600; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: .55rem 1.1rem; min-height: 44px; cursor: pointer; }
-    button:hover { border-color: var(--muted); }
+    .skip-link { position: absolute; left: 1rem; top: -10rem; z-index: 100; padding: .8rem 1.1rem; background: var(--pop); color: #15121c; font-weight: 800; border: 3px solid #15121c; border-radius: .6rem; text-decoration: none; }
+    .skip-link:focus { top: 1rem; }
 
-    /* Visually-hidden until focused: standard skip-link pattern */
-    .skip-link {
-      position: absolute;
-      left: 1rem;
-      top: -3.5rem;
-      background: var(--surface);
-      color: var(--text);
-      padding: .6rem 1rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      z-index: 100;
-      transition: top .15s ease-in-out;
-    }
-    .chime-bar { margin: 0 0 1rem; padding: 1.1rem 1.25rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
-    .chime-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: 0 0 .75rem; }
-    .chime-row button { min-height: 44px; }
-    #chime-btn { background: var(--text); color: var(--bg); border-color: var(--text); }
-    #chime-toggle[aria-pressed="false"] { background: transparent; }
-    #chime-note { margin: 0; color: var(--muted); font-size: .97rem; }
-    #ps-title:focus { outline: 3px solid #1b1b1b; outline-offset: 2px; }
+    button { font: inherit; font-weight: 800; color: var(--text); background: var(--surface); border: 2px solid var(--line); border-radius: .7rem; padding: .6rem 1rem; min-height: 44px; cursor: pointer; box-shadow: 3px 3px 0 var(--hard); }
+    button:hover { background: var(--surface-2); }
+    button:active { box-shadow: 1px 1px 0 var(--hard); }
+    button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+
+    /* Hero: the center of the chaos */
+    header.hero { position: relative; padding: 3.25rem 0 2.5rem; overflow: hidden; }
+    header.hero::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 1rem; width: 44rem; height: 44rem; margin-left: -22rem; border-radius: 50%;
+      background: repeating-radial-gradient(circle, transparent 0 4.4rem, color-mix(in srgb, var(--accent) 30%, transparent) 4.4rem calc(4.4rem + 2px)); opacity: .55; }
+    .kicker { display: inline-block; margin: 0 0 1rem; padding: .3rem .75rem; font: 700 .9rem/1.3 var(--mono); letter-spacing: .04em; background: var(--text); color: var(--bg); border-radius: 999px; }
+    header.hero h1 { margin: 0; font-size: clamp(3.1rem, 1.6rem + 9vw, 6.6rem); line-height: .9; font-weight: 900; letter-spacing: -.055em; }
+    header.hero h1 .h1-2 { display: block; color: var(--accent); }
+    .sticker { display: inline-block; margin: 1.1rem 0 .4rem; padding: .45rem .9rem; font-weight: 900; font-size: clamp(1.1rem, 1rem + .9vw, 1.45rem); line-height: 1.25; background: var(--pop); color: #15121c; border: 3px solid #15121c; border-radius: .5rem; transform: rotate(-2deg); box-shadow: 4px 4px 0 var(--accent-2); }
+    .hero-lede { font-size: 1.2rem; max-width: 38rem; margin: 1rem 0 0; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+    .hero-cta a { display: inline-flex; align-items: center; min-height: 48px; padding: .7rem 1.15rem; border: 3px solid var(--line); border-radius: .8rem; font-weight: 900; text-decoration: none; box-shadow: 4px 4px 0 var(--hard); }
+    .hero-cta a.primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); box-shadow: 4px 4px 0 var(--accent-2); }
+    .hero-cta a.ghost { background: var(--surface); color: var(--text); }
+    .hero-cta a:hover { text-decoration: underline; }
+
+    .status-card { margin: 2rem 0 0; padding: 1rem 1.1rem 1.1rem; background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); box-shadow: 5px 5px 0 var(--hard); }
+    .status-card .label { margin: 0 0 .35rem; font: 700 .85rem/1.2 var(--mono); letter-spacing: .06em; color: var(--muted); }
+    #custom-status { margin: 0 0 .75rem; font: 700 1.08rem/1.45 var(--mono); }
+    #past-statuses { margin: 0 0 .75rem; }
+    #past-statuses summary { cursor: pointer; font-weight: 800; min-height: 44px; display: list-item; padding: .55rem 0; }
+    #past-statuses ul { margin: .25rem 0 .5rem; padding-left: 1.25rem; }
+    #past-statuses li { margin: .3rem 0; }
+    .status-card p:last-of-type { margin-bottom: 0; }
+
+    /* Nav */
+    nav.jump { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 92%, transparent); border-block: 2px solid var(--line); }
+    @supports not (background: color-mix(in srgb, red 50%, blue)) { nav.jump { background: var(--bg); } }
+    nav.jump ul { display: flex; gap: .4rem; margin: 0 auto; padding: .5rem 0; list-style: none; overflow-x: auto; width: min(100% - 1.5rem, var(--wide)); scrollbar-width: thin; }
+    nav.jump li { flex: none; }
+    @media (min-width: 60rem) { nav.jump ul { flex-wrap: wrap; justify-content: center; overflow: visible; } }
+    nav.jump a, nav.jump button { display: inline-flex; align-items: center; min-height: 44px; padding: .45rem .8rem; border-radius: 999px; font-weight: 800; font-size: .98rem; color: var(--text); text-decoration: none; border: 2px solid transparent; box-shadow: none; background: transparent; }
+    nav.jump a:hover, nav.jump button:hover { border-color: var(--line); text-decoration: underline; }
+
+    /* Sections */
+    main { counter-reset: sec; }
+    main > section { margin: 4.25rem auto; }
+    main > section > h2 { counter-increment: sec; margin: 0 0 .9rem; font-size: clamp(1.9rem, 1.4rem + 2.4vw, 2.9rem); line-height: 1.02; font-weight: 900; letter-spacing: -.035em; }
+    main > section > h2::before { content: counter(sec, decimal-leading-zero); content: counter(sec, decimal-leading-zero) / ""; display: block; margin-bottom: .35rem; font: 800 .95rem/1 var(--mono); letter-spacing: .08em; color: var(--accent-2); }
+    h3 { font-size: 1.3rem; line-height: 1.2; font-weight: 900; letter-spacing: -.015em; margin: 2.1rem 0 .6rem; }
+    .intro { font-size: 1.12rem; color: var(--muted); max-width: 40rem; }
+
+    ul.big-links { list-style: none; margin: 1.2rem 0 0; padding: 0; display: grid; gap: .8rem; }
+    ul.big-links a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.7rem; padding: .85rem 1.15rem; background: var(--surface); color: var(--text); border: 2px solid var(--line); border-radius: var(--radius); box-shadow: 5px 5px 0 var(--hard); font-weight: 800; font-size: 1.1rem; line-height: 1.3; text-decoration: none; }
+    ul.big-links a::after { content: "\2192"; content: "\2192" / ""; flex: none; font-size: 1.35rem; color: var(--accent-2); }
+    ul.big-links a:hover { background: var(--surface-2); text-decoration: underline; }
+    ul.big-links a .tag { display: block; font: 600 .85rem/1.3 var(--mono); color: var(--muted); margin-top: .15rem; }
+    @media (min-width: 46rem) { ul.big-links.two { grid-template-columns: 1fr 1fr; } }
+
+    .card { margin-top: 1.2rem; padding: 1.1rem 1.2rem; background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); box-shadow: 5px 5px 0 var(--hard); }
+    .card > :first-child { margin-top: 0; }
+    .card > :last-child { margin-bottom: 0; }
+    .nostr code { overflow-wrap: anywhere; word-break: break-all; font-size: .95rem; }
+    .nostr output { display: block; padding: .6rem .75rem; background: var(--surface-2); border-radius: .5rem; }
+    .callout { padding: 1rem 1.2rem; background: var(--pop); color: #15121c; border: 3px solid #15121c; border-radius: var(--radius); font-weight: 600; }
+    .callout a { color: #15121c; }
+
+    .tracks { padding-left: 1.2rem; }
+    .tracks li { margin: .7rem 0; }
+
+    /* Project grid */
+    #projects .grid { display: grid; gap: 1.2rem; margin-top: 1.4rem; }
+    @media (min-width: 46rem) { #projects .grid { grid-template-columns: 1fr 1fr; } }
+    #projects article { display: flex; flex-direction: column; margin: 0; padding: 1.15rem 1.2rem 1.25rem; background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); box-shadow: 5px 5px 0 var(--hard); }
+    #projects article h3 { margin: 0 0 .25rem; font-size: 1.4rem; }
+    #projects article .vibe { margin: 0 0 .6rem; font: 700 .85rem/1.35 var(--mono); color: var(--accent-2); }
+    #projects article p { margin: .5rem 0; }
+    #projects article ul { padding-left: 1.2rem; }
+    #projects article.feature { grid-column: 1 / -1; background: var(--surface-2); }
+    #projects .links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: auto; padding-top: .7rem; }
+    #projects .links a { display: inline-flex; align-items: center; min-height: 44px; padding: .5rem .9rem; border: 2px solid var(--line); border-radius: .65rem; font-weight: 800; text-decoration: none; color: var(--text); background: var(--bg); }
+    #projects .links a.go { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+    #projects .links a:hover { text-decoration: underline; }
+    #projects .status { font: 700 .9rem/1.35 var(--mono); color: var(--muted); }
+
+    #ps-notice { padding: 1.2rem 1.25rem; border: 3px dashed var(--line); border-radius: var(--radius); }
+    #ps-notice h2::before { color: var(--accent); }
+    #ps-title:focus { outline: 3px solid var(--focus); outline-offset: 4px; }
     #ps-title:focus:not(:focus-visible) { outline: none; }
-    .skip-link:focus {
-      top: 1rem;
-    }
+    #ps-notice summary { cursor: pointer; font-weight: 800; min-height: 44px; display: list-item; padding: .55rem 0; }
+    .back-to-top { font-weight: 800; }
 
-    ul.social-list { list-style: none; margin: 1.5rem 0 0; padding: .25rem 1.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
-    ul.social-list > li { margin: 0; padding: 1rem 0; border-bottom: 1px solid var(--border); color: var(--muted); }
-    ul.social-list > li:last-child { border-bottom: none; }
-    ul.social-list p { margin: .2rem 0; }
-    ul.social-list a { color: var(--accent); }
-    .social-name { font-weight: 700; color: var(--text); }
-    #nostr-npub code { overflow-wrap: anywhere; word-break: break-all; }
-    /* Projects: Loostore-style cards. Name, what it does, then Open and source code links. */
-    #projects article h3 { font-size: 1.3rem; margin-bottom: .35rem; }
-    #projects .status { color: var(--muted); }
-    #projects .links { display: flex; flex-wrap: wrap; gap: .5rem; margin: .9rem 0 0; }
-    #projects a.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: .5rem 1rem; border: 2px solid var(--accent); border-radius: 10px; background: var(--accent); color: var(--on-accent); font-weight: 600; line-height: 1.3; text-decoration: none; }
-    #projects a.btn.alt { background: transparent; color: var(--accent); }
-    #projects a.btn:hover { text-decoration: underline; text-decoration-thickness: 2px; }
-    @media (forced-colors: active) { #projects a.btn { border-color: LinkText; } }
-    footer { border-top: 1px solid var(--border); padding: 2rem 0 4rem; color: var(--muted); font-size: .97rem; }
-    footer p { max-width: 40rem; }
-    .back-to-top { display: inline-block; margin-top: 1rem; }
+    footer { margin-top: 5rem; padding: 2.5rem 0 3.5rem; border-top: 2px solid var(--line); background: var(--surface); }
+    footer p { margin: 0 0 .85rem; }
+    footer .loud { font-weight: 900; font-size: 1.15rem; }
 
-
-    /* Settings: grouped rounded rows, labels left, controls right. No motion. */
-    nav button#settings-open { display: inline-block; min-height: 44px; padding: .5rem .9rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-2); color: var(--text); font-weight: 600; line-height: 1.35; }
+    /* Settings dialog */
     html:has(dialog#settings[open]) { overflow: hidden; }
-    dialog#settings { margin: 0 0 0 auto; padding: 0; width: min(100%, 28rem); max-width: 100%; height: 100%; max-height: 100%; border: 0; border-left: 1px solid var(--border); background: var(--bg); color: var(--text); overflow-y: auto; overflow-x: hidden; }
-    dialog#settings::backdrop { background: rgba(0, 0, 0, .5); }
-    .settings-inner { min-height: 100%; padding: 1.25rem 1.1rem 2rem; }
-    .settings-top { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: .4rem; }
-    .settings-top h2 { margin: 0; font-size: 1.6rem; }
-    #settings-close { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
-    .settings-intro { color: var(--muted); margin: 0 0 1.25rem; font-size: 1rem; }
-    .settings-inner h3 { margin: 1.4rem 0 .5rem .9rem; font-size: .95rem; font-weight: 700; color: var(--muted); letter-spacing: 0; }
-    .settings-group { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
-    .set-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem .75rem; margin: 0; padding: .6rem .9rem; min-height: 3.25rem; border: 0; border-top: 1px solid var(--border); min-width: 0; }
-    .settings-group > .set-row:first-child { border-top: 0; }
-    fieldset.set-row legend { float: left; padding: 0; font-weight: 600; }
-    .seg { display: flex; padding: 3px; gap: 3px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; }
+    dialog#settings { margin: 0 0 0 auto; padding: 0; width: min(100%, 28rem); max-width: 100%; height: 100%; max-height: 100%; border: 0; border-left: 3px solid var(--line); background: var(--bg); color: var(--text); overflow-y: auto; overflow-x: hidden; }
+    dialog#settings::backdrop { background: rgba(0, 0, 0, .55); }
+    .settings-inner { padding: 1.25rem 1.25rem 2rem; }
+    .settings-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .settings-top h2 { margin: 0; font-size: 1.8rem; font-weight: 900; letter-spacing: -.03em; }
+    .settings-intro, .set-foot, .settings-joke { color: var(--muted); }
+    .settings-group { background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); padding: .4rem; }
+    .set-row { border: 0; margin: 0; padding: .6rem .5rem; min-width: 0; }
+    .set-row legend { font-weight: 800; padding: 0 0 .45rem; }
+    .seg { display: flex; padding: 3px; gap: 3px; background: var(--surface-2); border: 2px solid var(--line); border-radius: 999px; }
     .seg-opt { position: relative; display: flex; }
-    /* The font row has longer names, so it wraps onto more lines instead of running off the screen when zoomed in. */
     .seg.seg-wrap { flex-wrap: wrap; border-radius: 26px; max-width: 100%; }
     .seg-wrap .seg-opt { flex: 0 1 auto; min-width: 0; }
     .seg-wrap .seg-opt label { text-align: center; }
     .seg-opt input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
-    .seg-opt label { display: flex; align-items: center; justify-content: center; min-width: 4.25rem; min-height: 44px; padding: .3rem .8rem; border-radius: 999px; font-weight: 600; line-height: 1.2; }
+    .seg-opt label { display: flex; align-items: center; justify-content: center; min-width: 4.25rem; min-height: 44px; padding: .3rem .8rem; border-radius: 999px; font-weight: 700; line-height: 1.2; }
     .seg-opt input:checked + label { background: var(--accent); color: var(--on-accent); }
     .seg-opt input:focus-visible + label { outline: 3px solid var(--focus); outline-offset: 2px; box-shadow: 0 0 0 5px var(--halo); }
     .set-row.set-switch-row { padding: 0; }
-    .set-switch { display: flex; align-items: center; justify-content: space-between; gap: .75rem; width: 100%; min-height: 3.25rem; margin: 0; padding: .6rem .9rem; border: 0; border-radius: var(--radius); background: transparent; color: var(--text); text-align: left; font-weight: 600; }
-    .set-switch:hover { border: 0; background: var(--surface-2); }
+    .set-switch { display: flex; align-items: center; justify-content: space-between; gap: .75rem; width: 100%; min-height: 3.25rem; margin: 0; padding: .6rem .9rem; border: 0; border-radius: var(--radius); background: transparent; color: var(--text); text-align: left; font-weight: 700; box-shadow: none; }
+    .set-switch:hover { background: var(--surface-2); }
     .set-switch[aria-disabled="true"] { cursor: not-allowed; }
-    .set-end { display: inline-flex; align-items: center; gap: .55rem; flex: none; }
-    .set-state { color: var(--muted); font-weight: 500; font-size: .95rem; }
+    .set-end { display: inline-flex; align-items: center; gap: .6rem; }
     .track { position: relative; display: inline-block; width: 3.1rem; height: 1.9rem; border: 2px solid var(--muted); border-radius: 999px; background: transparent; flex: none; }
     .knob { position: absolute; top: 50%; left: .2rem; width: 1.2rem; height: 1.2rem; margin-top: -.6rem; border-radius: 50%; background: var(--muted); }
     .set-switch[aria-checked="true"] .track { background: var(--accent); border-color: var(--accent); }
     .set-switch[aria-checked="true"] .knob { left: auto; right: .2rem; background: var(--on-accent); }
-    .set-foot { margin: .45rem .9rem 0; color: var(--muted); font-size: .93rem; line-height: 1.5; }
-    .settings-joke { margin: 2rem .9rem 0; color: var(--muted); font-size: .95rem; font-style: italic; }
+
     @media (forced-colors: active) {
+      ul.big-links a, .hero-cta a, #projects article, .card, .status-card, button { border: 2px solid CanvasText; }
       .seg-opt input:checked + label { outline: 2px solid CanvasText; }
       .track { border-color: CanvasText; }
       .knob { background: CanvasText; }
       .set-switch[aria-checked="true"] .track { background: Highlight; border-color: Highlight; }
       .set-switch[aria-checked="true"] .knob { background: Canvas; }
     }
-
-    @media (max-width: 30rem) {
-      header { padding-top: 3rem; }
-      article, .chime-bar { padding: 1.1rem 1.1rem; }
-      ul.social-list { padding-inline: 1.1rem; }
-      main { padding-top: 1rem; }
-    main > section { margin-block: 3.5rem; }
-    main > section:first-child { margin-top: 1.5rem; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .skip-link { transition: none; }
-    }
+    /* Calm mode (on by default) and Reduce Motion: nothing here animates anyway, this is the seatbelt. */
+    html.calm *, html.calm *::before, html.calm *::after { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
+    html.ps-hidden *, html.ps-hidden *::before, html.ps-hidden *::after { animation-play-state: paused !important; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
   </style>
-<link rel="icon" href="data:,">
-<style id="ps-style">
-/* Photosensitivity notice + Calm mode (no flashing; motion off under Calm mode or the system Reduce Motion setting) */
-#ps-notice{box-sizing:border-box;display:block;width:100%;margin:0;padding:.7rem 1rem .6rem;background:#fff4c2;color:#1b1b1b;border-bottom:2px solid #1b1b1b;font:1rem/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:left;position:relative;z-index:60;min-height:0}
-#ps-notice *{box-sizing:border-box;color:#1b1b1b;font-family:inherit;letter-spacing:normal;text-transform:none;text-shadow:none;-webkit-text-fill-color:#1b1b1b}
-#ps-notice h2{font-size:1.05rem;font-weight:700;line-height:1.3;margin:0 0 .2rem;padding:0;border:0;background:none}
-#ps-notice p{margin:0 0 .45rem;padding:0;max-width:62rem;font-size:1rem}
-#ps-notice .ps-row{display:flex;flex-wrap:wrap;gap:.5rem .75rem;align-items:flex-start}
-#ps-notice button,#ps-notice summary{font:600 1rem/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;cursor:pointer;background:#fff;border:2px solid #1b1b1b;border-radius:8px;padding:.55rem .85rem;min-height:44px;margin:0;box-shadow:none;width:auto;transform:none}
-#ps-notice button[aria-pressed="true"]{background:#1b1b1b;color:#fff;-webkit-text-fill-color:#fff}
-#ps-notice button[aria-pressed="true"] *{color:#fff;-webkit-text-fill-color:#fff}
-#ps-notice summary{display:inline-block;list-style-position:inside}
-#ps-notice details{flex:1 1 16rem;min-width:0}
-#ps-notice details > div{margin-top:.5rem;padding:.6rem .8rem;background:#fffdf3;border:1px solid #1b1b1b;border-radius:8px;max-width:62rem}
-#ps-notice ul{margin:.2rem 0 .3rem 1.2rem;padding:0}
-#ps-notice li{margin:.2rem 0}
-#ps-notice a{text-decoration:underline}
-#ps-notice :focus-visible{outline:3px solid #1b1b1b;outline-offset:2px;box-shadow:0 0 0 6px #fff4c2}
-#ps-notice .ps-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-html.calm *,html.calm *::before,html.calm *::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important;scroll-behavior:auto!important}}
-html.ps-hidden *,html.ps-hidden *::before,html.ps-hidden *::after{animation-play-state:paused!important}
-</style>
+
 <script id="ps-script">
 /* Calm mode: ON unless the visitor turns it off (remembered on this device). The system Reduce Motion setting always wins. */
 (function(){var K="calm-mode",d=document.documentElement,mq=window.matchMedia?window.matchMedia("(prefers-reduced-motion: reduce)"):{matches:false};
 function pref(){try{return localStorage.getItem(K)!=="off";}catch(e){return true;}}
 window.calmMode=function(){return !!mq.matches||pref();};
-function sync(say){var on=window.calmMode();d.classList.toggle("calm",on);var b=document.getElementById("ps-calm"),s=document.getElementById("ps-state"),st=document.getElementById("ps-status");
+function sync(say){var on=window.calmMode();d.classList.toggle("calm",on);var b=document.getElementById("ps-calm"),s=document.getElementById("ps-state"),st=document.getElementById("announcer");
 if(b)b.setAttribute("aria-pressed",String(on));if(s)s.textContent=on?"on":"off";
 if(say&&st){st.textContent="";setTimeout(function(){st.textContent=on?(mq.matches&&!pref()?"Motion stays off because your device's Reduce Motion setting is on.":"Calm mode on. Motion is off."):"Calm mode off. Motion is on.";},50);}
 try{document.dispatchEvent(new CustomEvent("calmchange",{detail:{calm:on}}));}catch(e){}}
@@ -246,64 +233,22 @@ if(f==="atkinson"&&!document.getElementById("font-preload")){var l=document.crea
 var m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++){var o=m[i].getAttribute("data-c")||m[i].getAttribute("content");m[i].setAttribute("data-c",o);m[i].setAttribute("content",t==="light"?"#f2f2f4":t==="dark"?"#111113":o);}};
 window.__applyPrefs();})();
 </script>
-
-  <style id="chaotic-theme">
-    /* Chaotic Carter look: deep navy glass with a soft glow, like the beat covers. Light mode stays bright. No motion. */
-    :root {
-      --bg: #eef0fb; --surface: rgba(255,255,255,.82); --surface-2: #e1e5f7; --text: #0d1020; --muted: #3c4260;
-      --accent: #2743c4; --border: #c9d0ee; --focus: #2743c4; --halo: #eef0fb; --on-accent: #ffffff;
-      --shadow: 0 1px 2px rgba(20,30,90,.06), 0 10px 30px rgba(39,67,196,.08);
-      --glow-a: rgba(88,101,242,.16); --glow-b: rgba(0,170,255,.10);
-    }
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #070a14; --surface: rgba(19,25,46,.74); --surface-2: rgba(38,47,86,.72); --text: #f2f4ff; --muted: #b9c0de;
-        --accent: #7cc4ff; --border: rgba(140,165,255,.24); --focus: #ffe66d; --halo: #070a14; --on-accent: #070a14;
-        --shadow: 0 0 0 1px rgba(124,196,255,.05), 0 10px 34px rgba(50,70,200,.22);
-        --glow-a: rgba(88,101,242,.30); --glow-b: rgba(0,200,255,.16);
-      }
-    }
-    :root[data-theme="dark"] {
-      --bg: #070a14; --surface: rgba(19,25,46,.74); --surface-2: rgba(38,47,86,.72); --text: #f2f4ff; --muted: #b9c0de;
-      --accent: #7cc4ff; --border: rgba(140,165,255,.24); --focus: #ffe66d; --halo: #070a14; --on-accent: #070a14;
-      --shadow: 0 0 0 1px rgba(124,196,255,.05), 0 10px 34px rgba(50,70,200,.22);
-      --glow-a: rgba(88,101,242,.30); --glow-b: rgba(0,200,255,.16);
-    }
-    body {
-      background-color: var(--bg);
-      background-image: radial-gradient(60rem 38rem at 10% -8%, var(--glow-a), transparent 62%), radial-gradient(48rem 34rem at 105% 6%, var(--glow-b), transparent 60%);
-      background-repeat: no-repeat;
-    }
-    header { padding: 4rem 0 1.75rem; }
-    header h1 { font-size: clamp(2.6rem, 1.9rem + 3.4vw, 4rem); letter-spacing: -.035em; margin-bottom: .35rem; }
-    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) header h1 { text-shadow: 0 0 28px rgba(124,196,255,.45); } }
-    :root[data-theme="dark"] header h1 { text-shadow: 0 0 28px rgba(124,196,255,.45); }
-    .cc-tagline { margin: 0 0 1rem; font-size: 1.3rem; font-weight: 700; color: var(--accent); letter-spacing: .02em; }
-    nav, article, ul.social-list, .chime-bar, .cc-nostr, .cc-latest, a.cc-btn { -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
-    main { padding-top: 1rem; }
-    main > section { margin-block: 3.5rem; }
-    main > section:first-child { margin-top: 1.5rem; }
-    main > section > h3 { color: var(--text); font-weight: 700; font-size: 1.25rem; margin: 2rem 0 .75rem; }
-    ul.cc-links { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: .65rem; }
-    ul.cc-links > li { margin: 0; }
-    a.cc-btn { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; min-height: 3.6rem; padding: .9rem 1.3rem; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); font-weight: 700; font-size: 1.12rem; line-height: 1.35; text-decoration: none; }
-    a.cc-btn::after { content: "\2192"; content: "\2192" / ""; color: var(--accent); font-size: 1.3rem; flex: none; }
-    a.cc-btn:hover { border-color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; }
-    .cc-nostr { margin-top: .9rem; padding: 1rem 1.3rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); color: var(--muted); }
-    .cc-nostr p { margin: .25rem 0; }
-    .cc-nostr code { overflow-wrap: anywhere; word-break: break-all; }
-    .cc-latest { padding: .9rem 1.3rem; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); }
-    #ps-notice { border: 2px solid #1b1b1b; border-radius: var(--radius); padding: 1rem 1.25rem; margin-block: 3.5rem; }
-    @media (forced-colors: active) { a.cc-btn { border: 2px solid LinkText; } }
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header id="top">
-    <h1>Chaotic Carter</h1>
-    <p class="cc-tagline">producer. builder. chaos.</p>
-    <p>you found my corner of the internet: accessible tools, Nostr stuff, old computer voices, and way too much bass. bugs are features until proven otherwise.</p>
+  <header id="top" class="hero">
+    <div class="wrap">
+      <p class="kicker">2three1y · the king of chaos 👑</p>
+      <h1>Chaotic <span class="h1-2">Carter</span></h1>
+      <p class="sticker">blind producer, coder, certified 3 AM menace.</p>
+      <p class="hero-lede">i make beats i’ve never seen and code with a screen reader yelling at me. this site is the center of the chaos: YouTube, TikTok, GitHub, and every app i shipped at 3 AM all orbit this one page. you are now in orbit. no refunds.</p>
+      <ul class="hero-cta">
+        <li><a class="primary" href="https://www.youtube.com/channel/UChazMrj9avsQnGW-UiG86IQ">Free beats on YouTube</a></li>
+        <li><a class="ghost" href="#projects">Stuff I built at 3 AM</a></li>
+      </ul>
+      <div class="status-card">
+        <p class="label">live status, refreshed every visit</p>
     <p id="custom-status">Custom status: arguing with Safari .. and losing</p>
     <details id="past-statuses">
       <summary>Past statuses</summary>
@@ -375,301 +320,297 @@ window.__applyPrefs();})();
         }
       })();
     </script>
+      </div>
+    </div>
   </header>
 
-  <nav aria-label="Page navigation">
+  <nav class="jump" aria-label="Page navigation">
     <ul>
       <li><a href="#links">Links</a></li>
       <li><a href="#music">Music</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#about">About me</a></li>
-      <li><a href="blog/">Writing (the blog)</a></li>
-      <li><a href="#ps-notice">Photosensitivity notice (read this one)</a></li>
-      <li id="settings-entry" hidden><button type="button" id="settings-open" aria-haspopup="dialog"><span aria-hidden="true">⚙︎ </span>Settings (theme, chime, Calm mode)</button></li>
+      <li><a href="#blog">Writing</a></li>
+      <li><a href="#sound">Startup chime</a></li>
+      <li><a href="#ps-notice">Photosensitivity notice</a></li>
+      <li id="settings-entry" hidden><button type="button" id="settings-open" aria-haspopup="dialog"><span aria-hidden="true">⚙︎ </span>Settings (theme, text, chime, Calm mode)</button></li>
     </ul>
   </nav>
 
   <main id="main-content">
-    <section id="links" aria-labelledby="links-heading">
-      <h2 id="links-heading">Stalk me professionally (Links)</h2>
-      <p>Come say hi. I reply faster than my builds finish, which is a low bar, but hell, I clear it.</p>
-      <ul class="cc-links" id="socials">
-        <li><a class="cc-btn" href="https://www.youtube.com/channel/UChazMrj9avsQnGW-UiG86IQ">YouTube: beats that go hard</a></li>
-        <li><a class="cc-btn" href="https://www.tiktok.com/@supxr.and.odetari_fan">TikTok: 15 seconds of chaos</a></li>
-        <li><a class="cc-btn" href="https://github.com/2three1y" rel="me">GitHub: where the code sleeps (it doesn’t)</a></li>
-        <li><a class="cc-btn" href="https://techhub.social/@Techgirl1232" rel="me">Mastodon: the verified one</a></li>
-        <li><a class="cc-btn" href="https://twitter.com/2three1y" rel="me">Twitter: yes, I still call it Twitter</a></li>
-        <li><a class="cc-btn" href="https://discord.com/users/1242237822434410536" rel="me">Discord: I read the patch notes</a></li>
-        <li><a class="cc-btn" href="feed.xml">RSS feed: new writing, zero algorithm</a></li>
+    <section id="links" class="wrap" aria-labelledby="links-heading">
+      <h2 id="links-heading">Links (every place i exist)</h2>
+      <p class="intro">pick a platform, any platform. i’m on all of them and asleep on none. they all point back here anyway.</p>
+      <ul class="big-links" id="socials">
+        <li><a href="https://www.youtube.com/channel/UChazMrj9avsQnGW-UiG86IQ"><span class="lbl">YouTube: free beats, zero sleep<span class="sr-only">, </span><span class="tag">the main stage</span></span></a></li>
+        <li><a href="https://www.tiktok.com/@supxr.and.odetari_fan"><span class="lbl">TikTok: beats in 15 second doses<span class="sr-only">, </span><span class="tag">short attention span friendly</span></span></a></li>
+        <li><a href="https://github.com/2three1y" rel="me"><span class="lbl">GitHub: 8,000 stars and a problem<span class="sr-only">, </span><span class="tag">where the code lives (and the bugs)</span></span></a></li>
+        <li><a href="https://techhub.social/@Techgirl1232" rel="me"><span class="lbl">Mastodon: the verified one<span class="sr-only">, </span><span class="tag">yes it’s really me</span></span></a></li>
+        <li><a href="https://twitter.com/2three1y" rel="me"><span class="lbl">Twitter: i will never call it X<span class="sr-only">, </span><span class="tag">die on this hill with me</span></span></a></li>
+        <li><a href="https://discord.com/users/1242237822434410536" rel="me"><span class="lbl">Discord: come yell at me<span class="sr-only">, </span><span class="tag">respectfully. i read the patch notes</span></span></a></li>
+        <li><a href="feed.xml"><span class="lbl">RSS feed: new posts, no algorithm<span class="sr-only">, </span><span class="tag">for the real ones</span></span></a></li>
       </ul>
-      <div class="cc-nostr">
-          <p class="social-name">Nostr (my favorite, obviously)</p>
-          <p><label id="nostr-npub-label" for="nostr-npub">Nostr public key (npub)</label></p>
-          <p><output id="nostr-npub"><code>npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</code></output></p>
-          <p><button id="copy-nostr-btn" type="button">Copy my Nostr public key</button></p>
-          <span id="copy-nostr-status" role="status" aria-live="polite" aria-atomic="true"></span>
-        </div>
+      <div class="card nostr">
+        <h3>Nostr (my favorite, not even close)</h3>
+        <p><label id="nostr-npub-label" for="nostr-npub">Nostr public key (npub)</label></p>
+        <p><output id="nostr-npub"><code>npub1456xmzeel8j7rr9rq0vwtch7rtulv7j623yg3d74e29vj4yuaxwswuep4d</code></output></p>
+        <p><button id="copy-nostr-btn" type="button">Copy my Nostr public key</button></p>
+      </div>
     </section>
 
-    <section id="music" aria-labelledby="music-heading">
-      <h2 id="music-heading">Where the beats live (Music)</h2>
-      <p class="cc-latest"><strong>Latest beat:</strong> cooking right now. New Chaotic Carter beats drop soon, and they land on YouTube first.</p>
-      <ul class="cc-links">
-        <li><a class="cc-btn" href="https://www.youtube.com/channel/UChazMrj9avsQnGW-UiG86IQ">YouTube: hear the newest Chaotic Carter beats</a></li>
-        <li><a class="cc-btn" href="https://2three1y.github.io/letterorchestra/">Letter Orchestra: type letters, make music, annoy the neighbors</a></li>
-      </ul>
-      <h3>What’s on repeat</h3>
-      <p>Warning: this section is mostly bass, and damn, it’s a lot of bass. Numbers below are rough measurements of each track, not a lab report.</p>
-
-      <p>Now playing: whatever shuffle picks from the 203-song playlist. Expect hyperpop, digital rap and jersey club bounce, mostly under 3 minutes, anywhere from a laid-back 80-ish BPM to a 170-ish BPM sprint, with bass the loudness meter has opened a support ticket about.</p>
-      <article>
-
-        <h3>Playlists</h3>
-
-        <ul>
-          <li><a href="https://www.youtube.com/playlist?list=PLZZegqbp1Trc">my song playlist</a>: 200+ songs, heavy on SUPXR, waera and pxiqzes. Shuffle at your own risk. This shit slaps.</li>
-          <li><a href="https://youtube.com/playlist?list=PLMFsoYpUMuLYKhZcQHGLyKyIhrqPIFeon&amp;si=OZAla0CtnyUH_0pn">amazing beat playlist</a>: beats for coding, or for pretending to code</li>
-          <li><a href="https://youtube.com/playlist?list=PLMFsoYpUMuLaRLbKDwUdTOwx0VgdaX8H7&amp;si=1dx7jpZezbfK4gaH">funny videos playlist</a>: emotional support for when the build fails</li>
-        </ul>
-
-      </article>
-      <article>
-
-        <h3>Favorite tracks (with vibe checks)</h3>
-
-        <ul>
-          <li><a href="https://www.youtube.com/watch?v=VSp9MDXYWsY">YOU DECIDE</a> by SUPXR: hyperpop with a jersey club bounce at about 129 BPM, so the only thing you actually get to decide is how hard you nod (yes, the page title is a reference).</li>
-          <li><a href="https://www.youtube.com/watch?v=kGCdZ63ZZGI">wussup?</a> by shteppi and SUPXR: about 123 BPM and roughly 69% bass, the audio version of someone typing “wussup?” and then joining your voice channel without asking.</li>
-          <li><a href="https://www.youtube.com/watch?v=fZtLSdtQFgs">concord.</a> by shteppi: waera on the beat, around 136 BPM, and mastered so loud (about −8 LUFS) that it doesn’t knock, it kicks the door in and asks why you’re muted.</li>
-          <li><a href="https://www.youtube.com/watch?v=6Ku7wQvJvoE">ronald.</a> by shteppi: a laid-back bounce around 83 BPM with about three-quarters of the energy down in the bass, like the server member named Ronald who never talks but everyone somehow loves.</li>
-          <li><a href="https://www.youtube.com/watch?v=zWp8dfJO_04">SCRUPLES</a> by yit and Isaac Horner: measured at about −5.7 LUFS, the loudest track on this whole site by a mile, mastered like it just bought Nitro and has something to prove.</li>
-          <li><a href="https://www.youtube.com/watch?v=gcemjdDbKuo">press start.</a> by pxiqzes featuring mi.ntyyy: about 150 BPM played half-time with 72% bass, so it sits there like a chill game lobby right up until the boss music kicks in.</li>
-          <li><a href="https://www.youtube.com/watch?v=nN9H95IwD4A">flower</a> by waera: fast (around 172 BPM) and the bassiest one here at about 89%, which makes “flower” the most misleading name in the server, respectfully.</li>
-          <li><a href="https://www.youtube.com/watch?v=5hiS3xc-hmg">What’s a Nintendo?</a> by Lilithzplug: a bouncy 129-ish BPM with about two-thirds bass and a title engineered to start a 40-message argument in the gaming channel.</li>
-        </ul>
-
-      </article>
-    </section>
-
-    <section id="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Stuff I built at 3 AM (Projects)</h2>
-      <p>Stuff I built. Newest on top, chaos sinks to the bottom. Bass levels: working as intended. Ping me if something breaks, I’m probably already in there.</p>
-      <ul class="cc-links">
-        <li><a class="cc-btn" href="https://looscid.github.io/Looscid/">Looscid: my local-first workspace, forever in beta</a></li>
-        <li><a class="cc-btn" href="https://2three1y.github.io/chaoticnews/">Chaotic News: unbiased, unverified, unhinged</a></li>
-        <li><a class="cc-btn" href="https://2three1y.github.io/dusk/">Dusk: a free voice for Piper, still growing up</a></li>
-        <li><a class="cc-btn" href="https://2three1y.github.io/birdline/">Birdline: a timeline with zero algorithm, on Nostr</a></li>
+    <section id="music" class="wrap" aria-labelledby="music-heading">
+      <h2 id="music-heading">Music (beats i’ve never seen)</h2>
+      <p class="intro">i can’t see a waveform. don’t need to. i hear the 808 and i just know. digicore, jerk, hyperpop, whatever the 808 demands that day, and the beat switch is always the best part. that’s the law.</p>
+      <p class="callout"><strong>latest beat:</strong> still in the oven. new Chaotic Carter beats drop on YouTube first, and they’re free. turn your volume down first. or don’t, i’m not your mom.</p>
+      <ul class="big-links">
+        <li><a href="https://www.youtube.com/channel/UChazMrj9avsQnGW-UiG86IQ"><span class="lbl">YouTube: hear the newest Chaotic Carter beats<span class="sr-only">, </span><span class="tag">free, loud, mine</span></span></a></li>
+        <li><a href="https://2three1y.github.io/letterorchestra/"><span class="lbl">Letter Orchestra: type letters, accidentally make a beat<span class="sr-only">, </span><span class="tag">my app, your new hobby</span></span></a></li>
       </ul>
 
-      <article id="looscid">
-        <h3>Looscid</h3>
-        <p><strong>My local-first workspace (forever in beta, in a good way)</strong></p>
-        <p>Looscid is an autonomous, local-first, decentralized web workspace built around owning your stuff. Your data and daily tools stay useful right on your own device. It’s still evolving, and no, it’s not trying to replace iOS or Android. It knows its role.</p>
-      <p>The main quest is screen-reader comfort: predictable landmarks and headings, short chunks, keyboard-first movement, and status updates announced through live regions. The goal is a workspace that stays calm when every single thing is being spoken. Think quiet server at 3 AM, not everyone unmuting in the voice channel at once.</p>
-      </article>
+      <h3>On repeat (bass warning)</h3>
+      <p>heads up: this part is mostly bass. like, a concerning amount of bass. the numbers below are my rough measurements of each track, not a science fair project.</p>
+      <p>right now: whatever shuffle pulls from my 203-song playlist. expect hyperpop, digital rap and jersey club bounce, mostly under 3 minutes, anywhere from a laid-back 80-ish BPM to a 170-ish BPM sprint, with bass so loud the loudness meter filed a complaint.</p>
 
-      <!-- New projects go right below this line: copy an <article> block. -->
-      <article>
-        <h3>Fork Lab</h3>
-        <p>New: I fork a lot of apps, and most of them can’t run on a webpage, so I made tiny fake-but-working demos of 8 of them. Mesh chat on bitchat, posting on Misskey and Feditext, a scripted Kilo Code helper, a TalkBack trainer, the GrapheneOS camera, messages and PDF viewer, Chat UI and OldTwitter. All fake data, no servers, nothing to break. Finally my forks do something besides sit there looking busy.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/forklab/">Open Fork Lab</a> <a class="btn alt" href="https://github.com/2three1y/forklab">Fork Lab source code</a></p>
-      </article>
+      <h3>Playlists</h3>
+      <ul class="tracks">
+        <li><a href="https://www.youtube.com/playlist?list=PLZZegqbp1Trc">my song playlist</a>: 200+ songs, mostly SUPXR, waera and pxiqzes. shuffle at your own risk. it slaps, every time.</li>
+        <li><a href="https://youtube.com/playlist?list=PLMFsoYpUMuLYKhZcQHGLyKyIhrqPIFeon&amp;si=OZAla0CtnyUH_0pn">amazing beat playlist</a>: beats for coding, or for pretending to code really hard</li>
+        <li><a href="https://youtube.com/playlist?list=PLMFsoYpUMuLaRLbKDwUdTOwx0VgdaX8H7&amp;si=1dx7jpZezbfK4gaH">funny videos playlist</a>: emergency serotonin for when the build fails again</li>
+      </ul>
 
-      <article>
-        <h3>Retro Desk</h3>
-        <p>New: a Windows 95-style desktop in your browser, fan-made and totally original. Press Turn on computer for the boot chime, then poke around the Start menu, My Computer, a Notepad that actually saves, and a Recycle Bin with attitude. Zero blue screens so far. I’m knocking on my beige plastic.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/retrodesk/">Open Retro Desk</a> <a class="btn alt" href="https://github.com/2three1y/retrodesk">Retro Desk source code</a></p>
-      </article>
-
-      <article>
-        <h3>Letter Orchestra</h3>
-        <p>New: type letters and they turn into music. 17 instruments, effects like reverb, delay and a bitcrusher, genre demos to get you started, and Export WAV so you can keep your masterpiece. Turns out my group chat messages slap.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/letterorchestra/">Open Letter Orchestra</a> <a class="btn alt" href="https://github.com/2three1y/letterorchestra">Letter Orchestra source code</a></p>
-      </article>
-
-      <article>
-        <h3>Earshot</h3>
-        <p>New: an offline talking assistant in your browser. Paste text, open a file or a link, and it reads it aloud with natural neural voices (or hands it to VoiceOver). Talk to it to pause, skip, speed up or ask what the text says. Voices download only when you press Load voices. It never gets tired of reading to you, unlike some people.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/earshot/">Open Earshot</a> <a class="btn alt" href="https://github.com/2three1y/earshot">Earshot source code</a></p>
-      </article>
-
-      <article>
-        <h3>Relay Radio</h3>
-        <p>New: Nostr as a radio station. Press play and the feed comes in as sound: an earcon for each note, reply, repost, reaction, zap and mention, then the note read aloud (or by VoiceOver). Safe curated relays by default, with an optional station for people you follow. It’s lurking, but with earcons.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/relayradio/">Open Relay Radio</a> <a class="btn alt" href="https://github.com/2three1y/relayradio">Relay Radio source code</a></p>
-      </article>
-
-      <article>
-        <h3>Blind Chess</h3>
-        <p>New: chess you play entirely by sound and keyboard. Every move is spoken out loud, you type moves like Nf3 or tap squares, and you can play the computer, pass and play, or invite a friend over Nostr with a link. No account needed. Trash talk sold separately.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/blindchess/">Open Blind Chess</a> <a class="btn alt" href="https://github.com/2three1y/blindchess">Blind Chess source code</a></p>
-      </article>
-
-      <article>
-        <h3>Stargazer</h3>
-        <p>New: my 8,000+ GitHub stars as a sound map. Every repo plays a note (more stars, higher note), with audio graphs by month, language and license. Yes, I star a lot of repos. No, I will not be taking questions.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/stargazer/">Open Stargazer</a> <a class="btn alt" href="https://github.com/2three1y/stargazer">Stargazer source code</a></p>
-      </article>
-
-      <article>
-        <h3>Retro Voice Jukebox</h3>
-        <p>New: type anything and hear it in old-school DECtalk-style formant voices. 13 presets, retro effects, and you can save clips as WAV. One of them sings. You’ve been warned.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/retrovoicejukebox/">Open Retro Voice Jukebox</a> <a class="btn alt" href="https://github.com/2three1y/retrovoicejukebox">Retro Voice Jukebox source code</a></p>
-      </article>
-
-      <article>
-        <h3>GameSpeak</h3>
-        <p>New: drop in a game screenshot and it reads the text bubbles top to bottom, with next and previous line keys and a describe-layout mode. Reading text from pictures needs browser support; on iPhone, paste text from Live Text. The NPCs finally speak up.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/gamespeak/">Open GameSpeak</a> <a class="btn alt" href="https://github.com/2three1y/gamespeak">GameSpeak source code</a></p>
-      </article>
-
-      <article>
-        <h3>Dream Nests</h3>
-        <p>New: accessible live Nostr audio rooms and streams. Earcons tell you when a hand is raised, a mic turns on or a room ends, and the live chat gets read aloud. It’s listen-only and opens Nests rooms in their own app. Basically a voice channel, minus the open mic eating chips.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/dreamnests/">Open Dream Nests</a> <a class="btn alt" href="https://github.com/2three1y/dreamnests">Dream Nests source code</a></p>
-      </article>
-
-      <article>
-        <h3>Tap Party</h3>
-        <p>New and featured: a serverless Morse chat where you share a room link, tap a big pad, and your friends hear and feel every dot and dash. It has a learn mode and a braille view, and it’s built only from repos I’ve starred, all credited. Group chat, but make it the 1840s.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/tapparty/">Open Tap Party</a> <a class="btn alt" href="https://github.com/2three1y/tapparty">Tap Party source code</a></p>
-      </article>
-
-      <article>
-        <h3>Memeprojects</h3>
-        <p>The digital antidote to having nothing to do and a suspicious amount of free time. Memeprojects serves up unhinged quizzes, questionable diagnostic verdicts, and internet chaos designed to waste your time in the best possible way. Your answers aren’t collected; the site is here to judge your vibes, not harvest your data.</p>
-        <ul>
-          <li><strong>RU a Cheater:</strong> Submit yourself to a completely unserious verdict machine. It’s a joke generator, not a courtroom—no lawyers, no evidence, just dramatic judgment.</li>
-          <li><strong>Persona Evaluator:</strong> Press a button; receive a very important-sounding persona result. Take it with approximately zero seriousness. Your friends, regrettably, may not.</li>
-        </ul>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/memeprojects/">Open Memeprojects</a> <a class="btn alt" href="https://github.com/2three1y/memeprojects">Memeprojects source code</a></p>
-      </article>
-
-      <article>
-        <h3>Reactor Toolbar</h3>
-        <p>Fast-draw reactions and accessible toolbar power, without hunting through menus like an archaeologist excavating the sacred Like button. Get to the reaction or shortcut you need while the moment is still happening.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/reactortoolbar/">Open Reactor Toolbar</a> <a class="btn alt" href="https://github.com/2three1y/reactortoolbar">Reactor Toolbar source code</a></p>
-      </article>
-
-      <article>
-        <h3>Easyconvert</h3>
-        <p>File conversion without 47 malware ads, sketchy download countdowns, or fake “Click Here” banners trying to install a toolbar on your grandmother’s laptop. Easyconvert handles clean, in-browser conversion—no shady download circus. Your files stay on your device; they aren’t collected or sent off for processing.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/Easyconvert/">Open Easyconvert</a> <a class="btn alt" href="https://github.com/2three1y/Easyconvert">Easyconvert source code</a></p>
-      </article>
-
-      <article>
-        <h3>Alex Classic</h3>
-        <p>A proper homage to the legendary, uncompressed Leopard-era Alex timbre—before neural models gave him a midlife crisis, pitch distortion, and an inexplicable new relationship with compression. Classic Alex, sounding like himself again.</p>
-        <p class="status">GitHub Pages is disabled for this project.</p>
-        <p class="links"><a class="btn alt" href="https://github.com/2three1y/alexclassic">Alex Classic source code</a></p>
-      </article>
-
-      <article>
-        <h3>Soundvault</h3>
-        <p>Nostalgic chimes, classic speech synths, vintage soundfonts, and retro OS audio relics—rescued from the digital void before they vanish into the great forgotten-download-folder in the sky. Open the vault; accidentally spend an hour recognizing startup sounds.</p>
-        <p class="links"><a class="btn" href="https://2three1y.github.io/soundvault/">Open Soundvault</a> <a class="btn alt" href="https://github.com/2three1y/soundvault">Soundvault source code</a></p>
-      </article>
-
-      <article>
-        <h3>Code Translator</h3>
-        <p>A two-panel browser code playground with a language dropdown and live output. Run JavaScript, preview HTML and SVG, and experiment with canvas drawings. Use the Run button or Ctrl/Cmd + Enter. Python is listed, but execution is not available yet. Despite the name, this runs or renders code rather than translating between languages.</p>
-        <p class="status">Source only, no live site yet.</p>
-        <p class="links"><a class="btn alt" href="https://github.com/2three1y/codetranslator">Code Translator source code</a></p>
-      </article>
-
-      <article>
-        <h3>chaoticmodel</h3>
-        <p>A chaotic little model with a personality of its own. Its system prompt and the raw training data behind it are open source.</p>
-        <p class="status">Source only, no live site yet.</p>
-        <p class="links"><a class="btn alt" href="https://github.com/2three1y/chaoticmodel">chaoticmodel source code</a></p>
-      </article>
+      <h3>Favorite tracks (vibe checked)</h3>
+      <ul class="tracks">
+        <li><a href="https://www.youtube.com/watch?v=VSp9MDXYWsY">YOU DECIDE</a> by SUPXR: hyperpop with a jersey club bounce at about 129 BPM. the only thing you actually get to decide is how hard you nod.</li>
+        <li><a href="https://www.youtube.com/watch?v=kGCdZ63ZZGI">wussup?</a> by shteppi and SUPXR: about 123 BPM and roughly 69% bass. it’s the song version of someone typing “wussup?” and joining your voice channel uninvited.</li>
+        <li><a href="https://www.youtube.com/watch?v=fZtLSdtQFgs">concord.</a> by shteppi: waera on the beat, around 136 BPM, mastered so loud (about −8 LUFS) it doesn’t knock, it kicks the door down and asks why you’re muted.</li>
+        <li><a href="https://www.youtube.com/watch?v=6Ku7wQvJvoE">ronald.</a> by shteppi: a lazy bounce around 83 BPM with about three-quarters of the energy in the bass. like the server member named Ronald who never talks but everyone loves anyway.</li>
+        <li><a href="https://www.youtube.com/watch?v=zWp8dfJO_04">SCRUPLES</a> by yit and Isaac Horner: about −5.7 LUFS, the loudest track on this whole site by a mile. mastered like it just bought Nitro and needs you to know.</li>
+        <li><a href="https://www.youtube.com/watch?v=gcemjdDbKuo">press start.</a> by pxiqzes featuring mi.ntyyy: about 150 BPM played half-time with 72% bass. chill game lobby energy, right up until the boss music hits.</li>
+        <li><a href="https://www.youtube.com/watch?v=nN9H95IwD4A">flower</a> by waera: fast (around 172 BPM) and the bassiest one here at about 89%. calling this “flower” is the biggest lie in the server, respectfully.</li>
+        <li><a href="https://www.youtube.com/watch?v=5hiS3xc-hmg">What’s a Nintendo?</a> by Lilithzplug: a bouncy 129-ish BPM, about two-thirds bass, with a title built to start a 40-message argument in the gaming channel.</li>
+      </ul>
     </section>
 
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">Lore (About me)</h2>
-      <p>hey, i’m Chaotic Carter (aka 2three1y). new name, same chaos. the username stays because it has seniority.</p>
-
-      <p>My main quest: poke at tech until it confesses how it works, then turn it into something people can actually use. Some days that’s a handy browser tool. Some days it’s a chess game you play by ear. Some days it’s a quiz that judges your vibes. All shipped. All count. No further questions.</p>
-
-      <p>Accessibility ships in the first commit, not in a hotfix after launch. Real headings, keyboard for everything, focus you can actually see, and apps that tell you what they’re doing. If a screen reader can’t get around it, it isn’t done. It’s a draft with a domain name.</p>
-
-      <p>Side quest that became a main quest: old computer voices, synths and system sounds. Startup chimes, classic speech synths, the tiny beeps old hardware makes. If it beeped back in the day, I want it back on speaker. (You may have already heard mine.)</p>
-
-      <p>And I’m into tools that live on your own device and don’t need anyone’s permission to work. Local-first, decentralized, actually yours. No “please sign in to continue” pop-up showing up uninvited. That’s basically what Looscid is about.</p>
-      <article>
-
-        <h3>Favorite voices</h3>
-
-        <ul>
-          <li>Classic Alex, the Leopard-era one, before neural voices gave him a midlife crisis</li>
-          <li>Old-school speech synths in general. The more robotic, the better. Bonus points if it mispronounces my username</li>
-        </ul>
-
-      </article>
-      <article>
-
-        <h3>Favorite things</h3>
-
-        <ul>
-          <li>Startup chimes and system sounds (I made my own, it’s at the top of the page)</li>
-          <li>Synths and vintage soundfonts</li>
-          <li>Retro OS audio that nobody else bothered to save</li>
-          <li>Apps that work offline and keep your stuff on your device, like a normal amount of privacy</li>
-        </ul>
-
-
-      </article>
-      <article id="advocacy">
-        <h3>Accessibility advocacy</h3>
-        <p><strong>Not optional, not a plugin, not a paid DLC</strong></p>
-        <p>Accessibility isn’t a feature I add when there’s time left over. It’s the starting line. Semantic HTML, focus you can see, keyboard support for everything, high contrast, structure that makes sense when it’s read out loud, and no important info hiding behind fiddly extra clicks.</p>
-      <p>If it only works with a mouse, it’s still in early access. If a div is pretending to be a button, it’s catfishing, and I will notice. What the hell, div.</p>
-      </article>
+    <section id="projects" class="wide" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects (built at 3 AM, mostly working)</h2>
+      <p class="intro">everything i’ve shipped. accessible on day one, because i’m the first user and i can’t see the screen either. something broke? ping me. i’m probably already in there.</p>
+      <h3>The headliners</h3>
+      <ul class="big-links two">
+        <li><a href="https://looscid.github.io/Looscid/"><span class="lbl">Looscid: my local-first workspace<span class="sr-only">, </span><span class="tag">forever in beta, on purpose</span></span></a></li>
+        <li><a href="https://2three1y.github.io/chaoticnews/"><span class="lbl">Chaotic News: unbiased, unverified, unhinged<span class="sr-only">, </span><span class="tag">the only news you need (don’t quote me)</span></span></a></li>
+        <li><a href="https://2three1y.github.io/dusk/"><span class="lbl">Dusk: a free voice for Piper<span class="sr-only">, </span><span class="tag">still learning to talk, like all of us</span></span></a></li>
+        <li><a href="https://2three1y.github.io/birdline/"><span class="lbl">Birdline: a Nostr timeline with zero algorithm<span class="sr-only">, </span><span class="tag">just posts, in order, like the old days</span></span></a></li>
+      </ul>
+      <p class="intro">and everything else in orbit, newest-ish first:</p>
+      <div class="grid">
+        <article id="looscid" class="feature">
+          <h3>Looscid</h3>
+          <p class="vibe">the main quest. forever in beta, on purpose</p>
+          <p>my local-first, decentralized web workspace, built around one idea: your stuff is yours. your data and your daily tools keep working right on your own device. no account wall, no “please sign in to continue” jumpscare.</p>
+          <p>it is not trying to replace iOS or Android. it knows its role. its real job is being comfy with a screen reader: predictable landmarks and headings, short chunks, keyboard-first everything, and status updates that get announced instead of hidden. the goal is a workspace that stays chill even when every single thing is being read out loud. quiet server at 3 AM, not ten people unmuting at once.</p>
+          <p class="links"><a class="go" href="https://looscid.github.io/Looscid/">Open Looscid</a></p>
+        </article>
+        <article>
+          <h3>Fork Lab</h3>
+          <p class="vibe">my forks finally got jobs</p>
+          <p>i fork a lot of apps. most of them can’t run in a browser. so i built tiny fake-but-working demos of 8 of them: mesh chat on bitchat, posting on Misskey and Feditext, a scripted Kilo Code helper, a TalkBack trainer, the GrapheneOS camera, messages and PDF viewer, Chat UI, and OldTwitter.</p>
+          <p>all fake data. no servers. nothing to break (i checked, i tried).</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/forklab/">Open Fork Lab</a> <a href="https://github.com/2three1y/forklab">Fork Lab source code</a></p>
+        </article>
+        <article>
+          <h3>Retro Desk</h3>
+          <p class="vibe">windows 95 called. i picked up</p>
+          <p>a Windows 95-style desktop in your browser, fan-made and totally original. hit Turn on computer for the boot chime, then mess with the Start menu, My Computer, a Notepad that actually saves, and a Recycle Bin with a personality problem.</p>
+          <p>blue screens so far: zero. knocking on beige plastic.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/retrodesk/">Open Retro Desk</a> <a href="https://github.com/2three1y/retrodesk">Retro Desk source code</a></p>
+        </article>
+        <article>
+          <h3>Letter Orchestra</h3>
+          <p class="vibe">type letters, accidentally make a beat</p>
+          <p>every letter you type turns into music. 17 instruments, reverb, delay, a bitcrusher, genre demos so you’re not starting from zero, and Export WAV so your masterpiece survives.</p>
+          <p>fun fact: my group chat messages go hard as melodies. the group chat did not consent.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/letterorchestra/">Open Letter Orchestra</a> <a href="https://github.com/2three1y/letterorchestra">Letter Orchestra source code</a></p>
+        </article>
+        <article>
+          <h3>Earshot</h3>
+          <p class="vibe">it reads to you and never gets tired</p>
+          <p>an offline talking assistant in your browser. paste text, open a file or a link, and it reads it out loud with natural neural voices, or hands it straight to VoiceOver. talk to it to pause, skip, speed up, or ask what the text even says.</p>
+          <p>voices only download when you press Load voices, so it’s not eating your data behind your back. unlike some apps. you know who you are.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/earshot/">Open Earshot</a> <a href="https://github.com/2three1y/earshot">Earshot source code</a></p>
+        </article>
+        <article>
+          <h3>Relay Radio</h3>
+          <p class="vibe">nostr, but it’s a radio station now</p>
+          <p>press play and your Nostr feed comes in as sound: an earcon for every note, reply, repost, reaction, zap and mention, then the note read out loud (or by VoiceOver). safe curated relays by default, plus an optional station for people you follow.</p>
+          <p>it’s lurking. with earcons. premium lurking.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/relayradio/">Open Relay Radio</a> <a href="https://github.com/2three1y/relayradio">Relay Radio source code</a></p>
+        </article>
+        <article>
+          <h3>Blind Chess</h3>
+          <p class="vibe">chess by ear. i made it for me, you can play too</p>
+          <p>chess you play completely by sound and keyboard. every move gets said out loud, you type moves like Nf3 or tap squares, and you can play the computer, pass and play, or invite a friend over Nostr with a link. no account needed.</p>
+          <p>trash talk not included. bring your own.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/blindchess/">Open Blind Chess</a> <a href="https://github.com/2three1y/blindchess">Blind Chess source code</a></p>
+        </article>
+        <article>
+          <h3>Stargazer</h3>
+          <p class="vibe">my star addiction, but you can hear it</p>
+          <p>my 8,000+ GitHub stars turned into a sound map. every repo plays a note (more stars, higher note), with audio graphs by month, language and license.</p>
+          <p>yes, i star a lot of repos. no, i will not be taking questions at this time.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/stargazer/">Open Stargazer</a> <a href="https://github.com/2three1y/stargazer">Stargazer source code</a></p>
+        </article>
+        <article>
+          <h3>Retro Voice Jukebox</h3>
+          <p class="vibe">old robot voices, on demand</p>
+          <p>type anything and hear it in old-school DECtalk-style formant voices. 13 presets, retro effects, and you can save clips as WAV.</p>
+          <p>one of the presets sings. this is your only warning.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/retrovoicejukebox/">Open Retro Voice Jukebox</a> <a href="https://github.com/2three1y/retrovoicejukebox">Retro Voice Jukebox source code</a></p>
+        </article>
+        <article>
+          <h3>GameSpeak</h3>
+          <p class="vibe">the NPCs finally speak up</p>
+          <p>drop in a game screenshot and it reads the text bubbles top to bottom, with next and previous line keys plus a describe-layout mode.</p>
+          <p>reading text out of pictures needs browser support. on iPhone, paste the text from Live Text and it works the same.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/gamespeak/">Open GameSpeak</a> <a href="https://github.com/2three1y/gamespeak">GameSpeak source code</a></p>
+        </article>
+        <article>
+          <h3>Dream Nests</h3>
+          <p class="vibe">voice channel energy, accessible edition</p>
+          <p>accessible live Nostr audio rooms and streams. earcons tell you when a hand goes up, a mic turns on, or a room ends, and the live chat gets read out loud.</p>
+          <p>it’s listen-only and opens Nests rooms in their own app. basically a voice channel without the guy eating chips on open mic.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/dreamnests/">Open Dream Nests</a> <a href="https://github.com/2three1y/dreamnests">Dream Nests source code</a></p>
+        </article>
+        <article>
+          <h3>Tap Party</h3>
+          <p class="vibe">group chat, but make it 1840</p>
+          <p>a serverless Morse code chat. share a room link, tap the big pad, and your friends hear and feel every dot and dash. it has a learn mode and a braille view.</p>
+          <p>built only from repos i’ve starred, every one credited. the stars finally paid off.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/tapparty/">Open Tap Party</a> <a href="https://github.com/2three1y/tapparty">Tap Party source code</a></p>
+        </article>
+        <article>
+          <h3>Memeprojects</h3>
+          <p class="vibe">for when you have suspicious amounts of free time</p>
+          <p>unhinged quizzes, fake diagnostic verdicts, and internet chaos made to waste your time in the best way possible. your answers don’t get collected. it judges your vibes, it doesn’t harvest your data.</p>
+          <ul>
+            <li><strong>RU a Cheater:</strong> step up to a completely unserious verdict machine. it’s a joke generator, not a courtroom. no lawyers, no evidence, just drama.</li>
+            <li><strong>Persona Evaluator:</strong> press a button, get a very official-sounding persona. take it with zero seriousness. your friends won’t. sorry in advance.</li>
+          </ul>
+          <p class="links"><a class="go" href="https://2three1y.github.io/memeprojects/">Open Memeprojects</a> <a href="https://github.com/2three1y/memeprojects">Memeprojects source code</a></p>
+        </article>
+        <article>
+          <h3>Reactor Toolbar</h3>
+          <p class="vibe">find the like button without a shovel</p>
+          <p>fast reactions and accessible toolbar shortcuts, so you’re not digging through menus like an archaeologist looking for the sacred Like button. hit the reaction you want while the moment is still happening.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/reactortoolbar/">Open Reactor Toolbar</a> <a href="https://github.com/2three1y/reactortoolbar">Reactor Toolbar source code</a></p>
+        </article>
+        <article>
+          <h3>Easyconvert</h3>
+          <p class="vibe">file conversion with zero malware ads</p>
+          <p>convert files without 47 sketchy ads, fake download countdowns, or a “Click Here” banner trying to install a toolbar on your grandma’s laptop. it all happens right in your browser. your files stay on your device and never get sent anywhere.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/Easyconvert/">Open Easyconvert</a> <a href="https://github.com/2three1y/Easyconvert">Easyconvert source code</a></p>
+        </article>
+        <article>
+          <h3>Alex Classic</h3>
+          <p class="vibe">justice for the original Alex</p>
+          <p>a tribute to the legendary, uncompressed Leopard-era Alex voice, from before neural models gave him a midlife crisis, weird pitch, and a toxic relationship with compression. Alex, sounding like Alex again.</p>
+          <p class="status">GitHub Pages is off for this one, so it’s source only for now.</p>
+          <p class="links"><a href="https://github.com/2three1y/alexclassic">Alex Classic source code</a></p>
+        </article>
+        <article>
+          <h3>Soundvault</h3>
+          <p class="vibe">a museum for startup sounds</p>
+          <p>nostalgic chimes, classic speech synths, vintage soundfonts and retro OS audio, rescued before they vanish into the forgotten-downloads-folder in the sky.</p>
+          <p>open it for one minute. lose an hour recognizing startup sounds. happens every time.</p>
+          <p class="links"><a class="go" href="https://2three1y.github.io/soundvault/">Open Soundvault</a> <a href="https://github.com/2three1y/soundvault">Soundvault source code</a></p>
+        </article>
+        <article>
+          <h3>Code Translator</h3>
+          <p class="vibe">it doesn’t translate. it runs. naming is hard</p>
+          <p>a two-panel code playground with a language dropdown and live output. run JavaScript, preview HTML and SVG, and draw on a canvas. press Run or Ctrl/Cmd + Enter. Python is in the list but can’t run yet. despite the name, it runs or renders code, it doesn’t translate between languages.</p>
+          <p class="status">source only, no live site yet.</p>
+          <p class="links"><a href="https://github.com/2three1y/codetranslator">Code Translator source code</a></p>
+        </article>
+        <article>
+          <h3>chaoticmodel</h3>
+          <p class="vibe">a model with my personality. be afraid</p>
+          <p>a chaotic little model with a personality of its own. its system prompt and the raw training data behind it are open source, so you can see exactly how the chaos was made.</p>
+          <p class="status">source only, no live site yet.</p>
+          <p class="links"><a href="https://github.com/2three1y/chaoticmodel">chaoticmodel source code</a></p>
+        </article>
+      </div>
     </section>
 
-    <section id="blog" aria-labelledby="blog-heading">
-      <h2 id="blog-heading">Thoughts too long for a text (Writing)</h2>
-      <p>For when a thought needs more than one breath, or more than one message in a row. Latest:</p>
-      <p><a href="blog/my-800-iphone-died/">My $800 iPhone Died, and a 2019 iPod Had to Save It</a></p>
-      <p><a href="blog/">Read everything I’ve written (no paywall, no newsletter pop-up)</a></p>
+    <section id="about" class="wrap" aria-labelledby="about-heading">
+      <h2 id="about-heading">About me (the lore)</h2>
+      <p>hey, i’m Chaotic Carter, aka 2three1y. new name, same chaos. the username stays, it has seniority.</p>
+      <p>also: i’m blind. yes, for real. i make beats i’ve never seen, i write code with VoiceOver reading every line back at me, and i’ve never seen this website. i hear it’s pretty. if it’s ugly, please lie to me.</p>
+      <p>that’s why everything i build works with a screen reader from the very first commit. not because it’s trendy. because i’m the first user, and if i can’t use it, it isn’t done. it’s a draft with a domain name.</p>
+      <p>my main quest: poke at tech until it confesses how it works, then turn it into something people can actually use. some days that’s a browser tool. some days it’s chess you play by ear. some days it’s a quiz that roasts your personality. all shipped. all count. no further questions.</p>
+      <p>side quest that took over: old computer voices, synths and system sounds. startup chimes, classic speech synths, the tiny beeps old hardware makes. if it beeped in 1998, i want it back on speaker. (you might’ve already heard mine.)</p>
+      <p>and i love tools that live on your own device and don’t need anybody’s permission to work. local-first, decentralized, actually yours. that’s basically Looscid’s whole personality.</p>
+
+      <h3>Favorite voices</h3>
+      <ul>
+        <li>Classic Alex, the Leopard-era one, before neural voices gave him a midlife crisis</li>
+        <li>old-school speech synths in general. the more robotic the better. bonus points if it butchers my username</li>
+      </ul>
+
+      <h3>Favorite things</h3>
+      <ul>
+        <li>startup chimes and system sounds (i made my own, it’s in the Startup chime section)</li>
+        <li>synths and vintage soundfonts</li>
+        <li>retro OS audio that nobody else bothered to save</li>
+        <li>apps that work offline and keep your stuff on your device, like a normal amount of privacy</li>
+      </ul>
+
+      <h3 id="advocacy">Accessibility advocacy (not a paid DLC)</h3>
+      <p>accessibility isn’t a bonus feature you add if there’s time left. it’s the starting line. semantic HTML, focus you can actually see, keyboard for everything, real contrast, structure that makes sense out loud, and no important info hiding behind fiddly extra clicks.</p>
+      <p>if it only works with a mouse, it’s still in early access. if a div is pretending to be a button, that’s catfishing, and i will find out. VoiceOver snitches. what the hell, div.</p>
     </section>
 
-    <section id="sound" aria-labelledby="sound-heading">
+    <section id="blog" class="wrap" aria-labelledby="blog-heading">
+      <h2 id="blog-heading">Writing (thoughts too long for a text)</h2>
+      <p>for when a thought needs more than one breath, or more than six messages in a row. latest:</p>
+      <ul class="big-links">
+        <li><a href="blog/my-800-iphone-died/"><span class="lbl">My $800 iPhone Died, and a 2019 iPod Had to Save It<span class="sr-only">, </span><span class="tag">latest post</span></span></a></li>
+        <li><a href="blog/"><span class="lbl">Read everything I’ve written<span class="sr-only">, </span><span class="tag">no paywall, no newsletter pop-up</span></span></a></li>
+      </ul>
+    </section>
+
+    <section id="sound" class="wrap" aria-labelledby="sound-heading">
       <h2 id="sound-heading">Startup chime (optional, like sleep)</h2>
-      <div id="chime" class="chime-bar">
-      <p class="chime-row"><button id="chime-btn" type="button">Play my startup chime</button> <button id="chime-toggle" type="button" aria-pressed="false">Startup chime: <span id="chime-state">off</span></button></p>
-      <p id="chime-note">My startup chime is off unless you switch it on. Switch it on and it plays once when the page opens, or on your first tap, click or key press if your browser makes sites wait. It’s soft, about two seconds, and made live in your browser. Whatever you pick stays that way on this device. If your iPhone is on silent, it may stay quiet.</p>
-    </div>
+      <div id="chime" class="card chime-bar">
+        <p class="chime-row"><button id="chime-btn" type="button">Play my startup chime</button> <button id="chime-toggle" type="button" aria-pressed="false">Startup chime: <span id="chime-state">off</span></button></p>
+        <p id="chime-note">i made my own startup chime. it stays off unless you turn it on. turn it on and it plays once when the page opens, or on your first tap, click or key press if your browser makes sites wait. it’s soft, about two seconds, made live in your browser, and quiet enough to sit under VoiceOver. your pick is remembered on this device. if your iPhone is on silent, it might stay quiet.</p>
+      </div>
     </section>
 
-    <section id="ps-notice" aria-labelledby="ps-title">
-  <h2 id="ps-title" tabindex="-1">Photosensitivity notice</h2>
-  <p>Good news first: nothing on this site flashes or moves, and it stays within the three-flash safety limit. This is the one part of the site where I keep a straight face (mostly).</p>
-  <div class="ps-row">
-  <details>
-    <summary>More details (the actually important part)</summary>
-    <div>
-    <ul>
-      <li>What was checked: every animation, transition and script on this page, plus a frame-by-frame screen recording measured against the WCAG 2.3.1 limits (no more than three flashes in any second, including red flashes).</li>
-      <li>Nothing on this site moves or blinks on its own. Not even a little. The most exciting thing that moves here is my bass meter, and it doesn’t.</li>
-      <li>Your device's Reduce Motion setting is respected: if anything that moves ever gets added, it stays still while that setting is on. Your settings outrank me here, as they should.</li>
-      <li>Sound: the only sound here is my startup chime, and it’s off unless you switch it on (the “Startup chime” button in the Startup chime section, or in Settings). When it’s on, it’s soft, about two seconds long, and plays once when the page opens (or on your first tap, click or key press, if your browser makes sites wait). Nothing else on the site makes sound. Ironic, considering the playlist.</li>
-      <li>Honest limits: this was tested with automated measurement, not a clinical tool like PEAT, and not on every device. I have a lot of tabs open, but not that many.</li>
-    </ul>
-    <p>If anything here ever flickers, that’s a real bug, not a feature and not a vibe. Please <a href="https://github.com/2three1y/2three1y.github.io/issues">report it on GitHub</a> and it jumps to the top of my to-do list, ahead of sleep.</p>
-    </div>
-  </details>
-  </div>
-  <p id="ps-status" class="ps-sr" role="status" aria-live="polite"></p>
-</section>
+    <section id="ps-notice" class="wrap" aria-labelledby="ps-title">
+      <h2 id="ps-title" tabindex="-1">Photosensitivity notice</h2>
+      <p>good news first: nothing on this site flashes or moves, and it stays within the three-flash safety limit. this is the one section where i keep a straight face. mostly.</p>
+      <details>
+        <summary>More details (the actually important part)</summary>
+        <ul>
+          <li>what got checked: every animation, transition and script on this page, plus a frame-by-frame screen recording measured against the WCAG 2.3.1 limits (no more than three flashes in any second, red flashes included).</li>
+          <li>nothing on this site moves or blinks on its own. not even a little. the big color blocks and rings up top are painted on and stay perfectly still.</li>
+          <li>your device’s Reduce Motion setting is respected: if anything that moves ever gets added, it stays still while that setting is on. Calm mode in Settings is on by default too. your settings outrank mine, as they should.</li>
+          <li>sound: the only sound here is my startup chime, and it’s off unless you switch it on (the Startup chime button in the Startup chime section, or in Settings). when it’s on, it’s soft, about two seconds long, and plays once when the page opens (or on your first tap, click or key press if your browser makes sites wait). nothing else on the site makes sound. ironic, considering the playlist.</li>
+          <li>honest limits: this was tested with automated measurement, not a clinical tool like PEAT, and not on every device out there.</li>
+        </ul>
+        <p>if anything here ever flickers, that’s a real bug, not a feature and not a vibe. please <a href="https://github.com/2three1y/2three1y.github.io/issues">report it on GitHub</a> and it jumps to the top of my to-do list, ahead of sleep.</p>
+      </details>
+    </section>
 
-    <p><a class="back-to-top" href="#top">Back to top (speedrun the scroll)</a></p>
+    <p class="wrap"><a class="back-to-top" href="#top">Back to top (speedrun the scroll)</a></p>
   </main>
 
   <footer>
-    <p>Made by Chaotic Carter (2three1y) with semantic HTML, a keyboard, and a playlist that never ends. No trackers, no cookies, no flashing, and nothing autoplays. The tiny startup chime only plays if you switch it on. Known issue: sleep is still on the roadmap, no ETA. Closed as working as intended.</p>
-    <p>Co-written with <a href="https://tab.bot">Tab, my AI sidekick</a>. I wrote the vibes, Tab wrote the commits. If something breaks, blame accordingly (it was Tab).</p>
-    <p>If you read all the way down here, you are a GOOD BOY/GIRL/NONBINARY.</p>
+    <div class="wrap">
+      <p class="loud">Chaotic Carter, king of chaos. blind, loud, and shipping.</p>
+      <p>made by Chaotic Carter (2three1y) with semantic HTML, a keyboard, VoiceOver, and a playlist that never ends. no trackers, no cookies, no flashing, nothing autoplays. the startup chime only plays if you switch it on. known issue: sleep. still on the roadmap. no ETA. closed as working as intended.</p>
+      <p>Co-written with <a href="https://tab.bot">Tab</a>. i bring the chaos, Tab writes the commits. if something breaks, it was Tab.</p>
+      <p>you scrolled all the way down here? GOOD BOY/GIRL/NONBINARY. you passed the vibe check.</p>
+    </div>
   </footer>
 
   <dialog id="settings" aria-labelledby="settings-title">
@@ -678,7 +619,7 @@ window.__applyPrefs();})();
         <h2 id="settings-title">Settings</h2>
         <button type="button" id="settings-close">Close</button>
       </div>
-      <p class="settings-intro">Make this place yours. Every change sticks the moment you pick it, no Save button, no loading bar, no drama.</p>
+      <p class="settings-intro">make the chaos comfy. every change sticks the second you pick it. no Save button, no loading bar, no drama.</p>
 
       <h3>Look</h3>
       <div class="settings-group">
@@ -714,7 +655,7 @@ window.__applyPrefs();})();
           <button type="button" role="switch" id="set-chime" class="set-switch" aria-checked="false"><span class="set-label">Startup chime</span><span class="set-end" aria-hidden="true"><span class="set-state">Off</span><span class="track"><span class="knob"></span></span></span></button>
         </div>
       </div>
-      <p class="set-foot">Off unless you switch it on. Same switch as the one in the Startup chime section. Flip either one and they both follow, like a duo queue that actually communicates.</p>
+      <p class="set-foot">off unless you switch it on. same switch as the one in the Startup chime section. flip either and they both follow, like a duo queue that actually communicates.</p>
 
       <h3>Motion</h3>
       <div class="settings-group">
@@ -724,33 +665,34 @@ window.__applyPrefs();})();
       </div>
       <p class="set-foot" id="set-calm-foot">Keeps anything that could ever move perfectly still. On by default.</p>
 
-      <p class="settings-joke">These save on your device only. I can’t see them, and honestly I don’t want to. I have enough settings of my own to ignore.</p>
+      <p class="settings-joke">these save on your device only. i can’t see them. i literally can’t see anything. your secrets are safe.</p>
     </div>
   </dialog>
 
-  <script>
-    const copyNostrButton = document.getElementById('copy-nostr-btn');
-    const nostrNpub = document.getElementById('nostr-npub');
-    const copyNostrStatus = document.getElementById('copy-nostr-status');
-    let copyStatusTimeout;
+  <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 
-    copyNostrButton.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(nostrNpub.textContent.trim());
-        copyNostrButton.textContent = 'Copied!';
-        copyNostrStatus.textContent = 'Nostr public key copied to clipboard. Paste responsibly.';
-      } catch {
-        copyNostrStatus.textContent = 'Could not copy automatically. Select the public key text and copy it manually.';
-      }
-
-      clearTimeout(copyStatusTimeout);
-      copyStatusTimeout = setTimeout(() => {
-        copyNostrButton.textContent = 'Copy my Nostr public key';
-        copyNostrStatus.textContent = '';
-      }, 2500);
-    });
-  </script>
   <script>
+    // Nostr copy button. Talks through the page's one live region (#announcer).
+    (function () {
+      var btn = document.getElementById('copy-nostr-btn');
+      var key = document.getElementById('nostr-npub');
+      var say = document.getElementById('announcer');
+      if (!btn || !key) return;
+      var t;
+      function announce(msg) { if (!say) return; say.textContent = ''; setTimeout(function () { say.textContent = msg; }, 50); }
+      btn.addEventListener('click', function () {
+        var text = key.textContent.trim();
+        function done() { btn.textContent = 'Copied. go follow me'; announce('Nostr public key copied. paste responsibly.'); }
+        function fail() { announce('Could not copy automatically. Select the key text and copy it yourself, old school.'); }
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fail);
+          else fail();
+        } catch (e) { fail(); }
+        clearTimeout(t);
+        t = setTimeout(function () { btn.textContent = 'Copy my Nostr public key'; if (say) say.textContent = ''; }, 3000);
+      });
+    })();
+
     // Startup chime: OFF unless the visitor switches it on. When on, plays once per page load, as early as the browser allows.
     // Tries on load; if the browser keeps audio locked until you interact, it plays on your
     // first tap, click or key press instead. "Startup chime: on/off" is remembered on this device.
