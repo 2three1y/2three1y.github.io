@@ -3,37 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Braille Text Field Label Occlusion Reproduction (Case-ID: 22245181)</title>
+<title>Braille Text Field Label Testing Playground</title>
 </head>
 <body>
 <header>
-<h1>Braille Text Field Label Occlusion Reproduction</h1>
-<p>Case-ID: 22245181</p>
-<p>This is an isolated minimal test case built specifically for Apple Accessibility engineering to reproduce the text field indicator truncation on 20-cell Braille displays. It does not reference any third-party production site. We apologize for using a minimal reproduction demo rather than a commercial third-party site; this page is intentionally stripped down so that only the behavior under test is present.</p>
+<h1>Braille Text Field Label Testing Playground</h1>
+<p>This is a minimal, neutral page for testing how text field labels and editability indicators display on 20-cell Braille displays. All field labels and values are generic sample text.</p>
 </header>
 <section>
-<h2>Reproduction steps</h2>
+<h2>Testing steps</h2>
 <ol>
 <li>Connect a 20-cell Braille display via Bluetooth.</li>
-<li>Navigate with Rotor or Pan keys to the long text fields.</li>
-<li>Observe the editability indicator behavior and label occlusion.</li>
+<li>Navigate with Rotor or Pan keys to the text fields below.</li>
+<li>Observe the editability indicator behavior and how the label displays.</li>
 </ol>
 </section>
 <form>
 <div>
-<label for="first-name">First Name</label>
-<input type="text" id="first-name" name="first-name" autocomplete="off">
+<label for="short-field">Short Label</label>
+<input type="text" id="short-field" name="short-field" autocomplete="off">
 </div>
 <div>
-<label for="email-confirm">Email Address Confirmation</label>
-<input type="email" id="email-confirm" name="email-confirm" autocomplete="off">
+<label for="medium-field">Medium Field Label</label>
+<input type="text" id="medium-field" name="medium-field" autocomplete="off">
 </div>
 <div>
-<label for="long-field">Please enter the full legal name of the primary account holder as it appears on the government issued identification document</label>
+<label for="long-field">Long Descriptive Label for Testing Text Field Indicator Behavior on Braille Displays</label>
 <input type="text" id="long-field" name="long-field" autocomplete="off">
 </div>
 <div>
-<label for="notes">Additional notes</label>
+<label for="notes">Multiline Notes Field</label>
 <textarea id="notes" name="notes" rows="6" cols="40"></textarea>
 </div>
 </form>
