@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Carter, accessible software</title>
-  <meta name="description" content="Carter builds accessible, open-source software in Detroit.">
+  <meta name="description" content="Carter builds accessible, open-source software in Michigan.">
   <style>
     :root {
       color-scheme: light dark;
@@ -33,7 +33,7 @@
       background: var(--background);
       font: 1rem/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-    a { color: var(--link); text-underline-offset: 0.18em; }
+    a { color: var(--link); text-decoration: none; }
     a:focus-visible {
       outline: 3px solid var(--focus);
       outline-offset: 4px;
@@ -61,6 +61,7 @@
     p { margin: 0; }
     footer { padding-top: 1.5rem; border-top: 1px solid var(--rule); }
     footer section { padding-top: 0; border-top: 0; }
+    footer > p { margin-top: 1.5rem; color: var(--foreground); }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; }
     }
@@ -68,16 +69,23 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <header>
+  <header aria-label="Site header">
     <h1>Carter</h1>
     <p class="lede">I build accessible, open-source software for people who use screen readers, because I'm one of them.</p>
   </header>
+  <nav aria-label="On-page sections">
+    <ul>
+      <li><a href="#work-heading">What I work on</a></li>
+      <li><a href="#page-heading">This page</a></li>
+      <li><a href="#about-heading">About</a></li>
+      <li><a href="#contact-heading">Contact</a></li>
+    </ul>
+  </nav>
   <main id="main" tabindex="-1">
     <section aria-labelledby="work-heading">
       <h2 id="work-heading">What I work on</h2>
       <ul>
-        <li><strong>Looscid</strong> — a screen-reader-first web OS</li>
-        <li><strong>Open source</strong> — everything I build is public on <a href="https://github.com/2three1y">GitHub</a></li>
+        <li><strong>Looscid (my biggest side project)</strong> — a screen-reader-first web OS</li>
         <li><strong>Accessibility</strong> — assistive tech, braille displays, and screen readers</li>
       </ul>
     </section>
@@ -87,16 +95,15 @@
     </section>
     <section aria-labelledby="about-heading">
       <h2 id="about-heading">About</h2>
-      <p>I'm a high school developer in Detroit. I started with LEGO, moved into web development, and never stopped taking things apart. Every project starts with VoiceOver instead of getting bolted on at the end. I have strong opinions about focus order. Rosy, the cat, has strong opinions about everything else.</p>
+      <p>I'm a high school developer in Michigan. I started with LEGO, moved into web development, and never stopped taking things apart. Every project starts with VoiceOver instead of getting bolted on at the end. I have strong opinions about focus order. Rosy, the cat, has strong opinions about everything else.</p>
     </section>
   </main>
-  <footer>
+  <footer aria-label="Site footer">
     <section aria-labelledby="contact-heading">
       <h2 id="contact-heading">Contact</h2>
-      <p><a href="mailto:2three1y@gmail.com">2three1y@gmail.com</a><br>
-      <a href="https://github.com/2three1y">GitHub</a></p>
+      <p><a href="https://github.com/2three1y">GitHub (external)</a></p>
     </section>
-    <p>Created by <a href="https://github.com/2three1y">2three1y</a></p>
+    <p>Created by <a href="https://2three1y.github.io">2three1y</a></p>
   </footer>
 </body>
 </html>
