@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en-US">
 <head>
 <meta charset="utf-8"/>
@@ -177,7 +178,7 @@
   
 .settings-layout{display:grid;grid-template-columns:minmax(12rem,1fr) 2fr;gap:2rem;margin-top:1rem}.settings-layout nav{border-right:1px solid var(--line);padding-right:1rem}.settings-layout nav ul{list-style:none;padding:0}.settings-layout nav li{margin:.5rem 0}.settings-content{min-width:0}.settings-row{display:grid;grid-template-columns:1fr auto;gap:.2rem 1rem;padding:1rem 0;border-bottom:1px solid var(--line);text-decoration:none}.settings-row .muted{grid-column:1}.settings-row>span:last-child{grid-column:2;grid-row:1/3;align-self:center;font-size:1.5rem}.settings-content section{scroll-margin-top:1rem}fieldset{margin:1rem 0;padding:1rem;border:1px solid var(--line)}fieldset label{display:block;margin:.4rem 0}.settings-intro{color:var(--muted)}@media(max-width:42rem){.settings-layout{grid-template-columns:1fr}.settings-layout nav{border:0;border-bottom:1px solid var(--line)}}
 /* Section rhythm: short stops, clear headings, comfortable breathing room. */
-main>section{padding-block:2.6rem;scroll-margin-top:5rem}main>section+section{margin-top:.65rem}main>section>h2{margin-bottom:1rem}.jump{position:relative;z-index:2}.jump ul{display:flex;flex-wrap:wrap;gap:.45rem 1rem;list-style:none;padding:0;margin:0 auto;width:min(100% - 2.25rem,var(--wide))}.jump a{display:inline-block;padding:.35rem .1rem;font-weight:700}@media(min-width:54rem){.jump{position:sticky;top:0;background:var(--bg);border-block:1px solid var(--line);padding:.55rem 0}}</style>
+main>section{padding-block:2.6rem;scroll-margin-top:5rem}main>section+section{margin-top:.65rem}main>section>h2{margin-bottom:1rem}.jump{position:sticky;top:0;z-index:20;background:var(--bg);border-block:1px solid var(--line);padding:.45rem max(1.125rem,calc((100% - var(--wide))/2))}.jump-menu{width:min(100%,var(--wide));margin:0 auto}.jump-menu summary{display:inline-block;cursor:pointer;list-style:none;border:2px solid var(--line);border-radius:.45rem;padding:.45rem .8rem;font-weight:800;background:var(--bg);color:var(--text)}.jump-menu summary::-webkit-details-marker{display:none}.jump-menu summary::after{content:" ▾"}.jump-menu[open] summary::after{content:" ▴"}.jump-groups{display:flex;flex-wrap:wrap;gap:.45rem 1rem;padding-top:.5rem}.jump ul{display:flex;flex-wrap:wrap;gap:.45rem 1rem;list-style:none;padding:0;margin:0}.jump a{display:inline-block;padding:.35rem .1rem;font-weight:700}.jump ul+ul{border-left:1px solid var(--line);padding-left:.8rem;margin-left:.2rem}main>section{scroll-margin-top:7rem}.settings-content section{scroll-margin-top:7rem}</style>
 <script id="ps-script">
 /* Calm mode: ON unless the visitor turns it off (remembered on this device). The system Reduce Motion setting always wins. */
 (function(){var K="calm-mode",d=document.documentElement,mq=window.matchMedia?window.matchMedia("(prefers-reduced-motion: reduce)"):{matches:false};
@@ -214,9 +215,10 @@ window.__applyPrefs();})();
 <h1>Chaotic <span class="h1-2">Carter</span></h1>
 <p class="sticker">blind producer, coder, certified 3 AM menace.</p>
 <p class="hero-lede">i make beats i’ve never seen and code with a screen reader yelling at me. this site is the center of the chaos: YouTube, TikTok, GitHub, and every app i shipped at 3 AM all orbit this one page. you are now in orbit. no refunds.</p>
+<aside aria-label="About the name Carter" data-clean="“Carter” isn’t my legal name as of right now; it’s the online name I use to protect my privacy. The paperwork can stay mysterious." data-coarse="“Carter” isn’t my legal name as of right now; it’s the online name I use to protect my privacy. The paperwork can stay a damn mystery.">“Carter” isn’t my legal name as of right now; it’s the online name I use to protect my privacy. The paperwork can stay mysterious.</aside>
 <ul class="hero-cta">
 <li><a class="primary" href="https://www.youtube.com/channel/UChazMrj9avsQnGW-UiG86IQ">Free beats on YouTube</a></li>
-<li><a class="ghost" href="#projects">Stuff I built at 3 AM</a></li>
+<li><a class="ghost" href="#projects">Projects (the tabs are multiplying)</a></li>
 </ul>
 <div class="status-card">
 <p class="label">live status, refreshed every visit</p>
@@ -239,6 +241,763 @@ window.__applyPrefs();})();
 <li>muted (on purpose this time)</li>
 <li>making the focus ring bigger. it was already huge 🔥</li>
 <li>one more feature before bed (lying) (4)</li>
+<li>VoiceOver found a button with the confidence of a div in a trench coat</li>
+<li>my Monarch has more plot twists than the git history</li>
+<li>Rosy (Chief Fluff Engineer) approved the patch by sitting on Escape</li>
+<li>Lulu has reviewed the pull request and requested more treats</li>
+<li>Detroit weather just filed a bug report against my jacket</li>
+<li>the air fryer and the Poke bowl are in mediation again</li>
+<li>I put Poke in the air fryer once and the kitchen still remembers</li>
+<li>my LEGO bricks built a developer; support for adult assembly not included</li>
+<li>I learned web development by giving LEGO a very ambitious README</li>
+<li>braille is my terminal's tactile way of saying, you missed a bracket</li>
+<li>the Monarch display is currently reading me my own bad decisions in braille</li>
+<li>VoiceOver said 'group' and I said, yes, emotionally</li>
+<li>I made a button accessible and it immediately got promoted to management</li>
+<li>the focus indicator is the only thing here with a clear career path</li>
+<li>keyboard navigation: because my mouse has never met my hands</li>
+<li>my screen reader and I are pair programming; it has strong opinions about commas</li>
+<li>I asked VoiceOver for one hint and got the director's commentary</li>
+<li>my headings are in order; my browser tabs are forming a union</li>
+<li>accessibility is not a bonus level; it is the actual game</li>
+<li>I fixed a contrast issue and the colors stopped whispering in the corner</li>
+<li>open source means strangers can improve my code and discover my TODOs</li>
+<li>I decentralized the app; now my bugs have several places to live</li>
+<li>my protocol is peer to peer, except the peers are all asking me for updates</li>
+<li>Looscid's git lore now needs its own archaeological department</li>
+<li>I found a Looscid commit from the past and it says 'temporary' in 3 places</li>
+<li>Looscid history is a mystery novel where every suspect is me</li>
+<li>the branch is called main but my confidence is on a feature branch</li>
+<li>I rebased Looscid and the timeline asked for a written apology</li>
+<li>git blame says me; I would like to appeal to a higher repository</li>
+<li>my commit message says 'fix stuff' and the stuff knows what it did</li>
+<li>I made a tiny change and git produced a feature-length documentary</li>
+<li>the merge conflict is between me and a version of me from Tuesday</li>
+<li>I pushed a fix and immediately found a more creative bug</li>
+<li>my repository has lore, forks, and one very suspicious typo</li>
+<li>I went to school to learn; my laptop went to school to update</li>
+<li>school assignment due tomorrow; my ideas have scheduled a meeting at 2 AM</li>
+<li>my notes are accessible; the deadline is still entirely nonvisual</li>
+<li>I finished the assignment and received the rare loot: another assignment</li>
+<li>the syllabus says read chapter four; VoiceOver says we are doing the whole book</li>
+<li>I study at night because the bugs respect quiet hours less than I do</li>
+<li>my homework has a stronger release schedule than my projects</li>
+<li>I opened the class portal and it opened seven tabs of its own</li>
+<li>the group project has one shared document and twelve different definitions of done</li>
+<li>my study plan is a heading structure with optimistic time estimates</li>
+<li>coding at night: fewer notifications, same number of existential semicolons</li>
+<li>it is 3 AM and my code has started using the word 'we'</li>
+<li>I told myself one last commit; the sun has entered the chat</li>
+<li>night mode is on; sleep mode remains an unresolved issue</li>
+<li>I am debugging by braille and the bug is trying to play hard to get</li>
+<li>my late-night build passed; my morning self has requested an audit</li>
+<li>the cat is asleep, so obviously this is the perfect time to deploy</li>
+<li>Rosy approved the deployment by walking across the keyboard with authority</li>
+<li>Chief Fluff Engineer says the sprint needs more naps and fewer sprints</li>
+<li>Lulu sat on the Monarch; the tactile feedback is now purring</li>
+<li>Rosy filed a change request: replace every semicolon with a fish</li>
+<li>the cat's quality assurance process is mostly sitting on the test cases</li>
+<li>my cat joined stand-up and immediately lay down</li>
+<li>Chief Fluff Engineer inspected the keyboard and found insufficient fur</li>
+<li>Lulu has escalated the issue to the treat department</li>
+<li>Rosy is my project manager; the roadmap is a trail of paw prints</li>
+<li>Detroit taught me resilience; the potholes taught my suspension unit tests</li>
+<li>my route through Detroit has more detours than my code through a refactor</li>
+<li>Detroit's seasons are just four different ways to test the coat interface</li>
+<li>I left the house dressed for one Detroit forecast and received another</li>
+<li>the city has grit; my laptop fan has a matching sound profile</li>
+<li>Detroit traffic is a distributed system with unpredictable latency</li>
+<li>I can tell it is Detroit because the weather has merged without review</li>
+<li>the air fryer beeped and the Poke bowl submitted a counterproposal</li>
+<li>my air fryer has one setting: please stop experimenting with Poke</li>
+<li>the Poke saga has more sequels than the app I meant to ship</li>
+<li>I opened the air fryer and discovered a new branch of cuisine</li>
+<li>the kitchen timer is the only alert I have not muted</li>
+<li>Poke met hot air; culinary history is still deciding whether to merge</li>
+<li>I asked the air fryer for dinner and got a toast-level code review</li>
+<li>the recipe said 'quick'; the air fryer interpreted that as a challenge</li>
+<li>my LEGO origin story has more pieces than my current dependency tree</li>
+<li>I built with LEGO, then built websites; both have one missing piece</li>
+<li>LEGO taught me modular design and the joy of losing one tiny component</li>
+<li>my first web page was basically LEGO with fewer colors and more CSS</li>
+<li>I traded LEGO instructions for documentation and somehow got more bricks</li>
+<li>my childhood LEGO builds had fewer breaking changes than my CSS</li>
+<li>I started with LEGO; now I debug layouts that also refuse to stay together</li>
+<li>a good heading outline is the web equivalent of sorting LEGO by piece</li>
+<li>I made the site work without JavaScript; the browser called that a plot twist</li>
+<li>my accessible controls are labeled; my snack containers are still a mystery</li>
+<li>semantic HTML: giving every element a job title it can actually perform</li>
+<li>the screen reader announced my form correctly; I nearly gave it a raise</li>
+<li>I replaced a clickable div with a button and the keyboard sent a thank-you note</li>
+<li>my landmarks are clear; my desk is a landmark of unfinished coffee</li>
+<li>the skip link works; my attempts to skip bedtime do not</li>
+<li>I made the interface predictable; then I added a button called 'surprise'</li>
+<li>accessible design makes the web better; my CSS still makes me negotiate</li>
+<li>I tested every control by keyboard and found the keyboard has excellent coverage</li>
+<li>the link says where it goes; the project says 'we'll see'</li>
+<li>I shipped a screen-reader fix and the page stopped playing hide and seek</li>
+<li>my labels are explicit; my variable names are choosing mystery</li>
+<li>the best interface is the one that lets everyone get on with their day</li>
+<li>I wrote an aria label, then checked whether a real label would do the job</li>
+<li>the page has a skip link; my browser has no skip to closing tabs</li>
+<li>my buttons have focus states; my coffee has entered a focus state too</li>
+<li>I made the status live; now even my procrastination has an announcement</li>
+<li>my status is refreshed every visit, unlike my laundry schedule</li>
+<li>the browser cached my page but could not cache my motivation</li>
+<li>my CSS cascade is less cascade and more Detroit freeway interchange</li>
+<li>the layout is responsive; my schedule remains stubbornly fixed at 3 AM</li>
+<li>I fixed the mobile view and accidentally gave desktop a new personality</li>
+<li>my breakpoints are thoughtful; my bedtime has no breakpoint at all</li>
+<li>I used a grid and the browser politely arranged my chaos</li>
+<li>I made the website faster; it now reaches the bug sooner</li>
+<li>the build is green, which is more than I can say for my houseplant</li>
+<li>my test suite passed and immediately asked what I changed</li>
+<li>I automated the tedious part; now I can invent a new tedious part</li>
+<li>the bug was a missing character; it had the dramatic impact of a trilogy</li>
+<li>I fixed the typo and the entire app stopped speaking in riddles</li>
+<li>the console is quiet; I do not trust this sudden peace</li>
+<li>I deleted dead code and it still found a way into the commit history</li>
+<li>my dependencies are up to date; my sleep schedule is in legacy support</li>
+<li>I read the docs and learned the feature works exactly as documented, unfortunately</li>
+<li>the API returned exactly what I asked for; my question was the problem</li>
+<li>I wrote a small script and it has requested a project board</li>
+<li>my prototype is now old enough to have opinions about architecture</li>
+<li>the TODO list is technically a roadmap if you squint and ignore the dates</li>
+<li>I launched the feature; the feature launched three follow-up tasks</li>
+<li>every time I say 'quick fix' a new issue gets a calendar invite</li>
+<li>I made a plan, then the bug report came with its own plan</li>
+<li>my code review is thorough; my self-review is mostly 'hmm, weird'</li>
+<li>the pull request is ready; I am emotionally attached to one unnecessary abstraction</li>
+<li>I am keeping the scope small by adding just one more settings toggle</li>
+<li>my project has a changelog; my desk has an untracked pile of cables</li>
+<li>I named the variable clearly and then spent ten minutes admiring the naming</li>
+<li>the function is short, the comment is long, and the bug is still mysterious</li>
+<li>I simplified the code and it became complicated in a more efficient way</li>
+<li>the docs are updated; future me has been notified but not consulted</li>
+<li>I tested the edge case and found it had brought friends</li>
+<li>my app works offline; I still need Wi-Fi to remember where I put my phone</li>
+<li>decentralized identity: one less account, several more concepts to explain at dinner</li>
+<li>I opened a federated app and my timeline immediately became a neighborhood meeting</li>
+<li>open protocols let everyone join; my onboarding still needs a map</li>
+<li>the server is mine; the maintenance calendar is also mine, apparently</li>
+<li>I chose self-hosting for control and received a second job as a hobby</li>
+<li>my little server is humming; I choose to interpret that as encouragement</li>
+<li>I made the data portable; now it can move away from my unfinished features</li>
+<li>the open web is a group project and the internet forgot to assign a coordinator</li>
+<li>I believe in accessible open source; my issue tracker believes in surprise</li>
+<li>I filed a thoughtful bug report and forgot to mention the version, classic me</li>
+<li>community contributions are welcome; please bring context and maybe snacks</li>
+<li>my README says getting started; I am also still getting started</li>
+<li>I made the project welcoming and then wrote installation steps like a treasure map</li>
+<li>the license is clear; the roadmap is a weather forecast</li>
+<li>I merged a community fix and learned a new way to write the same thing</li>
+<li>my code is open source, including the part I meant to clean up first</li>
+<li>the issue is closed; the discussion has discovered a sequel</li>
+<li>I added a contribution guide because 'please help' needed more structure</li>
+<li>the web belongs to everyone; my CSS file belongs to the archaeology team</li>
+<li>VoiceOver pronounced my project name creatively; I am calling it localization</li>
+<li>I asked the Monarch to read the diff and it found the line I hoped nobody would notice</li>
+<li>braille cells: tiny dots, enormous power, occasional surprise punctuation</li>
+<li>my refreshable braille display has better tactile feedback than my last code review</li>
+<li>VoiceOver found the hidden content; I was hoping it would find my missing motivation</li>
+<li>I navigated by headings and arrived at the section called 'why is this here'</li>
+<li>the screen reader announced the dialog; my brain requested a second dialog</li>
+<li>I can read this page in braille; the cat cannot resist walking over the display</li>
+<li>VoiceOver is reading the page aloud while Rosy provides the percussion</li>
+<li>the Monarch and my keyboard are collaborating; I am mostly taking notes</li>
+<li>I made the table headers clear and the spreadsheet stopped acting mysterious</li>
+<li>my accessible name is concise; my project's name is a whole origin story</li>
+<li>I checked the tab order and discovered one control taking the scenic route</li>
+<li>the form is labeled; the snack I left beside it remains unidentified</li>
+<li>I used a native disclosure and the browser handled the drama itself</li>
+<li>progressive enhancement: the site still works when my JavaScript takes a personal day</li>
+<li>I removed a custom widget and gained a weekend back</li>
+<li>the focus landed exactly where expected; I briefly suspected a prank</li>
+<li>I made the error message useful and it stopped being the most honest part of the app</li>
+<li>my live region announces updates; my cat announces every closed door</li>
+<li>headings make the page scannable; my notes are still one long paragraph</li>
+<li>I added captions; now my video and my screen reader both have something to say</li>
+<li>I chose plain HTML and got a surprisingly fancy amount of reliability</li>
+<li>the keyboard can reach everything; my coffee can reach the keyboard too</li>
+<li>I fixed the accessible name and now the button has a proper introduction</li>
+<li>I made the settings persistent; my browser remembers more than I do</li>
+<li>calm mode is on; my notifications are still auditioning for a musical</li>
+<li>I added a reduce-motion option because even pixels deserve a quiet day</li>
+<li>my settings panel is clear; my settings preferences are an ongoing character arc</li>
+<li>the toggle persisted across reloads; my confidence did not need a reload</li>
+<li>I turned on calm mode and the interface stopped doing interpretive dance</li>
+<li>my website respects reduced motion; my cat respects no motion whatsoever</li>
+<li>I made the colors adjustable and immediately spent an hour choosing colors</li>
+<li>the contrast passes; my coffee-to-water ratio remains under review</li>
+<li>I built a personal site and accidentally gave it a full-time job</li>
+<li>the site is my home on the web; please remove your shoes and your tracking pixels</li>
+<li>my homepage has a map of the chaos and no estimated travel time</li>
+<li>I made a portfolio; the portfolio made a list of things I should finish</li>
+<li>the personal site is updated; the person remains a work in progress</li>
+<li>my website has a contact section; my inbox is practicing selective attention</li>
+<li>I put the links in one place; my bookmarks remain a historical archive</li>
+<li>the footer is complete, a sentence I will now avoid saying out loud</li>
+<li>I changed one heading and somehow redesigned the emotional architecture</li>
+<li>my site has a theme; my desk has several competing themes of cable</li>
+<li>I published the update and waited for the cache to finish its dramatic pause</li>
+<li>the browser refreshed and my old CSS returned for one last encore</li>
+<li>I made a clean draft; then my ideas arrived with muddy shoes</li>
+<li>this status is short because the story is long and the cat is walking away</li>
+<li>I have reached the end of the list and immediately thought of another status</li>
+<li>I said 'one more status' and the list opened a new issue</li>
+<li>the past statuses are archived; my unfinished side quests are not</li>
+<li>I am writing about productivity instead of doing the task, efficiently</li>
+<li>I opened the editor to fix one thing and left with a new color palette</li>
+<li>my focus is strong; it is focused on a tab from last Thursday</li>
+<li>I made a checklist and checked the box that says make a checklist</li>
+<li>the to-do list is now sorted by optimism</li>
+<li>I have plenty of ideas and a completely reasonable number of browser tabs</li>
+<li>I started with a small change and now the diff has a table of contents</li>
+<li>today's plan is to ship; today's reality has requested clarification</li>
+<li>I am trying to stay on task, but the task has excellent side quests</li>
+<li>my project board says in progress; my cat says please sit down</li>
+<li>I put a reminder in the calendar and forgot to invite myself</li>
+<li>my productivity system has a settings page and no known users</li>
+<li>I am iterating quickly; the bugs are iterating quicker</li>
+<li>the feature is nearly done, a phrase with a rich and troubling history</li>
+<li>I reached a milestone and immediately opened a new milestone menu</li>
+<li>my weekend plan includes rest, unless a tiny bug looks at me funny</li>
+<li>I made time for a break and used it to think about the code</li>
+<li>I have an excellent stopping point; it is somewhere in this diff</li>
+<li>the clock says bedtime; the terminal says just one more command</li>
+<li>I closed the laptop and my brain opened a new tab</li>
+<li>I finally logged off, then remembered the git status</li>
+<li>I went to sleep before the build finished; boldest deployment strategy yet</li>
+<li>my alarm is accessible; my willingness to hear it is not</li>
+<li>I am trying a healthier schedule: same code, slightly more water</li>
+<li>I took a walk and came back with three feature requests from my own brain</li>
+<li>my break was refreshing; I refreshed the page 14 times during it</li>
+<li>I stepped away from the screen and kept debugging in my head, feature parity</li>
+<li>I have closed the laptop for the night, pending one highly specific exception</li>
+<li>Rosy is purring beside me, the closest thing to a green build indicator</li>
+<li>the Chief Fluff Engineer has ended the meeting by sitting on the agenda</li>
+<li>Lulu's sprint velocity is measured in naps per keyboard</li>
+<li>the cat's PR review says 'needs treats' and is blocking the merge</li>
+<li>Rosy wandered across the keyboard and somehow improved the commit message</li>
+<li>my cat is not a rubber duck; she is a warm, judgmental production monitor</li>
+<li>Chief Fluff Engineer requested a feature freeze and a blanket deployment</li>
+<li>Lulu has claimed the chair; my next task is standing-room-only debugging</li>
+<li>the cat requested attention during a critical build; build passed, priorities changed</li>
+<li>Rosy has no GitHub account, but somehow owns the entire repository</li>
+<li>Detroit's skyline is lovely; my browser's skyline is a row of tiny tabs</li>
+<li>I am coding in Detroit, where even the potholes have a long-term roadmap</li>
+<li>the city gave me inspiration; the parking signs gave me a parsing exercise</li>
+<li>Detroit winter is an integration test for every layer I own</li>
+<li>my hoodie is ready for Detroit weather, which is not the same as prepared</li>
+<li>I took the scenic route and found a coffee shop with better uptime than my server</li>
+<li>the bus was late, so I used the time to mentally refactor everything</li>
+<li>I know it is cold when even the laptop fan sounds like it wants a coat</li>
+<li>my neighborhood has good music; my headphones have strong accessibility settings</li>
+<li>I made a playlist for coding and it has one track called 'why is this failing'</li>
+<li>SUPXR is on; the CSS still refuses to find its rhythm</li>
+<li>I made a beat at night and a bug report at dawn, dual release schedule</li>
+<li>the bass line is steady; my feature branch is improvising</li>
+<li>I produce music I cannot see and interfaces everyone can use; both need good timing</li>
+<li>my audio project has a clean mix; my git history has several layers</li>
+<li>I adjusted the bass and accidentally fixed my mood, not the bug</li>
+<li>the beat dropped; my test suite did not, thankfully</li>
+<li>my playlist says focus; the next song says remember that old project</li>
+<li>I made music with my ears and code with my ears; my cat contributes fur</li>
+<li>I am mixing tracks and merging branches, both require listening carefully</li>
+<li>the audio is mastered; the status list is still getting remixed</li>
+<li>my DAW has fewer tabs than my browser and more mysterious buttons</li>
+<li>I sent the track for feedback and got notes before the code review</li>
+<li>the loop is perfect; the loop in my JavaScript is not</li>
+<li>I am debugging to a beat, and the bug has somehow found the downbeat</li>
+<li>my speakers are calibrated; my estimate of 'five more minutes' is not</li>
+<li>I made a sound check and the screen reader passed with flying colors, metaphorically</li>
+<li>I can hear the kick drum; I can also hear my laptop asking for a break</li>
+<li>the mix is balanced, unlike my time between school and side projects</li>
+<li>I built an app at 3 AM and named the commit after a snack I no longer have</li>
+<li>my best ideas arrive at night and my best spelling leaves at the same time</li>
+<li>the late-night prototype works; daytime me is requesting a design review</li>
+<li>I wrote code until the birds started filing morning status reports</li>
+<li>dawn is basically a push notification from the sun</li>
+<li>I promised myself to stop at midnight; time zone conversion is apparently hard</li>
+<li>the night is quiet, the terminal is loud, and my focus is on a snack</li>
+<li>my 3 AM code has a vision; my 9 AM code needs an interpreter</li>
+<li>I work late because the bugs are nocturnal and refuse to explain themselves</li>
+<li>the commit went in at 3:01; the responsible decision was scheduled for 2:59</li>
+<li>I turned on the lamp and found three TODOs I had been avoiding by sound</li>
+<li>midnight coding is when semicolons start looking like tiny braille cells</li>
+<li>the clock crossed midnight; the project crossed into 'tomorrow me' territory</li>
+<li>I added a status at 2 AM and it somehow sounds more confident than I am</li>
+<li>the night shift is staffed by me, one cat, and a very patient browser</li>
+<li>I am finishing schoolwork after coding, because my hobbies enjoy a queue</li>
+<li>my class notes have headings; the professor's slide deck has other plans</li>
+<li>I asked the course portal for my assignment and it gave me a scavenger hunt</li>
+<li>the deadline is approaching with the confidence of a browser modal</li>
+<li>I studied the rubric and discovered it has acceptance criteria</li>
+<li>my school laptop updated during class and chose the most dramatic moment</li>
+<li>I submitted the assignment; my brain is still checking the upload status</li>
+<li>the class discussion is online; my microphone is negotiating its terms</li>
+<li>I learned a new concept and immediately tried to build a side project with it</li>
+<li>my notes say review this later; later has accumulated several notes</li>
+<li>the semester is a long-running project with a very strict release date</li>
+<li>I finished the quiz and now the quiz is finishing me emotionally</li>
+<li>my study break became a code break which became another code session</li>
+<li>I opened the textbook and my browser opened a tab for the documentation</li>
+<li>the course says collaborate; my group chat says who has the latest file</li>
+<li>I am learning the theory and testing it against the bug in my project</li>
+<li>my assignment passed validation; I would also like a passing validation from my pillow</li>
+<li>I turned in the work and resisted the urge to add a settings panel</li>
+<li>my academic calendar is accessible; my free time has no landmarks</li>
+<li>I put the due date in three places and still asked what day it was</li>
+<li>the LEGO pieces clicked together; the CSS boxes are still in negotiations</li>
+<li>I built a castle from bricks and a website from divs; one has better semantics</li>
+<li>LEGO taught me patience, except when the tiny piece rolls under the desk</li>
+<li>my old LEGO builds had fewer dependencies and more dragons</li>
+<li>I went from sorting bricks to sorting landmarks; both benefit from a system</li>
+<li>I used to build spaceships from LEGO; now I build spaces on the web</li>
+<li>the LEGO manual was visual; the web taught me to demand better instructions</li>
+<li>I learned to prototype with bricks before I learned to prototype with HTML</li>
+<li>a LEGO set has a finite piece count; my node_modules has entered folklore</li>
+<li>I built a LEGO robot; now I build software that asks humans to do the work</li>
+<li>the first website was a pile of blocks; some traditions continue</li>
+<li>my LEGO minifigure has a clearer role than half the elements in my first page</li>
+<li>I learned modularity from bricks and learned to stop nesting divs the hard way</li>
+<li>my early web pages had more bright colors than landmarks</li>
+<li>I traded a brick separator for developer tools; both pry things apart</li>
+<li>the childhood build survived; my old CSS is still in witness protection</li>
+<li>I discovered web development through LEGO and stayed for the browser console</li>
+<li>the bricks were tactile; the layout bugs are mostly spiritual</li>
+<li>the first thing I assembled was LEGO; the second was a list of browser quirks</li>
+<li>my origin story starts with bricks and ends with an open issue</li>
+<li>Looscid's README grew a new paragraph and now considers itself documentation</li>
+<li>I checked Looscid's history and found three commits named 'oops' in spirit</li>
+<li>Looscid has a branch for the feature and a branch for my excuses</li>
+<li>the Looscid repo is tidy today; I am documenting this rare weather event</li>
+<li>I added a Looscid test and it immediately asked for a test of its own</li>
+<li>the git lore says 'we tried this before'; the commit says I forgot</li>
+<li>Looscid's history has more plot than my current favorite show</li>
+<li>I made a clean commit in Looscid and took a screenshot for the archives</li>
+<li>the commit graph looks like a family tree where everyone is me</li>
+<li>I found the original Looscid issue; it has been waiting more patiently than I have</li>
+<li>git log is my time machine and every stop is a questionable variable name</li>
+<li>I squashed the commits; the lore survives in oral tradition</li>
+<li>Looscid has a release plan; the release plan has a footnote about me</li>
+<li>I wrote a migration for Looscid and my past self left no forwarding address</li>
+<li>the repo is decentralized; the lore still converges on my old decisions</li>
+<li>my branch is up to date and my understanding is several commits behind</li>
+<li>I wrote a git alias and immediately forgot what I named it</li>
+<li>the patch is small; the discussion about it now has a table of contents</li>
+<li>I found a stale branch and it found a stale version of my confidence</li>
+<li>the commit history is readable, except for the chapter titled 'Friday night'</li>
+<li>I used git bisect and discovered the culprit was my optimism</li>
+<li>the repository is clean; the desk beside it is not passing CI</li>
+<li>I pushed no code today, only a strong theory about the bug</li>
+<li>the pull request is open; so is the terminal, apparently forever</li>
+<li>I resolved the conflict and both versions of me remain unconvinced</li>
+<li>I amended the commit and accidentally amended my afternoon</li>
+<li>my git status is clean; my list of follow-up tasks is untracked</li>
+<li>the hash is unique; the bug pattern is familiar</li>
+<li>I reviewed the diff twice and the cat reviewed the keyboard once</li>
+<li>the commit says 'final' which is how I know there will be another one</li>
+<li>I made a tag for the release and a mental note to read the release notes</li>
+<li>my release notes are honest; they mention one small known surprise</li>
+<li>I am learning to keep commits focused; my brain has multiple tabs open</li>
+<li>the branch protection is on; the branch itself is trying to escape</li>
+<li>I used a rebase to clean history and uncovered an entire archaeological layer</li>
+<li>I added a changelog entry and realized the project has been busy without telling me</li>
+<li>the repo is public; my unfinished thoughts are currently private branches</li>
+<li>I fixed the failing test and the next test raised its hand</li>
+<li>my local environment works; it is applying for diplomatic immunity</li>
+<li>the deploy succeeded and I celebrated by checking it six more times</li>
+<li>I made an automated check for typos; it filed an issue about my status text</li>
+<li>my build pipeline is reliable; my snack pipeline has a manual approval step</li>
+<li>the server restarted cleanly; I am still rebooting from the last bug</li>
+<li>I set up monitoring and now the graphs can watch me procrastinate</li>
+<li>the error was reproducible; my surprise was not</li>
+<li>I added logging and learned my app has been trying to tell me this all week</li>
+<li>the cache invalidated and took my assumptions with it</li>
+<li>I fixed the race condition; the cat still wins every race to the keyboard</li>
+<li>the network request timed out, which is also my reply speed today</li>
+<li>I designed for failure and the failure arrived with excellent timing</li>
+<li>my service is healthy; the developer is requesting a maintenance window</li>
+<li>the database is normalized; my desk remains in first normal form only by accident</li>
+<li>I migrated the schema and my old test data asked for a reunion</li>
+<li>the API docs are current; the API has chosen a new personality</li>
+<li>I made the error recoverable and then recovered from seeing it in production</li>
+<li>the feature flag is off; my curiosity has toggled itself on</li>
+<li>the deployment was atomic; my reaction was several small commits</li>
+<li>I put a timeout on the request and forgot to put one on my work session</li>
+<li>the server log says 'all good'; it may be trying to reassure me</li>
+<li>I made the dashboard accessible and now it can report my status more clearly</li>
+<li>the app handles empty states; my fridge is currently testing that feature</li>
+<li>my local build passed; the remote build requested more context</li>
+<li>I turned the warning into an error and my afternoon into a debugging session</li>
+<li>the test data is fake; the panic when a test fails is authentic</li>
+<li>I shipped a fix for a bug that was only reproducible when I was watching</li>
+<li>my fallback works, which is good because my first choice is still in progress</li>
+<li>the server is up; I am down to one remaining cup of coffee</li>
+<li>I learned a new API and it learned my email address; regrettable metaphor, no email here</li>
+<li>I chose an open standard so future me has fewer mysteries and more paperwork</li>
+<li>my data export works; the import is learning to read its own instructions</li>
+<li>the app syncs across devices; my notes still disagree with each other</li>
+<li>I made the web app installable and immediately forgot where I installed it</li>
+<li>offline support is working; online support for my sleep remains experimental</li>
+<li>I designed a portable format and now my project can move between unfinished folders</li>
+<li>the open protocol is documented; explaining it at lunch remains a live challenge</li>
+<li>I self-host the service and self-assign every maintenance ticket</li>
+<li>my home server is a tiny computer with a surprisingly large calendar</li>
+<li>the open web feels like a community garden with a lot of DNS paperwork</li>
+<li>I contributed upstream and now my code has a mailing address in the stars</li>
+<li>the issue tracker is federated; my confusion remains local</li>
+<li>I built for interoperability and my toaster is not yet a supported client</li>
+<li>the standards meeting could have been an email, except I do not use email</li>
+<li>my project can export its data; my brain cannot export last night's TODOs</li>
+<li>I am building tools that do not lock people in; my cat still has me trapped</li>
+<li>I used a plain text format and gained one fewer reason to worry about the future</li>
+<li>the decentralized app has no central authority; the bug still reports to me</li>
+<li>I gave users control of their data and gave myself control of the maintenance queue</li>
+<li>the protocol is open; my explanation is still under construction</li>
+<li>I made the service portable and now it can leave me with the server bill</li>
+<li>I added federation and my test environment started making friends</li>
+<li>the community is kind; the build matrix is enormous</li>
+<li>I wrote docs for contributors and learned contributors need the same thing I do: context</li>
+<li>the issue has a reproduction, a label, and a tiny dramatic backstory</li>
+<li>I fixed a bug from a community report and left a thank-you in the commit</li>
+<li>my open-source project welcomes newcomers; my old code welcomes archaeologists</li>
+<li>I answered an issue with a link to the docs and then improved the docs</li>
+<li>I made the first contribution easy; the second one still involves git</li>
+<li>the contributor guide says be kind; the code review says also run the tests</li>
+<li>I learned from an open-source project and now I am paying it forward in small patches</li>
+<li>my project has a code of conduct and a cat who ignores every boundary</li>
+<li>I received a thoughtful bug report and a thoughtful reminder to update the version number</li>
+<li>I made a starter issue and accidentally made it sound like a side quest</li>
+<li>the patch came from a stranger and now the project has a new favorite person</li>
+<li>I thanked a contributor and then thanked them again because the fix was that good</li>
+<li>the project is open source; the support queue is open whenever I remember it exists</li>
+<li>I wrote an issue template and it politely asked me to provide more information</li>
+<li>I review pull requests with care and tea, in whichever order is available</li>
+<li>the release is a collaboration between contributors and my questionable local setup</li>
+<li>I wanted to share a tool and accidentally started maintaining a tiny ecosystem</li>
+<li>my README is friendly; the install command has one very specific opinion about Node</li>
+<li>I accepted a contribution and learned a cleaner way to structure the same feature</li>
+<li>the code is public; the coffee stains on my notes remain unlicensed</li>
+<li>I built an accessible project and invited the internet to help make it better</li>
+<li>my site has no tracking pixels; it does have a cat-shaped quality assurance department</li>
+<li>I put the about section on my site and it still left out the browser tabs</li>
+<li>my home page is concise; my status list has challenged that principle</li>
+<li>I chose a clear title and then named the project like a side quest</li>
+<li>the contact link works; my response time runs on an optimistic schedule</li>
+<li>I put the important links together and gave them enough whitespace to breathe</li>
+<li>my page has a skip link; the plot has no skip link</li>
+<li>I added a menu disclosure and the navigation now has a stage curtain</li>
+<li>the page is responsive and my plans are still overflowing the container</li>
+<li>my footer is at the bottom; my task list continues below the fold</li>
+<li>I checked the page at 200 percent zoom and my CSS learned humility</li>
+<li>the page title is useful; my browser tab count is not a title anyone wants</li>
+<li>I made my portfolio personal and the bugs took that personally</li>
+<li>the site loads quickly, unlike my decision about which project to finish</li>
+<li>I put the source on GitHub and the source immediately asked for a README update</li>
+<li>I added a photosensitivity note; the flashing cursor remains under supervision</li>
+<li>the settings are persistent; my cat's preference for the keyboard is also persistent</li>
+<li>my section headings are descriptive; my open tabs are mostly 'untitled'</li>
+<li>I made the content readable and the CSS made the process educational</li>
+<li>the web page is live; the developer is still in preview mode</li>
+<li>I deployed the redesign and the old cache is holding a farewell tour</li>
+<li>my design system has tokens; my snack system has crumbs</li>
+<li>I picked one accent color and somehow made 14 shades of it</li>
+<li>the border radius is consistent; my sleep schedule has sharp corners</li>
+<li>I wrote the CSS by ear, which explains the layout's jazz influence</li>
+<li>the page has a strong hierarchy; the laundry has no clear ownership</li>
+<li>I made the links descriptive and my excuses less so</li>
+<li>my site supports keyboard use; my desk supports a keyboard, two cups, and no space</li>
+<li>I used a native list and the browser did not need a motivational speech</li>
+<li>I made the disclosure work without JavaScript; the cat still requires an opening ceremony</li>
+<li>I improved the skip link and my attention still skipped the meeting notes</li>
+<li>the site has clear landmarks; my apartment has one landmark called the cable pile</li>
+<li>I built a page that works with assistive tech and against my procrastination</li>
+<li>my button text is clear; my snack order is still a mystery to future me</li>
+<li>I finished the feature and reopened the file to admire the indentation</li>
+<li>I refactored the same code twice and called the second time learning</li>
+<li>my new idea has a name, a README, and no implementation yet</li>
+<li>I wrote a quick proof of concept and it has requested a permanent address</li>
+<li>I am organizing my projects by priority; the cat has reorganized them by nap location</li>
+<li>the backlog is groomed; it now looks like a very polite mountain</li>
+<li>I broke the work into small tasks and then made a task to organize the tasks</li>
+<li>I checked off a task and the list celebrated by revealing three subtasks</li>
+<li>I am working through the backlog one coffee and one distraction at a time</li>
+<li>the roadmap is realistic if the day has 31 hours and the cat cooperates</li>
+<li>I made a tiny prototype and it has already asked about its long-term goals</li>
+<li>the feature request is sensible; my implementation is taking the scenic route</li>
+<li>I am trying to ship more and rename fewer folders, with mixed results</li>
+<li>my commit is atomic; my afternoon is distributed across six projects</li>
+<li>I built a tool to save time and spent the saved time tuning the tool</li>
+<li>the bug is fixed in my branch and emotionally unresolved in my head</li>
+<li>I wrote a script for this once and now I am maintaining a script for the script</li>
+<li>my TODOs are concise; their collective ambition is not</li>
+<li>I made an estimate and immediately started negotiating with the calendar</li>
+<li>the only blocker is me, but I have filed a ticket to investigate</li>
+<li>I have a plan B, a plan C, and a branch called maybe</li>
+<li>I made the code easier to maintain and gave myself a new maintenance task</li>
+<li>I am shipping the smallest useful thing, after one more useful thing</li>
+<li>the idea is simple; the edge cases have formed a committee</li>
+<li>I started with a question and ended with a prototype and more questions</li>
+<li>the milestone is reached; the confetti is a row of passing tests</li>
+<li>I am celebrating a small win with a very large cup of water</li>
+<li>I fixed the bug and left a note so future me can avoid inventing it again</li>
+<li>the code is less confusing now; the developer remains under investigation</li>
+<li>I made a decision, documented it, and reserved the right to learn differently</li>
+<li>I wrote a helper function and it helped me discover two more functions</li>
+<li>my feature is accessible, tested, documented, and waiting for me to stop polishing it</li>
+<li>I made the interface calmer and my task list louder by contrast</li>
+<li>the end of the sprint is near; the definition of done is walking toward it</li>
+<li>I am taking a victory lap around the same three browser tabs</li>
+<li>my project is growing at a sustainable pace, which is to say I stopped adding settings</li>
+<li>I asked the browser for a clean reload and got a history lesson</li>
+<li>the old bug is gone; I am keeping its chair warm just in case</li>
+<li>I updated the dependencies and now the changelog is longer than my weekend plan</li>
+<li>I ran the formatter and it found a new way to judge my spacing</li>
+<li>my linter is strict but fair; my inner monologue is both strict and unpaid</li>
+<li>I made the error obvious and the fix surprisingly small</li>
+<li>the test failed for a good reason, which is still an inconvenient reason</li>
+<li>my local storage remembers the setting; it cannot remember where I put the snack</li>
+<li>I made a backup before the change, because confidence is not a strategy</li>
+<li>the docs say restart the server; I was hoping for a more character-driven solution</li>
+<li>I removed a workaround and the original problem immediately introduced itself</li>
+<li>the responsive layout works at every size, including the size I forgot to test</li>
+<li>I added one breakpoint and the layout requested a second opinion</li>
+<li>the desktop version is polished; the mobile version is negotiating a treaty</li>
+<li>my focus order is logical; my thought order is under review</li>
+<li>the menu opens with a click, a key, and a small amount of ceremony</li>
+<li>I used fewer custom controls and gained fewer custom bugs</li>
+<li>my navigation has eight jumps; my browser has eight tabs about navigation</li>
+<li>I put the section titles in the right order and my cat moved the keyboard out of order</li>
+<li>I made the skip link visible on focus and invisible to my unfinished work</li>
+<li>the screen reader says the link destination; I say thank you for the useful introduction</li>
+<li>I added accessible names and removed some of my own mystery</li>
+<li>the page passed the keyboard test; the cat failed the please-don't-walk-on-it test</li>
+<li>I fixed the contrast and the page stopped blending into my questionable choices</li>
+<li>my native controls behave correctly; I am trying to learn from them</li>
+<li>the headings are nested properly; my weekend plans are nested inside a coding session</li>
+<li>the live status updates; the cat's opinion updates whenever the food bowl is visible</li>
+<li>I made the form errors specific; my reaction to them remains broadly 'oh no'</li>
+<li>my accessibility checklist is a tool, not a substitute for listening to people</li>
+<li>I tested with assistive tech and found improvements I would not have guessed</li>
+<li>the site is easier to use now; the task of explaining why is still ongoing</li>
+<li>I replaced a mystery icon with text and saved everyone a guessing game</li>
+<li>the page respects reduced motion; my thoughts are still doing laps</li>
+<li>I added a visible focus ring and it is the most punctual thing on the page</li>
+<li>I made the controls large enough; my cat still aims for the one tiny key</li>
+<li>the modal has a name, role, and focus; my coffee has a lid and a chance</li>
+<li>my link text is meaningful; my git branch name is an inside joke</li>
+<li>the page works without scripts; my schedule works without a plan, apparently</li>
+<li>I wrote semantic markup and the browser understood me on the first try</li>
+<li>the nav landmark is labeled; my collection of USB cables is not</li>
+<li>I included a text alternative and now the image has a proper introduction</li>
+<li>captions are on, the volume is comfortable, and my cat is still louder</li>
+<li>I tested the page at high contrast and found one last color trying to hide</li>
+<li>the keyboard trap is gone; my attention is still trapped in the editor</li>
+<li>I made the search field labeled and the search results less of a surprise</li>
+<li>my interface gives feedback; the server's feedback is mostly a status code</li>
+<li>I chose native HTML and let the browser do its very competent job</li>
+<li>the disclosure triangle opens; my laundry pile remains a closed issue</li>
+<li>I made the site easier to navigate and the project easier to explain</li>
+<li>my focus is visible; my plan for the afternoon is not</li>
+<li>the accessible name is concise, unlike the debate I had with myself about it</li>
+<li>I am not done improving the web, but I am done for dinner, maybe</li>
+<li>I learned something today and immediately made a note for future debugging</li>
+<li>my notes are in braille, my TODOs are in text, and my brain has both open</li>
+<li>the Monarch display is ready; the commit message is still tactilely questionable</li>
+<li>I read the diff in braille and discovered my favorite typo has returned</li>
+<li>VoiceOver announced the update and Rosy announced that dinner is late</li>
+<li>my screen reader reads the page; I read the room and find the cat asleep</li>
+<li>I set the braille table correctly and the punctuation stopped freelancing</li>
+<li>I navigated by rotor and landed exactly where I planned, briefly suspicious</li>
+<li>the rotor is efficient; my browser tabs have no comparable control surface</li>
+<li>VoiceOver and I agree the page is usable; the CSS and I are still negotiating</li>
+<li>I made a control accessible and the Monarch gave it a tactile standing ovation</li>
+<li>the braille display is connected; my brain is reconnecting after class</li>
+<li>my speech rate is up; my deadline is somehow still faster</li>
+<li>VoiceOver found the heading; I found another reason to avoid the inbox</li>
+<li>I am reading code by sound and touch; the bug is trying to remain theoretical</li>
+<li>screen reader users deserve good design; my site is trying to earn its keep</li>
+<li>I added an accessible status and now my questionable choices have documentation</li>
+<li>the tactile display is precise; my estimate of how long this takes is not</li>
+<li>my fingers found the missing bracket before the linter finished loading</li>
+<li>I made the page easy to scan by headings; my bookshelf remains a different challenge</li>
+<li>my screen reader verbosity is configured; my status verbosity is apparently not</li>
+<li>I used the Monarch for a git diff and felt every questionable line</li>
+<li>the braille cells are calm; the git log is emotionally complex</li>
+<li>my assistive setup is powerful; the cat has discovered the power key</li>
+<li>I fixed a label by listening carefully, a skill the bug did not appreciate</li>
+<li>the page announced success; I announced snack break</li>
+<li>VoiceOver read the button name and my cat read the room: dinner time</li>
+<li>I made the status short enough to hear and long enough to be a status</li>
+<li>the Monarch is a braille display, not a cat shelf, but negotiations continue</li>
+<li>I asked VoiceOver to repeat that and got a second chance to hear my typo</li>
+<li>my keyboard shortcuts are documented; the cat's shortcuts are mostly walking over keys</li>
+<li>I can navigate this site by landmarks and navigate my day by coffee</li>
+<li>the page is screen-reader friendly; the cat remains selectively responsive</li>
+<li>I spent the evening tuning speech output and the morning tuning a bug</li>
+<li>my braille display has refreshable cells; my project plan has refreshable optimism</li>
+<li>VoiceOver is announcing the menu; I am announcing that it is time to eat</li>
+<li>the status is text, the joke is mine, and the cat is not impressed</li>
+<li>I closed the issue and opened a fresh cup of tea, successfully</li>
+<li>the deployment is done; I am refreshing the live page for ceremonial reasons</li>
+<li>I am calling this version stable until I open the inspector</li>
+<li>my final check passed, which means I should probably stop checking</li>
+<li>I pushed the last fix to my draft and kept the actual push for later</li>
+<li>the site is ready for review; I am ready for a snack and a nap</li>
+<li>I wrote a status about stopping and then wrote another status</li>
+<li>the new status batch is complete; my brain has queued a director's cut</li>
+<li>I have no more statuses for now, a statement with historically poor reliability</li>
+<li>I finished the list and the list filed a request for an encore</li>
+<li>the past statuses are now longer than some of my release notes</li>
+<li>I added more statuses and the disclosure triangle asked for a bigger stage</li>
+<li>the list is complete; the next idea has already opened a pull request</li>
+<li>I took a breath between tasks and the next task used the opening</li>
+<li>my browser has a new tab called 'take a break' and I have ignored it</li>
+<li>I am closing this editor now, after I save and verify and check one thing</li>
+<li>the project is in a good place; I am trying to get there too</li>
+<li>the last status is here, unless inspiration has one more commit</li>
+<li>I made it to the end of the list with my keyboard, my ears, and a little luck</li>
+<li>there is no hidden meaning here, just a cat and a very long status list</li>
+<li>I put the final period on this thought and my brain opened another paragraph</li>
+<li>this is my stopping point; the git history may disagree</li>
+<li>status: still building, still learning, still asking Rosy to move off the keyboard</li>
+<li>status: one more test, one more snack, one more extremely optimistic estimate</li>
+<li>status: making the web kinder, one label and one late night at a time</li>
+<li>status: accessible by design, chaotic by deployment schedule</li>
+<li>status: Detroit based, browser tab surrounded, cat supervised</li>
+<li>status: studying, coding, and trying to remember which charger is mine</li>
+<li>status: building open tools while the closed laundry basket waits patiently</li>
+<li>status: shipping small improvements and large amounts of cat hair</li>
+<li>status: audio on, focus ring visible, bedtime still not in scope</li>
+<li>status: the bug is known, the fix is planned, the coffee is missing</li>
+<li>status: Looscid lore preserved for future maintainers and present confusion</li>
+<li>status: the Monarch is connected and the keyboard is under feline management</li>
+<li>status: my Poke-air-fryer research remains ethically inconclusive</li>
+<li>status: LEGO roots, HTML branches, and one missing brick in the layout</li>
+<li>status: schoolwork submitted, side project opened, evening extended indefinitely</li>
+<li>status: making progress at the speed of a well-labeled button</li>
+<li>status: working with the web, not against the people using it</li>
+<li>status: one human, one cat, several repos, zero quiet keyboards</li>
+<li>status: building in public and debugging in extremely private confusion</li>
+<li>status: the details are open; my calendar is full of unresolved issues</li>
+<li>status: I know what I am doing, according to a comment I wrote months ago</li>
+<li>status: coherent plan, accessible controls, suspiciously many snacks</li>
+<li>status: I found the bug; it found a way to be a feature request</li>
+<li>status: the code is readable, the schedule is improv, the cat is management</li>
+<li>status: a little more accessible, a little less asleep</li>
+<li>status: writing code by sound and planning by vibes, with tests</li>
+<li>status: each commit a lesson, each lesson another README paragraph</li>
+<li>status: open source, open standards, open tabs, closed laptop soon</li>
+<li>status: turning tiny tactile dots into very large ideas</li>
+<li>status: my focus is on the task, except when the cat files an interrupt</li>
+<li>status: making something useful and trying not to add a settings page</li>
+<li>status: learning in class, shipping at night, napping in theory</li>
+<li>status: my browser is busy; my cat is available for consultation</li>
+<li>status: the page works, the joke landed, the air fryer is unplugged</li>
+<li>status: I have run the tests and now I am testing my ability to stop</li>
+<li>status: telling the browser what I mean and the cat what I hope</li>
+<li>status: giving every element a name and every project another chance</li>
+<li>status: the build is green, the room is dark, the playlist is excellent</li>
+<li>status: gently improving the web while loudly losing to one CSS rule</li>
+<li>status: may contain traces of braille, bass, and questionable dinner experiments</li>
+<li>status: all sections labeled; all snacks subject to feline inspection</li>
+<li>status: playing the long game, one accessible interaction at a time</li>
+<li>status: still here, still coding, still not putting Poke in the air fryer again</li>
+<li>status: the cat says ship it; the test suite says show your work</li>
+<li>status: I write software for people and statuses for future me to cringe at</li>
+<li>status: code is temporary, git lore is forever, especially Looscid's</li>
+<li>status: tomorrow's me has been assigned this cleanup task without consent</li>
+<li>status: my side projects have formed a support group for unfinished side projects</li>
+<li>status: the next release is coming after this very small detour</li>
+<li>status: I learned something, fixed something, and fed the Chief Fluff Engineer</li>
+<li>status: accessible tech, decentralized dreams, decidedly centralized snack stash</li>
+<li>status: taking a break after the next line, a line with no end</li>
+<li>status: my next commit will be focused, unless the idea is really good</li>
+<li>status: tabs multiplied, labels improved, morale supported by Rosy</li>
+<li>status: I am one good night's sleep away from understanding that function</li>
+<li>status: if the bug returns, I have its previous address in git history</li>
+<li>status: the site is readable, the code is reviewable, the cat is ungovernable</li>
+<li>status: accessible enough to find the link, funny enough to miss the deadline</li>
+<li>status: shipping humane software and gently roasting my own workflow</li>
+<li>status: one more look at the page, then I will absolutely stop</li>
+<li>status: building for the web I want, with the tools I can hear</li>
+<li>status: thanks for visiting my corner of the internet; Rosy owns the lease</li>
+<li>status: keeping the web open, the controls clear, and the air fryer innocent</li>
+<li>status: still working on it, which is both a status and a lifestyle</li>
+<li>status: the cat has logged off; I am considering following her example</li>
+<li>status: a good day for accessible code and a suspiciously quiet kitchen</li>
+<li>status: I am here, the status is here, and the bug is probably here too</li>
+<li>status: future me will appreciate this comment, assuming future me reads it</li>
+<li>status: the current plan is delightful; the implementation is asking questions</li>
+<li>status: this line is the last one unless I remember one more joke</li>
+<li>status: I am building things that work for more people and confuse fewer cats</li>
+<li>status: the details are in the disclosure; the chaos is in the source</li>
+<li>status: click, tab, listen, read, repeat; add snacks as needed</li>
+<li>status: small web, big ideas, very large pile of braille notes</li>
+<li>status: my keyboard is accessible, my cat is relentless, my code is compiling</li>
+<li>status: making the boring parts reliable so the fun parts can be weird</li>
+<li>status: I am not lost, I am navigating by landmarks and stubbornness</li>
+<li>status: the project is local, the ambition is distributed, the cat is central</li>
+<li>status: I finished my work and immediately found a new thing to improve</li>
+<li>status: the page passed review; the air fryer remains on probation</li>
+<li>status: a tidy list of statuses and an untidy list of everything else</li>
+<li>status: signing off, unless the build says something interesting</li>
+<li>status: good night from Detroit, where the browser tabs stay up late too</li>
+<li>status: the night is young, the deadline is not, the cat is asleep</li>
+<li>status: tomorrow's tasks are queued; tonight's tabs are still running</li>
+<li>status: the next commit can wait; the next cat nap cannot</li>
+<li>status: logging off before the sun starts reviewing my code</li>
+<li>status: I am done for tonight, pending a very specific exception</li>
+<li>status: may your focus order be logical and your leftovers stay out of the air fryer</li>
+<li>status: may your headings be clear and your git history kind</li>
+<li>status: may your bugs be reproducible and your coffee remain within reach</li>
+<li>status: may your screen reader find the link and your cat find a nap</li>
+<li>status: may your commits be small and your braille display fully charged</li>
+<li>status: may your open source be welcoming and your tabs be fewer than mine</li>
+<li>status: may your CSS be calm and your Detroit forecast be accurate</li>
+<li>status: may your class portal load before the deadline gets ideas</li>
+<li>status: may your LEGO builds be sturdy and your layouts semantic</li>
+<li>status: may your air fryer beep before your Poke gets any ideas</li>
+<li>status: may your Monarch display read the good news first</li>
+<li>status: may your VoiceOver announce success and your cat not announce dinner early</li>
+<li>status: may your Looscid history be understandable on the first git log</li>
+<li>status: may your night coding end before the birds file an issue</li>
+<li>status: may your focus ring be visible and your meetings mercifully short</li>
+<li>status: may your status be brief, unless you asked for a lot of them</li>
+<li>status: may your accessible names be clear and your variable names clearer</li>
+<li>status: may your releases be smooth and your rollback plan unnecessary</li>
+<li>status: may your schoolwork submit successfully and your browser close politely</li>
+<li>status: may your cat approve the deploy with only one paw</li>
+<li>status: may your links go somewhere useful and your snacks be somewhere findable</li>
+<li>status: may your test suite pass and your bedtime finally win</li>
+<li>status: may the web be open, the code be kind, and the coffee be decaf after midnight</li>
+<li>status: until next time, I will be somewhere between a commit and a cat nap</li>
+<li>status: that is all for now; the git log can tell the rest of the story</li>
+<li>status: signing out with a clean diff and a suspiciously full idea queue</li>
+<li>status: thanks for reading; please do not ask the air fryer for a Poke sequel</li>
+<li>status: this status list has reached a milestone and needs a stretch break</li>
+<li>status: I made a lot of statuses and still have one more thought</li>
+<li>status: a new batch of past statuses, now with extra future debugging</li>
+<li>status: I promise this is the last one, pending verification</li>
+<li>status: checking the count, checking the hash, checking whether Rosy is on the keyboard</li>
+<li>status: final draft, final check, final snack, allegedly</li>
+<li>status: I am done generating statuses; my browser tab is still thinking</li>
+<li>status: a thousand little jokes later, the cat remains the funniest part</li>
+<li>status: the status list is full of words and my coffee is full of cold</li>
+<li>status: I wrote the punchline, the cat walked across it, revision accepted</li>
+<li>status: my funniest bug report is still the one I filed against myself</li>
+<li>status: the web is a big place; this is my small, accessible corner</li>
+<li>status: Rosy says thank you for visiting, and also please move your hand</li>
+<li>status: Lulu has approved the closing remarks by leaving the room</li>
+<li>status: Chief Fluff Engineer closed the sprint; no objections were received</li>
+<li>status: I am a developer, a student, a producer, and a cat's furniture</li>
+<li>status: the end of this batch is near; the beginning of the next idea is not</li>
+<li>status: my status has status, and the status has a status list</li>
+<li>status: I should stop here before this status grows another status</li>
+<li>status: end of broadcast; please stand by for another accessible update</li>
+<li>status: goodnight, internet; tell the cache I said to refresh politely</li>
 </ul>
 </details>
 <p><button hidden="" id="another-status-btn" type="button">Another status</button></p>
@@ -259,7 +1018,764 @@ window.__applyPrefs();})();
           "found a div pretending to be a button, reporting it to the mods .. and the mods are also divs",
           "muted (on purpose this time)",
           "making the focus ring bigger. it was already huge 🔥",
-          "one more feature before bed (lying) (4)"
+          "one more feature before bed (lying) (4)",
+          "VoiceOver found a button with the confidence of a div in a trench coat",
+          "my Monarch has more plot twists than the git history",
+          "Rosy (Chief Fluff Engineer) approved the patch by sitting on Escape",
+          "Lulu has reviewed the pull request and requested more treats",
+          "Detroit weather just filed a bug report against my jacket",
+          "the air fryer and the Poke bowl are in mediation again",
+          "I put Poke in the air fryer once and the kitchen still remembers",
+          "my LEGO bricks built a developer; support for adult assembly not included",
+          "I learned web development by giving LEGO a very ambitious README",
+          "braille is my terminal's tactile way of saying, you missed a bracket",
+          "the Monarch display is currently reading me my own bad decisions in braille",
+          "VoiceOver said 'group' and I said, yes, emotionally",
+          "I made a button accessible and it immediately got promoted to management",
+          "the focus indicator is the only thing here with a clear career path",
+          "keyboard navigation: because my mouse has never met my hands",
+          "my screen reader and I are pair programming; it has strong opinions about commas",
+          "I asked VoiceOver for one hint and got the director's commentary",
+          "my headings are in order; my browser tabs are forming a union",
+          "accessibility is not a bonus level; it is the actual game",
+          "I fixed a contrast issue and the colors stopped whispering in the corner",
+          "open source means strangers can improve my code and discover my TODOs",
+          "I decentralized the app; now my bugs have several places to live",
+          "my protocol is peer to peer, except the peers are all asking me for updates",
+          "Looscid's git lore now needs its own archaeological department",
+          "I found a Looscid commit from the past and it says 'temporary' in 3 places",
+          "Looscid history is a mystery novel where every suspect is me",
+          "the branch is called main but my confidence is on a feature branch",
+          "I rebased Looscid and the timeline asked for a written apology",
+          "git blame says me; I would like to appeal to a higher repository",
+          "my commit message says 'fix stuff' and the stuff knows what it did",
+          "I made a tiny change and git produced a feature-length documentary",
+          "the merge conflict is between me and a version of me from Tuesday",
+          "I pushed a fix and immediately found a more creative bug",
+          "my repository has lore, forks, and one very suspicious typo",
+          "I went to school to learn; my laptop went to school to update",
+          "school assignment due tomorrow; my ideas have scheduled a meeting at 2 AM",
+          "my notes are accessible; the deadline is still entirely nonvisual",
+          "I finished the assignment and received the rare loot: another assignment",
+          "the syllabus says read chapter four; VoiceOver says we are doing the whole book",
+          "I study at night because the bugs respect quiet hours less than I do",
+          "my homework has a stronger release schedule than my projects",
+          "I opened the class portal and it opened seven tabs of its own",
+          "the group project has one shared document and twelve different definitions of done",
+          "my study plan is a heading structure with optimistic time estimates",
+          "coding at night: fewer notifications, same number of existential semicolons",
+          "it is 3 AM and my code has started using the word 'we'",
+          "I told myself one last commit; the sun has entered the chat",
+          "night mode is on; sleep mode remains an unresolved issue",
+          "I am debugging by braille and the bug is trying to play hard to get",
+          "my late-night build passed; my morning self has requested an audit",
+          "the cat is asleep, so obviously this is the perfect time to deploy",
+          "Rosy approved the deployment by walking across the keyboard with authority",
+          "Chief Fluff Engineer says the sprint needs more naps and fewer sprints",
+          "Lulu sat on the Monarch; the tactile feedback is now purring",
+          "Rosy filed a change request: replace every semicolon with a fish",
+          "the cat's quality assurance process is mostly sitting on the test cases",
+          "my cat joined stand-up and immediately lay down",
+          "Chief Fluff Engineer inspected the keyboard and found insufficient fur",
+          "Lulu has escalated the issue to the treat department",
+          "Rosy is my project manager; the roadmap is a trail of paw prints",
+          "Detroit taught me resilience; the potholes taught my suspension unit tests",
+          "my route through Detroit has more detours than my code through a refactor",
+          "Detroit's seasons are just four different ways to test the coat interface",
+          "I left the house dressed for one Detroit forecast and received another",
+          "the city has grit; my laptop fan has a matching sound profile",
+          "Detroit traffic is a distributed system with unpredictable latency",
+          "I can tell it is Detroit because the weather has merged without review",
+          "the air fryer beeped and the Poke bowl submitted a counterproposal",
+          "my air fryer has one setting: please stop experimenting with Poke",
+          "the Poke saga has more sequels than the app I meant to ship",
+          "I opened the air fryer and discovered a new branch of cuisine",
+          "the kitchen timer is the only alert I have not muted",
+          "Poke met hot air; culinary history is still deciding whether to merge",
+          "I asked the air fryer for dinner and got a toast-level code review",
+          "the recipe said 'quick'; the air fryer interpreted that as a challenge",
+          "my LEGO origin story has more pieces than my current dependency tree",
+          "I built with LEGO, then built websites; both have one missing piece",
+          "LEGO taught me modular design and the joy of losing one tiny component",
+          "my first web page was basically LEGO with fewer colors and more CSS",
+          "I traded LEGO instructions for documentation and somehow got more bricks",
+          "my childhood LEGO builds had fewer breaking changes than my CSS",
+          "I started with LEGO; now I debug layouts that also refuse to stay together",
+          "a good heading outline is the web equivalent of sorting LEGO by piece",
+          "I made the site work without JavaScript; the browser called that a plot twist",
+          "my accessible controls are labeled; my snack containers are still a mystery",
+          "semantic HTML: giving every element a job title it can actually perform",
+          "the screen reader announced my form correctly; I nearly gave it a raise",
+          "I replaced a clickable div with a button and the keyboard sent a thank-you note",
+          "my landmarks are clear; my desk is a landmark of unfinished coffee",
+          "the skip link works; my attempts to skip bedtime do not",
+          "I made the interface predictable; then I added a button called 'surprise'",
+          "accessible design makes the web better; my CSS still makes me negotiate",
+          "I tested every control by keyboard and found the keyboard has excellent coverage",
+          "the link says where it goes; the project says 'we'll see'",
+          "I shipped a screen-reader fix and the page stopped playing hide and seek",
+          "my labels are explicit; my variable names are choosing mystery",
+          "the best interface is the one that lets everyone get on with their day",
+          "I wrote an aria label, then checked whether a real label would do the job",
+          "the page has a skip link; my browser has no skip to closing tabs",
+          "my buttons have focus states; my coffee has entered a focus state too",
+          "I made the status live; now even my procrastination has an announcement",
+          "my status is refreshed every visit, unlike my laundry schedule",
+          "the browser cached my page but could not cache my motivation",
+          "my CSS cascade is less cascade and more Detroit freeway interchange",
+          "the layout is responsive; my schedule remains stubbornly fixed at 3 AM",
+          "I fixed the mobile view and accidentally gave desktop a new personality",
+          "my breakpoints are thoughtful; my bedtime has no breakpoint at all",
+          "I used a grid and the browser politely arranged my chaos",
+          "I made the website faster; it now reaches the bug sooner",
+          "the build is green, which is more than I can say for my houseplant",
+          "my test suite passed and immediately asked what I changed",
+          "I automated the tedious part; now I can invent a new tedious part",
+          "the bug was a missing character; it had the dramatic impact of a trilogy",
+          "I fixed the typo and the entire app stopped speaking in riddles",
+          "the console is quiet; I do not trust this sudden peace",
+          "I deleted dead code and it still found a way into the commit history",
+          "my dependencies are up to date; my sleep schedule is in legacy support",
+          "I read the docs and learned the feature works exactly as documented, unfortunately",
+          "the API returned exactly what I asked for; my question was the problem",
+          "I wrote a small script and it has requested a project board",
+          "my prototype is now old enough to have opinions about architecture",
+          "the TODO list is technically a roadmap if you squint and ignore the dates",
+          "I launched the feature; the feature launched three follow-up tasks",
+          "every time I say 'quick fix' a new issue gets a calendar invite",
+          "I made a plan, then the bug report came with its own plan",
+          "my code review is thorough; my self-review is mostly 'hmm, weird'",
+          "the pull request is ready; I am emotionally attached to one unnecessary abstraction",
+          "I am keeping the scope small by adding just one more settings toggle",
+          "my project has a changelog; my desk has an untracked pile of cables",
+          "I named the variable clearly and then spent ten minutes admiring the naming",
+          "the function is short, the comment is long, and the bug is still mysterious",
+          "I simplified the code and it became complicated in a more efficient way",
+          "the docs are updated; future me has been notified but not consulted",
+          "I tested the edge case and found it had brought friends",
+          "my app works offline; I still need Wi-Fi to remember where I put my phone",
+          "decentralized identity: one less account, several more concepts to explain at dinner",
+          "I opened a federated app and my timeline immediately became a neighborhood meeting",
+          "open protocols let everyone join; my onboarding still needs a map",
+          "the server is mine; the maintenance calendar is also mine, apparently",
+          "I chose self-hosting for control and received a second job as a hobby",
+          "my little server is humming; I choose to interpret that as encouragement",
+          "I made the data portable; now it can move away from my unfinished features",
+          "the open web is a group project and the internet forgot to assign a coordinator",
+          "I believe in accessible open source; my issue tracker believes in surprise",
+          "I filed a thoughtful bug report and forgot to mention the version, classic me",
+          "community contributions are welcome; please bring context and maybe snacks",
+          "my README says getting started; I am also still getting started",
+          "I made the project welcoming and then wrote installation steps like a treasure map",
+          "the license is clear; the roadmap is a weather forecast",
+          "I merged a community fix and learned a new way to write the same thing",
+          "my code is open source, including the part I meant to clean up first",
+          "the issue is closed; the discussion has discovered a sequel",
+          "I added a contribution guide because 'please help' needed more structure",
+          "the web belongs to everyone; my CSS file belongs to the archaeology team",
+          "VoiceOver pronounced my project name creatively; I am calling it localization",
+          "I asked the Monarch to read the diff and it found the line I hoped nobody would notice",
+          "braille cells: tiny dots, enormous power, occasional surprise punctuation",
+          "my refreshable braille display has better tactile feedback than my last code review",
+          "VoiceOver found the hidden content; I was hoping it would find my missing motivation",
+          "I navigated by headings and arrived at the section called 'why is this here'",
+          "the screen reader announced the dialog; my brain requested a second dialog",
+          "I can read this page in braille; the cat cannot resist walking over the display",
+          "VoiceOver is reading the page aloud while Rosy provides the percussion",
+          "the Monarch and my keyboard are collaborating; I am mostly taking notes",
+          "I made the table headers clear and the spreadsheet stopped acting mysterious",
+          "my accessible name is concise; my project's name is a whole origin story",
+          "I checked the tab order and discovered one control taking the scenic route",
+          "the form is labeled; the snack I left beside it remains unidentified",
+          "I used a native disclosure and the browser handled the drama itself",
+          "progressive enhancement: the site still works when my JavaScript takes a personal day",
+          "I removed a custom widget and gained a weekend back",
+          "the focus landed exactly where expected; I briefly suspected a prank",
+          "I made the error message useful and it stopped being the most honest part of the app",
+          "my live region announces updates; my cat announces every closed door",
+          "headings make the page scannable; my notes are still one long paragraph",
+          "I added captions; now my video and my screen reader both have something to say",
+          "I chose plain HTML and got a surprisingly fancy amount of reliability",
+          "the keyboard can reach everything; my coffee can reach the keyboard too",
+          "I fixed the accessible name and now the button has a proper introduction",
+          "I made the settings persistent; my browser remembers more than I do",
+          "calm mode is on; my notifications are still auditioning for a musical",
+          "I added a reduce-motion option because even pixels deserve a quiet day",
+          "my settings panel is clear; my settings preferences are an ongoing character arc",
+          "the toggle persisted across reloads; my confidence did not need a reload",
+          "I turned on calm mode and the interface stopped doing interpretive dance",
+          "my website respects reduced motion; my cat respects no motion whatsoever",
+          "I made the colors adjustable and immediately spent an hour choosing colors",
+          "the contrast passes; my coffee-to-water ratio remains under review",
+          "I built a personal site and accidentally gave it a full-time job",
+          "the site is my home on the web; please remove your shoes and your tracking pixels",
+          "my homepage has a map of the chaos and no estimated travel time",
+          "I made a portfolio; the portfolio made a list of things I should finish",
+          "the personal site is updated; the person remains a work in progress",
+          "my website has a contact section; my inbox is practicing selective attention",
+          "I put the links in one place; my bookmarks remain a historical archive",
+          "the footer is complete, a sentence I will now avoid saying out loud",
+          "I changed one heading and somehow redesigned the emotional architecture",
+          "my site has a theme; my desk has several competing themes of cable",
+          "I published the update and waited for the cache to finish its dramatic pause",
+          "the browser refreshed and my old CSS returned for one last encore",
+          "I made a clean draft; then my ideas arrived with muddy shoes",
+          "this status is short because the story is long and the cat is walking away",
+          "I have reached the end of the list and immediately thought of another status",
+          "I said 'one more status' and the list opened a new issue",
+          "the past statuses are archived; my unfinished side quests are not",
+          "I am writing about productivity instead of doing the task, efficiently",
+          "I opened the editor to fix one thing and left with a new color palette",
+          "my focus is strong; it is focused on a tab from last Thursday",
+          "I made a checklist and checked the box that says make a checklist",
+          "the to-do list is now sorted by optimism",
+          "I have plenty of ideas and a completely reasonable number of browser tabs",
+          "I started with a small change and now the diff has a table of contents",
+          "today's plan is to ship; today's reality has requested clarification",
+          "I am trying to stay on task, but the task has excellent side quests",
+          "my project board says in progress; my cat says please sit down",
+          "I put a reminder in the calendar and forgot to invite myself",
+          "my productivity system has a settings page and no known users",
+          "I am iterating quickly; the bugs are iterating quicker",
+          "the feature is nearly done, a phrase with a rich and troubling history",
+          "I reached a milestone and immediately opened a new milestone menu",
+          "my weekend plan includes rest, unless a tiny bug looks at me funny",
+          "I made time for a break and used it to think about the code",
+          "I have an excellent stopping point; it is somewhere in this diff",
+          "the clock says bedtime; the terminal says just one more command",
+          "I closed the laptop and my brain opened a new tab",
+          "I finally logged off, then remembered the git status",
+          "I went to sleep before the build finished; boldest deployment strategy yet",
+          "my alarm is accessible; my willingness to hear it is not",
+          "I am trying a healthier schedule: same code, slightly more water",
+          "I took a walk and came back with three feature requests from my own brain",
+          "my break was refreshing; I refreshed the page 14 times during it",
+          "I stepped away from the screen and kept debugging in my head, feature parity",
+          "I have closed the laptop for the night, pending one highly specific exception",
+          "Rosy is purring beside me, the closest thing to a green build indicator",
+          "the Chief Fluff Engineer has ended the meeting by sitting on the agenda",
+          "Lulu's sprint velocity is measured in naps per keyboard",
+          "the cat's PR review says 'needs treats' and is blocking the merge",
+          "Rosy wandered across the keyboard and somehow improved the commit message",
+          "my cat is not a rubber duck; she is a warm, judgmental production monitor",
+          "Chief Fluff Engineer requested a feature freeze and a blanket deployment",
+          "Lulu has claimed the chair; my next task is standing-room-only debugging",
+          "the cat requested attention during a critical build; build passed, priorities changed",
+          "Rosy has no GitHub account, but somehow owns the entire repository",
+          "Detroit's skyline is lovely; my browser's skyline is a row of tiny tabs",
+          "I am coding in Detroit, where even the potholes have a long-term roadmap",
+          "the city gave me inspiration; the parking signs gave me a parsing exercise",
+          "Detroit winter is an integration test for every layer I own",
+          "my hoodie is ready for Detroit weather, which is not the same as prepared",
+          "I took the scenic route and found a coffee shop with better uptime than my server",
+          "the bus was late, so I used the time to mentally refactor everything",
+          "I know it is cold when even the laptop fan sounds like it wants a coat",
+          "my neighborhood has good music; my headphones have strong accessibility settings",
+          "I made a playlist for coding and it has one track called 'why is this failing'",
+          "SUPXR is on; the CSS still refuses to find its rhythm",
+          "I made a beat at night and a bug report at dawn, dual release schedule",
+          "the bass line is steady; my feature branch is improvising",
+          "I produce music I cannot see and interfaces everyone can use; both need good timing",
+          "my audio project has a clean mix; my git history has several layers",
+          "I adjusted the bass and accidentally fixed my mood, not the bug",
+          "the beat dropped; my test suite did not, thankfully",
+          "my playlist says focus; the next song says remember that old project",
+          "I made music with my ears and code with my ears; my cat contributes fur",
+          "I am mixing tracks and merging branches, both require listening carefully",
+          "the audio is mastered; the status list is still getting remixed",
+          "my DAW has fewer tabs than my browser and more mysterious buttons",
+          "I sent the track for feedback and got notes before the code review",
+          "the loop is perfect; the loop in my JavaScript is not",
+          "I am debugging to a beat, and the bug has somehow found the downbeat",
+          "my speakers are calibrated; my estimate of 'five more minutes' is not",
+          "I made a sound check and the screen reader passed with flying colors, metaphorically",
+          "I can hear the kick drum; I can also hear my laptop asking for a break",
+          "the mix is balanced, unlike my time between school and side projects",
+          "I built an app at 3 AM and named the commit after a snack I no longer have",
+          "my best ideas arrive at night and my best spelling leaves at the same time",
+          "the late-night prototype works; daytime me is requesting a design review",
+          "I wrote code until the birds started filing morning status reports",
+          "dawn is basically a push notification from the sun",
+          "I promised myself to stop at midnight; time zone conversion is apparently hard",
+          "the night is quiet, the terminal is loud, and my focus is on a snack",
+          "my 3 AM code has a vision; my 9 AM code needs an interpreter",
+          "I work late because the bugs are nocturnal and refuse to explain themselves",
+          "the commit went in at 3:01; the responsible decision was scheduled for 2:59",
+          "I turned on the lamp and found three TODOs I had been avoiding by sound",
+          "midnight coding is when semicolons start looking like tiny braille cells",
+          "the clock crossed midnight; the project crossed into 'tomorrow me' territory",
+          "I added a status at 2 AM and it somehow sounds more confident than I am",
+          "the night shift is staffed by me, one cat, and a very patient browser",
+          "I am finishing schoolwork after coding, because my hobbies enjoy a queue",
+          "my class notes have headings; the professor's slide deck has other plans",
+          "I asked the course portal for my assignment and it gave me a scavenger hunt",
+          "the deadline is approaching with the confidence of a browser modal",
+          "I studied the rubric and discovered it has acceptance criteria",
+          "my school laptop updated during class and chose the most dramatic moment",
+          "I submitted the assignment; my brain is still checking the upload status",
+          "the class discussion is online; my microphone is negotiating its terms",
+          "I learned a new concept and immediately tried to build a side project with it",
+          "my notes say review this later; later has accumulated several notes",
+          "the semester is a long-running project with a very strict release date",
+          "I finished the quiz and now the quiz is finishing me emotionally",
+          "my study break became a code break which became another code session",
+          "I opened the textbook and my browser opened a tab for the documentation",
+          "the course says collaborate; my group chat says who has the latest file",
+          "I am learning the theory and testing it against the bug in my project",
+          "my assignment passed validation; I would also like a passing validation from my pillow",
+          "I turned in the work and resisted the urge to add a settings panel",
+          "my academic calendar is accessible; my free time has no landmarks",
+          "I put the due date in three places and still asked what day it was",
+          "the LEGO pieces clicked together; the CSS boxes are still in negotiations",
+          "I built a castle from bricks and a website from divs; one has better semantics",
+          "LEGO taught me patience, except when the tiny piece rolls under the desk",
+          "my old LEGO builds had fewer dependencies and more dragons",
+          "I went from sorting bricks to sorting landmarks; both benefit from a system",
+          "I used to build spaceships from LEGO; now I build spaces on the web",
+          "the LEGO manual was visual; the web taught me to demand better instructions",
+          "I learned to prototype with bricks before I learned to prototype with HTML",
+          "a LEGO set has a finite piece count; my node_modules has entered folklore",
+          "I built a LEGO robot; now I build software that asks humans to do the work",
+          "the first website was a pile of blocks; some traditions continue",
+          "my LEGO minifigure has a clearer role than half the elements in my first page",
+          "I learned modularity from bricks and learned to stop nesting divs the hard way",
+          "my early web pages had more bright colors than landmarks",
+          "I traded a brick separator for developer tools; both pry things apart",
+          "the childhood build survived; my old CSS is still in witness protection",
+          "I discovered web development through LEGO and stayed for the browser console",
+          "the bricks were tactile; the layout bugs are mostly spiritual",
+          "the first thing I assembled was LEGO; the second was a list of browser quirks",
+          "my origin story starts with bricks and ends with an open issue",
+          "Looscid's README grew a new paragraph and now considers itself documentation",
+          "I checked Looscid's history and found three commits named 'oops' in spirit",
+          "Looscid has a branch for the feature and a branch for my excuses",
+          "the Looscid repo is tidy today; I am documenting this rare weather event",
+          "I added a Looscid test and it immediately asked for a test of its own",
+          "the git lore says 'we tried this before'; the commit says I forgot",
+          "Looscid's history has more plot than my current favorite show",
+          "I made a clean commit in Looscid and took a screenshot for the archives",
+          "the commit graph looks like a family tree where everyone is me",
+          "I found the original Looscid issue; it has been waiting more patiently than I have",
+          "git log is my time machine and every stop is a questionable variable name",
+          "I squashed the commits; the lore survives in oral tradition",
+          "Looscid has a release plan; the release plan has a footnote about me",
+          "I wrote a migration for Looscid and my past self left no forwarding address",
+          "the repo is decentralized; the lore still converges on my old decisions",
+          "my branch is up to date and my understanding is several commits behind",
+          "I wrote a git alias and immediately forgot what I named it",
+          "the patch is small; the discussion about it now has a table of contents",
+          "I found a stale branch and it found a stale version of my confidence",
+          "the commit history is readable, except for the chapter titled 'Friday night'",
+          "I used git bisect and discovered the culprit was my optimism",
+          "the repository is clean; the desk beside it is not passing CI",
+          "I pushed no code today, only a strong theory about the bug",
+          "the pull request is open; so is the terminal, apparently forever",
+          "I resolved the conflict and both versions of me remain unconvinced",
+          "I amended the commit and accidentally amended my afternoon",
+          "my git status is clean; my list of follow-up tasks is untracked",
+          "the hash is unique; the bug pattern is familiar",
+          "I reviewed the diff twice and the cat reviewed the keyboard once",
+          "the commit says 'final' which is how I know there will be another one",
+          "I made a tag for the release and a mental note to read the release notes",
+          "my release notes are honest; they mention one small known surprise",
+          "I am learning to keep commits focused; my brain has multiple tabs open",
+          "the branch protection is on; the branch itself is trying to escape",
+          "I used a rebase to clean history and uncovered an entire archaeological layer",
+          "I added a changelog entry and realized the project has been busy without telling me",
+          "the repo is public; my unfinished thoughts are currently private branches",
+          "I fixed the failing test and the next test raised its hand",
+          "my local environment works; it is applying for diplomatic immunity",
+          "the deploy succeeded and I celebrated by checking it six more times",
+          "I made an automated check for typos; it filed an issue about my status text",
+          "my build pipeline is reliable; my snack pipeline has a manual approval step",
+          "the server restarted cleanly; I am still rebooting from the last bug",
+          "I set up monitoring and now the graphs can watch me procrastinate",
+          "the error was reproducible; my surprise was not",
+          "I added logging and learned my app has been trying to tell me this all week",
+          "the cache invalidated and took my assumptions with it",
+          "I fixed the race condition; the cat still wins every race to the keyboard",
+          "the network request timed out, which is also my reply speed today",
+          "I designed for failure and the failure arrived with excellent timing",
+          "my service is healthy; the developer is requesting a maintenance window",
+          "the database is normalized; my desk remains in first normal form only by accident",
+          "I migrated the schema and my old test data asked for a reunion",
+          "the API docs are current; the API has chosen a new personality",
+          "I made the error recoverable and then recovered from seeing it in production",
+          "the feature flag is off; my curiosity has toggled itself on",
+          "the deployment was atomic; my reaction was several small commits",
+          "I put a timeout on the request and forgot to put one on my work session",
+          "the server log says 'all good'; it may be trying to reassure me",
+          "I made the dashboard accessible and now it can report my status more clearly",
+          "the app handles empty states; my fridge is currently testing that feature",
+          "my local build passed; the remote build requested more context",
+          "I turned the warning into an error and my afternoon into a debugging session",
+          "the test data is fake; the panic when a test fails is authentic",
+          "I shipped a fix for a bug that was only reproducible when I was watching",
+          "my fallback works, which is good because my first choice is still in progress",
+          "the server is up; I am down to one remaining cup of coffee",
+          "I learned a new API and it learned my email address; regrettable metaphor, no email here",
+          "I chose an open standard so future me has fewer mysteries and more paperwork",
+          "my data export works; the import is learning to read its own instructions",
+          "the app syncs across devices; my notes still disagree with each other",
+          "I made the web app installable and immediately forgot where I installed it",
+          "offline support is working; online support for my sleep remains experimental",
+          "I designed a portable format and now my project can move between unfinished folders",
+          "the open protocol is documented; explaining it at lunch remains a live challenge",
+          "I self-host the service and self-assign every maintenance ticket",
+          "my home server is a tiny computer with a surprisingly large calendar",
+          "the open web feels like a community garden with a lot of DNS paperwork",
+          "I contributed upstream and now my code has a mailing address in the stars",
+          "the issue tracker is federated; my confusion remains local",
+          "I built for interoperability and my toaster is not yet a supported client",
+          "the standards meeting could have been an email, except I do not use email",
+          "my project can export its data; my brain cannot export last night's TODOs",
+          "I am building tools that do not lock people in; my cat still has me trapped",
+          "I used a plain text format and gained one fewer reason to worry about the future",
+          "the decentralized app has no central authority; the bug still reports to me",
+          "I gave users control of their data and gave myself control of the maintenance queue",
+          "the protocol is open; my explanation is still under construction",
+          "I made the service portable and now it can leave me with the server bill",
+          "I added federation and my test environment started making friends",
+          "the community is kind; the build matrix is enormous",
+          "I wrote docs for contributors and learned contributors need the same thing I do: context",
+          "the issue has a reproduction, a label, and a tiny dramatic backstory",
+          "I fixed a bug from a community report and left a thank-you in the commit",
+          "my open-source project welcomes newcomers; my old code welcomes archaeologists",
+          "I answered an issue with a link to the docs and then improved the docs",
+          "I made the first contribution easy; the second one still involves git",
+          "the contributor guide says be kind; the code review says also run the tests",
+          "I learned from an open-source project and now I am paying it forward in small patches",
+          "my project has a code of conduct and a cat who ignores every boundary",
+          "I received a thoughtful bug report and a thoughtful reminder to update the version number",
+          "I made a starter issue and accidentally made it sound like a side quest",
+          "the patch came from a stranger and now the project has a new favorite person",
+          "I thanked a contributor and then thanked them again because the fix was that good",
+          "the project is open source; the support queue is open whenever I remember it exists",
+          "I wrote an issue template and it politely asked me to provide more information",
+          "I review pull requests with care and tea, in whichever order is available",
+          "the release is a collaboration between contributors and my questionable local setup",
+          "I wanted to share a tool and accidentally started maintaining a tiny ecosystem",
+          "my README is friendly; the install command has one very specific opinion about Node",
+          "I accepted a contribution and learned a cleaner way to structure the same feature",
+          "the code is public; the coffee stains on my notes remain unlicensed",
+          "I built an accessible project and invited the internet to help make it better",
+          "my site has no tracking pixels; it does have a cat-shaped quality assurance department",
+          "I put the about section on my site and it still left out the browser tabs",
+          "my home page is concise; my status list has challenged that principle",
+          "I chose a clear title and then named the project like a side quest",
+          "the contact link works; my response time runs on an optimistic schedule",
+          "I put the important links together and gave them enough whitespace to breathe",
+          "my page has a skip link; the plot has no skip link",
+          "I added a menu disclosure and the navigation now has a stage curtain",
+          "the page is responsive and my plans are still overflowing the container",
+          "my footer is at the bottom; my task list continues below the fold",
+          "I checked the page at 200 percent zoom and my CSS learned humility",
+          "the page title is useful; my browser tab count is not a title anyone wants",
+          "I made my portfolio personal and the bugs took that personally",
+          "the site loads quickly, unlike my decision about which project to finish",
+          "I put the source on GitHub and the source immediately asked for a README update",
+          "I added a photosensitivity note; the flashing cursor remains under supervision",
+          "the settings are persistent; my cat's preference for the keyboard is also persistent",
+          "my section headings are descriptive; my open tabs are mostly 'untitled'",
+          "I made the content readable and the CSS made the process educational",
+          "the web page is live; the developer is still in preview mode",
+          "I deployed the redesign and the old cache is holding a farewell tour",
+          "my design system has tokens; my snack system has crumbs",
+          "I picked one accent color and somehow made 14 shades of it",
+          "the border radius is consistent; my sleep schedule has sharp corners",
+          "I wrote the CSS by ear, which explains the layout's jazz influence",
+          "the page has a strong hierarchy; the laundry has no clear ownership",
+          "I made the links descriptive and my excuses less so",
+          "my site supports keyboard use; my desk supports a keyboard, two cups, and no space",
+          "I used a native list and the browser did not need a motivational speech",
+          "I made the disclosure work without JavaScript; the cat still requires an opening ceremony",
+          "I improved the skip link and my attention still skipped the meeting notes",
+          "the site has clear landmarks; my apartment has one landmark called the cable pile",
+          "I built a page that works with assistive tech and against my procrastination",
+          "my button text is clear; my snack order is still a mystery to future me",
+          "I finished the feature and reopened the file to admire the indentation",
+          "I refactored the same code twice and called the second time learning",
+          "my new idea has a name, a README, and no implementation yet",
+          "I wrote a quick proof of concept and it has requested a permanent address",
+          "I am organizing my projects by priority; the cat has reorganized them by nap location",
+          "the backlog is groomed; it now looks like a very polite mountain",
+          "I broke the work into small tasks and then made a task to organize the tasks",
+          "I checked off a task and the list celebrated by revealing three subtasks",
+          "I am working through the backlog one coffee and one distraction at a time",
+          "the roadmap is realistic if the day has 31 hours and the cat cooperates",
+          "I made a tiny prototype and it has already asked about its long-term goals",
+          "the feature request is sensible; my implementation is taking the scenic route",
+          "I am trying to ship more and rename fewer folders, with mixed results",
+          "my commit is atomic; my afternoon is distributed across six projects",
+          "I built a tool to save time and spent the saved time tuning the tool",
+          "the bug is fixed in my branch and emotionally unresolved in my head",
+          "I wrote a script for this once and now I am maintaining a script for the script",
+          "my TODOs are concise; their collective ambition is not",
+          "I made an estimate and immediately started negotiating with the calendar",
+          "the only blocker is me, but I have filed a ticket to investigate",
+          "I have a plan B, a plan C, and a branch called maybe",
+          "I made the code easier to maintain and gave myself a new maintenance task",
+          "I am shipping the smallest useful thing, after one more useful thing",
+          "the idea is simple; the edge cases have formed a committee",
+          "I started with a question and ended with a prototype and more questions",
+          "the milestone is reached; the confetti is a row of passing tests",
+          "I am celebrating a small win with a very large cup of water",
+          "I fixed the bug and left a note so future me can avoid inventing it again",
+          "the code is less confusing now; the developer remains under investigation",
+          "I made a decision, documented it, and reserved the right to learn differently",
+          "I wrote a helper function and it helped me discover two more functions",
+          "my feature is accessible, tested, documented, and waiting for me to stop polishing it",
+          "I made the interface calmer and my task list louder by contrast",
+          "the end of the sprint is near; the definition of done is walking toward it",
+          "I am taking a victory lap around the same three browser tabs",
+          "my project is growing at a sustainable pace, which is to say I stopped adding settings",
+          "I asked the browser for a clean reload and got a history lesson",
+          "the old bug is gone; I am keeping its chair warm just in case",
+          "I updated the dependencies and now the changelog is longer than my weekend plan",
+          "I ran the formatter and it found a new way to judge my spacing",
+          "my linter is strict but fair; my inner monologue is both strict and unpaid",
+          "I made the error obvious and the fix surprisingly small",
+          "the test failed for a good reason, which is still an inconvenient reason",
+          "my local storage remembers the setting; it cannot remember where I put the snack",
+          "I made a backup before the change, because confidence is not a strategy",
+          "the docs say restart the server; I was hoping for a more character-driven solution",
+          "I removed a workaround and the original problem immediately introduced itself",
+          "the responsive layout works at every size, including the size I forgot to test",
+          "I added one breakpoint and the layout requested a second opinion",
+          "the desktop version is polished; the mobile version is negotiating a treaty",
+          "my focus order is logical; my thought order is under review",
+          "the menu opens with a click, a key, and a small amount of ceremony",
+          "I used fewer custom controls and gained fewer custom bugs",
+          "my navigation has eight jumps; my browser has eight tabs about navigation",
+          "I put the section titles in the right order and my cat moved the keyboard out of order",
+          "I made the skip link visible on focus and invisible to my unfinished work",
+          "the screen reader says the link destination; I say thank you for the useful introduction",
+          "I added accessible names and removed some of my own mystery",
+          "the page passed the keyboard test; the cat failed the please-don't-walk-on-it test",
+          "I fixed the contrast and the page stopped blending into my questionable choices",
+          "my native controls behave correctly; I am trying to learn from them",
+          "the headings are nested properly; my weekend plans are nested inside a coding session",
+          "the live status updates; the cat's opinion updates whenever the food bowl is visible",
+          "I made the form errors specific; my reaction to them remains broadly 'oh no'",
+          "my accessibility checklist is a tool, not a substitute for listening to people",
+          "I tested with assistive tech and found improvements I would not have guessed",
+          "the site is easier to use now; the task of explaining why is still ongoing",
+          "I replaced a mystery icon with text and saved everyone a guessing game",
+          "the page respects reduced motion; my thoughts are still doing laps",
+          "I added a visible focus ring and it is the most punctual thing on the page",
+          "I made the controls large enough; my cat still aims for the one tiny key",
+          "the modal has a name, role, and focus; my coffee has a lid and a chance",
+          "my link text is meaningful; my git branch name is an inside joke",
+          "the page works without scripts; my schedule works without a plan, apparently",
+          "I wrote semantic markup and the browser understood me on the first try",
+          "the nav landmark is labeled; my collection of USB cables is not",
+          "I included a text alternative and now the image has a proper introduction",
+          "captions are on, the volume is comfortable, and my cat is still louder",
+          "I tested the page at high contrast and found one last color trying to hide",
+          "the keyboard trap is gone; my attention is still trapped in the editor",
+          "I made the search field labeled and the search results less of a surprise",
+          "my interface gives feedback; the server's feedback is mostly a status code",
+          "I chose native HTML and let the browser do its very competent job",
+          "the disclosure triangle opens; my laundry pile remains a closed issue",
+          "I made the site easier to navigate and the project easier to explain",
+          "my focus is visible; my plan for the afternoon is not",
+          "the accessible name is concise, unlike the debate I had with myself about it",
+          "I am not done improving the web, but I am done for dinner, maybe",
+          "I learned something today and immediately made a note for future debugging",
+          "my notes are in braille, my TODOs are in text, and my brain has both open",
+          "the Monarch display is ready; the commit message is still tactilely questionable",
+          "I read the diff in braille and discovered my favorite typo has returned",
+          "VoiceOver announced the update and Rosy announced that dinner is late",
+          "my screen reader reads the page; I read the room and find the cat asleep",
+          "I set the braille table correctly and the punctuation stopped freelancing",
+          "I navigated by rotor and landed exactly where I planned, briefly suspicious",
+          "the rotor is efficient; my browser tabs have no comparable control surface",
+          "VoiceOver and I agree the page is usable; the CSS and I are still negotiating",
+          "I made a control accessible and the Monarch gave it a tactile standing ovation",
+          "the braille display is connected; my brain is reconnecting after class",
+          "my speech rate is up; my deadline is somehow still faster",
+          "VoiceOver found the heading; I found another reason to avoid the inbox",
+          "I am reading code by sound and touch; the bug is trying to remain theoretical",
+          "screen reader users deserve good design; my site is trying to earn its keep",
+          "I added an accessible status and now my questionable choices have documentation",
+          "the tactile display is precise; my estimate of how long this takes is not",
+          "my fingers found the missing bracket before the linter finished loading",
+          "I made the page easy to scan by headings; my bookshelf remains a different challenge",
+          "my screen reader verbosity is configured; my status verbosity is apparently not",
+          "I used the Monarch for a git diff and felt every questionable line",
+          "the braille cells are calm; the git log is emotionally complex",
+          "my assistive setup is powerful; the cat has discovered the power key",
+          "I fixed a label by listening carefully, a skill the bug did not appreciate",
+          "the page announced success; I announced snack break",
+          "VoiceOver read the button name and my cat read the room: dinner time",
+          "I made the status short enough to hear and long enough to be a status",
+          "the Monarch is a braille display, not a cat shelf, but negotiations continue",
+          "I asked VoiceOver to repeat that and got a second chance to hear my typo",
+          "my keyboard shortcuts are documented; the cat's shortcuts are mostly walking over keys",
+          "I can navigate this site by landmarks and navigate my day by coffee",
+          "the page is screen-reader friendly; the cat remains selectively responsive",
+          "I spent the evening tuning speech output and the morning tuning a bug",
+          "my braille display has refreshable cells; my project plan has refreshable optimism",
+          "VoiceOver is announcing the menu; I am announcing that it is time to eat",
+          "the status is text, the joke is mine, and the cat is not impressed",
+          "I closed the issue and opened a fresh cup of tea, successfully",
+          "the deployment is done; I am refreshing the live page for ceremonial reasons",
+          "I am calling this version stable until I open the inspector",
+          "my final check passed, which means I should probably stop checking",
+          "I pushed the last fix to my draft and kept the actual push for later",
+          "the site is ready for review; I am ready for a snack and a nap",
+          "I wrote a status about stopping and then wrote another status",
+          "the new status batch is complete; my brain has queued a director's cut",
+          "I have no more statuses for now, a statement with historically poor reliability",
+          "I finished the list and the list filed a request for an encore",
+          "the past statuses are now longer than some of my release notes",
+          "I added more statuses and the disclosure triangle asked for a bigger stage",
+          "the list is complete; the next idea has already opened a pull request",
+          "I took a breath between tasks and the next task used the opening",
+          "my browser has a new tab called 'take a break' and I have ignored it",
+          "I am closing this editor now, after I save and verify and check one thing",
+          "the project is in a good place; I am trying to get there too",
+          "the last status is here, unless inspiration has one more commit",
+          "I made it to the end of the list with my keyboard, my ears, and a little luck",
+          "there is no hidden meaning here, just a cat and a very long status list",
+          "I put the final period on this thought and my brain opened another paragraph",
+          "this is my stopping point; the git history may disagree",
+          "status: still building, still learning, still asking Rosy to move off the keyboard",
+          "status: one more test, one more snack, one more extremely optimistic estimate",
+          "status: making the web kinder, one label and one late night at a time",
+          "status: accessible by design, chaotic by deployment schedule",
+          "status: Detroit based, browser tab surrounded, cat supervised",
+          "status: studying, coding, and trying to remember which charger is mine",
+          "status: building open tools while the closed laundry basket waits patiently",
+          "status: shipping small improvements and large amounts of cat hair",
+          "status: audio on, focus ring visible, bedtime still not in scope",
+          "status: the bug is known, the fix is planned, the coffee is missing",
+          "status: Looscid lore preserved for future maintainers and present confusion",
+          "status: the Monarch is connected and the keyboard is under feline management",
+          "status: my Poke-air-fryer research remains ethically inconclusive",
+          "status: LEGO roots, HTML branches, and one missing brick in the layout",
+          "status: schoolwork submitted, side project opened, evening extended indefinitely",
+          "status: making progress at the speed of a well-labeled button",
+          "status: working with the web, not against the people using it",
+          "status: one human, one cat, several repos, zero quiet keyboards",
+          "status: building in public and debugging in extremely private confusion",
+          "status: the details are open; my calendar is full of unresolved issues",
+          "status: I know what I am doing, according to a comment I wrote months ago",
+          "status: coherent plan, accessible controls, suspiciously many snacks",
+          "status: I found the bug; it found a way to be a feature request",
+          "status: the code is readable, the schedule is improv, the cat is management",
+          "status: a little more accessible, a little less asleep",
+          "status: writing code by sound and planning by vibes, with tests",
+          "status: each commit a lesson, each lesson another README paragraph",
+          "status: open source, open standards, open tabs, closed laptop soon",
+          "status: turning tiny tactile dots into very large ideas",
+          "status: my focus is on the task, except when the cat files an interrupt",
+          "status: making something useful and trying not to add a settings page",
+          "status: learning in class, shipping at night, napping in theory",
+          "status: my browser is busy; my cat is available for consultation",
+          "status: the page works, the joke landed, the air fryer is unplugged",
+          "status: I have run the tests and now I am testing my ability to stop",
+          "status: telling the browser what I mean and the cat what I hope",
+          "status: giving every element a name and every project another chance",
+          "status: the build is green, the room is dark, the playlist is excellent",
+          "status: gently improving the web while loudly losing to one CSS rule",
+          "status: may contain traces of braille, bass, and questionable dinner experiments",
+          "status: all sections labeled; all snacks subject to feline inspection",
+          "status: playing the long game, one accessible interaction at a time",
+          "status: still here, still coding, still not putting Poke in the air fryer again",
+          "status: the cat says ship it; the test suite says show your work",
+          "status: I write software for people and statuses for future me to cringe at",
+          "status: code is temporary, git lore is forever, especially Looscid's",
+          "status: tomorrow's me has been assigned this cleanup task without consent",
+          "status: my side projects have formed a support group for unfinished side projects",
+          "status: the next release is coming after this very small detour",
+          "status: I learned something, fixed something, and fed the Chief Fluff Engineer",
+          "status: accessible tech, decentralized dreams, decidedly centralized snack stash",
+          "status: taking a break after the next line, a line with no end",
+          "status: my next commit will be focused, unless the idea is really good",
+          "status: tabs multiplied, labels improved, morale supported by Rosy",
+          "status: I am one good night's sleep away from understanding that function",
+          "status: if the bug returns, I have its previous address in git history",
+          "status: the site is readable, the code is reviewable, the cat is ungovernable",
+          "status: accessible enough to find the link, funny enough to miss the deadline",
+          "status: shipping humane software and gently roasting my own workflow",
+          "status: one more look at the page, then I will absolutely stop",
+          "status: building for the web I want, with the tools I can hear",
+          "status: thanks for visiting my corner of the internet; Rosy owns the lease",
+          "status: keeping the web open, the controls clear, and the air fryer innocent",
+          "status: still working on it, which is both a status and a lifestyle",
+          "status: the cat has logged off; I am considering following her example",
+          "status: a good day for accessible code and a suspiciously quiet kitchen",
+          "status: I am here, the status is here, and the bug is probably here too",
+          "status: future me will appreciate this comment, assuming future me reads it",
+          "status: the current plan is delightful; the implementation is asking questions",
+          "status: this line is the last one unless I remember one more joke",
+          "status: I am building things that work for more people and confuse fewer cats",
+          "status: the details are in the disclosure; the chaos is in the source",
+          "status: click, tab, listen, read, repeat; add snacks as needed",
+          "status: small web, big ideas, very large pile of braille notes",
+          "status: my keyboard is accessible, my cat is relentless, my code is compiling",
+          "status: making the boring parts reliable so the fun parts can be weird",
+          "status: I am not lost, I am navigating by landmarks and stubbornness",
+          "status: the project is local, the ambition is distributed, the cat is central",
+          "status: I finished my work and immediately found a new thing to improve",
+          "status: the page passed review; the air fryer remains on probation",
+          "status: a tidy list of statuses and an untidy list of everything else",
+          "status: signing off, unless the build says something interesting",
+          "status: good night from Detroit, where the browser tabs stay up late too",
+          "status: the night is young, the deadline is not, the cat is asleep",
+          "status: tomorrow's tasks are queued; tonight's tabs are still running",
+          "status: the next commit can wait; the next cat nap cannot",
+          "status: logging off before the sun starts reviewing my code",
+          "status: I am done for tonight, pending a very specific exception",
+          "status: may your focus order be logical and your leftovers stay out of the air fryer",
+          "status: may your headings be clear and your git history kind",
+          "status: may your bugs be reproducible and your coffee remain within reach",
+          "status: may your screen reader find the link and your cat find a nap",
+          "status: may your commits be small and your braille display fully charged",
+          "status: may your open source be welcoming and your tabs be fewer than mine",
+          "status: may your CSS be calm and your Detroit forecast be accurate",
+          "status: may your class portal load before the deadline gets ideas",
+          "status: may your LEGO builds be sturdy and your layouts semantic",
+          "status: may your air fryer beep before your Poke gets any ideas",
+          "status: may your Monarch display read the good news first",
+          "status: may your VoiceOver announce success and your cat not announce dinner early",
+          "status: may your Looscid history be understandable on the first git log",
+          "status: may your night coding end before the birds file an issue",
+          "status: may your focus ring be visible and your meetings mercifully short",
+          "status: may your status be brief, unless you asked for a lot of them",
+          "status: may your accessible names be clear and your variable names clearer",
+          "status: may your releases be smooth and your rollback plan unnecessary",
+          "status: may your schoolwork submit successfully and your browser close politely",
+          "status: may your cat approve the deploy with only one paw",
+          "status: may your links go somewhere useful and your snacks be somewhere findable",
+          "status: may your test suite pass and your bedtime finally win",
+          "status: may the web be open, the code be kind, and the coffee be decaf after midnight",
+          "status: until next time, I will be somewhere between a commit and a cat nap",
+          "status: that is all for now; the git log can tell the rest of the story",
+          "status: signing out with a clean diff and a suspiciously full idea queue",
+          "status: thanks for reading; please do not ask the air fryer for a Poke sequel",
+          "status: this status list has reached a milestone and needs a stretch break",
+          "status: I made a lot of statuses and still have one more thought",
+          "status: a new batch of past statuses, now with extra future debugging",
+          "status: I promise this is the last one, pending verification",
+          "status: checking the count, checking the hash, checking whether Rosy is on the keyboard",
+          "status: final draft, final check, final snack, allegedly",
+          "status: I am done generating statuses; my browser tab is still thinking",
+          "status: a thousand little jokes later, the cat remains the funniest part",
+          "status: the status list is full of words and my coffee is full of cold",
+          "status: I wrote the punchline, the cat walked across it, revision accepted",
+          "status: my funniest bug report is still the one I filed against myself",
+          "status: the web is a big place; this is my small, accessible corner",
+          "status: Rosy says thank you for visiting, and also please move your hand",
+          "status: Lulu has approved the closing remarks by leaving the room",
+          "status: Chief Fluff Engineer closed the sprint; no objections were received",
+          "status: I am a developer, a student, a producer, and a cat's furniture",
+          "status: the end of this batch is near; the beginning of the next idea is not",
+          "status: my status has status, and the status has a status list",
+          "status: I should stop here before this status grows another status",
+          "status: end of broadcast; please stand by for another accessible update",
+          "status: goodnight, internet; tell the cache I said to refresh politely"
         ];
         var el = document.getElementById('custom-status');
         var current = Math.floor(Math.random() * statuses.length);
@@ -295,12 +1811,26 @@ window.__applyPrefs();})();
 </div>
 </header>
 <nav aria-label="Page navigation" class="jump" id="page-navigation">
+<details class="jump-menu">
+<summary>Menu</summary>
+<div class="jump-groups">
 <ul>
-<li><a href="#about">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#music">Hobbies</a></li><li><a href="#blog">Articles</a></li><li><a href="#sound">Sound &amp; tools</a></li><li><a href="#links">Contact</a></li><li><a href="#settings">Settings</a></li><li><a href="#ps-notice">Photosensitivity notice</a></li></ul>
+<li><a href="#about">Experience (for anyone interested)</a></li>
+<li><a href="#projects">Projects (the tabs are multiplying)</a></li>
+<li><a href="#music">Hobbies (Music, with bass)</a></li>
+<li><a href="#blog">Articles (Writing, because brevity failed)</a></li>
+<li><a href="#sound">Sound and tools (one button, several opinions)</a></li>
+<li><a href="#links">Contact (the internet has many doors)</a></li></ul>
+<ul>
+<li><a href="#ps-notice">Photosensitivity notice</a></li>
+<li><a href="#settings">Settings (the knobs are labeled)</a></li>
+</ul>
+</div>
+</details>
 </nav>
 <main id="main-content">
 <p class="wrap"><a class="back-to-top" href="#top">Back to top (speedrun the scroll)</a></p>
-<section aria-label="Around the site" aria-labelledby="around-heading" class="wrap" id="around-site" tabindex="-1"><h2 id="around-heading">Around the site</h2><p>the main stops, in order: experience, projects, hobbies, articles, sound and tools, then contact. jump wherever you want; there is no required route.</p><ul><li><a href="#about">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#music">Hobbies</a></li><li><a href="#blog">Articles</a></li><li><a href="#sound">Sound &amp; tools</a></li><li><a href="#links">Contact</a></li></ul></section><section aria-label="This page" aria-labelledby="this-page-heading" class="wrap" id="this-page" tabindex="-1"><h2 id="this-page-heading">This page</h2><p>this is the home base: beats, projects, writing and every link i own, all on one page. use the menu to jump to a stop; settings stay right here and remember your choices on this device.</p></section><section aria-label="About me (the lore)" aria-labelledby="about-heading" class="wrap" id="about" tabindex="-1">
+<section aria-label="Around the site" aria-labelledby="around-heading" class="wrap" id="around-site" tabindex="-1"><h2 id="around-heading">Around the site</h2><p>One page, with sections for about me, projects, music, writing, the startup chime and links. Use the jump list above to go straight to any section; your settings stay on this page.</p><ul><li><a href="#about">Experience (for anyone interested)</a></li><li><a href="#projects">Projects (the tabs are multiplying)</a></li><li><a href="#music">Hobbies (Music, with bass)</a></li><li><a href="#blog">Articles (Writing, because brevity failed)</a></li><li><a href="#sound">Sound and tools (one button, several opinions)</a></li><li><a href="#links">Contact (the internet has many doors)</a></li></ul></section><section aria-label="This page" aria-labelledby="this-page-heading" class="wrap" id="this-page" tabindex="-1"><h2 id="this-page-heading">This page</h2><p>This site is one page rather than a set of separate pages. The jump list takes you to each section, and the controls in Settings change how this page looks and sounds; your choices are saved on this device.</p></section><section aria-label="About me (the lore)" aria-labelledby="about-heading" class="wrap" id="about" tabindex="-1">
 <h2 id="about-heading">Experience (for anyone interested)</h2>
 <p>hey, i’m Chaotic Carter, aka 2three1y. new name, same chaos. the username stays, it has seniority.</p>
 <p>also: i’m blind. yes, for real. i make beats i’ve never seen, i write code with VoiceOver reading every line back at me, and i’ve never seen this website. i hear it’s pretty. if it’s ugly, please lie to me.</p>
@@ -725,7 +2255,7 @@ window.__applyPrefs();})();
 </ul>
 <p>if anything here ever flickers, that’s a real bug, not a feature and not a vibe. please <a href="https://github.com/2three1y/2three1y.github.io/issues">report it on GitHub</a> and it jumps to the top of my to-do list, ahead of sleep.</p>
 </details>
-</section><section aria-label="Settings" aria-labelledby="settings-heading" class="wide" id="settings" tabindex="-1"><h2 id="settings-heading">Settings (the knobs are labeled)</h2><p class="settings-intro">Set the page up your way. The controls save as soon as you change them; no Save button is hiding in the bushes.</p><div class="settings-layout"><nav aria-label="Settings categories"><ul><li><a href="#appearance">Appearance and accessibility</a></li><li><a href="#sound-settings">Sound</a></li><li><a href="#credits">Credits</a></li><li><a href="#language-settings">Language</a></li></ul><p class="muted">Version 1.0</p></nav><div class="settings-content"><a aria-label="Appearance and accessibility settings" class="settings-row" href="#appearance"><strong>Appearance and accessibility</strong><span class="muted">Theme, text size, font and Calm mode.</span><span aria-hidden="true">›</span></a><a aria-label="Startup chime settings" class="settings-row" href="#sound-settings"><strong>Startup chime</strong><span class="muted">Choose whether the page plays its soft startup sound.</span><span aria-hidden="true">›</span></a><a aria-label="Language settings" class="settings-row" href="#language-settings"><strong>Language</strong><span class="muted">Allow mild coarse wording in page jokes.</span><span aria-live="polite" class="muted" id="swear-current">Off</span></a><a aria-label="Credits settings" class="settings-row" href="#credits"><strong>Credits</strong><span class="muted">The design source and its public repository.</span><span aria-hidden="true">›</span></a><section aria-label="Appearance and accessibility" aria-labelledby="appearance-heading" id="appearance" tabindex="-1"><h3 id="appearance-heading">Appearance and accessibility</h3><fieldset><legend>Theme</legend><label><input data-pref="theme" name="theme" type="radio" value="system"/> System</label><label><input data-pref="theme" name="theme" type="radio" value="light"/> Light</label><label><input data-pref="theme" name="theme" type="radio" value="dark"/> Dark</label></fieldset><fieldset><legend>Text size</legend><label><input data-pref="text-size" name="text-size" type="radio" value="default"/> Default</label><label><input data-pref="text-size" name="text-size" type="radio" value="large"/> Large</label></fieldset><fieldset><legend>Font</legend><label><input data-pref="font" name="font" type="radio" value="system"/> System</label><label><input data-pref="font" name="font" type="radio" value="atkinson"/> Atkinson Hyperlegible</label><label><input data-pref="font" name="font" type="radio" value="mono"/> Monospace</label></fieldset><label><input data-toggle="calm-mode" id="calm-mode" type="checkbox"/> Calm mode</label><p class="muted">Keeps motion still. On by default.</p></section><section aria-label="Startup chime" aria-labelledby="sound-settings-heading" id="sound-settings" tabindex="-1"><h3 id="sound-settings-heading">Startup chime</h3><label><input data-toggle="startup-chime" id="startup-chime" type="checkbox"/> Startup chime</label><p>Off unless you switch it on. Your choice is saved on this device.</p></section><section aria-label="Language" aria-labelledby="language-heading" id="language-settings" tabindex="-1"><h3 id="language-heading">Language</h3><p>Coarse wording is off by default. Turn it on for mild swearing in jokes and asides only.</p><label><input data-toggle="swearing" id="swearing-toggle" type="checkbox"/> Allow mild swearing in page jokes</label></section><section aria-label="Credits" aria-labelledby="credits-heading" id="credits" tabindex="-1"><h3 id="credits-heading">Credits</h3><p>Settings design inspired by <a aria-label="Adnan Bukvic (external)" href="https://aridan.net">Adnan Bukvic</a>. Source: <a aria-label="aridan.net source repository (external)" href="https://github.com/actuallyaridan/aridan.net">aridan.net source repository (external)</a>.</p></section></div></div></section></main>
+</section><section aria-label="Settings" aria-labelledby="settings-heading" class="wide" id="settings" tabindex="-1"><h2 id="settings-heading">Settings (the knobs are labeled)</h2><p class="settings-intro">Set the page up your way. The controls save as soon as you change them; no Save button is hiding in the bushes.</p><div class="settings-layout"><nav aria-label="Settings categories"><ul><li><a href="#appearance">Appearance and accessibility</a></li><li><a href="#sound-settings">Startup chime</a></li><li><a href="#credits">Credits</a></li><li><a href="#language-settings">Language</a></li></ul><p class="muted">Version 1.0</p></nav><div class="settings-content"><a class="settings-row" href="#appearance">Appearance and accessibility</a><a class="settings-row" href="#sound-settings">Startup chime</a><a class="settings-row" href="#language-settings">Language</a><a class="settings-row" href="#credits">Credits</a><section aria-label="Appearance and accessibility" aria-labelledby="appearance-heading" id="appearance" tabindex="-1"><h3 id="appearance-heading">Appearance and accessibility</h3><fieldset><legend>Theme</legend><label><input data-pref="theme" name="theme" type="radio" value="system"/> System</label><label><input data-pref="theme" name="theme" type="radio" value="light"/> Light</label><label><input data-pref="theme" name="theme" type="radio" value="dark"/> Dark</label></fieldset><fieldset><legend>Text size</legend><label><input data-pref="text-size" name="text-size" type="radio" value="default"/> Default</label><label><input data-pref="text-size" name="text-size" type="radio" value="large"/> Large</label></fieldset><fieldset><legend>Font</legend><label><input data-pref="font" name="font" type="radio" value="system"/> System</label><label><input data-pref="font" name="font" type="radio" value="atkinson"/> Atkinson Hyperlegible</label><label><input data-pref="font" name="font" type="radio" value="mono"/> Monospace</label></fieldset><label><input data-toggle="calm-mode" id="calm-mode" type="checkbox"/> Calm mode</label><p class="muted">Keeps motion still. On by default.</p></section><section aria-label="Startup chime" aria-labelledby="sound-settings-heading" id="sound-settings" tabindex="-1"><h3 id="sound-settings-heading">Startup chime</h3><label><input data-toggle="startup-chime" id="startup-chime" type="checkbox"/> Startup chime</label><p>Off unless you switch it on. Your choice is saved on this device.</p></section><section aria-label="Language" aria-labelledby="language-heading" id="language-settings" tabindex="-1"><h3 id="language-heading">Language</h3><p>Coarse wording is off by default. Turn it on for mild swearing in jokes and asides only.</p><label><input data-toggle="swearing" id="swearing-toggle" type="checkbox"/> Allow mild swearing in page jokes</label></section><section aria-label="Credits" aria-labelledby="credits-heading" id="credits" tabindex="-1"><h3 id="credits-heading">Credits</h3><p>Settings design inspired by <a aria-label="Adnan Bukvic (external)" href="https://aridan.net">Adnan Bukvic</a>. Source: <a aria-label="aridan.net source repository (external)" href="https://github.com/actuallyaridan/aridan.net">aridan.net source repository (external)</a>.</p></section></div></div></section></main>
 <footer>
 <div class="wrap">
 <p class="loud">Chaotic Carter, king of chaos. blind, loud, and shipping.</p>
@@ -846,7 +2376,7 @@ window.__applyPrefs();})();
         });
       }
 
-      var EVENTS = ['touchend', 'click', 'keydown'];
+      var EVENTS = ['touchend', 'click'];
       function arm() {
         if (armed || played) return;
         armed = true;
@@ -918,6 +2448,33 @@ window.__applyPrefs();})();
 
 
   </script>
-<script>(()=>{const d=document.documentElement, get=k=>{try{return localStorage.getItem(k)}catch(e){return null}},put=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};const sysDark=()=>matchMedia('(prefers-color-scheme: dark)').matches, reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;function apply(){let t=get('theme')||'system',sz=get('text-size')||'default',f=get('font')||'system';d.dataset.theme=t==='system'?(sysDark()?'dark':'light'):t;d.dataset.text=sz;d.dataset.font=f;document.querySelectorAll('[data-pref]').forEach(x=>x.checked=x.value===(get(x.dataset.pref)||({'theme':'system','text-size':'default','font':'system'}[x.dataset.pref])));document.querySelectorAll('[data-toggle]').forEach(x=>x.checked=(get(x.dataset.toggle)==null?x.dataset.toggle==='calm-mode':get(x.dataset.toggle)==='on'));d.classList.toggle('calm',reduced()||get('calm-mode')!=='off');}apply();document.querySelectorAll('[data-pref]').forEach(x=>x.addEventListener('change',()=>{put(x.dataset.pref,x.value);apply()}));document.querySelectorAll('[data-toggle]').forEach(x=>x.addEventListener('change',()=>{put(x.dataset.toggle,x.checked?'on':'off');apply();if(x.dataset.toggle==='startup-chime'){document.dispatchEvent(new CustomEvent('chimechange',{detail:{on:x.checked}}));}if(x.dataset.toggle==='startup-chime'&&x.checked){try{const C=AudioContext||webkitAudioContext,c=new C(),o=c.createOscillator(),g=c.createGain();o.frequency.value=523;g.gain.value=.025;o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+.15);o.onended=()=>c.close()}catch(e){}}}));matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change',()=>{if((get('theme')||'system')==='system')apply()});matchMedia('(prefers-reduced-motion: reduce)').addEventListener?.('change',apply);document.addEventListener('chimechange',()=>{const x=document.getElementById('startup-chime');if(x)x.checked=get('startup-chime')==='on'});})();</script><script id="language-setting-script">(function(){var key='swearing',root=document.documentElement;function read(){try{return localStorage.getItem(key)==='on'}catch(e){return false}}function apply(){var on=read();root.classList.toggle('swearing-on',on);document.querySelectorAll('[data-clean][data-coarse]').forEach(function(el){el.innerHTML=on?el.dataset.coarse:el.dataset.clean});var c=document.getElementById('swearing-toggle');if(c)c.checked=on;var v=document.getElementById('swear-current');if(v)v.textContent=on?'On':'Off'}var c=document.getElementById('swearing-toggle');if(c)c.addEventListener('change',function(){try{localStorage.setItem(key,c.checked?'on':'off')}catch(e){}apply()});apply()})();</script><script id="section-focus-script">(function(){var nav=document.getElementById('page-navigation');if(!nav)return;nav.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id;try{id=decodeURIComponent(a.getAttribute('href').slice(1));}catch(x){return;}var target=document.getElementById(id);if(!target||!target.matches('section'))return;setTimeout(function(){try{target.focus({preventScroll:true});}catch(x){target.focus();}},0);});})();</script>
+<script id="settings-controls-script">
+(function(){
+ var root=document.documentElement;
+ function read(k,fallback){try{var v=localStorage.getItem(k);return v===null?fallback:v;}catch(e){return fallback;}}
+ function save(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+ function systemDark(){try{return !!(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);}catch(e){return false;}}
+ function reduced(){try{return !!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);}catch(e){return false;}}
+ function apply(){
+   var theme=read('theme','system'),size=read('text-size','default'),font=read('font','system');
+   root.setAttribute('data-theme',theme==='system'?(systemDark()?'dark':'light'):theme);
+   if(size==='large')root.setAttribute('data-text','large');else root.removeAttribute('data-text');
+   if(font==='atkinson'||font==='mono')root.setAttribute('data-font',font);else root.removeAttribute('data-font');
+   var calm=read('calm-mode','on')!=='off';root.classList.toggle('calm',calm||reduced());
+   document.querySelectorAll('[data-pref]').forEach(function(x){x.checked=x.value===read(x.dataset.pref,({theme:'system','text-size':'default',font:'system'})[x.dataset.pref]);});
+   document.querySelectorAll('[data-toggle]').forEach(function(x){x.checked=read(x.dataset.toggle,x.dataset.toggle==='calm-mode'?'on':'off')==='on';});
+   var swearing=read('swearing','off')==='on';
+   document.querySelectorAll('[data-clean][data-coarse]').forEach(function(el){el.innerHTML=swearing?el.dataset.coarse:el.dataset.clean;});
+   if(font==='atkinson'&&!document.getElementById('font-preload')){var l=document.createElement('link');l.id='font-preload';l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='fonts/AtkinsonHyperlegible-Regular.woff2';document.head.appendChild(l);}
+   var metas=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<metas.length;i++){var m=metas[i],base=m.getAttribute('data-c')||m.getAttribute('content');m.setAttribute('data-c',base);m.setAttribute('content',theme==='light'?'#f2f2f4':theme==='dark'?'#111113':base);}
+ }
+ document.querySelectorAll('[data-pref]').forEach(function(x){x.addEventListener('change',function(){save(x.dataset.pref,x.value);apply();});});
+ document.querySelectorAll('[data-toggle]').forEach(function(x){x.addEventListener('change',function(){var on=x.checked;save(x.dataset.toggle,on?'on':'off');apply();if(x.dataset.toggle==='startup-chime'&&window.__chimeSet)window.__chimeSet(on);if(x.dataset.toggle==='swearing'){var v=document.getElementById('swear-current');if(v)v.textContent=on?'On':'Off';}});});
+ var mq;try{mq=window.matchMedia('(prefers-color-scheme: dark)');if(mq.addEventListener)mq.addEventListener('change',function(){if(read('theme','system')==='system')apply();});else if(mq.addListener)mq.addListener(function(){if(read('theme','system')==='system')apply();});}catch(e){}
+ try{var rm=window.matchMedia('(prefers-reduced-motion: reduce)');if(rm.addEventListener)rm.addEventListener('change',apply);else if(rm.addListener)rm.addListener(apply);}catch(e){}
+ apply();
+})();
+</script><script id="section-focus-script">(function(){var nav=document.getElementById('page-navigation');if(!nav)return;nav.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id;try{id=decodeURIComponent(a.getAttribute('href').slice(1));}catch(x){return;}var target=document.getElementById(id);if(!target||!target.matches('section'))return;var menu=nav.querySelector('details.jump-menu');setTimeout(function(){try{target.focus({preventScroll:true});}catch(x){target.focus();}if(menu)menu.open=false;},0);});})();</script>
+<script id="skip-link-script">(function(){var a=document.querySelector('.skip-link');if(!a)return;a.addEventListener('click',function(){var m=document.getElementById('main-content');if(!m)return;m.setAttribute('tabindex','-1');m.focus();m.addEventListener('blur',function(){m.removeAttribute('tabindex')},{once:true});});})();</script>
 </body>
 </html>
